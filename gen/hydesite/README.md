@@ -1,0 +1,1 @@
+Basic template for jgoldfar personal site.

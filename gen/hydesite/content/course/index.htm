@@ -1,0 +1,51 @@
+---
+extends: main.j2
+title: Teaching
+description: 
+---
+
+{% block breadcrumbs -%}
+	<a href="{{content_url('/')}}">Home</a>:<a href="{{content_url('course')}}">{{resource.meta.title}}</a>
+{%- endblock %}
+
+{% block content_body %}
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	  <h2>Teaching</h2>
+<div>
+<h3><a name="courses-fa13"></a>Fall 2013</h3>
+<ul>
+<li><a href="mth0111-fa13/">MTH 0111: Intermediate Algebra</a> </li>
+<li><a href="mth1701-fa13/">MTH 1701: College Algebra</a> </li>
+<li><a href="mth1702-fa13/">MTH 1702: Applied Calculus</a> </li>
+<li><a href="mth3210-fa13/">MTH 3210: Introduction to PDE</a> (<em>As TA</em>)</li>
+</ul>
+</div>	  
+	  <hr size="2" width="70%" />
+<div>
+<h3><a name="courses-su13"></a>Summer 2013</h3>
+<ul>
+<li><a href="SIAM-su13/">SIAM Applied Math Summer Program: 2013</a>  <a href="floridatech.orgsync.com/org/siam/Summer_Camp_2013">Flyer Here</a><br />(<em>With Dr. Mine Subasi, Rana Haber, and Ryan White</em>) </li>
+<li><a href="mth1701-su13/">MTH 1701: College Algebra</a> </li>
+<li><a href="mth0111-su13/">MTH 0111: Intermediate Algebra</a> </li>
+<li><a href="mth3210-su13/">MTH 3210: Introduction to PDE</a> (<em>As TA</em>)</li>
+</ul>
+<h3><a name="courses-sp13"></a>Spring 2013</h3>
+<ul>
+<li><a href="mth1702-sp13/">MTH 1702: Applied Calculus</a> </li>
+<li><a href="mth1603-sp13/">MTH 1603: Applied Calculus and Statistics</a></li>
+<li><a href="mth3210-sp13/">MTH 3210: Introduction to PDE</a> (<em>As TA</em>)</li>
+</ul>
+<h3><a name="courses-fa12"></a>Fall 2012</h3>
+<ul>
+<li><a href="mth1701-fa12/">MTH 1701: College Algebra</a> </li>
+<li><a href="mth0111-fa12/">MTH 0111: Intermediate Algebra</a></li>
+<li><a href="mth3210-fa12/">MTH 3210: Introduction to PDE</a> (<em>As TA</em>)</li>
+</ul>
+<h3><a name="courses-su12"></a>Summer 2012</h3>
+<ul>
+<li><a href="mth5401-su12/">MTH 5401: Applied Statistical Analysis</a> (<em>As Lab Assistant</em>)</li>
+<li><a href="mth3210-su12/">MTH 3210: Introduction to PDE</a> (<em>As TA</em>)</li>
+</ul>
+</div>
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+{% endblock %}

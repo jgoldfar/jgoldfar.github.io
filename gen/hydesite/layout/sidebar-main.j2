@@ -1,0 +1,44 @@
+{% import "macros.j2" as macros %}
+<td class="sidebar">
+	  <table width="100%">
+	  <tbody>
+	  {{ macros.render_sidebar_button('Home', content_url('/')) }}
+  	  {{ macros.render_sidebar_button('Courses', content_url('/course')) }}
+  	  {{ macros.render_sidebar_button('Research', content_url('/research.htm')) }}
+  	  {{ macros.render_sidebar_button('Presentations', content_url('/conf.htm')) }}
+	  <!--<tr><td class="navbutton">
+	  <a href="/~jgoldfar/contact.htm">Agenda</a>
+	  </td></tr>-->
+	  </tbody>
+	  </table>
+	  <hr width="90%" size=3 color="black" />
+	  <table align="center" class="info">
+                  <tr>
+                    <td><h4>Contact Information:</h4></td></tr>
+					                  <tr>
+                    <td class="inforight"> Mathematical Sciences <br /> Florida Institute of Technology <br />150 W. University Blvd<br />Melbourne, FL 32903</td>
+                  </tr>
+                  <tr>
+                    <td class="inforight">Office: Crawford 111 <br />Hours: TWRF 9am-2pm</td>
+                  </tr>
+                  <tr>
+                    <td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.<span class="displaynone">ob</span>fit.edu</a></td>
+                  </tr>
+                  <!--<tr>
+                    <td class="inforight">Office Phone: <br />321 674-xxxx
+                  </tr>-->
+                </table>
+	<hr width="90%" size=3 color="black" />
+	  <table class="info">
+	  <tbody>
+	  <!--<th><td>Quick Links</td></th>-->
+	  <tr><td class="navbutton">
+	  <a href="http://floridatech.orgsync.com/org/siam" target="_blank">FIT SIAM Chapter</a>
+	  </td></tr>
+	  <tr><td class="navbutton">
+	  <a href="http://cos.fit.edu/math" target="_blank">FIT Math Department</a>
+	  </td></tr>
+	  </tbody>
+	  </table>
+	  <p>&nbsp;</p>
+	  </td>

@@ -1,0 +1,15 @@
+---
+extends: main.j2
+title: Main Page
+description: 
+---
+
+{% block breadcrumbs -%}
+	<a href="{{content_url('/')}}">Home</a>:<a href="{{content_url('course')}}">{{resource.meta.title}}</a>
+{%- endblock %}
+
+{% block content_body %}
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	  <h2>Teaching</h2>
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+{% endblock %}

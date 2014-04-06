@@ -1,0 +1,19 @@
+---
+extends: main.j2
+title: MTH 1603-SP13
+description: 
+---
+
+{% block breadcrumbs -%}
+	<a href="{{content_url('/')}}">Home</a>:<a href="{{content_url('course')}}">Teaching</a>:<a href="{{content_url('course/mth1603-sp13')}}">{{resource.meta.title}}</a>
+{%- endblock %}
+
+{% block content_body %}
+
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	  <h3>MTH 1603: Applied Calculus and Statistics: Spring 2013</h3>
+	  <ul>
+	  <li><a href="MTH1603-syllabus.pdf" target="_blank">Syllabus</a></li>
+	  </ul>
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+{% endblock %}

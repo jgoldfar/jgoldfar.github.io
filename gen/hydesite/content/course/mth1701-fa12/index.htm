@@ -1,0 +1,18 @@
+---
+extends: main.j2
+title: MTH 1701-FA12
+description: 
+---
+
+{% block breadcrumbs -%}
+	<a href="{{content_url('/')}}">Home</a>:<a href="{{content_url('course')}}">Teaching</a>:<a href="{{content_url('course/mth1701-fa12')}}">{{resource.meta.title}}</a>
+{%- endblock %}
+
+{% block content_body %}
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	  <h3>MTH 1701: College Algebra: Fall 2012</h3>
+	  <ul>
+	  <li><a href="MTH1701-syllabus.pdf" target="_blank">Syllabus</a></li>
+	  </ul>
+	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+{% endblock %}
