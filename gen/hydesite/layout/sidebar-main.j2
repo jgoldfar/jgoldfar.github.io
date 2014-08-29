@@ -6,9 +6,7 @@
   	  {{ macros.render_sidebar_button('Courses', content_url('/course')) }}
   	  {{ macros.render_sidebar_button('Research', content_url('/research.htm')) }}
   	  {{ macros.render_sidebar_button('Presentations', content_url('/conf.htm')) }}
-	  <!--<tr><td class="navbutton">
-	  <a href="/~jgoldfar/contact.htm">Agenda</a>
-	  </td></tr>-->
+	  {{ macros.render_sidebar_button('Schedule', content_url('/lab-cal.htm')) }}
 	  </tbody>
 	  </table>
 	  <hr width="90%" size=3 color="black" />
@@ -19,7 +17,7 @@
                     <td class="inforight"> Mathematical Sciences <br /> Florida Institute of Technology <br />150 W. University Blvd<br />Melbourne, FL 32903</td>
                   </tr>
                   <tr>
-                    <td class="inforight">Office: Crawford 111 <br />Hours: TWRF 9am-2pm</td>
+                    <td class="inforight">Office: Crawford 111 <br />Hours: See <a href="{{content_url('lab-cal.htm')}}">here</a></td>
                   </tr>
                   <tr>
                     <td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.<span class="displaynone">ob</span>fit.edu</a></td>
@@ -37,6 +35,9 @@
 	  </td></tr>
 	  <tr><td class="navbutton">
 	  <a href="http://cos.fit.edu/math" target="_blank">FIT Math Department</a>
+	  </td></tr>
+	  <tr><td class="navbuttonInvisible">
+	  <a href="{{content_url('instruct.htm')}}" target="_blank">Instruct</a>
 	  </td></tr>
 	  </tbody>
 	  </table>

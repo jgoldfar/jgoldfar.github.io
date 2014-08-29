@@ -5,16 +5,11 @@ description:
 ---
 
 {% block content_body %}
-<!--<div><p align="center"><a href="#courses">Courses</a> |<!-- <a href="#papers">Papers and Publications</a> | <a href="#research">Research Projects/Interests</a> | <a href="#associations">Professional Associations</a></p></div>
-<br />-->
+<div><p align="center"><a href="#courses">Courses</a> <!--| <a href="#papers">Papers and Publications</a>--> | <a href="#research">Research Projects/Interests</a> | <a href="#associations">Professional Associations</a></p></div>
+<br />
 <div style="float: right; margin-left: 20px;"><img src="{{content_url(media_url('img/max.jpg'))}}" style="margin: 10px;" width="100px"/></div>
 <div><h2><a name="courses" id="courses"></a>Teaching</h2>
-<ul>
-<li><a href="{{content_url('course/mth0111-fa13/')}}">MTH 0111: Intermediate Algebra</a> </li>
-<li><a href="{{content_url('course/mth1701-fa13/')}}">MTH 1701: College Algebra</a> </li>
-<li><a href="{{content_url('course/mth1702-fa13/')}}">MTH 1702: Applied Calculus</a> <br /> Look to the lab schedule <a href="{{content_url(lab-cal.htm)}}">here</a></li>
-<li><a href="{{content_url('course/mth3210-fa13/')}}">MTH 3210: Introduction to PDE</a> (<em>As TA</em>)</li>
-</ul>
+{% include "current-teaching.j2" %}
 <a href="{{content_url('course')}}">Previous Semesters...</a>
 </ul>
                 <!--<hr size="2" width="70%" color="black"/>
@@ -26,7 +21,10 @@ description:
                 <hr size="2" width="70%" color="black"/>
                 <h2><a name="research" id="research"></a>Research Interests</h2>
                 <ul>
-                  <li>Optimal Control, Inverse and Free Boundary Problems, Nonlinear Degenerate Parabolic Equations, Numerical Analysis of PDE</li>
+                  <li>Optimal Control, Inverse and Free Boundary Problems
+                  <li>Nonlinear Degenerate Parabolic Equations
+                  <li>Numerical Methods for PDE, Higher-order schemes
+                  <li>Geophysical fluid dynamics
                 </ul>
                 
                 <hr size="2" width="70%" color="black"/>

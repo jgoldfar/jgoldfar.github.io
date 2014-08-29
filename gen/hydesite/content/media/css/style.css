@@ -28,6 +28,7 @@ table.main td.footer {height: 30px; background-color: #efefe3;}
 /* Style for navigation buttons (in sidebar) */
 .navbutton { padding:5px 4px 5px 4px; text-align: center;}
 .navbutton:hover {background-color: #ffffff; color: #000000;}
+.navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
 
 .displaynone {display: none;}
 
