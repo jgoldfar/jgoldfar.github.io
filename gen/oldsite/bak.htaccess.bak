@@ -1,5 +1,0 @@
-AuthUserFile /udrive/faculty/jgoldfar/public_html/SIAMSEAS/.htpasswd 
-AuthGroupFile /dev/null
-AuthName EnterPassword
-AuthType Basic
-Require valid-user
