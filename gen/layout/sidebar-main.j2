@@ -2,7 +2,7 @@
 <td class="sidebar">
 	  <table width="100%">
 	  <tbody>
-	  {{ macros.render_sidebar_button('Home', content_url('/')) }}
+	  {{ macros.render_sidebar_button('Home', content_url('/index.htm')) }}
   	  {{ macros.render_sidebar_button('Courses', content_url('/course')) }}
   	  {{ macros.render_sidebar_button('Research', content_url('/research.htm')) }}
   	  {{ macros.render_sidebar_button('Presentations', content_url('/conf.htm')) }}
@@ -17,7 +17,7 @@
                     <td class="inforight"> Mathematical Sciences <br /> Florida Institute of Technology <br />150 W. University Blvd<br />Melbourne, FL 32903</td>
                   </tr>
                   <tr>
-                    <td class="inforight">Office: Crawford 111 <br />Hours: See <a href="{{content_url('lab-cal.htm')}}">here</a></td>
+                    <td class="inforight">Office: Crawford 111 <br />Hours: See <a href="{{content_url('/lab-cal.htm')}}">here</a></td>
                   </tr>
                   <tr>
                     <td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.<span class="displaynone">ob</span>fit.edu</a></td>
@@ -35,6 +35,12 @@
 	  </td></tr>
 	  <tr><td class="navbutton">
 	  <a href="http://cos.fit.edu/math" target="_blank">FIT Math Department</a>
+	  </td></tr>
+	  <tr><td class="navbutton">
+	  <a href="http://math.reu.fit.edu/blog" target="_blank">Math Blog</a>
+	  </td></tr>
+	  <tr><td class="navbutton">
+	  <a href="http://math.reu.fit.edu" target="_blank">FIT Math sREU</a>
 	  </td></tr>
 	  <tr><td class="navbuttonInvisible">
 	  <a href="{{content_url('instruct.htm')}}" target="_blank">Instruct</a>
