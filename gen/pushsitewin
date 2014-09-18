@@ -1,0 +1,10 @@
+#!/bin/sh
+echo `pwd`
+cd `dirname $0`
+echo `dirname $0`
+echo `pwd`
+
+hyde gen
+
+echo "moving deploy/ to /cygdrive/u/public_html"
+cp -rf ./deploy/* /cygdrive/u/public_html
