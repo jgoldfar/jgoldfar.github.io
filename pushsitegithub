@@ -1,0 +1,6 @@
+#!/bin/sh
+
+hyde gen
+
+cp deploy/index-simple.htm jgoldfar.github.io/index.htm
+cp -r deploy/media/ jgoldfar.github.io
