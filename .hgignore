@@ -2,3 +2,4 @@ syntax: glob
 *.DS_Store
 deploy/*
 .hyde_deps
+jgoldfar.github.io/*
