@@ -15,12 +15,30 @@ students, graduate students, and faculty members. Anyone interested is welcome t
  with your suggestions for future talks, as well as any questions or comments.{% endblock %}
 
 {% block tabsMenu %}
+<li><a href="#tabs-sp15"><h4 style="margin-top: 2px; margin-bottom: 2px;">Spring 2015</h4></a>
 <li><a href="#tabs-fa14"><h4 style="margin-top: 2px; margin-bottom: 2px;">Fall 2014</h4></a>
 <li><a href="#tabs-sp14"><h4 style="margin-top: 2px; margin-bottom: 2px;">Spring 2014</h4></a>
 {% endblock %}
 
 {% import "macros.j2" as macros %}
 {% block tabs %}
+<!-- Begin fall 2014 table/tab -->
+    <div id="tabs-sp15" style="padding: 0px;">
+<table class="pure-table pure-table-horizontal regular-text" style="width: 100%;">
+<thead> 
+<tr>
+<th> Date and Time </th> <th> Speaker </th> <th> Title &amp; Abstract </th>
+</tr>
+</thead> 
+{% set defaultloc='Evans Library 133' %}
+{% set defaulttime='4 - 5pm' %}
+{% set defaultaffil='Math Sciences Department<br /> Florida Tech' %}
+<tbody>
+{{ macros.render_seminar_entry('Date TBA', defaulttime, defaultloc, 'TBA', defaultaffil, 
+'') }}
+</tbody>
+</table>
+</div>
 <!-- Begin fall 2014 table/tab -->
     <div id="tabs-fa14" style="padding: 0px;">
 <table class="pure-table pure-table-horizontal regular-text" style="width: 100%;">
