@@ -14,5 +14,5 @@ echo "moving deploy/ to jgoldfar.github.io subdirectory."
 cp -a ./deploy/* ./jgoldfar.github.io/
 
 cd ./jgoldfar.github.io && \
-  git commit -m "Update with changes generated upstream" && \
+  git commit -am "Update with changes generated upstream" && \
   git push
