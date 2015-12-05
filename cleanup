@@ -1,3 +1,2 @@
 #!/bin/sh
 rm -rf deploy
-rm site.yaml-bak
