@@ -1,1 +1,3 @@
-Basic template for jgoldfar personal site.
+## Personal Website for Jonathan Goldfarb ##
+
+* v2015.2
