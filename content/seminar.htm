@@ -12,6 +12,7 @@
 <br /><br /> The seminar is currently organized by Jonathan Goldfarb, Naveed Iqbal, and Adam Prinkey. Please send an email to <a href="mailto:jgoldfar@my.fit.edu?subject=Department%20Graduate%20Seminar">jgoldfar<span style="display: none;">ob</span>@my.fit.edu</a>
  with your suggestions for future talks, as well as any questions or comments.{% endblock %}
 
+{% import "macros.j2" as macros %}
 {% block tabsMenu %}
 {{ macros.render_seminar_tab('Spring 2016', 'tabs-sp16') }}
 {{ macros.render_seminar_tab('Fall 2015', 'tabs-fa15') }}
@@ -19,7 +20,6 @@
 {{ macros.render_seminar_tab('Spring 2014', 'tabs-sp14') }}
 {% endblock %}
 
-{% import "macros.j2" as macros %}
 {% block tabs %}
 <!-- Begin Spring 2016 table/tab -->
 {% set defaultloc='MAC' %}
