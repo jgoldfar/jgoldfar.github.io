@@ -1,28 +1,28 @@
 {% macro render_seminar_tab(title, id) -%}
-	<li><a href="#{{ id }}"><h4 style="margin-top: 2px; margin-bottom: 2px;">{{ title }}</h4></a>
+  <li><a href="#{{ id }}"><h4 style="margin-top: 2px; margin-bottom: 2px;">{{ title }}</h4></a>
 {%- endmacro %}
 
 {% macro render_seminar_tab_start(id) -%}
-	<div id="{{ id }}" style="padding: 0px;">
-	<table class="pure-table pure-table-horizontal regular-text" style="width: 100%;">
-	<thead> 
-	<tr>
-	<th> Date and Time </th> <th> Speaker </th> <th> Title &amp; Abstract </th>
-	</tr>
-	</thead>
-	<tbody>
+  <div id="{{ id }}" style="padding: 0px;">
+  <table class="pure-table pure-table-horizontal regular-text" style="width: 100%;">
+  <thead>
+  <tr>
+  <th> Date and Time </th> <th> Speaker </th> <th> Title &amp; Abstract </th>
+  </tr>
+  </thead>
+  <tbody>
 {%- endmacro %}
 
 {% macro render_seminar_tab_end() -%}
-	</tbody>
-	</table>
-	</div>
+  </tbody>
+  </table>
+  </div>
 {%- endmacro %}
 
 {% macro render_sidebar_button(title, link) -%}
-	  <tr><td class="navbutton">
-	  <a href="{{link}}">{{ title }}</a>
-	  </td></tr>
+    <tr><td class="navbutton">
+    <a href="{{link}}">{{ title }}</a>
+    </td></tr>
 {%- endmacro %}
 
 {% macro render_seminar_entry(date, time, loc, name, affiliation, title, abstract) -%}
@@ -34,7 +34,7 @@
 <div class="center_col">{% if name and name !='' %}{{name}} {%else%} Speaker TBA {%endif%}<br />{% if affiliation and affiliation != '' %}{{affiliation}}{% endif %}</div>
 </td>
 <td style="min-width: 50%;">
-<div class="right_col"><strong>Title:</strong> {% if title %}{{title}}{% else %}TBA {%endif%} 
+<div class="right_col"><strong>Title:</strong> {% if title %}{{title}}{% else %}TBA {%endif%}
 {% if abstract %}<br /><strong>Abstract:</strong> {{abstract}}
 {% endif %}</div>
 </td>
@@ -44,7 +44,7 @@
 {% macro render_empty_seminar_entry(date, reason) -%}
 <tr>
 <td style="width: 23%;">
-<div class="left_col">{{date}}<br /> {% if reason %}<strong>{{reason}}</strong>{%endif%}</div>
+<div class="left_col">{{date}}<br /> {% if reason %}<strong>{{reason}}</strong>{% endif %}</div>
 <td style="width: 23%;"></td>
 <td style="min-width: 50%;"></td>
 </td>
@@ -65,4 +65,17 @@
 process_course_listings(courses)
 </div>
 
+{%- endmacro %}
+
+{% macro render_readinggroup_schedule_date(DatesAndTopics) -%}
+  {% for date, topic in DatesAndTopics %}
+    <tr>
+      <td>
+        {{date}}
+      </td>
+      <td>
+        {{topic}}
+      </td>
+    </tr>
+  {% endfor %}
 {%- endmacro %}
