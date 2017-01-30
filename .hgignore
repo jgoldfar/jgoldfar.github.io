@@ -3,3 +3,5 @@ syntax: glob
 deploy/*
 .hyde_deps
 jgoldfar.github.io/*
+content/course/AlgebraReadingGroup/index.htm
+*.pdf
