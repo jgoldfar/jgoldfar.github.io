@@ -1,23 +1,26 @@
 ---
 extends: main.j2
 title: Research
-description: 
+description:
 ---
 
 {% block content_body %}
-	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-	  <h5>
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <h5>
 My current research is in various aspects of the analysis of Partial Differential Equations (PDE) and related problems. Partial differential equations come from many applications; practically any problem of physics requires the solution of a properly posed PDE problem. Though I have a wide interest, the research I am currently pursuing falls into the following categories
 <ul>
 <li>Inverse problems for Equations of Mathematical Physics
 <li>Nonlinear Degenerate Parabolic Equations and Development of Interfaces
 </ul>
 <br />
+<h3>Inverse Problems for Equations of Mathematical Physics</h3>
 In many applications, the relevant parameters for the solution of the PDE are not available, or involve some measurement error: in this case, one must first solve a PDE <em>Inverse problem</em> to identify the relevant parameters. After first solving this problem, useful predictions may be made. I study inverse problems for a class of parabolic equations, which describe phenomena such as diffusion of a gas or heat in a medium.
 
-<br />
-While receiving a technical undergraduate education, one oftentimes meets the linear PDE of mathematical physics, such as the Poisson equation 
-\[ \Delta u=f\] or the heat (diffusion) equation \[ u_t=\Delta u\]
+<h3>Nonlinear Degenerate Parabolic Equations</h3>
+While receiving a technical undergraduate education, one oftentimes meets the linear PDE of mathematical physics, such as the Poisson equation
+\[ \Delta u=f\]
+or the heat (diffusion) equation
+\[ u_t=\Delta u\]
 Though these equations are useful models for many physical phenomena, linearity is typically only a first approximation to the underlying physics, for which reason the observations in some situations will disagree strongly with the mathematical models. Nonlinear equations are more difficult to analyze, but oftentimes can capture more relevant dynamics. In particular, I am interested in the family of nonlinear diffusion equations, the archetypal example of which is the Porous Medium Equation (PME)
 \[ u_t=\Delta (u^m)\]
 In contrast to the case of linear diffusion, heat waves in the PME move with finite speed. Description of the motion of heat waves, as well as the well-posedness and regularity problems for more complicated equations have many interesting technical aspects.
@@ -25,5 +28,5 @@ In contrast to the case of linear diffusion, heat waves in the PME move with fin
 <br>
 In the study of PDE, one gains perspective on the underlying physical phenomena, as well as new facets of these very intricate objects.
 </h5>
-	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 {% endblock %}

@@ -10,7 +10,7 @@ description:
 <br />
 <div style="float: right; margin-left: 20px;"><img src="{{content_url(media_url('img/max.jpg'))}}" style="margin: 10px;" width="100px"/></div>
 <div><h2><a name="courses" id="courses"></a>Teaching</h2>
-{% include "current-teaching.j2" %}
+    {{ macros.process_course_listings([('', 'MTH 1001: Calculus 1')])}}
 <a href="{{content_url('course')}}">Previous Semesters...</a>
 </ul>
                 <!--<hr size="2" width="70%" color="black"/>
