@@ -13,9 +13,10 @@ reading-group-deps:
 	hg clone $(ARGFSPath) $(ARGLocalDir) || hg pull --cwd $(ARGLocalDir)
 	hg update --cwd $(ARGLocalDir)
 	$(MAKE) -C $(ARGLocalDir) hersteinExercises.pdf munkresExercises.pdf
-	mv $(ARGLocalDir)/hersteinExercises.pdf $(ARGCoursePath)
-	mv $(ARGLocalDir)/munkresExercises.pdf $(ARGCoursePath)
-	mv $(ARGLocalDir)/index.htm $(ARGCoursePath)
+	mkdir -p $(ARGCoursePath)
+	mv $(ARGLocalDir)/hersteinExercises.pdf $(ARGCoursePath)/hersteinExercises.pdf
+	mv $(ARGLocalDir)/munkresExercises.pdf $(ARGCoursePath)/munkresExercises.pdf
+	mv $(ARGLocalDir)/index.htm $(ARGCoursePath)/index.htm
 
 ### Push targets
 push-git: github.site.yaml site.yaml-old pull-deps
