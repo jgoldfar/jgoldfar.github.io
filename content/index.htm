@@ -6,32 +6,36 @@ description:
 
 {% import "macros.j2" as macros %}
 {% block content_body %}
-<div><p align="center"><a href="#courses">Courses</a> <!--| <a href="#papers">Papers and Publications</a>--> | <a href="#research">Research Projects/Interests</a> | <a href="#associations">Professional Associations</a></p></div>
-<br />
-<div style="float: right; margin-left: 20px;"><img src="{{content_url(media_url('img/max.jpg'))}}" style="margin: 10px;" width="100px"/></div>
-<div><h2><a name="courses" id="courses"></a>Teaching</h2>
-    {{ macros.process_course_listings([('', 'MTH 1001: Calculus 1')])}}
-<a href="{{content_url('course')}}">Previous Semesters...</a>
-</ul>
-                <!--<hr size="2" width="70%" color="black"/>
-                <h2><a name="papers" id="papers"></a>Papers and Publications</h2>
-                <ul>
-                  <li>Type your Papers and Publications here.</li>
-                </ul>
-                <p align="right"><a href="#top"><img src="images/backtotop.gif" alt="back to top" width="20" height="20" border="0" /></a></p>-->
-                <hr size="2" width="70%" color="black"/>
-                <h2><a name="research" id="research"></a>Research Interests</h2>
-                <ul>
-                  <li>Optimal Control, Inverse and Free Boundary Problems
-                  <li>Nonlinear Degenerate Parabolic Equations
-                  <li>Numerical Methods for PDE, Higher-order schemes
-                  <li>Geophysical Fluid Dynamics
-                </ul>
+  <div>
+    <p align="center">
+      <a href="#courses">Courses</a> <!--| <a href="#papers">Papers and Publications</a>--> | <a href="#research">Research Projects/Interests</a> | <a href="#associations">Professional Associations</a>
+    </p>
+  </div>
+  <br />
+  <div style="float: right; margin-left: 20px;"><img src="{{content_url(media_url('img/max.jpg'))}}" style="margin: 10px;" width="100px"/></div>
+  <div><h2><a name="courses" id="courses"></a>Teaching</h2>
+      {{ macros.process_course_listings([('', 'MTH 1001: Calculus 1')])}}
+  <a href="{{content_url('course')}}">Previous Semesters...</a>
+  </ul>
+  <!--<hr size="2" width="70%" color="black"/>
+  <h2><a name="papers" id="papers"></a>Papers and Publications</h2>
+  <ul>
+    <li>Type your Papers and Publications here.</li>
+  </ul>
+  <p align="right"><a href="#top"><img src="images/backtotop.gif" alt="back to top" width="20" height="20" border="0" /></a></p>-->
+  <hr size="2" width="70%" color="black"/>
+  <h2><a name="research" id="research"></a>Research Interests</h2>
+  <ul>
+    <li>Optimal Control, Inverse and Free Boundary Problems
+    <li>Nonlinear Degenerate Parabolic Equations
+    <li>Numerical Methods for PDE, Higher-order schemes
+    <li>Geophysical Fluid Dynamics
+  </ul>
 
-                <hr size="2" width="70%" color="black"/>
-                <h2><a name="associations" id="associations"></a>Professional Associations</h2>
-                <ul>
-                  <li><a href="http://www.ams.org">American Mathematical Society</a></li>
-                  <li><a href="http://www.siam.org">Society for Industrial and Applied Mathematics</a></li>
-                </ul></div>
+  <hr size="2" width="70%" color="black"/>
+  <h2><a name="associations" id="associations"></a>Professional Associations</h2>
+  <ul>
+    <li><a href="http://www.ams.org">American Mathematical Society</a></li>
+    <li><a href="http://www.siam.org">Society for Industrial and Applied Mathematics</a></li>
+  </ul></div>
 {% endblock %}
