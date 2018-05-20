@@ -4,3 +4,6 @@ jgoldfar.github.io/*
 *.pdf
 public
 static/AlgebraReadingGroup/index.htm
+bin/hugo
+bin/LICENSE
+bin/README.md
