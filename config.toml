@@ -1,0 +1,7 @@
+baseURL = "https://jgoldfar.github.io"
+languageCode = "en-us"
+title = "jgoldfar's home on the web"
+theme = "jgoldfar"
+
+[params]
+    font = "Raleway" # should match the name on Google Fonts!

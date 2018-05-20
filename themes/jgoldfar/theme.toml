@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Jgoldfar"
+license = "MIT"
+licenselink = "https://github.com/jgoldfar/jgoldfarHugoTheme/blob/master/LICENSE.md"
+description = "Theme for jgoldfar's homepage, created to match the existing style."
+homepage = "http://example.com/"
+tags = []
+features = []
+min_version = "0.38"
+
+[author]
+  name = "Jonathan Goldfarb"
+  homepage = "https://jgoldfar.github.io"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
