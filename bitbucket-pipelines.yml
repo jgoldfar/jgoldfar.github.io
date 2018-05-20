@@ -5,5 +5,5 @@ pipelines:
   default:
     - step:
         script:
-#          - apt-get update && apt-get install -y chktex pgf curl
+          - apt-get update && apt-get install -y make
           - make pull-deps gen-git
