@@ -71,3 +71,4 @@ clean:
 	$(RM) -r $(InstallDirs)
 	$(RM) -r $(CloneDirs)
 	$(RM) -r jgoldfar.github.io
+	$(RM) bin/hugo bin/LICENSE bin/README.md
