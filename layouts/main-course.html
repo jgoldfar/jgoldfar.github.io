@@ -1,4 +1,4 @@
-{% include "preamble.j2" %}
+{{/*{% include "preamble.j2" %}*/}}
 
 <body>
 
@@ -14,11 +14,11 @@
     </tr>
 	<tr><td class="sidebar">&nbsp;</td>
 	<td class="spacer">{% block breadcrumbs -%}
-	<a href="{{content_url('/')}}">Home</a>:{{resource.meta.title}}
+	<a href="{{/*content_url('/')*/}}">{{/*resource.meta.title*/}}</a>:
 	{%- endblock %}</td>
   </tr>
     <tr>
-     {% include "sidebar-main.j2" %}
+     	{{/*{% include "sidebar-main.j2" %}*/}}
       <td class="mainbody">
       {% block content_body %}
 	  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->

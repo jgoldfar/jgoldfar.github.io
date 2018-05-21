@@ -1,13 +1,12 @@
-{% import "macros.j2" as macros %}
 <td class="sidebar">
     <table width="100%">
     <tbody>
-    {{ macros.render_sidebar_button('Home', content_url('/index.htm')) }}
-    {{ macros.render_sidebar_button('CV', content_url(media_url('/cv.pdf'))) }}
-    {{ macros.render_sidebar_button('Courses', content_url('/course')) }}
-    {{ macros.render_sidebar_button('Research', content_url('/research.htm')) }}
-    {{ macros.render_sidebar_button('Presentations', content_url('/conf.htm')) }}
-    {{ macros.render_sidebar_button('Schedule', content_url('/lab-cal.htm')) }}
+    {{/* macros.render_sidebar_button('Home', content_url('/index.htm')) */}}
+    {{/* macros.render_sidebar_button('CV', content_url(media_url('/cv.pdf'))) */}}
+    {{/* macros.render_sidebar_button('Courses', content_url('/course')) */}}
+    {{/* macros.render_sidebar_button('Research', content_url('/research.htm')) */}}
+    {{/* macros.render_sidebar_button('Presentations', content_url('/conf.htm')) */}}
+    {{/* macros.render_sidebar_button('Schedule', content_url('/lab-cal.htm')) */}}
     </tbody>
     </table>
     <hr width="90%" size=3 color="black" />
@@ -16,7 +15,7 @@
             <td class="inforight">Assistant Professor <br />and Director of MAC<br />Mathematical Sciences Department<br /> Florida Institute of Technology <br />150 W. University Blvd<br />Melbourne, FL 32901</td>
         </tr>
         <tr>
-            <td class="inforight">Office: MAC, Quad 405<br />Hours: See <a href="{{content_url('/lab-cal.htm')}}">here</a></td>
+            <td class="inforight">Office: MAC, Quad 405<br />Hours: See <a href="{{/*content_url('/lab-cal.htm')*/}}">here</a></td>
         </tr>
         <tr>
             <td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.<span class="displaynone">ob</span>fit.edu</a></td>
@@ -39,7 +38,7 @@
     <a href="http://math.reu.fit.edu" target="_blank">FIT Math REU</a>
     </td></tr>
     <tr><td class="navbuttonInvisible">
-    <a href="{{content_url('instruct.htm')}}" target="_blank">Instruct</a>
+    <a href="{{/*content_url('instruct.htm')*/}}" target="_blank">Instruct</a>
     </td></tr>
     </tbody>
     </table>
