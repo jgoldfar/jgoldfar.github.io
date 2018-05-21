@@ -13,7 +13,7 @@ $(HUGO): bin/hugo_0.40.3_Linux-64bit.tar.gz
 endif
 
 ### Dependencies
-pull-deps: reading-group-deps
+pull-deps: reading-group-deps cv-deps
 
 
 ARGDownloadPath=https://bitbucket.org/jgoldfar/algebrareadinggroupnotes/downloads
@@ -27,23 +27,15 @@ reading-group-deps:
 		curl -L "$(ARGDownloadPath)/$(file)" -o "$(ARGCoursePath)/$(file)"; \
 	)
 
-CVCloneDir=deps/CV
-CloneDirs+=$(CVCloneDir)
-CVFSPath=../../../misc/resume
+CVDownloadPath=https://bitbucket.org/jgoldfar/resumepublic/downloads
 CVPath=static/cv
 InstallDirs+=$(CVPath)
-CVFiles=cv.pdf res.pdf
-update-cv:
-	mkdir -p $(CVCloneDir)
-	hg clone $(CVFSPath) $(CVCloneDir) || hg pull --cwd $(CVCloneDir)
-	hg update --cwd $(CVCloneDir)
-	$(MAKE) -C $(CVCloneDir) $(CVFiles)
+CVFiles=cv@default.pdf res@default.pdf
+cv-deps:
 	mkdir -p $(CVPath)
 	$(foreach file, $(CVFiles), \
-		mv $(CVCloneDir)/$(file) "$(CVPath)/$(file)"; \
+		curl -L "$(ARGDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
 	)
-
-$(addprefix $(CVPath),$(CVFiles)): update-cv
 
 HUGOFILE := config.toml
 
