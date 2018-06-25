@@ -1,14 +1,35 @@
 <style>
 
-    html body {
-        font-family: {{ .Site.Params.font }}, sans-serif;
-        background-color: {{ .Site.Params.backgroundColor | default "white" }};
-    }
+ html body {
+     font-family: {{ .Site.Params.font }}, sans-serif;
+     background-color: {{ .Site.Params.backgroundColor | default "white" }};
+ }
 
-    :root {
-        --accent: {{ .Site.Params.accent | default "#2196F3" }};
-        --border-width: {{ if .Site.Params.showBorder | default false }} 5px {{ else }} 0 {{ end }};
-    }
+ :root {
+     --accent: {{ .Site.Params.accent | default "#2196F3" }};
+     --border-width: {{ if .Site.Params.showBorder | default false }} 5px {{ else }} 0 {{ end }};
+ }
+
+ /* Style for page header */
+ header {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+ }
+ header div.name {
+     float: left;
+     width: 25%;
+     text-align: center;
+     font-family:{{ .Site.Params.fontAlternate }}, sans-serif;
+     font-size: 150%;
+     background-color: #EFEFE3;
+ }
+ header div.title {
+     float: right;
+     font-size: 200%;
+     width: 50%;
+ }
 
 </style>
 
@@ -23,3 +44,4 @@
 
 <!-- google fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.fontAlternate }}">
