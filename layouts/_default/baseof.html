@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}" xmlns="http://www.w3.org/1999/xhtml">
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    {{ partial "pageHead.html" . }}
+
+    <body>
+
+        <main aria-role="main">
+            <header class="main-header">
+                <div class="name">
+                     {{ .Site.Params.authorName }}
+                </div>
+                {{ with .Title }}
+                <div class="title">
+                {{.}}
+                </div>
+                {{ end }}
+                {{ with .Params.subtitle }}
+                <spann class="subtitle">{{.}}</span>
+                {{ end }}
+                {{/*{{ block "siteNav" . }}
+                {{ partial "site-nav.html" . }}
+                {{ end }}
+                {{ block "header" . }}{{ end }}
+                */}}
+            </header>
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                            {{ block "sidebar" . }}
+                        {{ partial "sidebar.html" . }}
+                        {{ end }}
+                        </td>
+                            <td class="mainbody">
+                                <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                                {{ block "mainContent" . }}
+                                {{ .Content }}
+                                {{end}}
+                                <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    {{ with .PrevInSection }}
+                    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+                    {{ end }}
+                    {{ with .NextInSection }}
+                    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+                    {{ end }}
+                </div>
+
+                {{ partialCached "footer.html" . }}
+            </div>
+        </main>
+
+
+    </body>
+</html>
