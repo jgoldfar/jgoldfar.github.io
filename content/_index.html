@@ -1,18 +1,16 @@
 ---
-extends: main.j2
-title: Main Page
-description:
+title: ""
+date: 2017-08-07T11:33:47-04:00
+draft: false
 ---
 
-{% import "macros.j2" as macros %}
-{% block content_body %}
-  <div>
+ <div>
     <p align="center">
       <a href="#courses">Courses</a> <!--| <a href="#papers">Papers and Publications</a>--> | <a href="#research">Research Projects/Interests</a> | <a href="#associations">Professional Associations</a>
     </p>
   </div>
   <br />
-  <div style="float: right; margin-left: 20px;"><img src="{{content_url(media_url('img/max.jpg'))}}" style="margin: 10px;" width="100px"/></div>
+  <div style="float: right; margin-left: 20px;"><img src="media/img/max.jpg" style="margin: 10px;" width="100px"/></div>
   <div><h2><a name="courses" id="courses"></a>Teaching</h2>
       {{ macros.process_course_listings([('', 'MTH 1001: Calculus 1')])}}
   <a href="{{content_url('course')}}">Previous Semesters...</a>
@@ -37,5 +35,5 @@ description:
   <ul>
     <li><a href="http://www.ams.org">American Mathematical Society</a></li>
     <li><a href="http://www.siam.org">Society for Industrial and Applied Mathematics</a></li>
-  </ul></div>
-{% endblock %}
+  </ul>
+  </div>
