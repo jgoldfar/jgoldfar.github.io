@@ -26,10 +26,10 @@ metaDataFormat = "yaml"
     url = "/cv/cv.pdf"
 
 [[menu.sidebar]]
-    name = "Courses"
+    name = "Teaching"
     weight = 3
-    identifier = "courses"
-    url = "/course"
+    identifier = "teaching"
+    url = "/teaching"
 
 [[menu.sidebar]]
     name = "Research"
@@ -48,3 +48,9 @@ metaDataFormat = "yaml"
     weight = 1
     identifier = "schedule"
     url = "/schedule"
+
+[[menu.courses]]
+    name = "MTH 1001: Calculus 1"
+    weight = 1
+    identifier = "mth1001"
+    url = "/teaching/mth1001"
