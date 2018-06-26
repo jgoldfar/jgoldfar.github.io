@@ -8,35 +8,52 @@
     <body>
 
         <main aria-role="main">
-            <header class="main-header">
-                <div class="name">
-                     {{ .Site.Params.authorName }}
-                </div>
-                {{ with .Title }}
-                <div class="title">
-                {{.}}
-                </div>
-                {{ end }}
-                {{ with .Params.subtitle }}
-                <spann class="subtitle">{{.}}</span>
-                {{ end }}
-                {{/*{{ block "siteNav" . }}
-                {{ partial "site-nav.html" . }}
-                {{ end }}
-                {{ block "header" . }}{{ end }}
-                */}}
-            </header>
+
             <div class="main-content">
                 <table class="main">
                     <col />
                     <col />
                     <tbody>
+                        <thead>
+                            <tr>
+                                <td>
+                            <div class="name">
+                                {{ .Site.Params.authorName }}
+                            </div>
+                            <!-- TODO: Consider some nice way (logo?) for displaying misc information -->
+                            {{/*
+                            {{ with .Site.Params.authorMisc }}
+                            <div class="name-misc">
+                                {{.}}
+                            </div>
+                            {{ end }}
+                            */}}
+
+                                </td>
+                            {{ with .Title }}
+                                <td>
+                                    <div class="title">
+                                        {{.}}
+                                    </div>
+                                </td>
+                            {{ end }}
+                            {{ with .Params.subtitle }}
+                            <span class="subtitle">{{.}}</span>
+                            {{ end }}
+
+                            </tr>
+                            <!-- TODO: Consider re-adding navigation? -->
+                            {{/*
+                            {{ block "siteNav" . }}
+                            {{ partial "site-nav.html" . }}
+                            {{ end }}
+                            {{ block "header" . }}{{ end }}
+                            */}}
+                        </thead>
                         <tr>
-                            <td>
                             {{ block "sidebar" . }}
-                        {{ partial "sidebar.html" . }}
-                        {{ end }}
-                        </td>
+                            {{ partial "sidebar.html" . }}
+                            {{ end }}
                             <td class="mainbody">
                                 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                                 {{ block "mainContent" . }}
