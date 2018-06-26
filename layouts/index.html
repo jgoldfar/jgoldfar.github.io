@@ -1,3 +1,14 @@
-{{ define "main" }}
+{{ define "mainContent" }}
+<div>
+
 {{ .Content }}
+
+{{- partial "home-page-sections/research.html" . -}}
+
+{{- partial "home-page-sections/teaching.html" . -}}
+
+{{- partial "home-page-sections/professional.html" . -}}
+
+</div>
+
 {{ end }}

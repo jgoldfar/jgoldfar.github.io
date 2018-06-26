@@ -1,5 +1,7 @@
 <head>
-    <title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <title>
+        {{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}
+    </title>
 
     {{ partial "css" . }}
 
@@ -9,9 +11,9 @@
 
     {{ partial "js-mathjax" . }}
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">

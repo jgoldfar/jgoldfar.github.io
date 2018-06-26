@@ -11,37 +11,38 @@
  }
 
  /* Style for page header */
- header {
+ thead {
      width: 800px;
      margin-left: auto;
      margin-right: auto;
      margin-top: 5px;
+     background-color: #EFEFE3;
  }
- header div.name {
+ thead div.name {
      float: left;
-     width: 25%;
+     width: 100%;
      text-align: center;
      font-family:{{ .Site.Params.fontAlternate }}, sans-serif;
      font-size: 150%;
-     background-color: #EFEFE3;
  }
- header div.title {
+ thead div.title {
      float: right;
      font-size: 200%;
-     width: 50%;
+     width: 100%;
+     text-align: center;
  }
 
 </style>
 
 <!-- main -->
-<link rel="stylesheet" href="/media/css/style.css">
+<link rel="stylesheet" href="/media/css/style.css" />
 
 <!-- custom -->
-{{- range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}"> {{ end -}}
+{{- range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}" /> {{ end -}}
 
 <!-- PureCSS -->
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
 
 <!-- google fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.fontAlternate }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.fontAlternate }}" />
