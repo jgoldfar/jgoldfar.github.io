@@ -62,16 +62,24 @@
                                 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
                             </td>
                         </tr>
+                        {{ block "prevAndNext" . }}
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    {{ with .PrevInSection }}
+                                    <a class="previous" href="{{.Permalink}}">&lArr; {{.Title}}</a>
+                                    {{ end }}
+                                    {{ with .NextInSection }}
+                                    <a class="next" href="{{.Permalink}}"> {{.Title}} &rArr;</a>
+                            {{ end }}
+                        </div>
+                            </td>
+                        </tr>
+                        {{ end }}
                     </tbody>
                 </table>
-                <div>
-                    {{ with .PrevInSection }}
-                    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-                    {{ end }}
-                    {{ with .NextInSection }}
-                    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-                    {{ end }}
-                </div>
+
 
                 {{ partialCached "footer.html" . }}
             </div>
