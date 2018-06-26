@@ -1,5 +1,5 @@
 <li>
-  <a href="{{ .URL }}">
-  {{ .Name }}
+  <a href="{{ index . "url" | absURL }}">
+  {{  index . "name" }}
   </a>
 </li>

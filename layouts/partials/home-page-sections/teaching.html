@@ -1,11 +1,3 @@
 <h2><a name="teaching" id="teaching"></a>Teaching</h2>
-<ul>
-{{ range .Site.Menus.courses.ByWeight }}
-<li>
-    <a href="{{ .URL }}">
-        {{ .Name }}
-    </a>
-</li>
-{{ end }}
+{{ partial "currentCourses.html" . }}
 <a href="/teaching">Previous Semesters...</a>
-</ul>

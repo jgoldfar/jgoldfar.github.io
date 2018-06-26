@@ -1,0 +1,9 @@
+<ul>
+    {{ range .Site.Menus.courses.ByWeight }}
+<li>
+    <a href="{{ .URL }}">
+        {{ .Name }}
+    </a>
+</li>
+{{ end }}
+</ul>
