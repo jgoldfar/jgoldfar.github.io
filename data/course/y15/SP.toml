@@ -1,0 +1,23 @@
+[[courses]]
+name = "MTH 0111: Intermediate Algebra (Coordinator)"
+url = "mth0111"
+
+[[courses]]
+name = "MTH 1011: Precalculus A"
+url = "mth1011"
+
+[[courses]]
+name = "MTH 1012: Precalculus B"
+url = "mth1012"
+
+[[courses]]
+name = "MTH 1701: College Algebra (Coordinator)"
+url = "mth1701"
+
+[[courses]]
+name = "MTH 1702: Applied Calculus (Coordinator)"
+url = "mth1702"
+
+[[courses]]
+name = "MTH 3210: Introduction to PDE (TA Coordinator)"
+url = "mth3210"

@@ -1,0 +1,9 @@
+{{ define "mainContent" }}
+
+{{ range $.Site.Data.course.y12.FA.courses }}
+{{ partial "showVars.html" . }}
+{{ end }}
+
+{{ .Content }}
+
+{{ end }}

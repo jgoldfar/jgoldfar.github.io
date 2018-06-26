@@ -1,0 +1,15 @@
+[[courses]]
+name = "MTH 0111: Intermediate Algebra"
+url = "mth0111"
+
+[[courses]]
+name = "MTH 1701: College Algebra"
+url = "mth1701"
+
+[[courses]]
+name = "MTH 1702: Applied Calculus"
+url = "mth1702"
+
+[[courses]]
+name = "MTH 3210: Introduction to PDE (As TA)"
+url = "mth3210"
