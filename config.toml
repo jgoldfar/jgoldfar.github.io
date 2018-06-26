@@ -8,6 +8,7 @@ metaDataFormat = "yaml"
     font = "Raleway" # should match the name on Google Fonts!
     fontAlternate = "Oswald"
     authorName="Jonathan Goldfarb"
+    authorMisc="Applied Mathematician"
     authorOffice="MAC, Quad 405"
     authorPhone="321 674-8157"
     authorEmail="jgoldfar@my.fit.edu"
@@ -22,7 +23,7 @@ metaDataFormat = "yaml"
     name = "CV"
     weight = 2
     identifier = "cv"
-    url = "/media/cv.pdf"
+    url = "/cv/cv.pdf"
 
 [[menu.sidebar]]
     name = "Courses"

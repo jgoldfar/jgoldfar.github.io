@@ -31,11 +31,16 @@ CVDownloadPath=https://bitbucket.org/jgoldfar/resumepublic/downloads
 CVPath=static/cv
 InstallDirs+=$(CVPath)
 CVFiles=cv@default.pdf res@default.pdf
-cv-deps:
+cv-deps-pull:
 	mkdir -p $(CVPath)
 	$(foreach file, $(CVFiles), \
 		curl -L "$(ARGDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
 	)
+
+cv-deps: cv-deps-pull $(addprefix $(CVPath)/,cv.pdf res.pdf)
+
+$(CVPath)/%.pdf: $(CVPath)/%@default.pdf
+	mv $< $@
 
 HUGOFILE := config.toml
 
