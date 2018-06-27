@@ -1,5 +1,4 @@
 <style>
-
  html body {
      font-family: {{ .Site.Params.font }}, sans-serif;
      background-color: {{ .Site.Params.backgroundColor | default "white" }};
@@ -20,6 +19,41 @@
      text-decoration: none;
  }
 
+ /* Style for Blog header */
+  thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+ 
+ /* Style for Blog Post Title */
+ thead td.postTitle {
+      background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ } 
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+ 
  /* Style for page header */
  thead {
      width: 800px;
@@ -41,7 +75,6 @@
      width: 100%;
      text-align: center;
  }
-
 
  /* General Styles */
  body a {color: #000;}
