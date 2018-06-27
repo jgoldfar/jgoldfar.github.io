@@ -8,7 +8,6 @@
     </title>
 
     <style>
-
  html body {
      font-family: Raleway, sans-serif;
      background-color: white;
@@ -30,6 +29,41 @@
  }
 
   
+  thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+ 
+  
+ thead td.postTitle {
+      background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ } 
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+ 
+  
  thead {
      width: 800px;
      margin-left: auto;
@@ -50,7 +84,6 @@
      width: 100%;
      text-align: center;
  }
-
 
   
  body a {color: #000;}
@@ -105,10 +138,13 @@
 
     
 
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
 </script>
 <script type="text/x-mathjax-config">
- MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+ MathJax.Hub.Config(
+	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	}
+ );
 </script>
 
 
@@ -131,15 +167,18 @@
                     <col />
                     <tbody>
                         <thead>
+                        
                             <tr>
                                 <td>
+                                
                             <div class="name">
                                 Jonathan Goldfarb
                             </div>
                             
                             
-
+                            
                                 </td>
+                            
                             
                                 <td>
                                     <div class="title">
@@ -148,7 +187,8 @@
                                 </td>
                             
                             
-
+                            
+                            
                             </tr>
                             
                             
@@ -197,29 +237,33 @@
             
         </tbody>
     </table>
-    <hr width="90%" size=3 color="black" />
-    <table align="center" class="info">
-        <tr>
-            <td class="inforight">
-                Assistant Professor <br />and Director of MAC
-            </td>
-        </tr>
-        <tr>
-            <td class="inforight">
-                Mathematical Sciences Dept.<br /> Florida Institute of Technology
-            </td>
-        </tr>
-        <tr>
-            <td class="inforight">Office: MAC, Quad 405</td>
-        </tr>
-        <tr>
-            <td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
-        </tr>
-        <tr>
-            <td class="inforight">Office Phone: 321 674-8157</td>
-        </tr>
-    </table>
-    <hr width="90%" size=3 color="black" />
+    
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">Office: MAC, Quad 405</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+	<tr>
+		<td class="inforight">Office Phone: 321 674-8157</td>
+	</tr>
+</table>
+    
+    <hr width="90%" size=3 />
+    
     <table class="info">
         <tbody>
             
@@ -234,6 +278,9 @@
             </td></tr>
         </tbody>
     </table>
+    
+    <hr width="90%" size=3 />
+    
 </td>
 
                             
@@ -265,7 +312,6 @@ Please see the <a href="http://canvas.fit.edu" target="_blank">Canvas course web
                         
                     </tbody>
                 </table>
-
 
                 <footer>
 
