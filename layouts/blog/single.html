@@ -1,0 +1,32 @@
+{{ define "aboveHeader" }}
+<tr><td class="blogTitle" colspan="2">
+<div class="blogTitle">
+n+1 Problems, &varepsilon; Progress
+</div>
+<div class="blogSubtitle">
+a mathematical blog
+</div>
+</td>
+</tr>
+{{ end }}
+
+{{ define "titleDisplay" }}
+	<td class="postTitle">
+	{{ with .Title }}
+		<div class="postTitle">
+			{{.}}
+		</div>
+	{{ end }}
+	{{ with .Params.subtitle }}
+		<span class="subtitle">{{.}}</span>
+	{{ end }}
+	</td>
+{{ end }}
+
+{{ define "sidebar" }}
+{{ partial "blog/sidebar.html" . }}
+{{ end }}
+
+{{ define "mainContent" }}
+{{ .Content }}
+{{ end }}
