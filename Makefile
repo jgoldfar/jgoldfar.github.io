@@ -55,8 +55,8 @@ gen-git: $(HUGOFILE) $(HUGO)
 	$(RSYNC) ./public/* ./$(GitRepoName)/
 
 init-git:
-	if [[ ! -d $(GitRepoName) ]] ; then
-	git clone git@github.com:jgoldfar/$(GitRepoName).git
+	if [[ ! -d $(GitRepoName) ]] ; then \
+	git clone git@github.com:jgoldfar/$(GitRepoName).git ;\
 	fi
 
 push-git: gen-git init-git
