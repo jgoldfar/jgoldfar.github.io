@@ -10,29 +10,13 @@
             {{ end }}
         </tbody>
     </table>
-    <hr width="90%" size=3 color="black" />
-    <table align="center" class="info">
-        <tr>
-            <td class="inforight">
-                Assistant Professor <br />and Director of MAC
-            </td>
-        </tr>
-        <tr>
-            <td class="inforight">
-                Mathematical Sciences Dept.<br /> Florida Institute of Technology
-            </td>
-        </tr>
-        <tr>
-            <td class="inforight">Office: {{ .Site.Params.authorOffice }}</td>
-        </tr>
-        <tr>
-            <td class="inforight" colspan="2">E-mail: <a href="mailto:{{ .Site.Params.authorEmail }}">{{ .Site.Params.authorEmail }}</a></td>
-        </tr>
-        <tr>
-            <td class="inforight">Office Phone: {{ .Site.Params.authorPhone }}</td>
-        </tr>
-    </table>
-    <hr width="90%" size=3 color="black" />
+    
+    <hr width="90%" size=3 />
+    
+	{{ partial "sidebar-infobox.html" . }}
+    
+    <hr width="90%" size=3 />
+    
     <table class="info">
         <tbody>
             <!--<th><td>Quick Links</td></th>-->
@@ -47,4 +31,7 @@
             </td></tr>
         </tbody>
     </table>
+    
+    <hr width="90%" size=3 />
+    
 </td>
