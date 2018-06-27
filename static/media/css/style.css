@@ -1,5 +1,4 @@
 /* General Styles */
-body { background-color: #ddd; color: #000000; table-layout: fixed; }
 body a {color: #000;}
 hr {color: #005196;}
 table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
@@ -31,12 +30,10 @@ footer { width: 800px; margin-left: auto; margin-right: auto; text-align: justif
 
 .displaynone {display: none;}
 
+/* Sidebar/infobox style */
 table.info { width: 200px; }
 table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
 table.info h4 { margin: 0px;}
 
+/* Sub-sidebar styles */
 td.inforight { font-size: 11pt; }
-
-table.infolarge { width: 500px; }
-table.infolarge td { padding: 5px 5px 5px 5px; font-size: 12px;}
-table.infolarge h4 { margin: 0px;}
