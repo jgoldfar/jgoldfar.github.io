@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jgoldfar&#39;s home on the web</title>
+    <link>https://jgoldfar.github.io/</link>
+    <description>Recent content on jgoldfar&#39;s home on the web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Aug 2017 11:33:47 -0400</lastBuildDate>
+    
+	<atom:link href="https://jgoldfar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Conference Talks</title>
+      <link>https://jgoldfar.github.io/presentations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/presentations/</guid>
+      <description>Invited   SIAM Conference on Analysis of PDE, December 2014: 10:00-10:25 On the Optimal Control of Free Boundary Problems for the Second Order Parabolic PDEs, joint work with Dr. Ugur Abdulla  Contributed   SIAM SEAS Conference, May 2014: On the Optimal Control of Free Boundary Problems for the Second Order Parabolic PDEs, joint work with Dr. Ugur Abdulla  Posters   SIAM Annual Meeting, Summer 2012: Analysis of Interfaces for Nonlinear Diffusion-Convection Equations, joint work with Dr.</description>
+    </item>
+    
+    <item>
+      <title>MATLAB Short Course, FA13</title>
+      <link>https://jgoldfar.github.io/teaching/matlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/matlab/</guid>
+      <description>MATLAB Seminar on 8/31/2013 Course Files:  DigitsOfPi.m, a routine which calculates the digits of pi to within a given tolerance, and handles input errors. exponential.m, an implementation of the exponential function. funct.m, some exercises with functions in MATLAB matrices.m, the matrices we defined and experimented with work.m, our initial batch of work.  Recommended Links:  Course in which students create GUI applications in MATLAB Here. GUI programming is a bit obtuse in MATLAB compared to e.</description>
+    </item>
+    
+    <item>
+      <title>MTH 0111</title>
+      <link>https://jgoldfar.github.io/teaching/mth0111/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth0111/</guid>
+      <description>MTH 0111: Intermediate Algebra Please see the Canvas course website for all relevant information. </description>
+    </item>
+    
+    <item>
+      <title>MTH 1011</title>
+      <link>https://jgoldfar.github.io/teaching/mth1011/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth1011/</guid>
+      <description>MTH 1011: Precalculus A Please see the Canvas course website for all relevant information. </description>
+    </item>
+    
+    <item>
+      <title>MTH 1012</title>
+      <link>https://jgoldfar.github.io/teaching/mth1012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth1012/</guid>
+      <description>MTH 1012: Precalculus B Please see the Canvas course website for all relevant information. </description>
+    </item>
+    
+    <item>
+      <title>MTH 1603-SP13</title>
+      <link>https://jgoldfar.github.io/teaching/mth1603/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth1603/</guid>
+      <description>MTH 1603: Applied Calculus and Statistics Please see the Canvas course website for all relevant information. </description>
+    </item>
+    
+    <item>
+      <title>MTH 1701</title>
+      <link>https://jgoldfar.github.io/teaching/mth1701/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth1701/</guid>
+      <description>MTH 1701: College Algebra Please see the Canvas course website for all relevant information. </description>
+    </item>
+    
+    <item>
+      <title>MTH 1702</title>
+      <link>https://jgoldfar.github.io/teaching/mth1702/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth1702/</guid>
+      <description>MTH 1702: Applied Calculus Please see the Canvas course website for all relevant information. </description>
+    </item>
+    
+    <item>
+      <title>MTH 2201/2202</title>
+      <link>https://jgoldfar.github.io/teaching/mth2202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth2202/</guid>
+      <description>MTH 2201/2202: Differential Equations with Linear Algebra Please see the Canvas course website for all relevant information. Dr. Bukshtynov is hosting files relevant to introductory numerical linear algebra and programming in MATLAB, Mathematica, and Julia. Please see that course site if you are interested, and feel free to ask any questions on the codes.</description>
+    </item>
+    
+    <item>
+      <title>MTH 3210</title>
+      <link>https://jgoldfar.github.io/teaching/mth3210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth3210/</guid>
+      <description>MTH 3210: Introduction to PDE Please see the Canvas course website for all relevant information. </description>
+    </item>
+    
+    <item>
+      <title>MTH 5401-SU12</title>
+      <link>https://jgoldfar.github.io/teaching/mth5401/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/mth5401/</guid>
+      <description>MTH 5401: Applied Statistical Analysis: Summer 2012  Lab 1 Base File Lab 1 Test File--  </description>
+    </item>
+    
+    <item>
+      <title>SIAM SU13</title>
+      <link>https://jgoldfar.github.io/teaching/siam-su13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/teaching/siam-su13/</guid>
+      <description>FIT SIAM Summer School: 2013 </description>
+    </item>
+    
+    <item>
+      <title>Schedule</title>
+      <link>https://jgoldfar.github.io/schedule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/schedule/</guid>
+      <description>  Day M T W R F     Seminar and
+Teaching 12-2:&amp;nbsp;MTH&amp;nbsp;1001 2-4:&amp;nbsp;Office Hours   12-2:&amp;nbsp;MTH&amp;nbsp;1001 2-4:&amp;nbsp;Office Hours   12-2:&amp;nbsp;MTH&amp;nbsp;1001 2-4:&amp;nbsp;Office Hours   Please feel free to send an email (jgoldfar@my.fit.edu) to ask a question or arrange an appointment.    </description>
+    </item>
+    
+  </channel>
+</rss>
