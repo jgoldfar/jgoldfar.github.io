@@ -8,6 +8,7 @@ metaDataFormat = "yaml"
     font = "Raleway" # should match the name on Google Fonts!
     fontAlternate = "Oswald"
     authorName="Jonathan Goldfarb"
+    authorImage="https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/media/img/max.jpg"
     authorMisc="Applied Mathematician"
     authorOffice="MAC, Quad 405"
     authorPhone="321 674-8157"
