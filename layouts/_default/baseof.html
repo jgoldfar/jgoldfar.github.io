@@ -14,8 +14,10 @@
                     <col />
                     <tbody>
                         <thead>
+                        {{ block "aboveHeader" . }}{{ end }}
                             <tr>
                                 <td>
+                                {{ block "authorNameDisplay" . }}
                             <div class="name">
                                 {{ .Site.Params.authorName }}
                             </div>
@@ -27,8 +29,9 @@
                             </div>
                             {{ end }}
                             */}}
-
+                            {{ end }}
                                 </td>
+                            {{ block "titleDisplay" . }}
                             {{ with .Title }}
                                 <td>
                                     <div class="title">
@@ -39,15 +42,11 @@
                             {{ with .Params.subtitle }}
                             <span class="subtitle">{{.}}</span>
                             {{ end }}
-
-                            </tr>
-                            <!-- TODO: Consider re-adding navigation? -->
-                            {{/*
-                            {{ block "siteNav" . }}
-                            {{ partial "site-nav.html" . }}
                             {{ end }}
+                            
+                            </tr>
+                            {{ block "siteNav" . }}{{ end }}
                             {{ block "header" . }}{{ end }}
-                            */}}
                         </thead>
                         <tr>
                             {{ block "sidebar" . }}
@@ -78,7 +77,6 @@
                         {{ end }}
                     </tbody>
                 </table>
-
 
                 {{ partialCached "footer.html" . }}
             </div>
