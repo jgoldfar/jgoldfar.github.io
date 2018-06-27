@@ -14,6 +14,7 @@ metaDataFormat = "yaml"
     authorPhone="321 674-8157"
     authorEmail="jgoldfar@my.fit.edu"
 
+## sidebar for main page
 [[menu.sidebar]]
     name = "Home"
     weight = 1
@@ -50,6 +51,26 @@ metaDataFormat = "yaml"
     identifier = "schedule"
     url = "/schedule"
 
+## sidebar for Blog
+[[menu.sidebarBlog]]
+    name = "Home"
+    weight = 1
+    identifier = "home"
+    url = "/"
+
+[[menu.sidebarBlog]]
+    name = "About"
+    weight = 2
+    identifier = "about"
+    url = "/blog/about/"
+
+[[menu.sidebarBlog]]
+    name = "CV"
+    weight = 2
+    identifier = "cv"
+    url = "/cv/cv.pdf"
+
+## Course list for homepage
 [[menu.courses]]
     name = "MTH 1001: Calculus 1"
     weight = 1
