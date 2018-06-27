@@ -34,7 +34,7 @@ CVFiles=cv@default.pdf res@default.pdf
 cv-deps-pull:
 	mkdir -p $(CVPath)
 	$(foreach file, $(CVFiles), \
-		curl -L "$(ARGDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
+		curl -L "$(CVDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
 	)
 
 cv-deps: cv-deps-pull $(addprefix $(CVPath)/,cv.pdf res.pdf)
