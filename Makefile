@@ -55,11 +55,14 @@ gen-git: $(HUGOFILE) $(HUGO)
 	echo "moving public/ to $(GitRepoName) subdirectory."
 	$(RSYNC) ./public/* ./$(GitRepoName)/
 
+#TODO: set identity only on CI
 init-git:
 	if [[ ! -d $(GitRepoName) ]] ; then \
 	git clone git@github.com:jgoldfar/$(GitRepoName).git ;\
 	fi
 	$(RM) -r $(GitRepoName)/*
+	git -C ./$(GitRepoName) config user.email "ci@bitbucket.org" || echo "email set failed."
+	git -C ./$(GitRepoName) config user.name "Bitbucket CI" || echo "username set failed."
 
 push-git: init-git gen-git
 	git -C ./$(GitRepoName) add -A .
