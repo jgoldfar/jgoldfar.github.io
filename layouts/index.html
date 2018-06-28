@@ -1,0 +1,16 @@
+{{ define "mainContent" }}
+<div>
+
+    {{ .Content }}
+
+    <div style="float: right; margin-left: 20px;"><img src="{{ .Site.Params.authorImage | relURL }}" style="margin: 10px;" width="100px"/></div>
+
+{{- partialCached "home-page-sections/research.html" . -}}
+
+{{- partialCached "home-page-sections/teaching.html" . -}}
+
+{{- partialCached "home-page-sections/professional.html" . -}}
+
+</div>
+
+{{ end }}

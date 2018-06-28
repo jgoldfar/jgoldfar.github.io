@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}" xmlns="http://www.w3.org/1999/xhtml">
+
+    {{ partial "pageHead.html" . }}
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        {{ block "aboveHeader" . }}{{ end }}
+                            <tr>
+                                <td>
+                                {{ block "authorNameDisplay" . }}
+                            <div class="name">
+                                {{ .Site.Params.authorName }}
+                            </div>
+                            <!-- TODO: Consider some nice way (logo?) for displaying misc information -->
+                            {{/*
+                            {{ with .Site.Params.authorMisc }}
+                            <div class="name-misc">
+                                {{.}}
+                            </div>
+                            {{ end }}
+                            */}}
+                            {{ end }}
+                                </td>
+                            {{ block "titleDisplay" . }}
+                            {{ with .Title }}
+                                <td>
+                                    <div class="title">
+                                        {{.}}
+                                    </div>
+                                </td>
+                            {{ end }}
+                            {{ with .Params.subtitle }}
+                            <span class="subtitle">{{.}}</span>
+                            {{ end }}
+                            {{ end }}
+                            
+                            </tr>
+                            {{ block "siteNav" . }}{{ end }}
+                            {{ block "header" . }}{{ end }}
+                        </thead>
+                        <tr>
+                            {{ block "sidebar" . }}
+                            {{ partial "sidebar.html" . }}
+                            {{ end }}
+                            <td class="mainbody">
+                                <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                                {{ block "mainContent" . }}
+                                {{ .Content }}
+                                {{end}}
+                                <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                            </td>
+                        </tr>
+                        {{ block "prevAndNext" . }}
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    {{ with .PrevInSection }}
+                                    <a class="previous" href="{{.Permalink}}">&lArr; {{.Title}}</a>
+                                    {{ end }}
+                                    {{ with .NextInSection }}
+                                    <a class="next" href="{{.Permalink}}"> {{.Title}} &rArr;</a>
+                            {{ end }}
+                        </div>
+                            </td>
+                        </tr>
+                        {{ end }}
+                    </tbody>
+                </table>
+
+                {{ partialCached "footer.html" . }}
+            </div>
+        </main>
+
+
+    </body>
+</html>

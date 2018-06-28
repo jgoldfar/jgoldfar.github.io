@@ -1,7 +1,9 @@
 syntax: glob
 *.DS_Store
-deploy/*
-.hyde_deps
 jgoldfar.github.io/*
-content/course/AlgebraReadingGroup/index.htm
 *.pdf
+public
+static/AlgebraReadingGroup/index.htm
+bin/hugo
+bin/LICENSE
+bin/README.md

@@ -1,0 +1,11 @@
+<article class="blogPostListing">
+<header>
+      <h3><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</a> {{ with .Params.subtitle }}: <span class="blogSubtitle">{{ . }}</span> {{ end }}</h3>
+</header>
+
+{{ .Summary }}
+
+<footer>
+        <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+</footer>
+</article>

@@ -1,0 +1,10 @@
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: ubuntu:xenial
+
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get update && apt-get install -y make curl mercurial rsync git
+          - make pull-deps gen-git
+          - ls -R

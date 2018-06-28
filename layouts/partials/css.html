@@ -1,0 +1,134 @@
+<style>
+ html body {
+     font-family: {{ .Site.Params.font }}, sans-serif;
+     background-color: {{ .Site.Params.backgroundColor | default "white" }};
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: {{ .Site.Params.accent | default "#2196F3" }};
+     --border-width: {{ if .Site.Params.showBorder | default false }} 5px {{ else }} 0 {{ end }};
+ }
+
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+ /* Style for Blog header */
+  thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+ 
+ /* Style for Blog Post Title */
+ thead td.postTitle {
+      background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ } 
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+ 
+ /* Style for page header */
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:{{ .Site.Params.fontAlternate }}, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+ /* General Styles */
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+ /* Style for main table */
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+ /* Style for spacer and breadcrumbs */
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000; /*text-transform: uppercase;*/}
+
+ /* Style for sidebar */
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+ /* Style for body content */
+ table.main td.mainbody {width: 80%; background-color: #ffffff; vertical-align: top; padding-left: 2%; padding-right: 2%; padding-bottom: 3%; padding-top: 2%; }
+
+ /* Style for page footer */
+ footer {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    font-size: x-small;
+  }
+
+ /* Style for navigation buttons (in sidebar) */
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+ /* Sidebar/infobox style */
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px;}
+
+ /* Sub-sidebar styles */
+ td.inforight { font-size: 11pt; }
+</style>
+
+<!-- custom -->
+{{- range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}" /> {{ end -}}
+
+<!-- PureCSS -->
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+<!-- google fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.fontAlternate }}" />

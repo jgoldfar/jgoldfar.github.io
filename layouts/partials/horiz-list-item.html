@@ -1,0 +1,6 @@
+<li id="item">
+    {{- $.Scratch.Set "link" .RelPermalink -}}
+    {{- .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" -}}
+    {{ with .Description }} {{- $.Scratch.Set "subtitle" . -}} {{ end }}
+    <a href="{{ .Scratch.Get "link" }}">{{ .Param "semester" }}</a>
+</li>
