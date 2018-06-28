@@ -6,5 +6,4 @@ pipelines:
     - step:
         script:
           - apt-get update && apt-get install -y make curl mercurial rsync git
-          - make pull-deps gen-git
-          - ls -R
+          - make pull-deps push-git
