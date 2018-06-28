@@ -62,10 +62,10 @@ init-git:
 	git clone git@github.com:jgoldfar/$(GitRepoName).git ;\
 	fi
 	$(RM) -r $(GitRepoName)/*
-	ifdef CI
+ifdef CI
 	git -C ./$(GitRepoName) config user.email "ci@bitbucket.org" || echo "email set failed."
 	git -C ./$(GitRepoName) config user.name "Bitbucket CI" || echo "username set failed."
-	endif
+endif
 
 push-git: init-git gen-git
 	git -C ./$(GitRepoName) add -A .
