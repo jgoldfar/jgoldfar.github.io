@@ -58,6 +58,7 @@ init-git:
 	if [[ ! -d $(GitRepoName) ]] ; then \
 	git clone git@github.com:jgoldfar/$(GitRepoName).git ;\
 	fi
+	$(RM) -r $(GitRepoName)/*
 
 push-git: init-git gen-git
 	git -C ./$(GitRepoName) add -A .
