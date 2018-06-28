@@ -2,7 +2,6 @@ SHELL=/bin/bash
 RSYNC=rsync -a
 UNAME=$(shell uname -s)
 HUGO?=bin/hugo
-TRAVIS?=false
 
 ifeq ($(UNAME),Darwin)
 $(HUGO): bin/hugo_0.40.3_macOS-64bit.tar.gz
@@ -57,8 +56,7 @@ gen-git: $(HUGOFILE) $(HUGO)
 	$(RSYNC) ./public/* ./$(GitRepoName)/
 
 #TODO: set identity only on CI
-
-$(info $(TRAVIS))
+$(info $(CI))
 
 init-git:
 	if [[ ! -d $(GitRepoName) ]] ; then \
