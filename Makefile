@@ -55,15 +55,14 @@ gen-git: $(HUGOFILE) $(HUGO)
 	echo "moving public/ to $(GitRepoName) subdirectory."
 	$(RSYNC) ./public/* ./$(GitRepoName)/
 
-#TODO: set identity only on CI
-$(info $(CI))
-
+# Note: CI environment variable is (or should be) only set on CI services.
+# This is when config should be set.
 init-git:
 	if [[ ! -d $(GitRepoName) ]] ; then \
 	git clone git@github.com:jgoldfar/$(GitRepoName).git ;\
 	fi
 	$(RM) -r $(GitRepoName)/*
-	ifeq ($(CI),true)
+	ifdef CI
 	git -C ./$(GitRepoName) config user.email "ci@bitbucket.org" || echo "email set failed."
 	git -C ./$(GitRepoName) config user.name "Bitbucket CI" || echo "username set failed."
 	endif
