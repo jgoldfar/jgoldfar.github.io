@@ -56,6 +56,9 @@ gen-git: $(HUGOFILE) $(HUGO)
 	$(RSYNC) ./public/* ./$(GitRepoName)/
 
 #TODO: set identity only on CI
+
+$(info $(TRAVIS))
+
 init-git:
 	if [[ ! -d $(GitRepoName) ]] ; then \
 	git clone git@github.com:jgoldfar/$(GitRepoName).git ;\
