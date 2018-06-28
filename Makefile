@@ -1,3 +1,4 @@
+SHELL=/bin/bash
 RSYNC=rsync -a
 UNAME=$(shell uname -s)
 HUGO?=bin/hugo
