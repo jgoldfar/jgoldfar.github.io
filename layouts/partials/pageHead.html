@@ -3,13 +3,13 @@
         {{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}
     </title>
 
-    {{ partial "css" . }}
+    {{ partialCached "css" . }}
 
     {{ .Hugo.Generator }}
 
-    {{ partial "js" . }}
+    {{ partialCached "js" . }}
 
-    {{ partial "js-mathjax" . }}
+    {{ partialCached "js-mathjax" . }}
 
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 
