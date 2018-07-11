@@ -17,19 +17,21 @@
                         {{ block "aboveHeader" . }}{{ end }}
                             <tr>
                                 <td>
-                                {{ block "authorNameDisplay" . }}
-                            <div class="name">
-                                {{ .Site.Params.authorName }}
-                            </div>
-                            <!-- TODO: Consider some nice way (logo?) for displaying misc information -->
-                            {{/*
-                            {{ with .Site.Params.authorMisc }}
-                            <div class="name-misc">
-                                {{.}}
-                            </div>
-                            {{ end }}
-                            */}}
-                            {{ end }}
+                                    {{ block "authorNameDisplay" . }}
+                                    <div class="name">
+                                        <a href="{{ .Site.BaseURL }}">{{ .Site.Params.authorName }}</a>
+                                    </div>
+                                    {{ end }}
+                                    <!-- TODO: Consider some nice way (logo?) for displaying misc information -->
+                                    {{ block "authorMiscDisplay" . }}
+                                    {{ with .Site.Params.authorMisc }}
+                                    <!--
+                                    <div class="name-misc">
+                                        {{.}}
+                                    </div>
+                                    -->
+                                    {{ end }}
+                                    {{ end }}
                                 </td>
                             {{ block "titleDisplay" . }}
                             {{ with .Title }}
@@ -43,7 +45,7 @@
                             <span class="subtitle">{{.}}</span>
                             {{ end }}
                             {{ end }}
-                            
+
                             </tr>
                             {{ block "siteNav" . }}{{ end }}
                             {{ block "header" . }}{{ end }}
