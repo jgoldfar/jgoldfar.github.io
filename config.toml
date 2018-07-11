@@ -3,6 +3,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "jgoldfar's home on the web"
 metaDataFormat = "yaml"
+enableGitInfo = true
 
 [params]
     font = "Raleway" # should match the name on Google Fonts!
@@ -54,9 +55,16 @@ metaDataFormat = "yaml"
 ## sidebar for Blog
 [[menu.sidebarBlog]]
     name = "Home"
-    weight = 1
+    weight = 4
     identifier = "home"
     url = "/"
+
+[[menu.sidebarBlog]]
+    name = "Blog Home"
+    weight = 1
+    identifier = "blogIndex"
+    url = "/blog"
+
 
 [[menu.sidebarBlog]]
     name = "About"
