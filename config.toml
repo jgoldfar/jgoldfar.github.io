@@ -65,7 +65,6 @@ enableGitInfo = false # TODO: make this a git repo, enable
     identifier = "blogIndex"
     url = "/blog"
 
-
 [[menu.sidebarBlog]]
     name = "About"
     weight = 2
@@ -77,6 +76,12 @@ enableGitInfo = false # TODO: make this a git repo, enable
     weight = 2
     identifier = "cv"
     url = "/cv/cv.pdf"
+
+[[menu.sidebarBlog]]
+    name = "Software"
+    weight = 2
+    identifier = "software"
+    url = "/oss-contributions/"
 
 ## Course list for homepage
 [[menu.courses]]
