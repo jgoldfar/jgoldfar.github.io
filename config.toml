@@ -3,7 +3,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "jgoldfar's home on the web"
 metaDataFormat = "yaml"
-enableGitInfo = true
+enableGitInfo = false # TODO: make this a git repo, enable
 
 [params]
     font = "Raleway" # should match the name on Google Fonts!
