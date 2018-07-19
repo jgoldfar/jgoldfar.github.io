@@ -64,6 +64,46 @@
      text-align: justify;
      font-size: small;
  }
+ /* Style for OSS pages/cards */
+ /* TODO: Use material card here instead of all of this... */
+ div.ossContainer {
+     width: 45%;
+     background-color: #f2f2f2;
+     padding-top: 5px;
+     padding-left: 5px;
+     border-radius: 2px;
+
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), /*Umbra*/
+     0px 2px 2px 0px rgba(0,0,0,0.14), /*Penumbra */
+     0px 1px 5px 0px rgba(0,0,0,0.12) /*Ambient*/;
+ }
+
+ article.ossListing header {
+     font-family:{{ .Site.Params.fontAlternate }}, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
 
  /* Style for page header */
  thead {

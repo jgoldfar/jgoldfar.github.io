@@ -1,0 +1,26 @@
+{{ define "aboveHeader" }}
+<tr><td class="ossTitle" colspan="2">
+</td>
+</tr>
+{{ end }}
+
+{{ define "titleDisplay" }}
+<td class="postTitle">
+    {{ with .Title }}
+    <div class="postTitle">
+        {{.}}
+    </div>
+    {{ end }}
+    {{ with .Params.subtitle }}
+    <span class="subtitle">{{.}}</span>
+    {{ end }}
+</td>
+{{ end }}
+
+{{ define "sidebar" }}
+{{ partialCached "blog/sidebar.html" . }}
+{{ end }}
+
+{{ define "mainContent" }}
+{{ .Content }}
+{{ end }}
