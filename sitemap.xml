@@ -25,6 +25,38 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/graphcircuits.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/hypre.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/libical.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/librsync.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/libui.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/xbraid.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/igraph.jl/</loc>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/teaching/matlab/</loc>
   </url>
   
@@ -69,6 +101,10 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/metarowechelon.jl/</loc>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/oss-contributions/</loc>
   </url>
   
@@ -85,12 +121,20 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/silo.jl/</loc>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jgoldfar.github.io/teaching/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/termbox.jl/</loc>
   </url>
   
 </urlset>

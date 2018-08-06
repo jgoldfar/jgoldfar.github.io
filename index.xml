@@ -30,6 +30,78 @@
     </item>
     
     <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</guid>
+      <description>https://github.com/jgoldfar/BonminBuilder</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/graphcircuits.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/graphcircuits.jl/</guid>
+      <description>https://github.com/jgoldfar/GraphCircuits.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/hypre.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/hypre.jl/</guid>
+      <description>https://github.com/jgoldfar/Hypre.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/libical.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/libical.jl/</guid>
+      <description>https://github.com/jgoldfar/Libical.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/librsync.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/librsync.jl/</guid>
+      <description>https://github.com/jgoldfar/Librsync.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/libui.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/libui.jl/</guid>
+      <description>https://github.com/jgoldfar/Libui.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/xbraid.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/xbraid.jl/</guid>
+      <description>https://github.com/jgoldfar/XBraid.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/igraph.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/igraph.jl/</guid>
+      <description>https://github.com/jgoldfar/igraph.jl</description>
+    </item>
+    
+    <item>
       <title>MATLAB Short Course</title>
       <link>https://jgoldfar.github.io/teaching/matlab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -129,6 +201,15 @@
     </item>
     
     <item>
+      <title>MetaRowEchelon.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/metarowechelon.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/metarowechelon.jl/</guid>
+      <description>https://github.com/jgoldfar/MetaRowEchelon.jl</description>
+    </item>
+    
+    <item>
       <title>Schedule</title>
       <link>https://jgoldfar.github.io/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -145,6 +226,24 @@ Teaching 12-2:&amp;nbsp;MTH&amp;nbsp;1001 2-4:&amp;nbsp;Office Hours   12-2:&amp
       
       <guid>https://jgoldfar.github.io/oss-contributions/sps/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Silo.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/silo.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/silo.jl/</guid>
+      <description>https://github.com/jgoldfar/Silo.jl</description>
+    </item>
+    
+    <item>
+      <title>Termbox.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/termbox.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/termbox.jl/</guid>
+      <description>https://github.com/jgoldfar/Termbox.jl</description>
     </item>
     
   </channel>
