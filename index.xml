@@ -62,7 +62,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/building-octave-osx/</guid>
-      <description>Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated in https://jgoldfar.github.io/blog/why-oss/, but in particular, let me just say that I&amp;rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!</description>
+      <description>Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&amp;rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!</description>
     </item>
     
     <item>
