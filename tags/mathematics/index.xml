@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics on jgoldfar&#39;s home on the web</title>
+    <link>https://jgoldfar.github.io/tags/mathematics/</link>
+    <description>Recent content in Mathematics on jgoldfar&#39;s home on the web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jgoldfar.github.io/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Retrospective Look on my Dissertation Topic</title>
+      <link>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</guid>
+      <description>There&amp;rsquo;s a reason why a dissertation is considered an achievement in one&amp;rsquo;s life: producing such a document is a crazy thing to do, and it shows the kind of dedication you can put into a project. I certainly believe the topic I spent those years of my life studying was worthwhile, and I put a high (moral?) value on the advancement of human understanding of the world through the scientific process.</description>
+    </item>
+    
+  </channel>
+</rss>

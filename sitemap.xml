@@ -8,11 +8,36 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/feigenbaumutil.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/garminfit.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/language-maxima/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</loc>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/blog/about/</loc>
   </url>
   
   <url>
     <loc>https://jgoldfar.github.io/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/build-the-world/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/building-octave-osx/</loc>
   </url>
   
   <url>
@@ -25,7 +50,20 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/tags/isp/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/cmstest.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/couennebuilder/</loc>
   </url>
   
   <url>
@@ -46,6 +84,10 @@
   
   <url>
     <loc>https://jgoldfar.github.io/oss-contributions/libui.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/oss-contributions/silobuilder/</loc>
   </url>
   
   <url>
@@ -101,11 +143,26 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/tags/mathematics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/oss-contributions/metarowechelon.jl/</loc>
   </url>
   
   <url>
     <loc>https://jgoldfar.github.io/oss-contributions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/oss/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/pde/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -135,6 +192,10 @@
   
   <url>
     <loc>https://jgoldfar.github.io/oss-contributions/termbox.jl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/why-oss/</loc>
   </url>
   
 </urlset>

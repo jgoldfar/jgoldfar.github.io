@@ -12,12 +12,57 @@
     
     
     <item>
+      <title></title>
+      <link>https://jgoldfar.github.io/oss-contributions/feigenbaumutil.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/feigenbaumutil.jl/</guid>
+      <description>https://github.com/wbhart/flint2</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jgoldfar.github.io/oss-contributions/garminfit.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/garminfit.jl/</guid>
+      <description>https://github.com/jgoldfar/GarminFIT.jl</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jgoldfar.github.io/oss-contributions/language-maxima/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/language-maxima/</guid>
+      <description>https://github.com/jgoldfar/language-maxima</description>
+    </item>
+    
+    <item>
+      <title>A Retrospective Look on my Dissertation Topic</title>
+      <link>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</guid>
+      <description>There&amp;rsquo;s a reason why a dissertation is considered an achievement in one&amp;rsquo;s life: producing such a document is a crazy thing to do, and it shows the kind of dedication you can put into a project. I certainly believe the topic I spent those years of my life studying was worthwhile, and I put a high (moral?) value on the advancement of human understanding of the world through the scientific process.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://jgoldfar.github.io/blog/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/about/</guid>
       <description>I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you&#39;d like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.</description>
+    </item>
+    
+    <item>
+      <title>Building GNU Octave From Source on OSX</title>
+      <link>https://jgoldfar.github.io/blog/building-octave-osx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/building-octave-osx/</guid>
+      <description>Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated in https://jgoldfar.github.io/blog/why-oss/, but in particular, let me just say that I&amp;rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!</description>
     </item>
     
     <item>
@@ -35,6 +80,24 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</guid>
+      <description>https://github.com/jgoldfar/BonminBuilder</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/cmstest.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/cmstest.jl/</guid>
+      <description>https://github.com/jgoldfar/XBraid.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/couennebuilder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/couennebuilder/</guid>
       <description>https://github.com/jgoldfar/BonminBuilder</description>
     </item>
     
@@ -81,6 +144,15 @@
       
       <guid>https://jgoldfar.github.io/oss-contributions/libui.jl/</guid>
       <description>https://github.com/jgoldfar/Libui.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/silobuilder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/silobuilder/</guid>
+      <description>https://github.com/jgoldfar/BonminBuilder</description>
     </item>
     
     <item>
@@ -244,6 +316,15 @@ Teaching 12-2:&amp;nbsp;MTH&amp;nbsp;1001 2-4:&amp;nbsp;Office Hours   12-2:&amp
       
       <guid>https://jgoldfar.github.io/oss-contributions/termbox.jl/</guid>
       <description>https://github.com/jgoldfar/Termbox.jl</description>
+    </item>
+    
+    <item>
+      <title>Why Open Source Software?</title>
+      <link>https://jgoldfar.github.io/blog/why-oss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/why-oss/</guid>
+      <description>These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&amp;rsquo;s not always the path of least resistance. I&amp;rsquo;m not here to evangelize for open source, and I&amp;rsquo;m not a purist: closed-source and proprietary work has its place in our society. However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.</description>
     </item>
     
   </channel>

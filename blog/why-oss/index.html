@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <title>
+        Why Open Source Software? | jgoldfar&#39;s home on the web
+    </title>
+
+    <style>
+ html body {
+     font-family: Raleway, sans-serif;
+     background-color: white;
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: #2196F3;
+     --border-width:  0 ;
+ }
+
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+  
+ thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+
+  
+ thead td.postTitle {
+     background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ }
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+  
+ article.blogPostListing header {
+ }
+ article.blogPostListing div {
+ }
+
+ article.blogPostListing footer {
+     margin-top: 2px;
+     text-align: justify;
+     font-size: small;
+ }
+  
+  
+ div.ossContainer {
+     width: 45%;
+     background-color: #f2f2f2;
+     padding-top: 5px;
+     padding-left: 5px;
+     border-radius: 2px;
+
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),  
+     0px 2px 2px 0px rgba(0,0,0,0.14),  
+     0px 1px 5px 0px rgba(0,0,0,0.12)  ;
+ }
+
+ article.ossListing header {
+     font-family:Oswald, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
+
+  
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:Oswald, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+  
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+  
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+  
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000;  }
+
+  
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+  
+ table.main td.mainbody {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  vertical-align: top;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+  
+ footer {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+     font-size: x-small;
+ }
+
+  
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+  
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px;}
+
+  
+ td.inforight { font-size: 11pt; }
+</style>
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+
+    <meta name="generator" content="Hugo 0.40.3" />
+
+    
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config(
+	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	}
+ );
+</script>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <div class="name">
+                                        <a href="https://jgoldfar.github.io">Jonathan Goldfarb</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Why Open Source Software?
+    </div>
+    
+    
+</td>
+
+
+                            </tr>
+                            
+                            
+                        </thead>
+                        <tr>
+                            
+<td class="sidebar">
+    <table width="100%">
+        <tbody>
+            
+            <tr><td class="navbutton">
+                <a href="/blog">
+                    Blog Home
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/blog/about/">
+                    About
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/cv/cv.pdf">
+                    CV
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/oss-contributions/">
+                    Software
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/">
+                    Home
+                </a>
+            </td></tr>
+            
+        </tbody>
+    </table>
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+</table>
+	
+	<hr width="90%" size=3 />
+	
+</td>
+
+
+                            <td class="mainbody">
+                                
+                                
+<p>These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&rsquo;s not always the path of least resistance.
+I&rsquo;m not here to evangelize for open source, and I&rsquo;m not a purist: closed-source and proprietary work has its place in our society.
+However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.
+I&rsquo;m not sure that anyone needs to be convinced, but nevertheless I&rsquo;m going to record a few arguments I&rsquo;ve made for pursuing and contributing to open-source software, particularly for scientific work.
+I&rsquo;ll do my best not to pick on particular software tools!</p>
+
+<ul>
+<li><p>Your output is only as accurate as the underlying tools, and without the <em>ability</em> to check those tools and libraries, you can never be sure if your results are as true as possible.
+Of course, this reasoning extends all the way down the the &ldquo;bare metal&rdquo;, <a href="https://en.wikipedia.org/wiki/Pentium_FDIV_bug">with potentially troubling consequences</a>, but when faced with a potential bug (or new result!) it seems reasonable to check at least a layer or two in your computational stack for potential flaws.</p></li>
+
+<li><p>Related to the reason above, the more educated eyes pass over a portion of code, the more likely it is to be corrected if wrong.
+No matter the expertise available at large firms, there&rsquo;s simply no way to duplicate the &ldquo;web-scale&rdquo; possibility of open-source development.
+This can result in both increased correctness and performance; one example comes to mind: in one of my research areas, I solve (many) PDEs numerically as part of an optimization process.
+With enough time, just about anyone could develop the breadth and depth of knowledge necessary to implement custom optimization routines, time-stepping algorithms, linear solvers for sparse matrices, floating point arithmetic, and so on; sure, I&rsquo;ve written more or less sophisticated PDE solvers and linear algebra routines, but I&rsquo;m not an expert: I trust experts to work on those problems, enabling me to experiment with far better codes than I could produce in a reasonable amount of time.</p></li>
+
+<li><p>With a closed-source offering, the reproducibility of your results is contingent on the continuing existence of your license as well as firm offering the software.
+If the version of a closed-source tool used to produce your work is unsupported, too bad!
+Unmaintained FOSS exists, no doubt, but it is nearly trivial to <em>begin</em> maintaining an abandoned piece of available software (getting it to actually build correctly is another thing&hellip;)</p></li>
+
+<li><p>FOSS democratizes the scientific process: there is no reason to expect that the ability to spend money on software is correlated with ability or intelligence.
+Producing work that <em>requires</em> non-free software to reproduce is exclusionary.
+Much of the scientific work in USA is funded, at least in part, by the public, and the results are made available to the public.
+However, if those results are based on an opaque analysis, I&rsquo;m not sure one can say that taxpayers have received all they paid for.
+Within or without the USA, it seems reasonable to assert that the most lasting effect humanity will have on the universe is the dissemination of information; the production of order out of chaos, in some way.
+What a shame it would be for all of that information to be indecipherable (perhaps, again, appearing random) because we chose the path of least resistance.</p></li>
+</ul>
+
+<p>Though my code may not be particularly good, and not all of it can (or will) be open-sourced, take a look <a href="/oss-contributions/">here</a> for some of what I&rsquo;ve done.</p>
+
+
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    
+                                    
+                                    <a class="next" href="https://jgoldfar.github.io/blog/building-octave-osx/"> Building GNU Octave From Source on OSX &rArr;</a>
+                            
+                        </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <footer>
+
+  <p class="copyright text-muted">Copyright 2018, All rights reserved.</p>
+
+</footer>
+
+            </div>
+        </main>
+
+
+    </body>
+</html>

@@ -11,11 +11,56 @@
     
     
     <item>
+      <title></title>
+      <link>https://jgoldfar.github.io/oss-contributions/feigenbaumutil.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/feigenbaumutil.jl/</guid>
+      <description>https://github.com/wbhart/flint2</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jgoldfar.github.io/oss-contributions/garminfit.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/garminfit.jl/</guid>
+      <description>https://github.com/jgoldfar/GarminFIT.jl</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jgoldfar.github.io/oss-contributions/language-maxima/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/language-maxima/</guid>
+      <description>https://github.com/jgoldfar/language-maxima</description>
+    </item>
+    
+    <item>
       <title>Libui.jl</title>
       <link>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</guid>
+      <description>https://github.com/jgoldfar/BonminBuilder</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/cmstest.jl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/cmstest.jl/</guid>
+      <description>https://github.com/jgoldfar/XBraid.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/couennebuilder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/couennebuilder/</guid>
       <description>https://github.com/jgoldfar/BonminBuilder</description>
     </item>
     
@@ -62,6 +107,15 @@
       
       <guid>https://jgoldfar.github.io/oss-contributions/libui.jl/</guid>
       <description>https://github.com/jgoldfar/Libui.jl</description>
+    </item>
+    
+    <item>
+      <title>Libui.jl</title>
+      <link>https://jgoldfar.github.io/oss-contributions/silobuilder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/oss-contributions/silobuilder/</guid>
+      <description>https://github.com/jgoldfar/BonminBuilder</description>
     </item>
     
     <item>

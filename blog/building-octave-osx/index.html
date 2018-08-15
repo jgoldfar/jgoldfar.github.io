@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <title>
+        Building GNU Octave From Source on OSX | jgoldfar&#39;s home on the web
+    </title>
+
+    <style>
+ html body {
+     font-family: Raleway, sans-serif;
+     background-color: white;
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: #2196F3;
+     --border-width:  0 ;
+ }
+
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+  
+ thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+
+  
+ thead td.postTitle {
+     background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ }
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+  
+ article.blogPostListing header {
+ }
+ article.blogPostListing div {
+ }
+
+ article.blogPostListing footer {
+     margin-top: 2px;
+     text-align: justify;
+     font-size: small;
+ }
+  
+  
+ div.ossContainer {
+     width: 45%;
+     background-color: #f2f2f2;
+     padding-top: 5px;
+     padding-left: 5px;
+     border-radius: 2px;
+
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),  
+     0px 2px 2px 0px rgba(0,0,0,0.14),  
+     0px 1px 5px 0px rgba(0,0,0,0.12)  ;
+ }
+
+ article.ossListing header {
+     font-family:Oswald, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
+
+  
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:Oswald, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+  
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+  
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+  
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000;  }
+
+  
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+  
+ table.main td.mainbody {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  vertical-align: top;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+  
+ footer {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+     font-size: x-small;
+ }
+
+  
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+  
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px;}
+
+  
+ td.inforight { font-size: 11pt; }
+</style>
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+
+    <meta name="generator" content="Hugo 0.40.3" />
+
+    
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config(
+	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	}
+ );
+</script>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <div class="name">
+                                        <a href="https://jgoldfar.github.io">Jonathan Goldfarb</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Building GNU Octave From Source on OSX
+    </div>
+    
+    
+</td>
+
+
+                            </tr>
+                            
+                            
+                        </thead>
+                        <tr>
+                            
+<td class="sidebar">
+    <table width="100%">
+        <tbody>
+            
+            <tr><td class="navbutton">
+                <a href="/blog">
+                    Blog Home
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/blog/about/">
+                    About
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/cv/cv.pdf">
+                    CV
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/oss-contributions/">
+                    Software
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/">
+                    Home
+                </a>
+            </td></tr>
+            
+        </tbody>
+    </table>
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+</table>
+	
+	<hr width="90%" size=3 />
+	
+</td>
+
+
+                            <td class="mainbody">
+                                
+                                
+<p>Below are the steps I followed to build <a href="https://www.octave.org">GNU Octave</a> from source on my Mac, together with some binary dependencies.
+My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated in https://jgoldfar.github.io/blog/why-oss/, but in particular, let me just say that I&rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
+That instance actually motivated me to switch to <a href="https://www.julialang.org">Julia</a>, since even at version 0.3, it was a promising and inviting language, but Octave is nothing if not a practical choice: some codes will <em>never</em> be ported to anyone&rsquo;s language of choice, and allowing legacy code (even of debatable utility) to die unnecessarily seems&hellip; cruel?
+MATLAB, in particular, seems naturally opposed to &ldquo;modern&rdquo; continuous integration tools like Travis, so even if Octave exists only to enable automated assurance that code continues to run, that seems valuable.
+Moreover, if it can be improved in any way (certainly a Sisyphean task), any step towards parity is a step away from absolute dependence on a closed-source implementation.</p>
+
+<p>Building a package from source is always interesting, but building the package on OSX without too much complaining from the build system was another challenge; I chose to build some of the GNU packages rather than mess with my global (Homebrew) configuration.
+I&rsquo;ll document the exact versions that worked on my setup below.
+Anyways, enough blabbing, here&rsquo;s the steps, in their current form:</p>
+
+<ul>
+<li>Clone the Octave repository and update to the <code>release-4.4.1</code> tag:</li>
+</ul>
+
+<pre><code>hg clone https://www.octave.org/hg/octave
+hg update -r 25771 # release-4.4.1
+</code></pre>
+
+<ul>
+<li>Use Homebrew to download a few dependencies:</li>
+</ul>
+
+<pre><code>brew install autoconf automake gnuplot gcc hdf5 qt
+</code></pre>
+
+<ul>
+<li>Set up a directory in which we&rsquo;ll build some other dependencies, including a Makefile to build each from source:</li>
+</ul>
+
+<pre><code>mkdir -p octave/deps
+wget -O octave/deps/Makefile https://gist.github.com/jgoldfar/37312d6ee5834d85542b1e0b35e8db94/raw
+wget -O octave/deps/qrupdate-1.1.2_Makeconf.patch https://gist.github.com/jgoldfar/4f8f295841d68248d93426f82ab6d931/raw
+</code></pre>
+
+<ul>
+<li><p>Download <a href="https://www.gnu.org/software/bison/">Bison v3.0.4</a>, <a href="https://curl.haxx.se/">Curl v7.60.0</a>, <a href="https://www.gnu.org/software/gawk/">Gawk v4.2.1</a>, <a href="https://www.gnu.org/software/sed/">Sed v4.5</a>, <a href="http://www.geuz.org/gl2ps/">GL2PS v1.4.0</a>, <a href="http://www.qhull.org/">QHull v2015-7.2.0</a>, <a href="http://www.fftw.org/">FFTW v3.3.7</a>, <a href="https://www.gnu.org/software/glpk/">GLPK v4.65</a>, <a href="http://www.openblas.net/">OpenBLAS v</a>, <a href="https://www.pcre.org/">PCRE2-v10.31</a>, <a href="https://sourceforge.net/projects/qrupdate/">QRUpdate v1.1.2</a>, <a href="https://ftp.gnu.org/gnu/readline/">Readline v8.0-alpha</a>, <a href="http://faculty.cse.tamu.edu/davis/suitesparse.html">SuiteSparse v5.2.0</a>, and <a href="https://www.nongnu.org/icoutils/">icoutils v0.32.3</a> to <code>deps</code>.</p></li>
+
+<li><p>Run <code>make install</code> from <code>deps</code>.</p></li>
+
+<li><p>From the main source directory, generate the configuration script using Autotools and configure the build:</p></li>
+</ul>
+
+<pre><code>./bootstrap --gnulib-srcdir=`pwd`/gnulib --bootstrap-sync
+./configure --prefix=`pwd`/usr --without-sndfile --without-portaudio --without-sundials_nvecserial --without-sundials_ida --without-arpack --without-qscintilla --without-fltk --with-blas=`pwd`/usr/lib/libopenblas.a PKG_CONFIG_PATH=&quot;`pwd`/usr/lib/pkgconfig:/usr/local/opt/qt/lib/pkgconfig&quot; PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} LDFLAGS=&quot;-L`pwd`/usr/lib -L/usr/local/opt/qt/lib&quot; CPPFLAGS=&quot;-I`pwd`/usr/include -I/usr/local/opt/qt/include&quot;
+</code></pre>
+
+<ul>
+<li>Build the package:</li>
+</ul>
+
+<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make
+</code></pre>
+
+<p>This will only get so far, perhaps due to our fussing with local dependencies&hellip;</p>
+
+<ul>
+<li>First, the path to <code>gl2ps</code> will need to be set:</li>
+</ul>
+
+<pre><code>install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/src/.libs/octave-cli
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/src/.libs/octave-gui
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libgui/.libs/liboctgui.4.dylib
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/.libs/liboctinterp.6.dylib
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/__init_gnuplot__.oct
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/chol.oct
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/__delaunayn__.oct
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/__voronoi__.oct
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/convhulln.oct
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/qr.oct
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/__init_gnuplot__.oct
+</code></pre>
+
+<ul>
+<li>Then, the path to <code>qrupdate</code> will need to be fixed:</li>
+</ul>
+
+<pre><code>install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/src/.libs/octave-cli
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/src/.libs/octave-gui
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libgui/.libs/liboctgui.4.dylib
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/.libs/liboctinterp.6.dylib
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/liboctave/.libs/liboctave.6.dylib
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/__init_gnuplot__.oct
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/chol.oct
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/__delaunayn__.oct
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/__voronoi__.oct
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/convhulln.oct
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/qr.oct
+</code></pre>
+
+<p>You can check manually that these changes took place by running e.g.</p>
+
+<pre><code>otool -L `pwd`/libinterp/dldfcn/qr.oct
+</code></pre>
+
+<p>and looking to the paths this binary is expecting the above libraries.</p>
+
+<ul>
+<li>Copy over some files for building <code>texinfo</code> documentation:</li>
+</ul>
+
+<pre><code>cp build-aux/texinfo.tex doc/interpreter/
+cp deps/gawk-4.2.1/doc/it/epsf.tex doc/interpreter/
+</code></pre>
+
+<ul>
+<li><em>Now</em> we should be able to finish the build:</li>
+</ul>
+
+<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make
+</code></pre>
+
+<ul>
+<li>The check target should pass:</li>
+</ul>
+
+<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make check
+</code></pre>
+
+<ul>
+<li>Then we can install Octave locally:</li>
+</ul>
+
+<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make install
+</code></pre>
+
+<ul>
+<li>Oh no! More <code>oct</code> files!</li>
+</ul>
+
+<pre><code>for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do otool -L $file | grep qrupdate; done
+# This is no good!
+
+for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib $file ; done
+for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib $file ; done
+</code></pre>
+
+
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/why-oss/">&lArr; Why Open Source Software?</a>
+                                    
+                                    
+                                    <a class="next" href="https://jgoldfar.github.io/blog/about/"> About &rArr;</a>
+                            
+                        </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <footer>
+
+  <p class="copyright text-muted">Copyright 2018, All rights reserved.</p>
+
+</footer>
+
+            </div>
+        </main>
+
+
+    </body>
+</html>
