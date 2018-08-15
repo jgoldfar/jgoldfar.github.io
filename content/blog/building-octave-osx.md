@@ -7,7 +7,7 @@ draft: false
 ---
 
 Below are the steps I followed to build [GNU Octave](https://www.octave.org) from source on my Mac, together with some binary dependencies.
-My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated in {{< ref "blog/why-oss.md" >}}, but in particular, let me just say that I've been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
+My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on [my post on the topic]({{< ref "blog/why-oss.md" >}}), but in particular, let me just say that I've been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
 That instance actually motivated me to switch to [Julia](https://www.julialang.org), since even at version 0.3, it was a promising and inviting language, but Octave is nothing if not a practical choice: some codes will _never_ be ported to anyone's language of choice, and allowing legacy code (even of debatable utility) to die unnecessarily seems... cruel?
 MATLAB, in particular, seems naturally opposed to "modern" continuous integration tools like Travis, so even if Octave exists only to enable automated assurance that code continues to run, that seems valuable.
 Moreover, if it can be improved in any way (certainly a Sisyphean task), any step towards parity is a step away from absolute dependence on a closed-source implementation.
@@ -129,3 +129,5 @@ for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-
 for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib $file ; done
 for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib $file ; done
 ```
+
+* Finally, enjoy your Octave installation!
