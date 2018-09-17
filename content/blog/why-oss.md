@@ -34,4 +34,4 @@ However, if those results are based on an opaque analysis, I'm not sure one can 
 Within or without the USA, it seems reasonable to assert that the most lasting effect humanity will have on the universe is the dissemination of information; the production of order out of chaos, in some way.
 What a shame it would be for all of that information to be indecipherable (perhaps, again, appearing random) because we chose the path of least resistance.
 
-Though my code may not be particularly good, and not all of it can (or will) be open-sourced, take a look [here]({{< ref "/oss-contributions" >}}) for some of what I've done.
+Though my code may not be particularly good, and not all of it can (or will) be open-sourced, take a look [here](/oss-contributions/) for some of what I've done.
