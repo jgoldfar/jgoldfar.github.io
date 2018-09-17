@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webdev on jgoldfar&#39;s home on the web</title>
+    <link>https://jgoldfar.github.io/tags/webdev/</link>
+    <description>Recent content in Webdev on jgoldfar&#39;s home on the web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jgoldfar.github.io/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>One more round with Hyde</title>
+      <link>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</guid>
+      <description>Let&amp;rsquo;s say you&amp;rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
+1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

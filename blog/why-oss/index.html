@@ -354,7 +354,12 @@ With enough time, just about anyone could develop the breadth and depth of knowl
 
 <li><p>With a closed-source offering, the reproducibility of your results is contingent on the continuing existence of your license as well as firm offering the software.
 If the version of a closed-source tool used to produce your work is unsupported, too bad!
-Unmaintained FOSS exists, no doubt, but it is nearly trivial to <em>begin</em> maintaining an abandoned piece of available software (getting it to actually build correctly is another thing&hellip;)</p></li>
+Unmaintained FOSS exists, no doubt, but it is nearly trivial to <a href="https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/"><em>begin</em></a> maintaining an abandoned piece of available software (getting it to actually build correctly is another thing&hellip;)
+This point comes from experience, as my university once (quite controversially) decided to drop their MATLAB license, and some of the codes I was using to produce my research results were only implemented in MATLAB files.
+After writing shim code to get the package to work on <a href="https://jgoldfar.github.io/blog/building-octave-osx/">Octave</a>, the open source competitor, I found an almost two order-of-magnitude slowdown, meaning that the PDE constrained optimization codes that previously took perhaps an hour to complete a parameter sweep over a region of interest would become simply impractical to continue using.
+Octave has definite value, but it wouldn&rsquo;t fit my use-case.
+Taking to the internet in search of a solution, <a href="https://julialang.org/">Julia</a> (then only at version 0.2) appeared to promise a scientific computing local optimum: fast, expressive, and (as I would come to find) relatively safe.
+Julia has come a long way since then, and a more complete discussion of OSS tools is out of scope for this page, but most importantly, it was free and open source: once I had the source code, my work could never again be blocked arbitrarily, and in principle, all codes I wrote could be reprodicibly run against the same codebase indefinitely.</p></li>
 
 <li><p>FOSS democratizes the scientific process: there is no reason to expect that the ability to spend money on software is correlated with ability or intelligence.
 Producing work that <em>requires</em> non-free software to reproduce is exclusionary.
@@ -377,7 +382,7 @@ What a shame it would be for all of that information to be indecipherable (perha
                                 <div class="prevNext">
                                     
                                     
-                                    <a class="next" href="https://jgoldfar.github.io/blog/building-octave-osx/"> Building GNU Octave From Source on OSX &rArr;</a>
+                                    <a class="next" href="https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/"> One more round with Hyde &rArr;</a>
                             
                         </div>
                             </td>

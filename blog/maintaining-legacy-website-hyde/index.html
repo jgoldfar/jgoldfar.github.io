@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <title>
+        One more round with Hyde | jgoldfar&#39;s home on the web
+    </title>
+
+    <style>
+ html body {
+     font-family: Raleway, sans-serif;
+     background-color: white;
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: #2196F3;
+     --border-width:  0 ;
+ }
+
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+  
+ thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+
+  
+ thead td.postTitle {
+     background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ }
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+  
+ article.blogPostListing header {
+ }
+ article.blogPostListing div {
+ }
+
+ article.blogPostListing footer {
+     margin-top: 2px;
+     text-align: justify;
+     font-size: small;
+ }
+  
+  
+ div.ossContainer {
+     width: 45%;
+     background-color: #f2f2f2;
+     padding-top: 5px;
+     padding-left: 5px;
+     border-radius: 2px;
+
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),  
+     0px 2px 2px 0px rgba(0,0,0,0.14),  
+     0px 1px 5px 0px rgba(0,0,0,0.12)  ;
+ }
+
+ article.ossListing header {
+     font-family:Oswald, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
+
+  
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:Oswald, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+  
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+  
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+  
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000;  }
+
+  
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+  
+ table.main td.mainbody {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  vertical-align: top;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+  
+ footer {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+     font-size: x-small;
+ }
+
+  
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+  
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px;}
+
+  
+ td.inforight { font-size: 11pt; }
+</style>
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+
+    <meta name="generator" content="Hugo 0.40.3" />
+
+    
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config(
+	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	}
+ );
+</script>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <div class="name">
+                                        <a href="https://jgoldfar.github.io">Jonathan Goldfarb</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        One more round with Hyde
+    </div>
+    
+    
+</td>
+
+
+                            </tr>
+                            
+                            
+                        </thead>
+                        <tr>
+                            
+<td class="sidebar">
+    <table width="100%">
+        <tbody>
+            
+            <tr><td class="navbutton">
+                <a href="/blog">
+                    Blog Home
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/blog/about/">
+                    About
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/cv/cv.pdf">
+                    CV
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/oss-contributions/">
+                    Software
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/">
+                    Home
+                </a>
+            </td></tr>
+            
+        </tbody>
+    </table>
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+</table>
+	
+	<hr width="90%" size=3 />
+	
+</td>
+
+
+                            <td class="mainbody">
+                                
+                                
+
+
+<p>Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update.
+What to do?
+Clearly, there are at least two options:</p>
+
+<p>1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc. until the output is just right.
+That&rsquo;s what I did with this website some time back, and it was quite a bit more time consuming than I&rsquo;d care to admit; the results are hosted in the corresponding public repository <a href="https://bitbucket.org/jgoldfar/personal-site">here</a>, and perhaps I&rsquo;ll write about the experience some day.
+Suffice it to say that, despite the relatively friendly initial experience, as a non Gopher, it is clear that configuring Hugo to do what I want will take a while.</p>
+
+<p>or,</p>
+
+<p>2) Pick up the old, unmaintained static website generator (<a href="https://jgoldfar.github.io/blog/why-oss/">Yay for FOSS!</a>), make it work in a reproducible way, and package it up so you won&rsquo;t have to bother with the technical side of this problem again (one hopes)</p>
+
+<p>Given that the old static website generator, <a href="http://hyde.github.io/">Hyde</a> (Github repository <a href="https://github.com/hyde/hyde">here</a>) was written in Python 2, with some steps towards Python 3 support, obviously the latter was a more attractive solution.
+It gave me an opportunity to play around with some sides of Python I haven&rsquo;t messed with in a while, as well as tools like <a href="https://pipenv.readthedocs.io/en/latest/">pipenv</a> (which I&rsquo;m going to be using as much as I can! Very friendly!) and <a href="https://pypi.org/project/tox/">tox</a>.</p>
+
+<h2 id="patching-up-hyde">Patching up Hyde</h2>
+
+<p>Hyde hasn&rsquo;t had a commit to its main repository for almost 3 years now; while this isn&rsquo;t disqualifying for a project that could be considered mature written in Python 2 (which also isn&rsquo;t going anywhere soon) I found that I couldn&rsquo;t load the script on my machine, and though PRs hadn&rsquo;t been accepted since 2016, all of the recent ones failed CI, so something is amiss.
+I&rsquo;m a <a href=" ref &quot;blog/too-much-ci.md&quot; ">big fan</a> of continuous integration, in particular on <a href="https://travis-ci.org/">Travis CI</a> and make active use of Travis&rsquo; Cron jobs to keep tabs on whether I can reliably come back to a previous project and expect it to work, at least in some capacity.</p>
+
+<p>So, first things first, I cloned the Hyde repository and ran the tests according to the CI configuration.
+No go (as expected.)
+That is, the tests themselves didn&rsquo;t run.
+Flipping the switch on the repo&rsquo;s corresponding Travis page unsurprisingly gave a failure as well.
+But, the package itself did load when built from the <code>master</code> branch, so there wouldn&rsquo;t need to be <em>too</em> much poking around in the main package codebase, at least to get the tests passing.
+There are some bits that are interesting to think about and read, though, such as the plugin and backend management system; Python makes those kinds of things relatively ergonomic, even with conditional dependencies.
+Since the original test framework <code>nose</code> is in maintenance mode, I figured it would be a good time to play around with <a href="https://github.com/nose-devs/nose2"><code>nose2</code></a>, which would better support a Python 2 + 3 package.</p>
+
+<p>As promised, some features from <code>nose</code> that were heavily used in the Hyde tests were not yet implemented in <code>nose2</code>; in particular, the <code>@raise</code> decorator, and <code>@with_setup</code>/<code>@with_teardown</code> don&rsquo;t yet work with class-based tests.
+Though it&rsquo;s obviously sub-optimal, it was trivial to &ldquo;inline&rdquo; the action of those decorators into the tests.
+One test dependency of Hyde, asciidoc, just wouldn&rsquo;t run on my machine in the couple hours I had given myself for this project, so I disabled the corresponding test while getting the test scripts running; a couple other tests for the output of Javascript dependencies were documented to be fragile , and will need to be updated (and is it within scope of the site generator to check that external projects like <code>uglifyjs</code> behave? Maybe?)
+A couple of the plugin tests don&rsquo;t behave anymore either, which would require a bit more digging.</p>
+
+<p>While I was at it, I figured it would make sense to use a <code>npm</code> <code>package.json</code> script to track the Javascript dependencies, rather than hard-coding those in the CI file.
+<code>npm</code> helpfully nags you if the versions of your dependent packages have security issues, which the pinned versions did. <code>npm audit</code> is a neat tool!</p>
+
+<p>Hyde also tests for PEP8 conformity using <code>flake8</code>, which is nice, but the package had fallen behind the times; those issues were quite easy to fix.
+Lastly, the documentation build needed some tweaks.</p>
+
+<p>According to my commit history, the whole process took a couple of hours of work; the branch with the current state of things, such as they are, is <a href="https://github.com/jgoldfar/hyde/commits/fixes-for-python27">here</a>.
+I wouldn&rsquo;t say it&rsquo;s fixed (given a test coverage sitting at 61%, it very well might fail in unfortunate and surprising ways&hellip;), but it&rsquo;s at least reproducibly in its current state, and it works for my purposes!</p>
+
+<h2 id="future-proofing-the-whole-deal">Future-proofing the whole deal</h2>
+
+<p>That still leaves the question of generating these changes, and making sure that I wouldn&rsquo;t have to bother with this nonsense again.
+It&rsquo;s all well and good to have a working dependency today, but there&rsquo;s not much chance Hyde will be resurrected and become active (or even reach version 1.0) ever.
+Moreover, when I used it in the past and it <em>was</em> being maintained more actively, Hyde would have perennial conflicts with other tools I had installed over dependency resolution.
+This is where <code>pipenv</code> comes in; simply running</p>
+
+<pre><code>pipenv --two install -e git+https://github.com/jgoldfar/hyde.git@fixes-for-python2.7#egg=hyde
+</code></pre>
+
+<p>in the website directory was enough to grab my updated Hyde source tree, along with its dependencies, and make it all available only to this project (if necessary) with a Python 2 virtual environment.
+This also created a nice <code>Pipfile</code> that records the Python version and package dependencies, so simply running</p>
+
+<pre><code>pipenv install
+</code></pre>
+
+<p>would be enough next time.
+Once Hyde was up-and-running in this environment, I could make my template changes as necessary, and regenerate the output like I did long ago.
+Nostalgia!</p>
+
+<p>Is that enough?
+Of course not!
+My laptop is far from rock solid machine, as I&rsquo;ve written, which is part of <a href=" ref &quot;blog/too-much-ci.md&quot; ">my reason</a> for assiduously setting up continuous integration for as much as I can.
+The website code was already up on Bitbucket, and they&rsquo;ve just started offering their very nice <a href="https://confluence.atlassian.com/bitbucket/build-test-and-deploy-with-pipelines-792496469.html">Pipelines</a> service, which allows you to run a test script using any docker image you&rsquo;d like.
+The top <a href="https://hub.docker.com/r/kennethreitz/pipenv/">existing <code>pipenv</code> image</a> didn&rsquo;t seem to support Python2, but it was relatively simple to <a href="https://github.com/jgoldfar/circleci-pipenv">fork</a> a Dockerfile and set up an automated build on docker hub for <a href="https://hub.docker.com/r/jgoldfar/circleci-pipenv/">my own image</a>.</p>
+
+<p>With this docker image in hand, and a bit of automation hidden away in a simple <code>Makefile</code>, simply creating a <code>bitbucket-pipelines.yml</code> file with the contents</p>
+
+<pre><code>image: jgoldfar/circleci-pipenv:latest
+
+pipelines:
+  default:
+    - step:
+        script:
+          - make generate
+</code></pre>
+
+<p>will automatically complete the previous couple steps within that docker image and check that the package generation completes successfully.</p>
+
+<p>I then added a packaging step to the <code>Makefile</code> so I can easily send the generated HTML files upstream, and the <a href="https://developer.atlassian.com/bitbucket/api/2/reference/">Bitbucket API</a> allows authorized apps to upload files to repositories to be made available as downloads, so I can just go there any time I&rsquo;d like access to those files.</p>
+
+<p>The finished product, as it were, is in the repository <a href="https://bitbucket.org/jgoldfar/drabdullasitegenerator/">here</a>.
+I take no ownership of the content of the website itself; there I was just transcribing what I was told to add, and I certainly don&rsquo;t claim responsibility for the color choices, but the templates and configuration are my work.
+If I had to do it all over again, I probably wouldn&rsquo;t, but at least the technical part was interesting!</p>
+
+<h2 id="todos">TODOs</h2>
+
+<ul>
+<li><p>Document the process for getting the necessary dependencies and running tests locally in <code>test/README.rst</code></p></li>
+
+<li><p>Update the expected output, or (even better) robustify the tests for external tools</p></li>
+
+<li><p>Run tests on OSX to catch possible future build errors like the one I originally ran into.</p></li>
+
+<li><p>Add some regression checks for the output of this particular website.</p></li>
+</ul>
+
+
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/why-oss/">&lArr; Why Open Source Software?</a>
+                                    
+                                    
+                                    <a class="next" href="https://jgoldfar.github.io/blog/building-octave-osx/"> Building GNU Octave From Source on OSX &rArr;</a>
+                            
+                        </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <footer>
+
+  <p class="copyright text-muted">Copyright 2018, All rights reserved.</p>
+
+</footer>
+
+            </div>
+        </main>
+
+
+    </body>
+</html>
