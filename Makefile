@@ -13,10 +13,10 @@ $(HUGO): bin/hugo_0.40.3_Linux-64bit.tar.gz
 	cd bin && tar xvzf $(notdir $<)
 endif
 
-### Dependencies
-pull-deps: reading-group-deps cv-deps
+## Dependencies
+pull-deps: reading-group-deps cv-deps cal-deps
 
-
+### Algebra Reading Group
 ARGDownloadPath=https://bitbucket.org/jgoldfar/algebrareadinggroupnotes/downloads
 ARGCoursePath=static/AlgebraReadingGroup
 ARGFiles=hersteinExercises.pdf munkresExercises.pdf index.htm
@@ -28,6 +28,7 @@ reading-group-deps:
 		curl -L "$(ARGDownloadPath)/$(file)" -o "$(ARGCoursePath)/$(file)"; \
 	)
 
+### CV/Resume
 CVDownloadPath=https://bitbucket.org/jgoldfar/resumepublic/downloads
 CVPath=static/cv
 InstallDirs+=$(CVPath)
@@ -42,6 +43,24 @@ cv-deps: cv-deps-pull $(addprefix $(CVPath)/,cv.pdf res.pdf)
 
 $(CVPath)/%.pdf: $(CVPath)/%@default.pdf
 	mv $< $@
+
+### Schedule/Calendar
+# Note: Set these variables in the environment (in particular, on CI) for this target
+# to work.
+CourseAppointmentIcalLink?=
+CourseScheduleIcalLink?=
+SeminarScheduleIcalLink?=
+IcalDir:=deps/ical
+cal-deps-pull:
+	[ ! -z "$(CourseAppointmentIcalLink)" ]
+	[ ! -z "$(CourseScheduleIcalLink)" ]
+	[ ! -z "$(SeminarScheduleIcalLink)" ]
+	mkdir -p $(IcalDir)
+	@wget -O$(IcalDir)/CourseAppointment.ical $(CourseAppointmentIcalLink)
+	@wget -O$(IcalDir)/CourseSchedule.ical $(CourseScheduleIcalLink)
+	@wget -O$(IcalDir)/SeminarSchedule.ical $(SeminarScheduleIcalLink)
+
+cal-deps: cal-deps-pull
 
 HUGOFILE := config.toml
 
