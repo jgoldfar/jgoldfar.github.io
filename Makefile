@@ -60,7 +60,11 @@ cal-deps-pull:
 	@wget -O$(IcalDir)/CourseSchedule.ical $(CourseScheduleIcalLink)
 	@wget -O$(IcalDir)/SeminarSchedule.ical $(SeminarScheduleIcalLink)
 
-cal-deps: cal-deps-pull
+JULIA?=$(shell which julia)
+cal-deps: deps/generateScheduleFile.jl cal-deps-pull 
+	$(JULIA) --project -e 'using Pkg; Pkg.add("Compat"); Pkg.add(PackageSpec(url="https://github.com/jgoldfar/Libical.jl", rev="master"))'
+	$(JULIA) --project -e 'using InteractiveUtils; versioninfo()'
+	$(JULIA) --project $<
 
 HUGOFILE := config.toml
 
