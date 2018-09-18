@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <title>
+        Continuous Integration Ad Nauseam? | jgoldfar&#39;s home on the web
+    </title>
+
+    <style>
+ html body {
+     font-family: Raleway, sans-serif;
+     background-color: white;
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: #2196F3;
+     --border-width:  0 ;
+ }
+
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+  
+ thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+
+  
+ thead td.postTitle {
+     background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ }
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+  
+ article.blogPostListing header {
+ }
+ article.blogPostListing div {
+ }
+
+ article.blogPostListing footer {
+     margin-top: 2px;
+     text-align: justify;
+     font-size: small;
+ }
+  
+  
+ div.ossContainer {
+     width: 45%;
+     background-color: #f2f2f2;
+     padding-top: 5px;
+     padding-left: 5px;
+     border-radius: 2px;
+
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),  
+     0px 2px 2px 0px rgba(0,0,0,0.14),  
+     0px 1px 5px 0px rgba(0,0,0,0.12)  ;
+ }
+
+ article.ossListing header {
+     font-family:Oswald, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
+
+  
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:Oswald, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+  
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+  
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+  
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000;  }
+
+  
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+  
+ table.main td.mainbody {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  vertical-align: top;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+  
+ footer {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+     font-size: x-small;
+ }
+
+  
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+  
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px;}
+
+  
+ td.inforight { font-size: 11pt; }
+</style>
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+
+    <meta name="generator" content="Hugo 0.40.3" />
+
+    
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config(
+	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	}
+ );
+</script>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <div class="name">
+                                        <a href="https://jgoldfar.github.io">Jonathan Goldfarb</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Continuous Integration Ad Nauseam?
+    </div>
+    
+    
+</td>
+
+
+                            </tr>
+                            
+                            
+                        </thead>
+                        <tr>
+                            
+<td class="sidebar">
+    <table width="100%">
+        <tbody>
+            
+            <tr><td class="navbutton">
+                <a href="/blog">
+                    Blog Home
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/blog/about/">
+                    About
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/cv/cv.pdf">
+                    CV
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/oss-contributions/">
+                    Software
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/">
+                    Home
+                </a>
+            </td></tr>
+            
+        </tbody>
+    </table>
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+</table>
+	
+	<hr width="90%" size=3 />
+	
+</td>
+
+
+                            <td class="mainbody">
+                                
+                                
+
+
+<p>Anyone who&rsquo;s tried to look back on a document from years ago probably knows how difficult it can be for anything more than the simplest files.
+There are <a href="https://en.wikipedia.org/wiki/Software_rot">good</a> <a href="https://en.wikipedia.org/wiki/Entropy">reasons</a> why, over a long enough time scale, such problems are likely unavoidable (though that <a href="https://en.wikipedia.org/wiki/Voyager_Golden_Record">doesn&rsquo;t</a> <a href="https://en.wikipedia.org/wiki/Long_Now_Foundation">stop</a> us from <a href="http://www.slate.com/articles/health_and_science/green_room/2009/11/atomic_priesthoods_thorn_landscapes_and_munchian_pictograms.html">trying</a>, with completely unknown results.)</p>
+
+<p>A backup is no good if you can&rsquo;t open it, and even if it opens or runs on your machine, how do you know the recipient of your work has a chance of having the same luck.
+Not to mention the possibility that an inevitable computer crash or upgrade could have disastrous consequences for the future of your work.
+Speaking for myself, as the recipient of multiple literal crashes (with cars, on my bike) and regular deluges during my commute, it&rsquo;s a wonder my 2012 MacBook still runs.
+Indeed, some days it refuses to.</p>
+
+<p>I&rsquo;m going to give my solution for the short-term problem of being able to reliably open and run <em>your own</em> work for about as long as you care to keep it around.
+Long story short, I&rsquo;ve developed some techniques for running all kinds of codes on multiple CI services, as well as my own package for checking that my &ldquo;mono-repo&rdquo; correctly integrates changes and can continue to compile, well, everything I&rsquo;ve worked on dating back to 2005 or so (I am lucky to be an early TeX and OSS adopter for my own work, so I&rsquo;m not stuck with many opaque binary files; that would be a significant limitation&hellip;)</p>
+
+<p>The base repository wasn&rsquo;t designed to be open source from the outset, so it contains possibly sensitive work information (ah, isn&rsquo;t it nice to know that nothing you commit, even by accident, can be lost&hellip;)[1]
+While I can&rsquo;t share that, I can show how my CI system works.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>1) The whole thing should be as automated as possible, and work natively with my version control system.
+No existing CI service I could find supports private repositories and the rather idiosyncratic range of dependencies the wide range of projects I&rsquo;ve worked on.
+The CI system I created here uses a system of lockfiles and exercises <code>cron</code> to ensure that updates to the global state of the base repository are pulled to a local directory regularly, each pulled commit is only built once, and the repository/build is never put into an inconsistent state by pulling during a build or vice-versa.
+I thought about leveraging a kind of state machine here, but the transitions are few and simple enough that the current system works.</p>
+
+<p>2) Aside from some minimal configuration information, the system should not require a significant test apparatus to be added to existing repositories.
+Some of these repositories are shared with other users, who would find a heavy added dependency a bother, at the very least, and after implementing this system, I don&rsquo;t want to do significant amounts of additional work just to get tests running in each repository.
+Indeed, after the initial implementation, I was able to add more specific tests incrementally while retaining a measure of how well existing codes met a minimal standard.</p>
+
+<p>3) In particular, existing tests should be discovered automatically and run in as natural a way as possible.
+Since I&rsquo;m a Linux and OSX user, <code>make</code> tends to be my automation and build tool of choice; I decided that by default I should just check the output of <code>make check</code>, and put any linting or other test automation there.
+One of my goals was to ensure that &ldquo;root&rdquo; TeX files (not the include files, of course) can continue to be compiled against all of the other (possibly external to the current repository, for highly modular documents) files contained in the repository; rather than reinvent the wheel here, I opted to use <code>latexmk -pdf</code> to compile <em>every</em> TeX file in the repository.
+The list of TeX files to compile or skip is configurable on a per-directory basis, which turns out to be lightweight enough for my use-case.</p>
+
+<p>4) The output should be uploaded to support formation reports related to the overall health of the repository.
+More on this later; since I generate logfiles in a somewhat standard format, I found it easiest to just build tools that parse the output logs and form summary information based on that output.</p>
+
+<h2 id="some-details">Some Details</h2>
+
+<p>Take a look <a href="http://bitbucket.org/jgoldfar/cmstest.jl">here</a> for what I&rsquo;ve come up with as an implementation of this idea; basically, on a regular basis, commits are pulled from the base repository to a local directory.
+In order for this to complete in a reasonable amount of time, they are pulled and force-updated over an existing clone; this is unfortunate, since some state from the previous pull may remain.
+It would be interesting in the future to grow a family of local repositories and regularly re-clone old ones while using a new one in a round-robin style.</p>
+
+<p>Separately, by querying the local repository, the latest commit hash is discovered; by comparing this to the expected output location, we can determine if tests need to be run, and if so, we do.</p>
+
+<p>Running tests works recursively, and runs a few different things: first, we read in a configuration file to customize (if necessary) the files to be checked, scripts to be run to build PDF files, etc.
+Then</p>
+
+<p>1) Check if OSS equivalent codes exist for each code that is determined to have a closed-source-only extension.
+It would be good to actually check the output is the same, but that&rsquo;s the crux of the problem, isn&rsquo;t it&hellip;</p>
+
+<p>2) Check that each repository has a README and LICENSE.
+This seems (to me) to be the bare minimum of documentation and information one would need to return to a project years later and know at all what&rsquo;s going on.</p>
+
+<p>3) Check that TeX files compile.
+By default, <code>latexmk</code> is used, but it&rsquo;s nearly trivial to use <code>make</code>.
+Creating blacklists or whitelists of files to skip or compile, respectively, isn&rsquo;t too tricky either.</p>
+
+<p>4) Run the repository&rsquo;s <code>make check</code> command, or any other command configured for the repository in the configuration file.</p>
+
+<p>Based on tracing the execution of the script and some basic estimation, it seems as though the current implementation adds as little overhead as possible on top of the huge amount of compilation and other tests that have to be run.</p>
+
+<p>The reports are generated into directories outside the base repository tree.
+Once a sentinel value is found in the log file, uniquely showing that the build has ended, another script picks up from there:</p>
+
+<p>1) Parse the logfile and create a nice summary Markdown file</p>
+
+<p>2) Parse the previous commit logfile and create a list of new failures, tests, etc.</p>
+
+<p>3) Create a test trend image using gnuplot, and</p>
+
+<p>4) Commit all of the files corresponding to the given build to a git repository and push these changes.</p>
+
+<h2 id="future-work">Future work</h2>
+
+<ul>
+<li><p>If some dependency analysis could be added, tests could be run in parallel. This is (likely) much trickier than just running the tests asynchronously.</p></li>
+
+<li><p>Move more dependencies into the CMSTest repository (particularly, the log parsing logic,) rather than having those files live in the reporting repository and potentially fall out of sync with the CMSTest package.</p></li>
+
+<li><p>Add tests to this system (WIP)</p></li>
+</ul>
+
+<h2 id="footnotes">Footnotes</h2>
+
+<p>[1] While I know it&rsquo;s well possible to scrub data from commits, I don&rsquo;t think it&rsquo;s worth the effort.</p>
+
+
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/">&lArr; One more round with Hyde</a>
+                                    
+                                    
+                                    <a class="next" href="https://jgoldfar.github.io/blog/building-octave-osx/"> Building GNU Octave From Source on OSX &rArr;</a>
+                            
+                        </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <footer>
+
+  <p class="copyright text-muted">Copyright 2018, All rights reserved.</p>
+
+</footer>
+
+            </div>
+        </main>
+
+
+    </body>
+</html>

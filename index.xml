@@ -75,6 +75,16 @@
     </item>
     
     <item>
+      <title>Continuous Integration Ad Nauseam?</title>
+      <link>https://jgoldfar.github.io/blog/too-much-ci/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/too-much-ci/</guid>
+      <description>Anyone who&amp;rsquo;s tried to look back on a document from years ago probably knows how difficult it can be for anything more than the simplest files. There are good reasons why, over a long enough time scale, such problems are likely unavoidable (though that doesn&amp;rsquo;t stop us from trying, with completely unknown results.)
+A backup is no good if you can&amp;rsquo;t open it, and even if it opens or runs on your machine, how do you know the recipient of your work has a chance of having the same luck.</description>
+    </item>
+    
+    <item>
       <title>Libui.jl</title>
       <link>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
