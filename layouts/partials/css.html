@@ -53,9 +53,15 @@
      font-style: oblique;
      margin-left: 20px;
  }
+  /* Lists of Tags with under the title) */ 
+ thead td.postTitle ul.tags {
+ }
  /* Style for article body in list form */
  article.blogPostListing header {
  }
+ article.blogPostListing header h3 { margin-bottom: 4pt; }
+ /* Adjust margin in listing setting */
+ article.blogPostListing header ul.tags { margin-bottom: 4pt; }
  article.blogPostListing div {
  }
 
@@ -180,7 +186,14 @@
  table.info h4 { margin: 0px; }
 
  /* Sub-sidebar styles */
- td.inforight { font-size: 11pt; }
+ table.info td.inforight { font-size: 12px; padding: 5px 5px 5px 20px; }
+ 
+ /* Pagination tools */
+ div.pagination { padding-top: 10px; }
+ 
+ /* Lists of Tags (i.e. under the title) */
+ ul.tags { font-size: x-small; padding-left: 20pt; margin-top: 0px; margin-bottom: 0px;}
+ 
 </style>
 
 <!-- custom -->
@@ -188,6 +201,9 @@
 
 <!-- PureCSS -->
 <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 <!-- google fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}" />

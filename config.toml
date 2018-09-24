@@ -4,6 +4,7 @@ defaultContentLanguage = "en"
 title = "jgoldfar's home on the web"
 metaDataFormat = "yaml"
 enableGitInfo = false # TODO: make this a git repo, enable
+paginate = 5
 
 [taxonomies]
     tags = "tags"
@@ -49,13 +50,13 @@ enableGitInfo = false # TODO: make this a git repo, enable
 
 [[menu.sidebar]]
     name = "Presentations"
-    weight = 1
+    weight = 4
     identifier = "presentations"
     url = "/presentations"
 
 [[menu.sidebar]]
     name = "Schedule"
-    weight = 1
+    weight = 2
     identifier = "schedule"
     url = "/schedule"
 
