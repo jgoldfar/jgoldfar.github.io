@@ -20,6 +20,11 @@
     {{ with .Params.subtitle }}
     <span class="subtitle">{{.}}</span>
     {{ end }}
+<ul class="tags">
+    {{ range .Params.tags }}
+        : <!--<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">-->{{ . }}<!--</a>-->
+    {{ end }}
+</ul>
 </td>
 {{ end }}
 
