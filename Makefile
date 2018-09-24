@@ -48,24 +48,36 @@ $(CVPath)/%.pdf: $(CVPath)/%@default.pdf
 # Note: Set these variables in the environment (in particular, on CI) for this target
 # to work.
 CourseAppointmentIcalLink?=
-CourseScheduleIcalLink?=
 SeminarScheduleIcalLink?=
 IcalDir:=deps/ical
-cal-deps-pull:
+IcalTargetFiles=$(addsuffix .ical,CourseAppointment SeminarSchedule)
+$(IcalDir)/CourseAppointment.ical:
 	[ ! -z "$(CourseAppointmentIcalLink)" ]
-	[ ! -z "$(CourseScheduleIcalLink)" ]
+	mkdir -p $(dir $@)
+	@wget -O$@ $(CourseAppointmentIcalLink)
+
+$(IcalDir)/SeminarSchedule.ical:
 	[ ! -z "$(SeminarScheduleIcalLink)" ]
-	mkdir -p $(IcalDir)
-	@wget -O$(IcalDir)/CourseAppointment.ical $(CourseAppointmentIcalLink)
-	@wget -O$(IcalDir)/CourseSchedule.ical $(CourseScheduleIcalLink)
-	@wget -O$(IcalDir)/SeminarSchedule.ical $(SeminarScheduleIcalLink)
+	mkdir -p $(dir $@)
+	@wget -O$@ $(SeminarScheduleIcalLink)
+		
+cal-deps-pull: $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 
 JULIA?=$(shell which julia)
-cal-deps: deps/generateScheduleFile.jl cal-deps-pull 
-	$(JULIA) --project -e 'using Pkg; Pkg.add("Compat"); Pkg.add(PackageSpec(url="https://github.com/jgoldfar/Libical.jl", rev="master"))'
-	$(JULIA) --project -e 'using InteractiveUtils; versioninfo()'
-	$(JULIA) --project $<
+LIBICALURI?=https://github.com/jgoldfar/Libical.jl
+LIBICALDEV?=0
+cal-deps-generate: deps/generateScheduleFile.jl $(addprefix $(IcalDir)/,$(IcalTargetFiles))
+ifeq ($(LIBICALDEV),0)
+	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
+else
+	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
+endif
+	$(JULIA) --project="." $^
 
+cal-deps:
+
+
+## Hugo Generation
 HUGOFILE := config.toml
 
 serve: $(HUGOFILE) $(HUGO)
