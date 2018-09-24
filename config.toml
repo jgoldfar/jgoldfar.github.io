@@ -17,6 +17,10 @@ enableGitInfo = false # TODO: make this a git repo, enable
     authorOffice="MAC, Quad 405"
     authorPhone="321 674-8157"
     authorEmail="jgoldfar@my.fit.edu"
+    authorGithub="https://github.com/jgoldfar"
+    authorGitlab="https://gitlab.com/jgoldfar"
+    authorBitbucket="https://bitbucket.org/jgoldfar/"
+    authorResearchGate="https://www.researchgate.net/profile/Jonathan_Goldfarb"
 
 ## sidebar for main page
 [[menu.sidebar]]
