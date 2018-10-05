@@ -5,6 +5,7 @@ title = "jgoldfar's home on the web"
 metaDataFormat = "yaml"
 enableGitInfo = false # TODO: make this a git repo, enable
 paginate = 5
+disqusShortname = jgoldfar-blog
 
 [taxonomies]
     tags = "tags"
