@@ -6,41 +6,15 @@
     <description>Recent content on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 18 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>A Retrospective Look on my Dissertation Topic</title>
-      <link>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</guid>
-      <description>There&amp;rsquo;s a reason why a dissertation is considered an achievement in one&amp;rsquo;s life: producing such a document is a crazy thing to do, and it shows the kind of dedication you can put into a project. I certainly believe the topic I spent those years of my life studying was worthwhile, and I put a high (moral?) value on the advancement of human understanding of the world through the scientific process.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://jgoldfar.github.io/blog/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jgoldfar.github.io/blog/about/</guid>
-      <description>I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you&#39;d like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.</description>
-    </item>
-    
-    <item>
-      <title>Building GNU Octave From Source on OSX</title>
-      <link>https://jgoldfar.github.io/blog/building-octave-osx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jgoldfar.github.io/blog/building-octave-osx/</guid>
-      <description>Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&amp;rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!</description>
-    </item>
-    
-    <item>
       <title>Continuous Integration Ad Nauseam?</title>
       <link>https://jgoldfar.github.io/blog/too-much-ci/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/too-much-ci/</guid>
       <description>Anyone who&amp;rsquo;s tried to look back on a document from years ago probably knows how difficult it can be for anything more than the simplest files. There are good reasons why, over a long enough time scale, such problems are likely unavoidable (though that doesn&amp;rsquo;t stop us from trying, with completely unknown results.)
@@ -50,7 +24,7 @@ A backup is no good if you can&amp;rsquo;t open it, and even if it opens or runs
     <item>
       <title>One more round with Hyde</title>
       <link>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</guid>
       <description>Let&amp;rsquo;s say you&amp;rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
@@ -58,12 +32,30 @@ A backup is no good if you can&amp;rsquo;t open it, and even if it opens or runs
     </item>
     
     <item>
+      <title>Building GNU Octave From Source on OSX</title>
+      <link>https://jgoldfar.github.io/blog/building-octave-osx/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/building-octave-osx/</guid>
+      <description>Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&amp;rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!</description>
+    </item>
+    
+    <item>
       <title>Why Open Source Software?</title>
       <link>https://jgoldfar.github.io/blog/why-oss/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/why-oss/</guid>
       <description>These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&amp;rsquo;s not always the path of least resistance. I&amp;rsquo;m not here to evangelize for open source, and I&amp;rsquo;m not a purist: closed-source and proprietary work has its place in our society. However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://jgoldfar.github.io/blog/about/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/about/</guid>
+      <description>I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you&#39;d like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.</description>
     </item>
     
   </channel>

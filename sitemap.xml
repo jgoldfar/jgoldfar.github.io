@@ -3,12 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jgoldfar.github.io/blog/too-much-ci/</loc>
+    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/building-octave-osx/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/why-oss/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/about/</loc>
+    <lastmod>2018-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/</loc>
     <lastmod>2017-08-07T11:33:47-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://jgoldfar.github.io/blog/</loc>
+    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,24 +50,14 @@
   </url>
   
   <url>
-    <loc>https://jgoldfar.github.io/blog/dissertation-topic-retrospective/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/blog/about/</loc>
-  </url>
-  
-  <url>
     <loc>https://jgoldfar.github.io/tags/build-the-world/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jgoldfar.github.io/blog/building-octave-osx/</loc>
-  </url>
-  
-  <url>
     <loc>https://jgoldfar.github.io/tags/ci/</loc>
+    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -50,16 +66,8 @@
   </url>
   
   <url>
-    <loc>https://jgoldfar.github.io/blog/too-much-ci/</loc>
-  </url>
-  
-  <url>
     <loc>https://jgoldfar.github.io/tags/devops/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/tags/isp/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -152,16 +160,7 @@
   </url>
   
   <url>
-    <loc>https://jgoldfar.github.io/tags/mathematics/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jgoldfar.github.io/oss-contributions/metarowechelon.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</loc>
   </url>
   
   <url>
@@ -170,11 +169,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/oss/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/tags/pde/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -196,6 +191,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -209,11 +205,8 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/webdev/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/blog/why-oss/</loc>
   </url>
   
 </urlset>
