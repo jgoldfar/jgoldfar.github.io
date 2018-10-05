@@ -31,7 +31,7 @@
 {{ .Content }}
 
 {{/* See https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/ */}}
-{{ $paginator := .Paginate (where .Data.Pages.ByDate "Type" "blog") }}
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "blog") }}
 {{ range $paginator.Pages }}
     {{ .Render "li"}}
 {{ end }}
