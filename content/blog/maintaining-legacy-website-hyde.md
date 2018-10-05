@@ -2,6 +2,7 @@
 title: "One more round with Hyde"
 tags: ["OSS", "DevOps", "WebDev"]
 draft: false
+date: 2018-09-17
 ---
 
 Let's say you've got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update.

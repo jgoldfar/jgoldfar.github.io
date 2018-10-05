@@ -4,6 +4,7 @@ description: ""
 tags: ["build-the-world", "OSS"]
 weight: 0
 draft: false
+date: 2018-08-15
 ---
 
 Below are the steps I followed to build [GNU Octave](https://www.octave.org) from source on my Mac, together with some binary dependencies.

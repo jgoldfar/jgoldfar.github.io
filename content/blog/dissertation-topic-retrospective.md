@@ -1,7 +1,7 @@
 ---
 title: "A Retrospective Look on my Dissertation Topic"
 tags: ["Mathematics", "PDE", "ISP"]
-draft: false
+draft: true
 ---
 
 There's a reason why a dissertation is considered an achievement in one's life: producing such a document is a crazy thing to do, and it shows the kind of dedication you can put into a project.
