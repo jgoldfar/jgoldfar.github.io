@@ -1,5 +1,5 @@
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: jgoldfar/latex-docker:plus-julia-release-latest
+image: jgoldfar/latex-julia-docker:release-latest
 
 pipelines:
   default:
