@@ -52,13 +52,13 @@ function parse_schedule_to_week(filein, startDate)
         # YYYYMMDDTHHMMSSZ
         # Given the relative likelihood of the two options, probably start with
         # the latter.
-        dtstarttmp = find_prop(component, "DTSTART")
+        dtstarttmp = find_prop(component, PropertyKinds.DTSTART)
         dtstart = DateTime(dtstarttmp, newDTFormat)
         
-        dtendtmp = find_prop(component, "DTEND")
+        dtendtmp = find_prop(component, PropertyKinds.DTEND)
         dtend = DateTime(dtendtmp, newDTFormat)
 
-        summary = find_prop(component, "SUMMARY")
+        summary = find_prop(component, PropertyKinds.SUMMARY)
         if dtstart >= startDate && dtend <= endDate
             add_to_days_of_week!(component, summary, mEvents, tEvents, wEvents, rEvents, fEvents)
         end

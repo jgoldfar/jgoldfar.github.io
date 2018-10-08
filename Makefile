@@ -74,7 +74,7 @@ else
 endif
 	$(JULIA) --project="." $^
 
-cal-deps:
+cal-deps: cal-deps-pull
 
 
 ## Hugo Generation
