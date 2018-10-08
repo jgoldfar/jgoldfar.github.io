@@ -83,6 +83,19 @@ HUGOFILE := config.toml
 serve: $(HUGOFILE) $(HUGO)
 	$(HUGO) --verbose server
 
+FileName?=
+new: $(HUGOFILE) $(HUGO)
+ifeq ($(FileName),)
+	@echo "Usage: make new FileName=..."
+	@echo "i.e. make new FileName=blog/newBlogPost.md"
+else # FileName set
+ifeq ($(basename $(FileName)),$(FileName))
+	$(HUGO) new $(FileName).md
+else # Already has an extension
+	$(HUGO) new $(FileName)
+endif # Switch on existence of extension
+endif # Switch on definition of FileName
+
 ### Generate site
 GitRepoName=jgoldfar.github.io
 gen-git: $(HUGOFILE) $(HUGO)

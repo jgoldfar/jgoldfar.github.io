@@ -47,3 +47,11 @@ to generate and push an update are
 To make more significant changes to the pages, it is recommended to run `hugo` as a server, using
 
     make serve
+
+To generate a new page (in particular, to automatically set the date) run
+
+    make new FileName=...
+
+In particular, to make a new blog post with the title (for instance) `ImplicitFunctionTheoremApplications`, run
+
+    make new FileName=blog/ImplicitFunctionTheoremApplications
