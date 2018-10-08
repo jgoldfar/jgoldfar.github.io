@@ -54,12 +54,12 @@ IcalTargetFiles=$(addsuffix .ical,CourseAppointment SeminarSchedule)
 $(IcalDir)/CourseAppointment.ical:
 	[ ! -z "$(CourseAppointmentIcalLink)" ]
 	mkdir -p $(dir $@)
-	@wget -O$@ $(CourseAppointmentIcalLink)
+	@curl -L "$(CourseAppointmentIcalLink)" -o "$@"
 
 $(IcalDir)/SeminarSchedule.ical:
 	[ ! -z "$(SeminarScheduleIcalLink)" ]
 	mkdir -p $(dir $@)
-	@wget -O$@ $(SeminarScheduleIcalLink)
+	@curl -L "$(SeminarScheduleIcalLink)" -o "$@"
 		
 cal-deps-pull: $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 
