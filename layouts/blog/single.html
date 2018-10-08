@@ -21,8 +21,11 @@
     <span class="subtitle">{{.}}</span>
     {{ end }}
 <ul class="tags">
+<span class="date">
+    Published: {{ .Date | dateFormat "Jan 2, 2006" }}
+</span>
     {{ range .Params.tags }}
-        : <!--<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">-->{{ . }}<!--</a>-->
+        : <span class="tag"><!--<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">-->{{ . }}<!--</a>--></span>
     {{ end }}
 </ul>
 </td>
