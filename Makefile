@@ -66,16 +66,23 @@ cal-deps-pull: $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 JULIA?=$(shell which julia)
 LIBICALURI?=https://github.com/jgoldfar/Libical.jl
 LIBICALDEV?=0
-cal-deps-generate: deps/generateScheduleFile.jl $(addprefix $(IcalDir)/,$(IcalTargetFiles))
+cal-deps-generate: deps/generateScheduleFile.jl Project.toml $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 ifeq ($(LIBICALDEV),0)
 	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
 else
 	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
 endif
-	$(JULIA) --project="." $^
+	$(JULIA) --project="." $@ $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 
 cal-deps: cal-deps-pull
 
+
+### OSS contribution/repository listing generator
+data/oss/github.json: deps/getRepos.jl Project.toml
+	mkdir -p $(dir $@)
+	$(JULIA) --project="." $< $@ --github
+	
+oss-contribs-generate: data/oss/github.json
 
 ## Hugo Generation
 HUGOFILE := config.toml
