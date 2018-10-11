@@ -2,6 +2,7 @@
   {
     "name": "stan",
     "showReadme": true,
+    "weight": 0,
     "language": "R",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -11,6 +12,7 @@
   {
     "name": "PDQSort.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -20,6 +22,7 @@
   {
     "name": "spark-scala-maven-boilerplate-project",
     "showReadme": true,
+    "weight": 0,
     "language": "Scala",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -29,6 +32,7 @@
   {
     "name": "Sundials.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -38,6 +42,7 @@
   {
     "name": "DASSL.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -47,6 +52,7 @@
   {
     "name": "WeightedNorms.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -56,6 +62,7 @@
   {
     "name": "JuliaBox-Notebooks",
     "showReadme": true,
+    "weight": 0,
     "language": "Jupyter Notebook",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -65,6 +72,7 @@
   {
     "name": "NetCDF.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -74,6 +82,7 @@
   {
     "name": "PostgreSQL.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -83,6 +92,7 @@
   {
     "name": "Librsync.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -92,6 +102,7 @@
   {
     "name": "Julia-Cheat-Sheet",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -101,6 +112,7 @@
   {
     "name": "SimpleGradientDescent.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -110,6 +122,7 @@
   {
     "name": "BonminBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -119,6 +132,7 @@
   {
     "name": "SPSBase.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -128,6 +142,7 @@
   {
     "name": "flow-dashboard",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -137,6 +152,7 @@
   {
     "name": "StrPack.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -146,6 +162,7 @@
   {
     "name": "BarenblattDemo",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -155,6 +172,7 @@
   {
     "name": "MLforISP.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -164,6 +182,7 @@
   {
     "name": "ParserCombinator.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -173,6 +192,7 @@
   {
     "name": "GraphCircuits.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -182,6 +202,7 @@
   {
     "name": "Clang.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -191,6 +212,7 @@
   {
     "name": "hugo",
     "showReadme": true,
+    "weight": 0,
     "language": "Go",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -200,6 +222,7 @@
   {
     "name": "hipi",
     "showReadme": true,
+    "weight": 0,
     "language": "Java",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -209,6 +232,7 @@
   {
     "name": "zotero",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -218,6 +242,7 @@
   {
     "name": "Logging.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -227,6 +252,7 @@
   {
     "name": "Reel.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -236,6 +262,7 @@
   {
     "name": "circleci-pipenv",
     "showReadme": true,
+    "weight": 0,
     "language": "Dockerfile",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -245,6 +272,7 @@
   {
     "name": "pdf2htmlEX-docker",
     "showReadme": true,
+    "weight": 0,
     "language": "Shell",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -254,6 +282,7 @@
   {
     "name": "bibtex-markdown",
     "showReadme": true,
+    "weight": 0,
     "language": "Perl",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -263,6 +292,7 @@
   {
     "name": "preTeX",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -272,6 +302,7 @@
   {
     "name": "Sewell.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -281,6 +312,7 @@
   {
     "name": "sc-im",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -290,6 +322,7 @@
   {
     "name": "pdf2htmlEX",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -299,6 +332,7 @@
   {
     "name": "ODE.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -308,6 +342,7 @@
   {
     "name": "PGFPlotsX.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -317,6 +352,7 @@
   {
     "name": "omar-1",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -326,6 +362,7 @@
   {
     "name": "jgoldfarHugoTheme",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -335,6 +372,7 @@
   {
     "name": "awesome-deep-learning-papers",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -344,6 +382,7 @@
   {
     "name": "BGLR.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -353,6 +392,7 @@
   {
     "name": "miller",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -362,6 +402,7 @@
   {
     "name": "webwork-open-problem-library",
     "showReadme": true,
+    "weight": 0,
     "language": "PostScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -371,6 +412,7 @@
   {
     "name": "theorem_proving_in_lean",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -380,6 +422,7 @@
   {
     "name": "PlotDocs.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -389,6 +432,7 @@
   {
     "name": "MbedTLSBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -398,6 +442,7 @@
   {
     "name": "flint2",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -407,6 +452,7 @@
   {
     "name": "elm-platform",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -416,6 +462,7 @@
   {
     "name": "Adept",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -425,6 +472,7 @@
   {
     "name": "Yeppp.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -434,6 +482,7 @@
   {
     "name": "Homebrew.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -443,6 +492,7 @@
   {
     "name": "ThisWeekInJulia.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -452,6 +502,7 @@
   {
     "name": "Bitbucket.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -461,6 +512,7 @@
   {
     "name": "SPSInterface.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -470,6 +522,7 @@
   {
     "name": "Mollifiers.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Jupyter Notebook",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -479,6 +532,7 @@
   {
     "name": "jenkins",
     "showReadme": true,
+    "weight": 0,
     "language": "Java",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -488,6 +542,7 @@
   {
     "name": "goldberg",
     "showReadme": true,
+    "weight": 0,
     "language": "Ruby",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -497,6 +552,7 @@
   {
     "name": "Lapidary.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -506,6 +562,7 @@
   {
     "name": "list",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -515,6 +572,7 @@
   {
     "name": "Hiccup.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -524,6 +582,7 @@
   {
     "name": "jgoldfar.github.io",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -533,6 +592,7 @@
   {
     "name": "igraph.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -542,6 +602,7 @@
   {
     "name": "swift",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -551,6 +612,7 @@
   {
     "name": "pyspread",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -560,6 +622,7 @@
   {
     "name": "mkdocs",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -569,6 +632,7 @@
   {
     "name": "SCUDEMFiles",
     "showReadme": true,
+    "weight": 0,
     "language": "Jupyter Notebook",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -578,6 +642,7 @@
   {
     "name": "petsc",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -587,6 +652,7 @@
   {
     "name": "PkgDev.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -596,6 +662,7 @@
   {
     "name": "TiddlyWiki5",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -605,6 +672,7 @@
   {
     "name": "SiloBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -614,6 +682,7 @@
   {
     "name": "plotly.js",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -623,6 +692,7 @@
   {
     "name": "ww_install",
     "showReadme": true,
+    "weight": 0,
     "language": "Perl",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -632,6 +702,7 @@
   {
     "name": "DualNumbers.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -641,6 +712,7 @@
   {
     "name": "Jig.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -650,6 +722,7 @@
   {
     "name": "gsl",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -659,6 +732,7 @@
   {
     "name": "uClibc",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -668,6 +742,7 @@
   {
     "name": "latex-julia-docker",
     "showReadme": true,
+    "weight": 0,
     "language": "Dockerfile",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -677,6 +752,7 @@
   {
     "name": "18S096-iap17",
     "showReadme": true,
+    "weight": 0,
     "language": "Jupyter Notebook",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -686,6 +762,7 @@
   {
     "name": "FlexiblePrintingTestset.jl",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -695,6 +772,7 @@
   {
     "name": "CouenneBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -704,6 +782,7 @@
   {
     "name": "cpp-serializers",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -713,6 +792,7 @@
   {
     "name": "TagTime",
     "showReadme": true,
+    "weight": 0,
     "language": "Java",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -722,6 +802,7 @@
   {
     "name": "latex-docker",
     "showReadme": true,
+    "weight": 0,
     "language": "Dockerfile",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -731,6 +812,7 @@
   {
     "name": "Maker.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -740,6 +822,7 @@
   {
     "name": "kanban.bash",
     "showReadme": true,
+    "weight": 0,
     "language": "Shell",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -749,6 +832,7 @@
   {
     "name": "Plots.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -758,6 +842,7 @@
   {
     "name": "Borg.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -767,6 +852,7 @@
   {
     "name": "Polynomials.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -776,6 +862,7 @@
   {
     "name": "apm_julia",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -785,6 +872,7 @@
   {
     "name": "coin",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -794,6 +882,7 @@
   {
     "name": "Lint.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -803,6 +892,7 @@
   {
     "name": "scala",
     "showReadme": true,
+    "weight": 0,
     "language": "Scala",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -812,6 +902,7 @@
   {
     "name": "Dataproofer",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -821,6 +912,7 @@
   {
     "name": "vimrc",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -830,6 +922,7 @@
   {
     "name": "DifferentialEquations.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -839,6 +932,7 @@
   {
     "name": "pg",
     "showReadme": true,
+    "weight": 0,
     "language": "Perl",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -848,6 +942,7 @@
   {
     "name": "css-grid-layout",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -857,6 +952,7 @@
   {
     "name": "hyde",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -866,6 +962,7 @@
   {
     "name": "GarminFIT.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -875,6 +972,7 @@
   {
     "name": "swig",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -884,6 +982,7 @@
   {
     "name": "phpstack",
     "showReadme": true,
+    "weight": 0,
     "language": "PHP",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -893,6 +992,7 @@
   {
     "name": "VoiceMac",
     "showReadme": true,
+    "weight": 0,
     "language": "Objective-C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -902,6 +1002,7 @@
   {
     "name": "awesome-osx-command-line",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -911,6 +1012,7 @@
   {
     "name": "go",
     "showReadme": true,
+    "weight": 0,
     "language": "Go",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -920,6 +1022,7 @@
   {
     "name": "famous",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -929,6 +1032,7 @@
   {
     "name": "LibicalBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -938,6 +1042,7 @@
   {
     "name": "Elly.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -947,6 +1052,7 @@
   {
     "name": "atom-hg",
     "showReadme": true,
+    "weight": 0,
     "language": "CoffeeScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -956,6 +1062,7 @@
   {
     "name": "TrueCraft",
     "showReadme": true,
+    "weight": 0,
     "language": "C#",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -965,6 +1072,7 @@
   {
     "name": "scikits.bvp_solver",
     "showReadme": true,
+    "weight": 0,
     "language": "FORTRAN",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -974,6 +1082,7 @@
   {
     "name": "numerics",
     "showReadme": true,
+    "weight": 0,
     "language": "Clojure",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -983,6 +1092,7 @@
   {
     "name": "docker-debian-artifacts",
     "showReadme": true,
+    "weight": 0,
     "language": "Shell",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -992,6 +1102,7 @@
   {
     "name": "Dierckx.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1001,6 +1112,7 @@
   {
     "name": "ArgParse.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1010,6 +1122,7 @@
   {
     "name": "GSL.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1019,6 +1132,7 @@
   {
     "name": "language-pg",
     "showReadme": true,
+    "weight": 0,
     "language": "CoffeeScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1028,6 +1142,7 @@
   {
     "name": "drone",
     "showReadme": true,
+    "weight": 0,
     "language": "Go",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1037,6 +1152,7 @@
   {
     "name": "maxima-clone",
     "showReadme": true,
+    "weight": 0,
     "language": "Common Lisp",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1046,6 +1162,7 @@
   {
     "name": "spectacle",
     "showReadme": true,
+    "weight": 0,
     "language": "Objective-C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1055,6 +1172,7 @@
   {
     "name": "Nemo.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1064,6 +1182,7 @@
   {
     "name": "numal",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1073,6 +1192,7 @@
   {
     "name": "Escher.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1082,6 +1202,7 @@
   {
     "name": "PackageManagerCLI.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1091,6 +1212,7 @@
   {
     "name": "psopt",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1100,6 +1222,7 @@
   {
     "name": "METADATA.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1109,6 +1232,7 @@
   {
     "name": "Coverage.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1118,6 +1242,7 @@
   {
     "name": "jq",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1127,6 +1252,7 @@
   {
     "name": "csmith",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1136,6 +1262,7 @@
   {
     "name": "maxima-docker",
     "showReadme": true,
+    "weight": 0,
     "language": "Dockerfile",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1145,6 +1272,7 @@
   {
     "name": "SPSRunner.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1154,6 +1282,7 @@
   {
     "name": "alexa-skills-kit-sdk-for-python",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1163,6 +1292,7 @@
   {
     "name": "hypre",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1172,6 +1302,7 @@
   {
     "name": "Projects",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1181,6 +1312,7 @@
   {
     "name": "LightGraphs.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1190,6 +1322,7 @@
   {
     "name": "sbt-cpp",
     "showReadme": true,
+    "weight": 0,
     "language": "Scala",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1199,6 +1332,7 @@
   {
     "name": "rr",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1208,6 +1342,7 @@
   {
     "name": "Compose.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1217,6 +1352,7 @@
   {
     "name": "LaTeXTools.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1226,6 +1362,7 @@
   {
     "name": "BinDeps.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1235,6 +1372,7 @@
   {
     "name": "Libui.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1244,6 +1382,7 @@
   {
     "name": "stan_intro",
     "showReadme": true,
+    "weight": 0,
     "language": "TeX",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1253,6 +1392,7 @@
   {
     "name": "HyperDualNumbers.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1262,6 +1402,7 @@
   {
     "name": "TextWrap.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1271,6 +1412,7 @@
   {
     "name": "craftinginterpreters",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1280,6 +1422,7 @@
   {
     "name": "omar",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1289,6 +1432,7 @@
   {
     "name": "BaseTestNext.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1298,6 +1442,7 @@
   {
     "name": "Spark.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1307,6 +1452,7 @@
   {
     "name": "XBraid.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1316,6 +1462,7 @@
   {
     "name": "stanford_dl_ex",
     "showReadme": true,
+    "weight": 0,
     "language": "Matlab",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1325,6 +1472,7 @@
   {
     "name": "NLopt.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1334,6 +1482,7 @@
   {
     "name": "pandoc-docker-bibtex",
     "showReadme": true,
+    "weight": 0,
     "language": "Dockerfile",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1343,6 +1492,7 @@
   {
     "name": "yakyak",
     "showReadme": true,
+    "weight": 0,
     "language": "CoffeeScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1352,6 +1502,7 @@
   {
     "name": "Optim.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1361,6 +1512,7 @@
   {
     "name": "isp-julia-mwe",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1370,6 +1522,7 @@
   {
     "name": "tern",
     "showReadme": true,
+    "weight": 0,
     "language": "JavaScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1379,6 +1532,7 @@
   {
     "name": "DBI.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1388,6 +1542,7 @@
   {
     "name": "Libical.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1397,6 +1552,7 @@
   {
     "name": "Quantitative-Big-Imaging-Course",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1406,6 +1562,7 @@
   {
     "name": "ossim",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1415,6 +1572,7 @@
   {
     "name": "go-getter",
     "showReadme": true,
+    "weight": 0,
     "language": "Shell",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1424,6 +1582,7 @@
   {
     "name": "srclib",
     "showReadme": true,
+    "weight": 0,
     "language": "Go",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1433,6 +1592,7 @@
   {
     "name": "TermboxBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1442,6 +1602,7 @@
   {
     "name": "bland",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1451,6 +1612,7 @@
   {
     "name": "linter-chktex",
     "showReadme": true,
+    "weight": 0,
     "language": "CoffeeScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1460,6 +1622,7 @@
   {
     "name": "scientist",
     "showReadme": true,
+    "weight": 0,
     "language": "Ruby",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1469,6 +1632,7 @@
   {
     "name": "GroupTheoreticML.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1478,6 +1642,7 @@
   {
     "name": "coq",
     "showReadme": true,
+    "weight": 0,
     "language": "OCaml",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1487,6 +1652,7 @@
   {
     "name": "DAGAdvisor.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1496,6 +1662,7 @@
   {
     "name": "AmplNLWriter.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1505,6 +1672,7 @@
   {
     "name": "rust",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1514,6 +1682,7 @@
   {
     "name": "phdthesis",
     "showReadme": true,
+    "weight": 0,
     "language": "TeX",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1523,6 +1692,7 @@
   {
     "name": "julia",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1532,6 +1702,7 @@
   {
     "name": "matlab2tikz",
     "showReadme": true,
+    "weight": 0,
     "language": "Matlab",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1541,6 +1712,7 @@
   {
     "name": "MLDatasets.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1550,6 +1722,7 @@
   {
     "name": "Style.jl",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1559,6 +1732,7 @@
   {
     "name": "webwork2",
     "showReadme": true,
+    "weight": 0,
     "language": "Perl",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1568,6 +1742,7 @@
   {
     "name": "trilinos",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1577,6 +1752,7 @@
   {
     "name": "MPI.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1586,6 +1762,7 @@
   {
     "name": "Gadfly.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1595,6 +1772,7 @@
   {
     "name": "nlopt",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1604,6 +1782,7 @@
   {
     "name": "termbox",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1613,6 +1792,7 @@
   {
     "name": "FeigenbaumUtil",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1622,6 +1802,7 @@
   {
     "name": "language-maxima",
     "showReadme": true,
+    "weight": 0,
     "language": "CoffeeScript",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1631,6 +1812,7 @@
   {
     "name": "BuildYourOwnLisp",
     "showReadme": true,
+    "weight": 0,
     "language": "HTML",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1640,6 +1822,7 @@
   {
     "name": "Termbox.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1649,6 +1832,7 @@
   {
     "name": "arxiv-sanity-preserver",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1658,6 +1842,7 @@
   {
     "name": "BinaryBuilder.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1667,6 +1852,7 @@
   {
     "name": "Media.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1676,6 +1862,7 @@
   {
     "name": "Silo.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1685,6 +1872,7 @@
   {
     "name": "proteus",
     "showReadme": true,
+    "weight": 0,
     "language": "Python",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1694,6 +1882,7 @@
   {
     "name": "Compat.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1703,6 +1892,7 @@
   {
     "name": "diff-pdf",
     "showReadme": true,
+    "weight": 0,
     "language": "M4",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1712,6 +1902,7 @@
   {
     "name": "CoinOptServices.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1721,6 +1912,7 @@
   {
     "name": "BVP.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1730,6 +1922,7 @@
   {
     "name": "Nim",
     "showReadme": true,
+    "weight": 0,
     "language": "Nimrod",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1739,6 +1932,7 @@
   {
     "name": "SundialsKLUBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1748,6 +1942,7 @@
   {
     "name": "BlackBoxOptim.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1757,6 +1952,7 @@
   {
     "name": "libXftBuilder",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1766,6 +1962,7 @@
   {
     "name": "qlstephen",
     "showReadme": true,
+    "weight": 0,
     "language": "Objective-C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1775,6 +1972,7 @@
   {
     "name": "PackageEvaluator.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1784,6 +1982,7 @@
   {
     "name": "scala-xml",
     "showReadme": true,
+    "weight": 0,
     "language": "Scala",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1793,6 +1992,7 @@
   {
     "name": "spacemacs",
     "showReadme": true,
+    "weight": 0,
     "language": "Emacs Lisp",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1802,6 +2002,7 @@
   {
     "name": "Juno-LT",
     "showReadme": true,
+    "weight": 0,
     "language": null,
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1811,6 +2012,7 @@
   {
     "name": "MetaRowEchelon.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1820,6 +2022,7 @@
   {
     "name": "Luxor.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1829,6 +2032,7 @@
   {
     "name": "Hypre.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1838,6 +2042,7 @@
   {
     "name": "ossim-plugins",
     "showReadme": true,
+    "weight": 0,
     "language": "C++",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1847,6 +2052,7 @@
   {
     "name": "QuickCheck.jl",
     "showReadme": true,
+    "weight": 0,
     "language": "Julia",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1856,6 +2062,7 @@
   {
     "name": "visual-pdf-diff",
     "showReadme": true,
+    "weight": 0,
     "language": "Shell",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1865,6 +2072,7 @@
   {
     "name": "musl",
     "showReadme": true,
+    "weight": 0,
     "language": "C",
     "showOSSListing": true,
     "showLocalPage": "",
@@ -1874,6 +2082,7 @@
   {
     "name": "hg-plus",
     "showReadme": true,
+    "weight": 0,
     "language": "CoffeeScript",
     "showOSSListing": true,
     "showLocalPage": "",

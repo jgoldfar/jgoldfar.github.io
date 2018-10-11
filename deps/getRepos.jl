@@ -11,25 +11,40 @@ function get_github_repos(username::String = "jgoldfar")
     end
 end
 
-function init_repoListing(filename::String, repoData)
-    outputData = [Dict(
-                    "name" => k,
-                    "language" => v[1],
-                    "description" => v[2],
-                    "url" => v[3],
-                    "showOSSListing" => true,
-                    "showReadme" => true,
-                    "showLocalPage" => "") for (k, v) in repoData
-                    ]
+function update_repoListing(filename::String, repoData)
     open(filename, "w") do st
-    JSON.print(st, outputData, 2)
+        JSON.print(st, repoData, 2)
     end
     return nothing
 end
 
+# Ingest repository data in `filename`; comes in "internal" format
 function ingest_repoListing(filename::String)
     JSON.parsefile(filename)
 end
+
+# Convert all output from github API into our internal, annotated format
+function githubFormat_to_internal(repoData)
+    [_to_internal(k, v) for (k, v) in repoData]
+end
+
+# Internal, annotated format
+_to_internal(k, v) = Dict(
+        "name" => k,
+        "language" => v[1],
+        "description" => v[2],
+        "url" => v[3],
+        "showOSSListing" => true,
+        "showReadme" => true,
+        "showLocalPage" => "",
+        "weight" => 0)
+
+function internal_to_githubFormat(repoJsonData)
+    Dict(v["name"] => (v["language"], v["description"], v["url"]) for v in repoJsonData)
+end
+
+# Just grab vector of project names
+internal_to_name_vector(repoJsonData) = [v["name"] for v in repoJsonData]
 
 function usage()
     println(
@@ -46,7 +61,7 @@ function main(args=ARGS)
         return 0
     end
     jsonDataFile = first(ARGS)
-    if "--github" in ARGS
+    newData = if "--github" in ARGS
         newData = get_github_repos()
     elseif "--bitbucket" in ARGS
         newData = get_bitbucket_repos()
@@ -54,14 +69,38 @@ function main(args=ARGS)
         usage()
         return 0
     end
+    
+    if (newData == nothing)
+        println(stderr, "Failed to download repository information.")
+        return -1
+    end
+    
     if !isfile(jsonDataFile)
         println(stderr, "Creating new repository data file $(jsonDataFile)")
-        init_repoListing(jsonDataFile, newData)
+        if "--github" in ARGS
+            update_repoListing(jsonDataFile, githubFormat_to_internal(newData))
+        end
         return 0
     end
     
     println(stderr, "Updating repository data file $(jsonDataFile)")
     existingData = ingest_repoListing(jsonDataFile)
-#     newData = get_all_repos()
+    
+    ## To test: comment out null check for newData, and uncomment the next 3 lines
+    # newData = internal_to_githubFormat(existingData)
+    # pop!(existingData)
+    # pop!(existingData)
+
+    existingDataKeys = internal_to_name_vector(existingData)
+    
+    
+    for (k, v) in newData
+        if !(k in existingDataKeys)
+            println(stderr, "Found new repository: $(k)")
+            push!(existingData, _to_internal(k, v))
+        end
+    end
+    
+    update_repoListing(jsonDataFile, existingData)
 end
 main()
