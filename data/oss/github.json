@@ -1,0 +1,1883 @@
+[
+  {
+    "name": "stan",
+    "showReadme": true,
+    "language": "R",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Stan development repository (home page is linked below). The master branch contains the current release. The develop branch contains the latest stable development.  See the Developer Process Wiki for details.  ",
+    "url": "https://github.com/jgoldfar/stan"
+  },
+  {
+    "name": "PDQSort.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Implementation of PDQSort for Julia",
+    "url": "https://github.com/jgoldfar/PDQSort.jl"
+  },
+  {
+    "name": "spark-scala-maven-boilerplate-project",
+    "showReadme": true,
+    "language": "Scala",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "This is a skeleton of a Scala project with maven to start using Spark",
+    "url": "https://github.com/jgoldfar/spark-scala-maven-boilerplate-project"
+  },
+  {
+    "name": "Sundials.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia interface to Sundials, including a nonlinear solver (KINSOL), ODE's (CVODE), and DAE's (IDA).",
+    "url": "https://github.com/jgoldfar/Sundials.jl"
+  },
+  {
+    "name": "DASSL.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Solves stiff differential algebraic equations (DAE) using variable stepsize backwards finite difference formula (BDF)",
+    "url": "https://github.com/jgoldfar/DASSL.jl"
+  },
+  {
+    "name": "WeightedNorms.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Define weighted Euclidean norms over datasets",
+    "url": "https://github.com/jgoldfar/WeightedNorms.jl"
+  },
+  {
+    "name": "JuliaBox-Notebooks",
+    "showReadme": true,
+    "language": "Jupyter Notebook",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "JuliaBox Notebooks by jgoldfar",
+    "url": "https://github.com/jgoldfar/JuliaBox-Notebooks"
+  },
+  {
+    "name": "NetCDF.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "NetCDF support for the Julia programming language (fork of JuliaGeo package)",
+    "url": "https://github.com/jgoldfar/NetCDF.jl"
+  },
+  {
+    "name": "PostgreSQL.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "PostgreSQL DBI driver",
+    "url": "https://github.com/jgoldfar/PostgreSQL.jl"
+  },
+  {
+    "name": "Librsync.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Wrapper for rsync functionality in Julia",
+    "url": "https://github.com/jgoldfar/Librsync.jl"
+  },
+  {
+    "name": "Julia-Cheat-Sheet",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia v0.6 Cheat Sheet",
+    "url": "https://github.com/jgoldfar/Julia-Cheat-Sheet"
+  },
+  {
+    "name": "SimpleGradientDescent.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A small Julia package for a dead simple gradient descent algorithm",
+    "url": "https://github.com/jgoldfar/SimpleGradientDescent.jl"
+  },
+  {
+    "name": "BonminBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "BinaryBuilder repo for bonmin and couenne",
+    "url": "https://github.com/jgoldfar/BonminBuilder"
+  },
+  {
+    "name": "SPSBase.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Base functionality for the solution of a version of the scheduling problem",
+    "url": "https://github.com/jgoldfar/SPSBase.jl"
+  },
+  {
+    "name": "flow-dashboard",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A personal dashboard to focus on what matters",
+    "url": "https://github.com/jgoldfar/flow-dashboard"
+  },
+  {
+    "name": "StrPack.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Swiss Army Knife for encoding and decoding binary streams",
+    "url": "https://github.com/jgoldfar/StrPack.jl"
+  },
+  {
+    "name": "BarenblattDemo",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/BarenblattDemo"
+  },
+  {
+    "name": "MLforISP.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "ML codes for learning ISP parameters",
+    "url": "https://github.com/jgoldfar/MLforISP.jl"
+  },
+  {
+    "name": "ParserCombinator.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A parser combinator library for Julia",
+    "url": "https://github.com/jgoldfar/ParserCombinator.jl"
+  },
+  {
+    "name": "GraphCircuits.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Implementations of graph circuit enumeration algorithms written in Julia on top of LightGraphs.jl",
+    "url": "https://github.com/jgoldfar/GraphCircuits.jl"
+  },
+  {
+    "name": "Clang.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia interface to libclang and C wrapper generator",
+    "url": "https://github.com/jgoldfar/Clang.jl"
+  },
+  {
+    "name": "hugo",
+    "showReadme": true,
+    "language": "Go",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A Fast and Flexible Static Site Generator built with love by spf13 in GoLang",
+    "url": "https://github.com/jgoldfar/hugo"
+  },
+  {
+    "name": "hipi",
+    "showReadme": true,
+    "language": "Java",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "HIPI: Hadoop Image Processing Interface",
+    "url": "https://github.com/jgoldfar/hipi"
+  },
+  {
+    "name": "zotero",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources.",
+    "url": "https://github.com/jgoldfar/zotero"
+  },
+  {
+    "name": "Logging.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Logging package for julia",
+    "url": "https://github.com/jgoldfar/Logging.jl"
+  },
+  {
+    "name": "Reel.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "computations caught on camera",
+    "url": "https://github.com/jgoldfar/Reel.jl"
+  },
+  {
+    "name": "circleci-pipenv",
+    "showReadme": true,
+    "language": "Dockerfile",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/circleci-pipenv"
+  },
+  {
+    "name": "pdf2htmlEX-docker",
+    "showReadme": true,
+    "language": "Shell",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/pdf2htmlEX-docker"
+  },
+  {
+    "name": "bibtex-markdown",
+    "showReadme": true,
+    "language": "Perl",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A terrible little hack to integrate BibTeX into markdown in a way that is independent of the markdown parser.",
+    "url": "https://github.com/jgoldfar/bibtex-markdown"
+  },
+  {
+    "name": "preTeX",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "LaTeX preprocessor to simplify math typesetting",
+    "url": "https://github.com/jgoldfar/preTeX"
+  },
+  {
+    "name": "Sewell.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Implementation of ODE/BVP/PDE solvers from Sewell's text for exploration purposes",
+    "url": "https://github.com/jgoldfar/Sewell.jl"
+  },
+  {
+    "name": "sc-im",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "SC-IM - Spreadsheet Calculator Improvised -- An ncurses spreadsheet program for terminal",
+    "url": "https://github.com/jgoldfar/sc-im"
+  },
+  {
+    "name": "pdf2htmlEX",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Convert PDF to HTML without losing text or format.",
+    "url": "https://github.com/jgoldfar/pdf2htmlEX"
+  },
+  {
+    "name": "ODE.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Assorted basic Ordinary Differential Equation solvers",
+    "url": "https://github.com/jgoldfar/ODE.jl"
+  },
+  {
+    "name": "PGFPlotsX.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Seamlessly create plots in Julia using the PGFPlots LaTeX package",
+    "url": "https://github.com/jgoldfar/PGFPlotsX.jl"
+  },
+  {
+    "name": "omar-1",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/omar-1"
+  },
+  {
+    "name": "jgoldfarHugoTheme",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Hugo theme for my website (designed to match my existing page as precisely as possible)",
+    "url": "https://github.com/jgoldfar/jgoldfarHugoTheme"
+  },
+  {
+    "name": "awesome-deep-learning-papers",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The most cited deep learning papers",
+    "url": "https://github.com/jgoldfar/awesome-deep-learning-papers"
+  },
+  {
+    "name": "BGLR.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/BGLR.jl"
+  },
+  {
+    "name": "miller",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Miller is like sed, awk, cut, join, and sort for name-indexed data such as CSV and tabular JSON",
+    "url": "https://github.com/jgoldfar/miller"
+  },
+  {
+    "name": "webwork-open-problem-library",
+    "showReadme": true,
+    "language": "PostScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A library of WeBWorK problem contributed by the OpenWeBWorK community",
+    "url": "https://github.com/jgoldfar/webwork-open-problem-library"
+  },
+  {
+    "name": "theorem_proving_in_lean",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Theorem proving in Lean",
+    "url": "https://github.com/jgoldfar/theorem_proving_in_lean"
+  },
+  {
+    "name": "PlotDocs.jl",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Documentation for Plots.jl",
+    "url": "https://github.com/jgoldfar/PlotDocs.jl"
+  },
+  {
+    "name": "MbedTLSBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/MbedTLSBuilder"
+  },
+  {
+    "name": "flint2",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "FLINT (Fast Library for Number Theory)",
+    "url": "https://github.com/jgoldfar/flint2"
+  },
+  {
+    "name": "elm-platform",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Bundle of all core development tools for Elm",
+    "url": "https://github.com/jgoldfar/elm-platform"
+  },
+  {
+    "name": "Adept",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Fast automatic differentiation library in C++",
+    "url": "https://github.com/jgoldfar/Adept"
+  },
+  {
+    "name": "Yeppp.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Yeppp! bindings",
+    "url": "https://github.com/jgoldfar/Yeppp.jl"
+  },
+  {
+    "name": "Homebrew.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "OSX Binary dependency provider for Julia",
+    "url": "https://github.com/jgoldfar/Homebrew.jl"
+  },
+  {
+    "name": "ThisWeekInJulia.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/ThisWeekInJulia.jl"
+  },
+  {
+    "name": "Bitbucket.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A Julia package for interfacing with GitHub",
+    "url": "https://github.com/jgoldfar/Bitbucket.jl"
+  },
+  {
+    "name": "SPSInterface.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Provides a non-technical-user interface to SPS tools",
+    "url": "https://github.com/jgoldfar/SPSInterface.jl"
+  },
+  {
+    "name": "Mollifiers.jl",
+    "showReadme": true,
+    "language": "Jupyter Notebook",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Package for computing mollifications of given functions",
+    "url": "https://github.com/jgoldfar/Mollifiers.jl"
+  },
+  {
+    "name": "jenkins",
+    "showReadme": true,
+    "language": "Java",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Jenkins Continuous Integration Server",
+    "url": "https://github.com/jgoldfar/jenkins"
+  },
+  {
+    "name": "goldberg",
+    "showReadme": true,
+    "language": "Ruby",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Goldberg is a lightweight CI server written in Ruby which worries about Bundler & RVM so that you don't have to.",
+    "url": "https://github.com/jgoldfar/goldberg"
+  },
+  {
+    "name": "Lapidary.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A documentation generator for Julia.",
+    "url": "https://github.com/jgoldfar/Lapidary.jl"
+  },
+  {
+    "name": "list",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/list"
+  },
+  {
+    "name": "Hiccup.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "HTML DSL AFAIK",
+    "url": "https://github.com/jgoldfar/Hiccup.jl"
+  },
+  {
+    "name": "jgoldfar.github.io",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Home on the web for jgoldfar",
+    "url": "https://github.com/jgoldfar/jgoldfar.github.io"
+  },
+  {
+    "name": "igraph.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia wrappers for igraph (http://igraph.org)",
+    "url": "https://github.com/jgoldfar/igraph.jl"
+  },
+  {
+    "name": "swift",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The Swift Programming Language",
+    "url": "https://github.com/jgoldfar/swift"
+  },
+  {
+    "name": "pyspread",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Pyspread is a spreadsheet application that is based on and written in the programming language Python. ",
+    "url": "https://github.com/jgoldfar/pyspread"
+  },
+  {
+    "name": "mkdocs",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Project documentation with Markdown.",
+    "url": "https://github.com/jgoldfar/mkdocs"
+  },
+  {
+    "name": "SCUDEMFiles",
+    "showReadme": true,
+    "language": "Jupyter Notebook",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/SCUDEMFiles"
+  },
+  {
+    "name": "petsc",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Mirror of https://bitbucket.org/petsc/petsc",
+    "url": "https://github.com/jgoldfar/petsc"
+  },
+  {
+    "name": "PkgDev.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia Package Development Kit",
+    "url": "https://github.com/jgoldfar/PkgDev.jl"
+  },
+  {
+    "name": "TiddlyWiki5",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A self-contained JavaScript wiki for the browser, Node.js, AWS Lambda etc.",
+    "url": "https://github.com/jgoldfar/TiddlyWiki5"
+  },
+  {
+    "name": "SiloBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/SiloBuilder"
+  },
+  {
+    "name": "plotly.js",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The open source javascript graphing library that powers plotly",
+    "url": "https://github.com/jgoldfar/plotly.js"
+  },
+  {
+    "name": "ww_install",
+    "showReadme": true,
+    "language": "Perl",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "WeBWorK Install Script",
+    "url": "https://github.com/jgoldfar/ww_install"
+  },
+  {
+    "name": "DualNumbers.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia package for representing dual numbers and for performing dual algebra",
+    "url": "https://github.com/jgoldfar/DualNumbers.jl"
+  },
+  {
+    "name": "Jig.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Testing framework for Julia",
+    "url": "https://github.com/jgoldfar/Jig.jl"
+  },
+  {
+    "name": "gsl",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "GNU Scientific Library with CMake build support",
+    "url": "https://github.com/jgoldfar/gsl"
+  },
+  {
+    "name": "uClibc",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "uClibc mirror",
+    "url": "https://github.com/jgoldfar/uClibc"
+  },
+  {
+    "name": "latex-julia-docker",
+    "showReadme": true,
+    "language": "Dockerfile",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Dockerfile for Julia + LaTeX projects",
+    "url": "https://github.com/jgoldfar/latex-julia-docker"
+  },
+  {
+    "name": "18S096-iap17",
+    "showReadme": true,
+    "language": "Jupyter Notebook",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "18.S096 course at MIT in IAP 2017",
+    "url": "https://github.com/jgoldfar/18S096-iap17"
+  },
+  {
+    "name": "FlexiblePrintingTestset.jl",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Toy implementation of an AbstractTestset with more flexible output formatting",
+    "url": "https://github.com/jgoldfar/FlexiblePrintingTestset.jl"
+  },
+  {
+    "name": "CouenneBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/CouenneBuilder"
+  },
+  {
+    "name": "cpp-serializers",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Benchmark comparing various data serialization libraries (thrift, protobuf etc.) for C++",
+    "url": "https://github.com/jgoldfar/cpp-serializers"
+  },
+  {
+    "name": "TagTime",
+    "showReadme": true,
+    "language": "Java",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Stochastic Time Tracking for Space Cadets",
+    "url": "https://github.com/jgoldfar/TagTime"
+  },
+  {
+    "name": "latex-docker",
+    "showReadme": true,
+    "language": "Dockerfile",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Docker-based latex compilation",
+    "url": "https://github.com/jgoldfar/latex-docker"
+  },
+  {
+    "name": "Maker.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A make-like system for data analysis",
+    "url": "https://github.com/jgoldfar/Maker.jl"
+  },
+  {
+    "name": "kanban.bash",
+    "showReadme": true,
+    "language": "Shell",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "commandline asciii kanban board for minimalist productivity bash hackers (csv-based)",
+    "url": "https://github.com/jgoldfar/kanban.bash"
+  },
+  {
+    "name": "Plots.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Powerful convenience for Julia visualizations and data analysis",
+    "url": "https://github.com/jgoldfar/Plots.jl"
+  },
+  {
+    "name": "Borg.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia interface to Borg",
+    "url": "https://github.com/jgoldfar/Borg.jl"
+  },
+  {
+    "name": "Polynomials.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Polynomial manipulations",
+    "url": "https://github.com/jgoldfar/Polynomials.jl"
+  },
+  {
+    "name": "apm_julia",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "APMonitor Optimization Suite in Julia",
+    "url": "https://github.com/jgoldfar/apm_julia"
+  },
+  {
+    "name": "coin",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "COIN-OR projects with CMake build support",
+    "url": "https://github.com/jgoldfar/coin"
+  },
+  {
+    "name": "Lint.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A lint tool for Julia code",
+    "url": "https://github.com/jgoldfar/Lint.jl"
+  },
+  {
+    "name": "scala",
+    "showReadme": true,
+    "language": "Scala",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The Scala programming language",
+    "url": "https://github.com/jgoldfar/scala"
+  },
+  {
+    "name": "Dataproofer",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A proofreader for your data",
+    "url": "https://github.com/jgoldfar/Dataproofer"
+  },
+  {
+    "name": "vimrc",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "My vim settings",
+    "url": "https://github.com/jgoldfar/vimrc"
+  },
+  {
+    "name": "DifferentialEquations.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia package for solving differential equations",
+    "url": "https://github.com/jgoldfar/DifferentialEquations.jl"
+  },
+  {
+    "name": "pg",
+    "showReadme": true,
+    "language": "Perl",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Problem rendering engine for WeBWorK",
+    "url": "https://github.com/jgoldfar/pg"
+  },
+  {
+    "name": "css-grid-layout",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "CSS Grid Layout Examples",
+    "url": "https://github.com/jgoldfar/css-grid-layout"
+  },
+  {
+    "name": "hyde",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A Python Static Website Generator (forked to get it somewhat working)",
+    "url": "https://github.com/jgoldfar/hyde"
+  },
+  {
+    "name": "GarminFIT.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia library for reading (and hopefully writing?) FIT files generated by Garmin GPS devices.",
+    "url": "https://github.com/jgoldfar/GarminFIT.jl"
+  },
+  {
+    "name": "swig",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "SWIG is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages.",
+    "url": "https://github.com/jgoldfar/swig"
+  },
+  {
+    "name": "phpstack",
+    "showReadme": true,
+    "language": "PHP",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Docker- and Shipyard-managed PHP development stack: Nginx, MySQL, MongoDB, PHP-FPM, HHVM, Memcached, Redis, and Elasticsearch. Includes an optional Vagrant-managed CoreOS proxy box at your leisure.",
+    "url": "https://github.com/jgoldfar/phpstack"
+  },
+  {
+    "name": "VoiceMac",
+    "showReadme": true,
+    "language": "Objective-C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Google Voice and SIP Client",
+    "url": "https://github.com/jgoldfar/VoiceMac"
+  },
+  {
+    "name": "awesome-osx-command-line",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Use your OS X terminal shell to do awesome things.",
+    "url": "https://github.com/jgoldfar/awesome-osx-command-line"
+  },
+  {
+    "name": "go",
+    "showReadme": true,
+    "language": "Go",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The Go programming language",
+    "url": "https://github.com/jgoldfar/go"
+  },
+  {
+    "name": "famous",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "This repo is being deprecated. Please check out http://github.com/famous/",
+    "url": "https://github.com/jgoldfar/famous"
+  },
+  {
+    "name": "LibicalBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/LibicalBuilder"
+  },
+  {
+    "name": "Elly.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Hadoop HDFS and Yarn client",
+    "url": "https://github.com/jgoldfar/Elly.jl"
+  },
+  {
+    "name": "atom-hg",
+    "showReadme": true,
+    "language": "CoffeeScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Mercurial wrapper for Atom.io",
+    "url": "https://github.com/jgoldfar/atom-hg"
+  },
+  {
+    "name": "TrueCraft",
+    "showReadme": true,
+    "language": "C#",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Minecraft for hipsters",
+    "url": "https://github.com/jgoldfar/TrueCraft"
+  },
+  {
+    "name": "scikits.bvp_solver",
+    "showReadme": true,
+    "language": "FORTRAN",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Python package for solving two-point boundary value problems that wraps BVP_SOLVER",
+    "url": "https://github.com/jgoldfar/scikits.bvp_solver"
+  },
+  {
+    "name": "numerics",
+    "showReadme": true,
+    "language": "Clojure",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Numerical library for Clojure",
+    "url": "https://github.com/jgoldfar/numerics"
+  },
+  {
+    "name": "docker-debian-artifacts",
+    "showReadme": true,
+    "language": "Shell",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Official builds of debuerreotype-generated Debian tarballs for use in Docker",
+    "url": "https://github.com/jgoldfar/docker-debian-artifacts"
+  },
+  {
+    "name": "Dierckx.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia package for 1-d and 2-d splines",
+    "url": "https://github.com/jgoldfar/Dierckx.jl"
+  },
+  {
+    "name": "ArgParse.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Package for parsing command-line arguments to Julia programs.",
+    "url": "https://github.com/jgoldfar/ArgParse.jl"
+  },
+  {
+    "name": "GSL.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia interface to the GNU Scientific Library (GSL)",
+    "url": "https://github.com/jgoldfar/GSL.jl"
+  },
+  {
+    "name": "language-pg",
+    "showReadme": true,
+    "language": "CoffeeScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "PG/WebWork package for Atom",
+    "url": "https://github.com/jgoldfar/language-pg"
+  },
+  {
+    "name": "drone",
+    "showReadme": true,
+    "language": "Go",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Drone is a Continuous Integration platform built on Docker, written in Go",
+    "url": "https://github.com/jgoldfar/drone"
+  },
+  {
+    "name": "maxima-clone",
+    "showReadme": true,
+    "language": "Common Lisp",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Clone of maxima git repository",
+    "url": "https://github.com/jgoldfar/maxima-clone"
+  },
+  {
+    "name": "spectacle",
+    "showReadme": true,
+    "language": "Objective-C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Spectacle allows you to organize your windows without using a mouse.",
+    "url": "https://github.com/jgoldfar/spectacle"
+  },
+  {
+    "name": "Nemo.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia bindings for various mathematical libraries (including flint2)",
+    "url": "https://github.com/jgoldfar/Nemo.jl"
+  },
+  {
+    "name": "numal",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Numerical Algorithms in C",
+    "url": "https://github.com/jgoldfar/numal"
+  },
+  {
+    "name": "Escher.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Web UIs in pure Julia",
+    "url": "https://github.com/jgoldfar/Escher.jl"
+  },
+  {
+    "name": "PackageManagerCLI.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "npm or apm style CLI for Julia's package manager",
+    "url": "https://github.com/jgoldfar/PackageManagerCLI.jl"
+  },
+  {
+    "name": "psopt",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "PSOPT Optimal Control Software",
+    "url": "https://github.com/jgoldfar/psopt"
+  },
+  {
+    "name": "METADATA.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Metadata for registered Julia packages.",
+    "url": "https://github.com/jgoldfar/METADATA.jl"
+  },
+  {
+    "name": "Coverage.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Take Julia code coverage and memory allocation results, do useful things with them",
+    "url": "https://github.com/jgoldfar/Coverage.jl"
+  },
+  {
+    "name": "jq",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Command-line JSON processor",
+    "url": "https://github.com/jgoldfar/jq"
+  },
+  {
+    "name": "csmith",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Csmith, a random generator of C programs",
+    "url": "https://github.com/jgoldfar/csmith"
+  },
+  {
+    "name": "maxima-docker",
+    "showReadme": true,
+    "language": "Dockerfile",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Dockerfile for maxima + LaTeX projects",
+    "url": "https://github.com/jgoldfar/maxima-docker"
+  },
+  {
+    "name": "SPSRunner.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Scheduling problem solver using JuMP and Couenne/Bonmin",
+    "url": "https://github.com/jgoldfar/SPSRunner.jl"
+  },
+  {
+    "name": "alexa-skills-kit-sdk-for-python",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The Alexa Skills Kit SDK for Python (Beta) helps you get a skill up and running quickly, letting you focus on skill logic instead of boilerplate code. ",
+    "url": "https://github.com/jgoldfar/alexa-skills-kit-sdk-for-python"
+  },
+  {
+    "name": "hypre",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Parallel solvers for sparse linear systems featuring multigrid methods. This repository houses releases and test releases. Pull requests can still be addressed. LLNL users should use the main repository on MyStash.",
+    "url": "https://github.com/jgoldfar/hypre"
+  },
+  {
+    "name": "Projects",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": ":page_with_curl: A list of practical projects that anyone can solve in any programming language.",
+    "url": "https://github.com/jgoldfar/Projects"
+  },
+  {
+    "name": "LightGraphs.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "An optimized graphs package for Julia",
+    "url": "https://github.com/jgoldfar/LightGraphs.jl"
+  },
+  {
+    "name": "sbt-cpp",
+    "showReadme": true,
+    "language": "Scala",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Sbt plugin to allow native compilation of C and C++",
+    "url": "https://github.com/jgoldfar/sbt-cpp"
+  },
+  {
+    "name": "rr",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Record and Replay Framework",
+    "url": "https://github.com/jgoldfar/rr"
+  },
+  {
+    "name": "Compose.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Declarative vector graphics",
+    "url": "https://github.com/jgoldfar/Compose.jl"
+  },
+  {
+    "name": "LaTeXTools.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Tools for automatic manipulation and management of LaTeX Documents",
+    "url": "https://github.com/jgoldfar/LaTeXTools.jl"
+  },
+  {
+    "name": "BinDeps.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Tool for building binary dependencies for Julia modules",
+    "url": "https://github.com/jgoldfar/BinDeps.jl"
+  },
+  {
+    "name": "Libui.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia wrapper to the libui GUI library",
+    "url": "https://github.com/jgoldfar/Libui.jl"
+  },
+  {
+    "name": "stan_intro",
+    "showReadme": true,
+    "language": "TeX",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Draft introduction to probability and inference aimed at the Stan manual.",
+    "url": "https://github.com/jgoldfar/stan_intro"
+  },
+  {
+    "name": "HyperDualNumbers.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia implementation of HyperDualNumbers",
+    "url": "https://github.com/jgoldfar/HyperDualNumbers.jl"
+  },
+  {
+    "name": "TextWrap.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Package for wrapping text into paragraphs.",
+    "url": "https://github.com/jgoldfar/TextWrap.jl"
+  },
+  {
+    "name": "craftinginterpreters",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Repository for the book \"Crafting Interpreters\"",
+    "url": "https://github.com/jgoldfar/craftinginterpreters"
+  },
+  {
+    "name": "omar",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The Ossim Mapping ARchiver",
+    "url": "https://github.com/jgoldfar/omar"
+  },
+  {
+    "name": "BaseTestNext.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Provides the Base.Test functionality added in Julia v0.5",
+    "url": "https://github.com/jgoldfar/BaseTestNext.jl"
+  },
+  {
+    "name": "Spark.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia binding for Apache Spark",
+    "url": "https://github.com/jgoldfar/Spark.jl"
+  },
+  {
+    "name": "XBraid.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "XBraid wrapper in Julia",
+    "url": "https://github.com/jgoldfar/XBraid.jl"
+  },
+  {
+    "name": "stanford_dl_ex",
+    "showReadme": true,
+    "language": "Matlab",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Programming exercises for the Stanford Unsupervised Feature Learning and Deep Learning Tutorial",
+    "url": "https://github.com/jgoldfar/stanford_dl_ex"
+  },
+  {
+    "name": "NLopt.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Package to call the NLopt nonlinear-optimization library from the Julia language",
+    "url": "https://github.com/jgoldfar/NLopt.jl"
+  },
+  {
+    "name": "pandoc-docker-bibtex",
+    "showReadme": true,
+    "language": "Dockerfile",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Docker container for Pandoc with Latex tools and a simple Bibtex converter",
+    "url": "https://github.com/jgoldfar/pandoc-docker-bibtex"
+  },
+  {
+    "name": "yakyak",
+    "showReadme": true,
+    "language": "CoffeeScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Desktop chat client for Google Hangouts",
+    "url": "https://github.com/jgoldfar/yakyak"
+  },
+  {
+    "name": "Optim.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Optimization functions for Julia",
+    "url": "https://github.com/jgoldfar/Optim.jl"
+  },
+  {
+    "name": "isp-julia-mwe",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "MWE for the segfault issue I've been experiencing with Julia implementation of ISP codes",
+    "url": "https://github.com/jgoldfar/isp-julia-mwe"
+  },
+  {
+    "name": "tern",
+    "showReadme": true,
+    "language": "JavaScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A JavaScript code analyzer for deep, cross-editor language support",
+    "url": "https://github.com/jgoldfar/tern"
+  },
+  {
+    "name": "DBI.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Abstract DBI interface",
+    "url": "https://github.com/jgoldfar/DBI.jl"
+  },
+  {
+    "name": "Libical.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia wrapper for libical (https://github.com/libical/libical)",
+    "url": "https://github.com/jgoldfar/Libical.jl"
+  },
+  {
+    "name": "Quantitative-Big-Imaging-Course",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The overview and course material for the quantitative big imaging course for Spring Semester 2014",
+    "url": "https://github.com/jgoldfar/Quantitative-Big-Imaging-Course"
+  },
+  {
+    "name": "ossim",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "** GRAB ME FIRST! ** Core OSSIM package including C++ code for OSSIM library, command-line applications, tests, and build system",
+    "url": "https://github.com/jgoldfar/ossim"
+  },
+  {
+    "name": "go-getter",
+    "showReadme": true,
+    "language": "Shell",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Like 'go get' but with pinned package versions. A tiny shell script.",
+    "url": "https://github.com/jgoldfar/go-getter"
+  },
+  {
+    "name": "srclib",
+    "showReadme": true,
+    "language": "Go",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "srclib is a polyglot code analysis library, built for hackability. It consists of language analysis toolchains (currently for Go, Java, Python, JavaScript, Ruby, and Haskell) with a common output format, and developer tools (such as editor plugins) that consume this format.",
+    "url": "https://github.com/jgoldfar/srclib"
+  },
+  {
+    "name": "TermboxBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/TermboxBuilder"
+  },
+  {
+    "name": "bland",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Recursive generics using FLINT",
+    "url": "https://github.com/jgoldfar/bland"
+  },
+  {
+    "name": "linter-chktex",
+    "showReadme": true,
+    "language": "CoffeeScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "An Atom Linter plugin for LaTeX, using chktex",
+    "url": "https://github.com/jgoldfar/linter-chktex"
+  },
+  {
+    "name": "scientist",
+    "showReadme": true,
+    "language": "Ruby",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": ":microscope: A Ruby library for carefully refactoring critical paths.",
+    "url": "https://github.com/jgoldfar/scientist"
+  },
+  {
+    "name": "GroupTheoreticML.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Repo for Group theorectic ML codes",
+    "url": "https://github.com/jgoldfar/GroupTheoreticML.jl"
+  },
+  {
+    "name": "coq",
+    "showReadme": true,
+    "language": "OCaml",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Coq is a formal proof management system. It provides a formal language to write mathematical definitions, executable algorithms and theorems together with an environment for semi-interactive development of machine-checked proofs. ",
+    "url": "https://github.com/jgoldfar/coq"
+  },
+  {
+    "name": "DAGAdvisor.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Advising recommendation system based on a representation of courses as a DAG",
+    "url": "https://github.com/jgoldfar/DAGAdvisor.jl"
+  },
+  {
+    "name": "AmplNLWriter.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia interface to AMPL-enabled solvers",
+    "url": "https://github.com/jgoldfar/AmplNLWriter.jl"
+  },
+  {
+    "name": "rust",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A safe, concurrent, practical language.",
+    "url": "https://github.com/jgoldfar/rust"
+  },
+  {
+    "name": "phdthesis",
+    "showReadme": true,
+    "language": "TeX",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "phd thesis document source",
+    "url": "https://github.com/jgoldfar/phdthesis"
+  },
+  {
+    "name": "julia",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The Julia Language: A fresh approach to technical computing.",
+    "url": "https://github.com/jgoldfar/julia"
+  },
+  {
+    "name": "matlab2tikz",
+    "showReadme": true,
+    "language": "Matlab",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A converter that takes a MATLAB(R) figure and spits out a TikZ (Pgfplots) figure for smooth integration into LaTeX. ",
+    "url": "https://github.com/jgoldfar/matlab2tikz"
+  },
+  {
+    "name": "MLDatasets.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Utility package for accessing common Machine Learning datasets in Julia",
+    "url": "https://github.com/jgoldfar/MLDatasets.jl"
+  },
+  {
+    "name": "Style.jl",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Style guideline for Julia",
+    "url": "https://github.com/jgoldfar/Style.jl"
+  },
+  {
+    "name": "webwork2",
+    "showReadme": true,
+    "language": "Perl",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Course management front end for WeBWorK",
+    "url": "https://github.com/jgoldfar/webwork2"
+  },
+  {
+    "name": "trilinos",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Live clone of https://software.sandia.gov/trilinos/repositories/publicTrilinos.",
+    "url": "https://github.com/jgoldfar/trilinos"
+  },
+  {
+    "name": "MPI.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "MPI wrappers for Julia",
+    "url": "https://github.com/jgoldfar/MPI.jl"
+  },
+  {
+    "name": "Gadfly.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Crafty statistical graphics for Julia.",
+    "url": "https://github.com/jgoldfar/Gadfly.jl"
+  },
+  {
+    "name": "nlopt",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "library for nonlinear optimization, wrapping many algorithms for global and local, constrained or unconstrained, optimization",
+    "url": "https://github.com/jgoldfar/nlopt"
+  },
+  {
+    "name": "termbox",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Library for writing text-based user interfaces",
+    "url": "https://github.com/jgoldfar/termbox"
+  },
+  {
+    "name": "FeigenbaumUtil",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Codes for playing with first and second minimal periodic orbits",
+    "url": "https://github.com/jgoldfar/FeigenbaumUtil"
+  },
+  {
+    "name": "language-maxima",
+    "showReadme": true,
+    "language": "CoffeeScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Maxima language package for Atom.io",
+    "url": "https://github.com/jgoldfar/language-maxima"
+  },
+  {
+    "name": "BuildYourOwnLisp",
+    "showReadme": true,
+    "language": "HTML",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Learn C and build your own programming language in under 1000 lines of code!",
+    "url": "https://github.com/jgoldfar/BuildYourOwnLisp"
+  },
+  {
+    "name": "Termbox.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Low-level wrapper around the termbox library in Julia",
+    "url": "https://github.com/jgoldfar/Termbox.jl"
+  },
+  {
+    "name": "arxiv-sanity-preserver",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Web interface for browsing, search and filtering recent arxiv submissions",
+    "url": "https://github.com/jgoldfar/arxiv-sanity-preserver"
+  },
+  {
+    "name": "BinaryBuilder.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Binary Dependency Builder for Julia",
+    "url": "https://github.com/jgoldfar/BinaryBuilder.jl"
+  },
+  {
+    "name": "Media.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia Display System",
+    "url": "https://github.com/jgoldfar/Media.jl"
+  },
+  {
+    "name": "Silo.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Wrapper for the Silo file format in Julia",
+    "url": "https://github.com/jgoldfar/Silo.jl"
+  },
+  {
+    "name": "proteus",
+    "showReadme": true,
+    "language": "Python",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A computational methods and simulation toolkit",
+    "url": "https://github.com/jgoldfar/proteus"
+  },
+  {
+    "name": "Compat.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "cross-version compatibility",
+    "url": "https://github.com/jgoldfar/Compat.jl"
+  },
+  {
+    "name": "diff-pdf",
+    "showReadme": true,
+    "language": "M4",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A simple tool for visually comparing two PDF files (Note: this repo is provided *as-is*; PRs are welcome and promptly handled, but please don’t expect any kind of support, including implementation of feature requests or fixes. If you’re not a developer, this tool is probably not for you.)",
+    "url": "https://github.com/jgoldfar/diff-pdf"
+  },
+  {
+    "name": "CoinOptServices.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia interface to COIN-OR Optimization Services https://projects.coin-or.org/OS",
+    "url": "https://github.com/jgoldfar/CoinOptServices.jl"
+  },
+  {
+    "name": "BVP.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Implementation of BVP solvers for ODE in Julia",
+    "url": "https://github.com/jgoldfar/BVP.jl"
+  },
+  {
+    "name": "Nim",
+    "showReadme": true,
+    "language": "Nimrod",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Nim (formerly known as \"Nimrod\") is a compiled, garbage-collected systems programming language which has an excellent productivity/performance ratio. Nim's design focuses on efficiency, expressiveness, elegance (in the order of priority).",
+    "url": "https://github.com/jgoldfar/Nim"
+  },
+  {
+    "name": "SundialsKLUBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/SundialsKLUBuilder"
+  },
+  {
+    "name": "BlackBoxOptim.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Black-box optimization for Julia (julialang.org)",
+    "url": "https://github.com/jgoldfar/BlackBoxOptim.jl"
+  },
+  {
+    "name": "libXftBuilder",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/libXftBuilder"
+  },
+  {
+    "name": "qlstephen",
+    "showReadme": true,
+    "language": "Objective-C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A QuickLook plugin that lets you view plain text files without a file extension",
+    "url": "https://github.com/jgoldfar/qlstephen"
+  },
+  {
+    "name": "PackageEvaluator.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A tool to evaluate the quality of Julia packages.",
+    "url": "https://github.com/jgoldfar/PackageEvaluator.jl"
+  },
+  {
+    "name": "scala-xml",
+    "showReadme": true,
+    "language": "Scala",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "The standard Scala XML library.",
+    "url": "https://github.com/jgoldfar/scala-xml"
+  },
+  {
+    "name": "spacemacs",
+    "showReadme": true,
+    "language": "Emacs Lisp",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A community-driven Emacs distribution - The best editor is neither Emacs nor Vim,  it's Emacs *and* Vim!",
+    "url": "https://github.com/jgoldfar/spacemacs"
+  },
+  {
+    "name": "Juno-LT",
+    "showReadme": true,
+    "language": null,
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "A Julia environment built on Light Table",
+    "url": "https://github.com/jgoldfar/Juno-LT"
+  },
+  {
+    "name": "MetaRowEchelon.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": null,
+    "url": "https://github.com/jgoldfar/MetaRowEchelon.jl"
+  },
+  {
+    "name": "Luxor.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Simple drawings using vector graphics; Cairo \"for tourists!\"",
+    "url": "https://github.com/jgoldfar/Luxor.jl"
+  },
+  {
+    "name": "Hypre.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Julia wrapper for the Hypre library",
+    "url": "https://github.com/jgoldfar/Hypre.jl"
+  },
+  {
+    "name": "ossim-plugins",
+    "showReadme": true,
+    "language": "C++",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Contains all plugin libraries providing functional extensions to core OSSIM library",
+    "url": "https://github.com/jgoldfar/ossim-plugins"
+  },
+  {
+    "name": "QuickCheck.jl",
+    "showReadme": true,
+    "language": "Julia",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "QuickCheck specification-based testing for Julia",
+    "url": "https://github.com/jgoldfar/QuickCheck.jl"
+  },
+  {
+    "name": "visual-pdf-diff",
+    "showReadme": true,
+    "language": "Shell",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Merges two PDF files into one PDF file and highlights their visual differences",
+    "url": "https://github.com/jgoldfar/visual-pdf-diff"
+  },
+  {
+    "name": "musl",
+    "showReadme": true,
+    "language": "C",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "Unofficial mirror of etalabs musl repository. Updated daily.",
+    "url": "https://github.com/jgoldfar/musl"
+  },
+  {
+    "name": "hg-plus",
+    "showReadme": true,
+    "language": "CoffeeScript",
+    "showOSSListing": true,
+    "showLocalPage": "",
+    "description": "vim-fugitive like package for atom. make commits and other mercurial things without the terminal",
+    "url": "https://github.com/jgoldfar/hg-plus"
+  }
+]

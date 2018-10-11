@@ -3,12 +3,16 @@ using GitHub
 using JSON
 
 function get_github_repos(username::String = "jgoldfar")
-    repoVec = first(repos(username)) # First element is repository vector
-    Dict(repo.name => (repo.language, repo.description, repo.html_url.uri) for repo in repoVec)
+    try
+        repoVec = first(repos(username)) # First element is repository vector
+        return Dict(repo.name => (repo.language, repo.description, repo.html_url.uri) for repo in repoVec)
+    catch e
+        return nothing
+    end
 end
 
 function init_repoListing(filename::String, repoData)
-    outputData = (Dict(
+    outputData = [Dict(
                     "name" => k,
                     "language" => v[1],
                     "description" => v[2],
@@ -16,10 +20,10 @@ function init_repoListing(filename::String, repoData)
                     "showOSSListing" => true,
                     "showReadme" => true,
                     "showLocalPage" => "") for (k, v) in repoData
-                    )
-#     open(filename, "w") do st
-    JSON.print(outputData, 2)
-#     end
+                    ]
+    open(filename, "w") do st
+    JSON.print(st, outputData, 2)
+    end
     return nothing
 end
 
