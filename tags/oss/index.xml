@@ -6,10 +6,19 @@
     <description>Recent content in Oss on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/oss/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Containerizing and (Eventually) Updating pdf2htmlEX</title>
+      <link>https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/</guid>
+      <description>We&amp;rsquo;ve all been there: you&amp;rsquo;re asked to solve a technical problem (&amp;ldquo;compiling&amp;rdquo; a TeX file to the web with minimal changes to the content) and someone has done an impressive job towards solving this problem, just a few short years ago. And, the project, pdf2htmlEX, is open source! But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author. Some kind contributors seem to have picked up where the original author left off, but this project, too has languished.</description>
+    </item>
     
     <item>
       <title>One more round with Hyde</title>

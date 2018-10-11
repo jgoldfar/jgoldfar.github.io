@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Devops on jgoldfar&#39;s home on the web</title>
-    <link>https://jgoldfar.github.io/tags/devops/</link>
-    <description>Recent content in Devops on jgoldfar&#39;s home on the web</description>
+    <title>Docker on jgoldfar&#39;s home on the web</title>
+    <link>https://jgoldfar.github.io/tags/docker/</link>
+    <description>Recent content in Docker on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://jgoldfar.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jgoldfar.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/</guid>
       <description>We&amp;rsquo;ve all been there: you&amp;rsquo;re asked to solve a technical problem (&amp;ldquo;compiling&amp;rdquo; a TeX file to the web with minimal changes to the content) and someone has done an impressive job towards solving this problem, just a few short years ago. And, the project, pdf2htmlEX, is open source! But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author. Some kind contributors seem to have picked up where the original author left off, but this project, too has languished.</description>
-    </item>
-    
-    <item>
-      <title>One more round with Hyde</title>
-      <link>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</link>
-      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</guid>
-      <description>Let&amp;rsquo;s say you&amp;rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
-1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc.</description>
     </item>
     
   </channel>

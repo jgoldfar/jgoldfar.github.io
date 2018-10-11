@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        jgoldfar&#39;s home on the web
+        Containerizing and (Eventually) Updating pdf2htmlEX | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -236,7 +236,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/blog/index.xml">
     </head>
 
 
@@ -276,10 +275,26 @@
                                     
                                 </td>
                             
-  <td class="postTitle">
-  
-  
-  </td>
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Containerizing and (Eventually) Updating pdf2htmlEX
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Oct 10, 2018
+</span>
+    
+        : <span class="tag">OSS</span>
+    
+        : <span class="tag">DevOps</span>
+    
+        : <span class="tag">Docker</span>
+    
+</ul>
+</td>
 
 
                             </tr>
@@ -350,173 +365,75 @@
                             <td class="mainbody">
                                 
                                 
-<!--
-     Testing blog functionality
-
-     \[
-     u_t = {(a u_x)}_x + b u_x
-     \]
-
-     Which, in $n$-dimensions, may be written \(u_t = \text{div} {(A \nabla u)}\)
--->
 
 
+<p>We&rsquo;ve all been there: you&rsquo;re asked to solve a technical problem (&ldquo;compiling&rdquo; a TeX file to the web with minimal changes to the content) and someone has done <a href="http://coolwanglu.github.io/pdf2htmlEX/doc/tb108wang.pdf">an impressive job</a> towards solving this problem, just a few short years ago.
+And, the project, pdf2htmlEX, <a href="https://github.com/coolwanglu/pdf2htmlEX">is open source!</a>
+But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author.
+Some kind contributors seem to have <a href="https://github.com/pdf2htmlEX/pdf2htmlEX">picked up</a> where the original author left off, but this project, too has languished.
+pdf2htmlEX doesn&rsquo;t build on any &ldquo;modern&rdquo; system using &ldquo;off the shelf&rdquo; components.
+In fact, there are existing issues (including <a href="https://github.com/pdf2htmlEX/pdf2htmlEX/issues/15">this one</a> on various repositories related to fixing this issue, as well as a build script that one of the new maintainers posted that claims to build successfully on one platform.</p>
+
+<p>If we&rsquo;re going to adopt this as a solution to our problem, clearly there&rsquo;s a bit of work to be done.</p>
+
+<h2 id="step-1-containerization">Step 1: Containerization</h2>
+
+<p>The most obvious first step is to get some version of pdf2htmlEX to build against some combination of dependencies; <a href="https://www.docker.com/">docker</a> is an obvious choice here, since it offers the killer combination of portability and containerization: using a docker image, though large on disk space, will completely encapsulate the build dependencies from other software on a given system and offer a kind of reproducibility to the use of pdf2htmlEX as it stands now.</p>
+
+<p>In order to make later experimentation a bit quicker, I separated the Docker images into three parts:</p>
+
+<p>1) <a href="https://hub.docker.com/r/jgoldfar/pdf2htmlex-base/">Base</a>, containing a debian-based image with the system packages necessary to build the dependencies of pdf2htmlEX and the package itself.</p>
+
+<p>2) <a href="https://hub.docker.com/r/jgoldfar/pdf2htmlex-deps/">Deps</a>, building off of Base to provide source-build installations of known-good versions of the key dependencies for pdf2htmlEX.</p>
+
+<p>3) <a href="https://hub.docker.com/r/jgoldfar/pdf2htmlex-stable/">Stable</a>, building off Deps, which just contains the master version of pdf2htmlEX, pulled from the git repo and compiled from source against the previous images.</p>
+
+<h2 id="step-2-automation">Step 2: Automation</h2>
+
+<p>Once the docker images build locally, it&rsquo;s a simple process to create a Travis-CI file to automate the creation and uploading of those images to Docker Hub.
+Travis needs to be given your Docker username and password as environment variables, which it will helpfully keep secret for you.
+I have set up Travis to automatically build new images on a monthly basis, unless another build as happened recently; you can see the build <a href="https://travis-ci.org/jgoldfar/pdf2htmlEX-docker">here</a>, which uses Dockerfiles from <a href="https://github.com/jgoldfar/pdf2htmlEX-docker">this repository</a></p>
+
+<h2 id="step-3-reporting">Step 3: Reporting</h2>
+
+<p>Once a version of the package is known to build, CI should be able to build the package using nearly the same script as is found in the Dockerfile.
+At the very least, Travis should be switched on, so we know how far we are from success; this has been completed in <a href="https://github.com/pdf2htmlEX/pdf2htmlEX/pull/16">this PR</a> on top of some work by Rockstar04 and now merged into.
+A little bit more work on <a href="https://github.com/jgoldfar/pdf2htmlEX/tree/fix-travis-linux">a separate branch</a>, including some fiddling with the build, has finally allowed the compilation to complete, and many of the automated tests can now be switched back on.</p>
+
+<h2 id="future-work">Future Work</h2>
+
+<ul>
+<li><p>Separating the docker build into separate stages was intended to make it easier to upgrade poppler and fontforge, among the other dependencies, until they are even with the versions available from system package managers.
+This updating process should now proceed.</p></li>
+
+<li><p>A more minimal version of the dockerfile would be better: can this be build on top of the Alpine or minideb base images?</p></li>
+
+<li><p>Turn on compilation &amp; tests for OSX platform as well. This is actually enabled currently in the CI configuration, but is allowed to fail: apparently <a href="https://github.com/fontforge/fontforge/issues/3077">an outstanding issue</a> with fontforge blocks this effort.</p></li>
+
+<li><p>Upstream build process to homebrew (would be a new challenge!)</p></li>
+</ul>
 
 
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/">Containerizing and (Eventually) Updating pdf2htmlEX </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Oct 10, 2018
-    </span>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
-        : <span class="tag">OSS</span>
     
-        : <span class="tag">DevOps</span>
     
-        : <span class="tag">Docker</span>
-    
-    </ul>
-</header>
-
-<div>
-We&rsquo;ve all been there: you&rsquo;re asked to solve a technical problem (&ldquo;compiling&rdquo; a TeX file to the web with minimal changes to the content) and someone has done an impressive job towards solving this problem, just a few short years ago. And, the project, pdf2htmlEX, is open source! But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author. Some kind contributors seem to have picked up where the original author left off, but this project, too has languished.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/too-much-ci/">Continuous Integration Ad Nauseam? </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Sep 18, 2018
-    </span>
-    
-        : <span class="tag">CI</span>
-    
-    </ul>
-</header>
-
-<div>
-Anyone who&rsquo;s tried to look back on a document from years ago probably knows how difficult it can be for anything more than the simplest files. There are good reasons why, over a long enough time scale, such problems are likely unavoidable (though that doesn&rsquo;t stop us from trying, with completely unknown results.)
-A backup is no good if you can&rsquo;t open it, and even if it opens or runs on your machine, how do you know the recipient of your work has a chance of having the same luck.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/too-much-ci/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/">One more round with Hyde </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Sep 17, 2018
-    </span>
-    
-        : <span class="tag">OSS</span>
-    
-        : <span class="tag">DevOps</span>
-    
-        : <span class="tag">WebDev</span>
-    
-    </ul>
-</header>
-
-<div>
-Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
-1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/why-oss/">Why Open Source Software? </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Aug 15, 2018
-    </span>
-    
-        : <span class="tag">OSS</span>
-    
-    </ul>
-</header>
-
-<div>
-These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&rsquo;s not always the path of least resistance. I&rsquo;m not here to evangelize for open source, and I&rsquo;m not a purist: closed-source and proprietary work has its place in our society. However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/why-oss/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/building-octave-osx/">Building GNU Octave From Source on OSX </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Aug 15, 2018
-    </span>
-    
-        : <span class="tag">build-the-world</span>
-    
-        : <span class="tag">OSS</span>
-    
-    </ul>
-</header>
-
-<div>
-Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/building-octave-osx/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-
-
-<div class="pagination">
-  <nav role="pagination" class="post-list-pagination">
-      
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 2</span>
-    
-      <a href="/blog/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
-        Older&nbsp;<i class="fa fa-angle-double-right"></i>
-      </a>
-    
-  </nav>
-</div>
-
-
-
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
                                 
                             </td>
@@ -526,6 +443,8 @@ Below are the steps I followed to build GNU Octave from source on my Mac, togeth
                             <td></td>
                             <td>
                                 <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/too-much-ci/">&lArr; Continuous Integration Ad Nauseam?</a>
                                     
                                     
                         </div>
