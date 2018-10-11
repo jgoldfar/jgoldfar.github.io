@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Quick SHA256 Generation using Julia</title>
+      <link>https://jgoldfar.github.io/blog/quick-julia-sha256/</link>
+      <pubDate>Thu, 11 Oct 2018 13:15:29 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/quick-julia-sha256/</guid>
+      <description>When generating reproducible software, you&amp;rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&amp;rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
+using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end  </description>
+    </item>
+    
+    <item>
       <title>Containerizing and (Eventually) Updating pdf2htmlEX</title>
       <link>https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
@@ -316,7 +326,7 @@ A backup is no good if you can&amp;rsquo;t open it, and even if it opens or runs
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/schedule/</guid>
-      <description>Day M T W R F     Teaching 10-11:&amp;nbsp;MTH 1001-03/04 11-12:&amp;nbsp;Office Hours 12-1:&amp;nbsp;MTH 1001-15/16 1-2:&amp;nbsp;Office Hours   10-11:&amp;nbsp;MTH 1001-03/04 11-12:&amp;nbsp;Office Hours 12-1:&amp;nbsp;MTH 1001-15/16 1-2:&amp;nbsp;Office Hours   10-11:&amp;nbsp;MTH 1001-03/04 11-12:&amp;nbsp;Office Hours 12-1:&amp;nbsp;MTH 1001-15/16 1-2:&amp;nbsp;Office Hours    Seminar 9-10:&amp;nbsp;Graduate Seminar     3-4:&amp;nbsp;SCUDEM Preparation    Please feel free to send an email (jgoldfar@my.fit.edu) to ask a question or arrange an appointment.</description>
+      <description>Day M T W R F     Teaching 10-11:&amp;nbsp;MTH 1001-03/04 11-12:&amp;nbsp;Office Hours 12-1:&amp;nbsp;MTH 1001-15/16 1-2:&amp;nbsp;Office Hours   10-11:&amp;nbsp;MTH 1001-03/04 11-12:&amp;nbsp;Office Hours 12-1:&amp;nbsp;MTH 1001-15/16 1-2:&amp;nbsp;Office Hours   10-11:&amp;nbsp;MTH 1001-03/04 11-12:&amp;nbsp;Office Hours 12-1:&amp;nbsp;MTH 1001-15/16 1-2:&amp;nbsp;Office Hours    Seminar 9-10:&amp;nbsp;Graduate Seminar 1-2:&amp;nbsp;Vector Analysis     3-4:&amp;nbsp;SCUDEM Preparation    Please feel free to send an email (jgoldfar@my.fit.edu) to ask a question or arrange an appointment.</description>
     </item>
     
     <item>

@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        jgoldfar&#39;s home on the web
+        Quick SHA256 Generation using Julia | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -236,7 +236,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/blog/index.xml">
     </head>
 
 
@@ -276,10 +275,20 @@
                                     
                                 </td>
                             
-  <td class="postTitle">
-  
-  
-  </td>
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Quick SHA256 Generation using Julia
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Oct 11, 2018
+</span>
+    
+</ul>
+</td>
 
 
                             </tr>
@@ -350,166 +359,37 @@
                             <td class="mainbody">
                                 
                                 
-<!--
-     Testing blog functionality
+<p>When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file.
+Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in <code>fname</code>, write</p>
 
-     \[
-     u_t = {(a u_x)}_x + b u_x
-     \]
+<pre><code>using SHA: sha256
 
-     Which, in $n$-dimensions, may be written \(u_t = \text{div} {(A \nabla u)}\)
--->
-
-
+open(fname) do file
+    return bytes2hex(sha256(file))
+end
+</code></pre>
 
 
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/quick-julia-sha256/">Quick SHA256 Generation using Julia </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Oct 11, 2018
-    </span>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
-    </ul>
-</header>
-
-<div>
-When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
-using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end  
-</div>
-
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/">Containerizing and (Eventually) Updating pdf2htmlEX </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Oct 10, 2018
-    </span>
     
-        : <span class="tag">OSS</span>
     
-        : <span class="tag">DevOps</span>
-    
-        : <span class="tag">Docker</span>
-    
-    </ul>
-</header>
-
-<div>
-We&rsquo;ve all been there: you&rsquo;re asked to solve a technical problem (&ldquo;compiling&rdquo; a TeX file to the web with minimal changes to the content) and someone has done an impressive job towards solving this problem, just a few short years ago. And, the project, pdf2htmlEX, is open source! But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author. Some kind contributors seem to have picked up where the original author left off, but this project, too has languished.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/too-much-ci/">Continuous Integration Ad Nauseam? </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Sep 18, 2018
-    </span>
-    
-        : <span class="tag">CI</span>
-    
-    </ul>
-</header>
-
-<div>
-Anyone who&rsquo;s tried to look back on a document from years ago probably knows how difficult it can be for anything more than the simplest files. There are good reasons why, over a long enough time scale, such problems are likely unavoidable (though that doesn&rsquo;t stop us from trying, with completely unknown results.)
-A backup is no good if you can&rsquo;t open it, and even if it opens or runs on your machine, how do you know the recipient of your work has a chance of having the same luck.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/too-much-ci/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/">One more round with Hyde </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Sep 17, 2018
-    </span>
-    
-        : <span class="tag">OSS</span>
-    
-        : <span class="tag">DevOps</span>
-    
-        : <span class="tag">WebDev</span>
-    
-    </ul>
-</header>
-
-<div>
-Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
-1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/why-oss/">Why Open Source Software? </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Aug 15, 2018
-    </span>
-    
-        : <span class="tag">OSS</span>
-    
-    </ul>
-</header>
-
-<div>
-These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&rsquo;s not always the path of least resistance. I&rsquo;m not here to evangelize for open source, and I&rsquo;m not a purist: closed-source and proprietary work has its place in our society. However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/why-oss/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-
-
-<div class="pagination">
-  <nav role="pagination" class="post-list-pagination">
-      
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 2</span>
-    
-      <a href="/blog/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
-        Older&nbsp;<i class="fa fa-angle-double-right"></i>
-      </a>
-    
-  </nav>
-</div>
-
-
-
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
                                 
                             </td>
@@ -519,6 +399,8 @@ These days, free and open source software (FOSS) is in vogue across many fields,
                             <td></td>
                             <td>
                                 <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/">&lArr; Containerizing and (Eventually) Updating pdf2htmlEX</a>
                                     
                                     
                         </div>
