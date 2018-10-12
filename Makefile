@@ -78,15 +78,18 @@ cal-deps: cal-deps-pull
 
 
 ### OSS contribution/repository listing generator
-data/oss/github.json: deps/getRepos.jl Project.toml
+# Note: These depend on deps/getRepos.jl and Project.toml
+data/oss/github.json: 
 	mkdir -p $(dir $@)
-	$(JULIA) --project="." $< $@ --github
+	$(JULIA) --project="." deps/getRepos.jl $@ --bitbucket
 
-data/oss/bitbucket.json: deps/getRepos.jl Project.toml
+data/oss/bitbucket.json: 
 	mkdir -p $(dir $@)
-	$(JULIA) --project="." $< $@ --bitbucket
-	
-oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json
+	$(JULIA) --project="." deps/getRepos.jl $@ --bitbucket
+
+.PHONY: $(addprefix data/oss/, github.json bitbucket.json)
+
+oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json 
 
 ## Hugo Generation
 HUGOFILE := config.toml
