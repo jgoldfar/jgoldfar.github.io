@@ -184,7 +184,7 @@
     "showLocalPage": "",
     "description": "Uses a modified buildf2c script provided by http://hpc.sourceforge.net (HPC for Mac OS X) to build f2c correctly on newer OS X versions.",
     "url": "https://bitbucket.org/jgoldfar/buildf2c",
-    "updated": "2017-06-23T18:33:43"
+    "updated": "2018-10-12T00:24:32"
   },
   {
     "name": "SourceDeps.jl",
@@ -327,6 +327,6 @@
     "showLocalPage": "",
     "description": "Repository for my site",
     "url": "https://bitbucket.org/jgoldfar/personal-site",
-    "updated": "2018-10-11T19:27:33"
+    "updated": "2018-10-12T00:14:51"
   }
 ]
