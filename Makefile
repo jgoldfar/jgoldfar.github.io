@@ -87,9 +87,12 @@ data/oss/bitbucket.json:
 	mkdir -p $(dir $@)
 	$(JULIA) --project="." deps/getRepos.jl $@ --bitbucket
 
-.PHONY: $(addprefix data/oss/, github.json bitbucket.json)
-
 oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json 
+
+data/oss/combined.json: $(addprefix data/oss/, github.json bitbucket.json)
+	$(JULIA) --project="." -e "using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
+
+oss-contribs-deps: data/oss/combined.json
 
 ## Hugo Generation
 HUGOFILE := config.toml
