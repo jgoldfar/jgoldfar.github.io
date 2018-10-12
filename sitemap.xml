@@ -48,18 +48,6 @@
   </url>
   
   <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/feigenbaumutil.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/garminfit.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/language-maxima/</loc>
-  </url>
-  
-  <url>
     <loc>https://jgoldfar.github.io/tags/build-the-world/</loc>
     <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -85,50 +73,6 @@
     <loc>https://jgoldfar.github.io/tags/docker/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/bonminbuilder/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/cmstest.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/couennebuilder/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/graphcircuits.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/hypre.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/libical.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/librsync.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/libui.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/silobuilder/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/xbraid.jl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/igraph.jl/</loc>
   </url>
   
   <url>
@@ -176,15 +120,7 @@
   </url>
   
   <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/metarowechelon.jl/</loc>
-  </url>
-  
-  <url>
     <loc>https://jgoldfar.github.io/oss-contributions/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-gen/</loc>
   </url>
   
   <url>
@@ -202,14 +138,6 @@
   </url>
   
   <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/sps/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/silo.jl/</loc>
-  </url>
-  
-  <url>
     <loc>https://jgoldfar.github.io/tags/</loc>
     <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -217,10 +145,6 @@
   
   <url>
     <loc>https://jgoldfar.github.io/teaching/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jgoldfar.github.io/oss-contributions/termbox.jl/</loc>
   </url>
   
   <url>
