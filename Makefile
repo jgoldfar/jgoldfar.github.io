@@ -93,7 +93,7 @@ data/oss/bitbucket.json:
 oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json 
 
 data/oss/combined.json: $(addprefix data/oss/, github.json bitbucket.json)
-	$(JULIA) --project="." -e "using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
+	$(JULIA) --project="." -e "using Pkg; Pkg.instantiate(); using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
 
 oss-contribs-deps: data/oss/combined.json
 
