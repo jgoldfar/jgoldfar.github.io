@@ -81,7 +81,7 @@ cal-deps: cal-deps-pull
 # Note: These depend on deps/getRepos.jl and Project.toml
 data/oss/github.json: 
 	mkdir -p $(dir $@)
-	$(JULIA) --project="." deps/getRepos.jl $@ --bitbucket
+	$(JULIA) --project="." deps/getRepos.jl $@ --github
 
 data/oss/bitbucket.json: 
 	mkdir -p $(dir $@)
