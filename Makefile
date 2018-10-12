@@ -81,8 +81,12 @@ cal-deps: cal-deps-pull
 data/oss/github.json: deps/getRepos.jl Project.toml
 	mkdir -p $(dir $@)
 	$(JULIA) --project="." $< $@ --github
+
+data/oss/bitbucket.json: deps/getRepos.jl Project.toml
+	mkdir -p $(dir $@)
+	$(JULIA) --project="." $< $@ --bitbucket
 	
-oss-contribs-generate: data/oss/github.json
+oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json
 
 ## Hugo Generation
 HUGOFILE := config.toml

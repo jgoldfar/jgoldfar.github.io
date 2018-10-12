@@ -1,12 +1,37 @@
 using GitHub
 
 using JSON
+using Dates
 
+const githubDate = dateformat"Y-m-dTH:M:S"
 function get_github_repos(username::String = "jgoldfar")
     try
         repoVec = first(repos(username)) # First element is repository vector
-        return Dict(repo.name => (repo.language, repo.description, repo.html_url.uri) for repo in repoVec)
+        return Dict(repo.name => (repo.language, repo.description, repo.html_url.uri, repo.updated_at) for repo in repoVec)
     catch e
+        @show e
+        return nothing
+    end
+end
+
+const bitbucketDate = dateformat"Y-m-dTH:M:S.s"
+function get_bitbucket_repos(username::String = "jgoldfar")
+    try
+        repos = Dict{String, Any}()
+        tmp = JSON.parse(readchomp(`curl "https://api.bitbucket.org/2.0/repositories/$(username)"`))
+        while (length(tmp["values"]) > 0) && haskey(tmp, "next")
+            for v in tmp["values"]
+                # tmp["values"] is equivalent to first(repos(username)) above.
+                if v isa Dict{String, Any} && (v["type"] == "repository") && (v["is_private"] == false)
+                    dt = v["updated_on"][1:end-13]
+                    repos[v["name"]] = (v["language"], v["description"], v["links"]["html"]["href"], DateTime(dt, bitbucketDate))
+                end
+            end
+            tmp = JSON.parse(readchomp(`curl $(tmp["next"])`))
+        end
+        return repos
+    catch e
+        @show e
         return nothing
     end
 end
@@ -34,13 +59,14 @@ _to_internal(k, v) = Dict(
         "language" => v[1],
         "description" => v[2],
         "url" => v[3],
+        "updated" => (length(v) > 3 ? v[4] : Dates.now()),
         "showOSSListing" => true,
         "showReadme" => true,
         "showLocalPage" => "",
         "weight" => 0)
 
 function internal_to_githubFormat(repoJsonData)
-    Dict(v["name"] => (v["language"], v["description"], v["url"]) for v in repoJsonData)
+    Dict(v["name"] => (v["language"], v["description"], v["url"], v["updated"]) for v in repoJsonData)
 end
 
 # Just grab vector of project names
@@ -77,9 +103,7 @@ function main(args=ARGS)
     
     if !isfile(jsonDataFile)
         println(stderr, "Creating new repository data file $(jsonDataFile)")
-        if "--github" in ARGS
-            update_repoListing(jsonDataFile, githubFormat_to_internal(newData))
-        end
+        update_repoListing(jsonDataFile, githubFormat_to_internal(newData))
         return 0
     end
     
@@ -92,7 +116,6 @@ function main(args=ARGS)
     # pop!(existingData)
 
     existingDataKeys = internal_to_name_vector(existingData)
-    
     
     for (k, v) in newData
         if !(k in existingDataKeys)
