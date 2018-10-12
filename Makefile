@@ -14,7 +14,7 @@ $(HUGO): bin/hugo_0.40.3_Linux-64bit.tar.gz
 endif
 
 ## Dependencies
-pull-deps: reading-group-deps cv-deps cal-deps
+pull-deps: reading-group-deps cv-deps cal-deps oss-contribs-deps
 
 ### Algebra Reading Group
 ARGDownloadPath=https://bitbucket.org/jgoldfar/algebrareadinggroupnotes/downloads
@@ -51,6 +51,8 @@ CourseAppointmentIcalLink?=
 SeminarScheduleIcalLink?=
 IcalDir:=deps/ical
 IcalTargetFiles=$(addsuffix .ical,CourseAppointment SeminarSchedule)
+
+# Pull ical files from given links
 $(IcalDir)/CourseAppointment.ical:
 	[ ! -z "$(CourseAppointmentIcalLink)" ]
 	mkdir -p $(dir $@)
@@ -63,6 +65,7 @@ $(IcalDir)/SeminarSchedule.ical:
 		
 cal-deps-pull: $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 
+## Generate schedule file from ical files
 JULIA?=$(shell which julia)
 LIBICALURI?=https://github.com/jgoldfar/Libical.jl
 LIBICALDEV?=0
