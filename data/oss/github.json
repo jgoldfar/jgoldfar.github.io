@@ -172,7 +172,7 @@
     "language": "Julia",
     "subtitle": "Schedule solver using COIN-OR tools and a high-level modeling language.",
     "name": "SPSBase.jl",
-    "showLocalPage": "SPS.html",
+    "showLocalPage": "",
     "postImage": "/oss-contributions/SPS-logo.png",
     "description": "Base functionality for the solution of a version of the scheduling problem",
     "updated": "2018-09-01T18:20:10",
