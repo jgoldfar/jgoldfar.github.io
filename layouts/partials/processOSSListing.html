@@ -4,7 +4,7 @@
 <article class="ossListing">
 <header>
 	<a href="{{ if gt (len (index . "showLocalPage")) 0 }}/oss-contributions/{{ index . "showLocalPage"}}{{ else }}{{ index . "url" }}{{ end }}">
-	{{ if gt (len (index . "postImage")) 0 }}<img src="{{ index . "postImage" }}" />{{ end }}
+	{{ if gt (len (index . "postImage")) 0 }}<img class="ossImage" src="{{ index . "postImage" }}" />{{ end }}
     <h3>{{ index . "name" }}</h3>
     {{ if gt (len (index . "language")) 0 }}
     <span class="ossLanguage">{{ index . "language" }}</span> : 
