@@ -1,7 +1,7 @@
 [
   {
-    "language": "",
-    "subtitle": "",
+    "language": "LaTeX",
+    "subtitle": "Version control system training documents",
     "name": "VCS-Training",
     "showLocalPage": "",
     "postImage": "",
@@ -13,8 +13,8 @@
     "weight": 0
   },
   {
-    "language": "",
-    "subtitle": "",
+    "language": "LaTeX",
+    "subtitle": "LaTeX document preparation system training",
     "name": "LaTeX-Training",
     "showLocalPage": "",
     "postImage": "",
@@ -27,7 +27,7 @@
   },
   {
     "language": "mathematica",
-    "subtitle": "",
+    "subtitle": "CSV/TSV -> CDF converter for space-time grids",
     "name": "csv2cdf",
     "showLocalPage": "",
     "postImage": "",
@@ -46,14 +46,14 @@
     "postImage": "",
     "description": "For local updates to peat",
     "updated": "2014-11-22T20:43:01",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/jg-peat",
     "showReadme": true,
     "weight": 0
   },
   {
     "language": "julia",
-    "subtitle": "",
+    "subtitle": "Example problem data for the Inverse Stefan Problem",
     "name": "ISP-exfn",
     "showLocalPage": "",
     "postImage": "",
@@ -66,7 +66,7 @@
   },
   {
     "language": "julia",
-    "subtitle": "",
+    "subtitle": "Student list randomizer and activity tracker",
     "name": "RandomStudent.jl",
     "showLocalPage": "",
     "postImage": "",
@@ -85,14 +85,14 @@
     "postImage": "",
     "description": "",
     "updated": "2017-07-01T00:54:39",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/pdqsort.jl",
     "showReadme": true,
     "weight": 0
   },
   {
     "language": "latex",
-    "subtitle": "",
+    "subtitle": "TeX & LaTeX templates and include files",
     "name": "TeX-include",
     "showLocalPage": "",
     "postImage": "",
@@ -111,7 +111,7 @@
     "postImage": "",
     "description": "Tracking repo for language-maxima (https://github.com/jgoldfar/language-maxima)",
     "updated": "2016-05-10T21:05:57",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/language-maxima",
     "showReadme": true,
     "weight": 0
@@ -124,7 +124,7 @@
     "postImage": "",
     "description": "Wrapper for the XBraid library in Julia",
     "updated": "2015-01-28T16:41:22",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/xbraid.jl",
     "showReadme": true,
     "weight": 0
@@ -137,7 +137,7 @@
     "postImage": "",
     "description": "Fork of jgoldfar-mfem from Google Code",
     "updated": "2015-03-01T15:35:27",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/jgoldfar-mfem",
     "showReadme": true,
     "weight": 0
@@ -150,7 +150,7 @@
     "postImage": "",
     "description": "Private version of [Silo.jl](https://github.com/jgoldfar/Silo.jl)",
     "updated": "2018-08-06T14:07:56",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/silo.jl-hg",
     "showReadme": true,
     "weight": 0
@@ -163,16 +163,16 @@
     "postImage": "",
     "description": "Wrapper for the Hypre library in Julia",
     "updated": "2015-03-06T15:09:06",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/hypre.jl",
     "showReadme": true,
     "weight": 0
   },
   {
     "language": "julia",
-    "subtitle": "",
+    "subtitle": "Bespoke integration testing framework",
     "name": "CMSTest.jl",
-    "showLocalPage": "",
+    "showLocalPage": "/blog/too-much-ci.md",
     "postImage": "",
     "description": "CMS/integration testing for nested repositories.",
     "updated": "2018-10-05T17:31:39",
@@ -189,14 +189,14 @@
     "postImage": "",
     "description": "Micro CI server for people who like the idea of Jenkins, but don't want to use all of Jenkins.",
     "updated": "2016-05-10T21:04:22",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/microci.jl",
     "showReadme": true,
     "weight": 0
   },
   {
     "language": "latex",
-    "subtitle": "",
+    "subtitle": "FIT SIAM Student chapter administration files",
     "name": "SIAMChapterFiles",
     "showLocalPage": "",
     "postImage": "",
@@ -209,7 +209,7 @@
   },
   {
     "language": "c",
-    "subtitle": "",
+    "subtitle": "Fortran -> C translation script builder",
     "name": "buildf2c",
     "showLocalPage": "",
     "postImage": "",
@@ -222,7 +222,7 @@
   },
   {
     "language": "julia",
-    "subtitle": "",
+    "subtitle": "Dependency manager for remotely provided source files",
     "name": "SourceDeps.jl",
     "showLocalPage": "",
     "postImage": "",
@@ -235,7 +235,7 @@
   },
   {
     "language": "latex",
-    "subtitle": "",
+    "subtitle": "Notes and problems for a reading group in Algebra",
     "name": "AlgebraReadingGroupNotes",
     "showLocalPage": "",
     "postImage": "",
@@ -254,14 +254,14 @@
     "postImage": "",
     "description": "Tracking repo for language-pg (https://github.com/jgoldfar/language-pg)",
     "updated": "2016-05-10T21:06:11",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/language-pg",
     "showReadme": true,
     "weight": 0
   },
   {
     "language": "julia",
-    "subtitle": "",
+    "subtitle": "Unit testing for Julia, with xUnit compatible output",
     "name": "xUnitTest.jl",
     "showLocalPage": "",
     "postImage": "",
@@ -274,7 +274,7 @@
   },
   {
     "language": "latex",
-    "subtitle": "",
+    "subtitle": "Shell repository for all of my writing & coding",
     "name": "jgoldfar-cms",
     "showLocalPage": "",
     "postImage": "",
@@ -293,14 +293,14 @@
     "postImage": "",
     "description": "",
     "updated": "2016-05-10T21:07:53",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/juliastyle.jl-hg",
     "showReadme": true,
     "weight": 0
   },
   {
     "language": "",
-    "subtitle": "",
+    "subtitle": "Explorations of some languages and tools",
     "name": "misc-explore",
     "showLocalPage": "",
     "postImage": "",
@@ -319,7 +319,7 @@
     "postImage": "",
     "description": "Wrapper of Termbox (https://github.com/nsf/termbox) for Julia",
     "updated": "2015-09-11T01:49:31",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/termbox-jl",
     "showReadme": true,
     "weight": 0
@@ -332,14 +332,14 @@
     "postImage": "",
     "description": "",
     "updated": "2016-05-10T21:05:37",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/atom-hg",
     "showReadme": true,
     "weight": 0
   },
   {
     "language": "",
-    "subtitle": "",
+    "subtitle": "Configuration for Monit used to track site uptime",
     "name": "WorkSiteMonit",
     "showLocalPage": "",
     "postImage": "",
@@ -358,7 +358,7 @@
     "postImage": "",
     "description": "",
     "updated": "2018-10-10T19:25:10",
-    "showOSSListing": true,
+    "showOSSListing": false,
     "url": "https://bitbucket.org/jgoldfar/publicfiles",
     "showReadme": true,
     "weight": 0
@@ -378,7 +378,7 @@
   },
   {
     "language": "html/css",
-    "subtitle": "",
+    "subtitle": "Generator for my personal site",
     "name": "personal-site",
     "showLocalPage": "",
     "postImage": "",
