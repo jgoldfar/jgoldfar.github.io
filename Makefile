@@ -14,7 +14,22 @@ $(HUGO): bin/hugo_0.40.3_Linux-64bit.tar.gz
 endif
 
 ## Dependencies
-pull-deps: reading-group-deps cv-deps cal-deps oss-contribs-deps
+pull-deps: julia-pre-deps reading-group-deps cv-deps cal-deps oss-contribs-deps
+
+## Julia package installation & instantiation
+# Override JULIA variable to set a different Julia version
+JULIA?=$(shell which julia)
+# URI for Libical. Override with local path if setting LIBICALDEV=1
+LIBICALURI?=https://github.com/jgoldfar/Libical.jl
+# Use local development version of Libical (==1) or not (==0)?
+LIBICALDEV?=0
+julia-pre-deps:
+ifeq ($(LIBICALDEV),0)
+	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
+else
+	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
+endif
+	$(JULIA) --project="." -e 'using Pkg; Pkg.instantiate();'
 
 ### Algebra Reading Group
 ARGDownloadPath=https://bitbucket.org/jgoldfar/algebrareadinggroupnotes/downloads
@@ -66,15 +81,7 @@ $(IcalDir)/SeminarSchedule.ical:
 cal-deps-pull: $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 
 ## Generate schedule file from ical files
-JULIA?=$(shell which julia)
-LIBICALURI?=https://github.com/jgoldfar/Libical.jl
-LIBICALDEV?=0
 cal-deps-generate: deps/generateScheduleFile.jl Project.toml $(addprefix $(IcalDir)/,$(IcalTargetFiles))
-ifeq ($(LIBICALDEV),0)
-	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
-else
-	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
-endif
 	$(JULIA) --project="." $@ $(addprefix $(IcalDir)/,$(IcalTargetFiles))
 
 cal-deps: cal-deps-pull
@@ -93,7 +100,7 @@ data/oss/bitbucket.json:
 oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json 
 
 data/oss/combined.json: $(addprefix data/oss/, github.json bitbucket.json)
-	$(JULIA) --project="." -e "using Pkg; Pkg.instantiate(); using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
+	$(JULIA) --project="." -e "using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
 
 oss-contribs-deps: data/oss/combined.json
 
