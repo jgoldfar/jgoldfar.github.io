@@ -170,10 +170,10 @@
   },
   {
     "language": "Julia",
-    "subtitle": "",
+    "subtitle": "Schedule solver using COIN-OR tools and a high-level modeling language.",
     "name": "SPSBase.jl",
-    "showLocalPage": "/oss-contributions/SPS.html",
-    "postImage": "/oss/contributions/SPS-logo.png",
+    "showLocalPage": "SPS.html",
+    "postImage": "/oss-contributions/SPS-logo.png",
     "description": "Base functionality for the solution of a version of the scheduling problem",
     "updated": "2018-09-01T18:20:10",
     "showOSSListing": true,
@@ -377,7 +377,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "C",
     "subtitle": "",
     "name": "preTeX",
     "showLocalPage": "",
@@ -468,7 +468,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "html/css",
     "subtitle": "Hugo theme for my personal website",
     "name": "jgoldfarHugoTheme",
     "showLocalPage": "",
@@ -481,7 +481,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "LaTeX",
     "subtitle": "",
     "name": "awesome-deep-learning-papers",
     "showLocalPage": "",
@@ -832,7 +832,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "C",
     "subtitle": "",
     "name": "petsc",
     "showLocalPage": "",
@@ -936,7 +936,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "C",
     "subtitle": "",
     "name": "gsl",
     "showLocalPage": "",
@@ -988,7 +988,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "Julia",
     "subtitle": "",
     "name": "FlexiblePrintingTestset.jl",
     "showLocalPage": "",
@@ -1183,7 +1183,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "vimrc",
     "subtitle": "",
     "name": "vimrc",
     "showLocalPage": "",
@@ -1300,7 +1300,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "Shell",
     "subtitle": "",
     "name": "awesome-osx-command-line",
     "showLocalPage": "",
@@ -1534,7 +1534,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "C",
     "subtitle": "",
     "name": "numal",
     "showLocalPage": "",
@@ -1690,7 +1690,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "html/css",
     "subtitle": "",
     "name": "Projects",
     "showLocalPage": "",
@@ -2171,7 +2171,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "Rust",
     "subtitle": "",
     "name": "rust",
     "showLocalPage": "",
@@ -2236,7 +2236,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "html/css",
     "subtitle": "",
     "name": "Style.jl",
     "showLocalPage": "",
@@ -2600,7 +2600,7 @@
     "weight": 0
   },
   {
-    "language": null,
+    "language": "Javascript",
     "subtitle": "",
     "name": "Juno-LT",
     "showLocalPage": "",

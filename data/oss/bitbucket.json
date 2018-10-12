@@ -338,7 +338,7 @@
     "weight": 0
   },
   {
-    "language": "",
+    "language": "Monit",
     "subtitle": "Configuration for Monit used to track site uptime",
     "name": "WorkSiteMonit",
     "showLocalPage": "",
