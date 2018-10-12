@@ -25,9 +25,9 @@ LIBICALURI?=https://github.com/jgoldfar/Libical.jl
 LIBICALDEV?=0
 julia-pre-deps:
 ifeq ($(LIBICALDEV),0)
-	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
+	$(JULIA) --project="." -e 'using Pkg; Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
 else
-	$(JULIA) --project="." -e 'using Pkg; Pkg.add("Compat"); Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
+	$(JULIA) --project="." -e 'using Pkg; Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
 endif
 	$(JULIA) --project="." -e 'using Pkg; Pkg.instantiate();'
 
