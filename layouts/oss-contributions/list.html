@@ -1,6 +1,10 @@
 {{ define "aboveHeader" }}
 {{ end }}
 
+{{ define "sidebar" }}
+{{ partialCached "blog/sidebar.html" . }}
+{{ end }}
+
 {{ define "titleDisplay" }}
   <td class="ossTitle">
   {{ with .Title }}
@@ -14,15 +18,11 @@
   </td>
 {{ end }}
 
-{{ define "sidebar" }}
-{{ partialCached "blog/sidebar.html" . }}
-{{ end }}
-
 {{ define "mainContent" }}
+
 {{ .Content }}
 
-{{ range .Data.Pages }}
-  {{ .Render "li"}}
-{{ end }}
-
+<div class="ossFlex">
+{{ partial "processOSSListings.html" (dict "Data" $.Site.Data.oss.combined) }}
+</div>
 {{ end }}

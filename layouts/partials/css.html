@@ -70,23 +70,32 @@
      text-align: justify;
      font-size: small;
  }
+ 
+ /* Style for OSS cards container */
+ div.ossFlex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: 10px;
+ }
+ 
  /* Style for OSS pages/cards */
  /* TODO: Use material card here instead of all of this... */
  div.ossContainer {
-     width: 45%;
-     background-color: #f2f2f2;
-     padding-top: 5px;
-     padding-left: 5px;
-     border-radius: 2px;
-
-     display: flex;
-     flex-direction: column;
+     flex: 1 0 calc(25% - 10px);
      box-sizing: border-box;
+     
+     min-width: 45%;
+     background-color: #f2f2f2;
+     padding: 10px;
+     margin-left: 10px;
+     margin-top: 10px;
+     border-radius: 2px;
 
      box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), /*Umbra*/
      0px 2px 2px 0px rgba(0,0,0,0.14), /*Penumbra */
      0px 1px 5px 0px rgba(0,0,0,0.12) /*Ambient*/;
- }
+  }
 
  article.ossListing header {
      font-family:{{ .Site.Params.fontAlternate }}, sans-serif;
