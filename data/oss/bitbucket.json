@@ -26,7 +26,7 @@
     "weight": 0
   },
   {
-    "language": "mathematica",
+    "language": "Mathematica",
     "subtitle": "CSV/TSV -> CDF converter for space-time grids",
     "name": "csv2cdf",
     "showLocalPage": "",
@@ -39,7 +39,7 @@
     "weight": 0
   },
   {
-    "language": "python",
+    "language": "Python",
     "subtitle": "",
     "name": "jg-peat",
     "showLocalPage": "",
@@ -52,7 +52,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "Example problem data for the Inverse Stefan Problem",
     "name": "ISP-exfn",
     "showLocalPage": "",
@@ -65,7 +65,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "Student list randomizer and activity tracker",
     "name": "RandomStudent.jl",
     "showLocalPage": "",
@@ -91,7 +91,7 @@
     "weight": 0
   },
   {
-    "language": "latex",
+    "language": "LaTeX",
     "subtitle": "TeX & LaTeX templates and include files",
     "name": "TeX-include",
     "showLocalPage": "",
@@ -117,7 +117,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "",
     "name": "XBraid.jl",
     "showLocalPage": "",
@@ -143,7 +143,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "",
     "name": "Silo.jl-hg",
     "showLocalPage": "",
@@ -156,7 +156,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "",
     "name": "Hypre.jl",
     "showLocalPage": "",
@@ -169,7 +169,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "Bespoke integration testing framework",
     "name": "CMSTest.jl",
     "showLocalPage": "/blog/too-much-ci.md",
@@ -195,7 +195,7 @@
     "weight": 0
   },
   {
-    "language": "latex",
+    "language": "LaTeX",
     "subtitle": "FIT SIAM Student chapter administration files",
     "name": "SIAMChapterFiles",
     "showLocalPage": "",
@@ -208,7 +208,7 @@
     "weight": 0
   },
   {
-    "language": "c",
+    "language": "C",
     "subtitle": "Fortran -> C translation script builder",
     "name": "buildf2c",
     "showLocalPage": "",
@@ -221,7 +221,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "Dependency manager for remotely provided source files",
     "name": "SourceDeps.jl",
     "showLocalPage": "",
@@ -234,7 +234,7 @@
     "weight": 0
   },
   {
-    "language": "latex",
+    "language": "LaTeX",
     "subtitle": "Notes and problems for a reading group in Algebra",
     "name": "AlgebraReadingGroupNotes",
     "showLocalPage": "",
@@ -260,8 +260,8 @@
     "weight": 0
   },
   {
-    "language": "julia",
-    "subtitle": "Unit testing for Julia, with xUnit compatible output",
+    "language": "Julia",
+    "subtitle": "Unit testing for Julia with xUnit compatible output",
     "name": "xUnitTest.jl",
     "showLocalPage": "",
     "postImage": "",
@@ -273,7 +273,7 @@
     "weight": 0
   },
   {
-    "language": "latex",
+    "language": "LaTeX",
     "subtitle": "Shell repository for all of my writing & coding",
     "name": "jgoldfar-cms",
     "showLocalPage": "",
@@ -286,7 +286,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "",
     "name": "JuliaStyle.jl-hg",
     "showLocalPage": "",
@@ -312,7 +312,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "",
     "name": "termbox-jl",
     "showLocalPage": "",
@@ -364,7 +364,7 @@
     "weight": 0
   },
   {
-    "language": "julia",
+    "language": "Julia",
     "subtitle": "Shell repository for Julia tutorial-style projects",
     "name": "juliaTut",
     "showLocalPage": "",
