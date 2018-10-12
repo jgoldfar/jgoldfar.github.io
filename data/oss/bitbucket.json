@@ -365,7 +365,7 @@
   },
   {
     "language": "julia",
-    "subtitle": "",
+    "subtitle": "Shell repository for Julia tutorial-style projects",
     "name": "juliaTut",
     "showLocalPage": "",
     "postImage": "",
