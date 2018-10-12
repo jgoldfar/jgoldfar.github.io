@@ -49,7 +49,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/Sundials.jl",
     "showReadme": true,
-    "weight": 0
+    "weight": 100
   },
   {
     "language": "Julia",
@@ -75,7 +75,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/WeightedNorms.jl",
     "showReadme": true,
-    "weight": 0
+    "weight": 10
   },
   {
     "language": "Jupyter Notebook",
@@ -101,7 +101,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/NetCDF.jl",
     "showReadme": true,
-    "weight": 0
+    "weight": 100
   },
   {
     "language": "Julia",
@@ -127,7 +127,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/Librsync.jl",
     "showReadme": true,
-    "weight": 0
+    "weight": 10
   },
   {
     "language": "HTML",
@@ -166,7 +166,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/BonminBuilder",
     "showReadme": true,
-    "weight": 0
+    "weight": 1
   },
   {
     "language": "Julia",
@@ -374,7 +374,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/bibtex-markdown",
     "showReadme": true,
-    "weight": 0
+    "weight": 10
   },
   {
     "language": "C",
@@ -478,7 +478,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/jgoldfarHugoTheme",
     "showReadme": true,
-    "weight": 0
+    "weight": 90
   },
   {
     "language": "LaTeX",
@@ -621,7 +621,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/Yeppp.jl",
     "showReadme": true,
-    "weight": 0
+    "weight": 100
   },
   {
     "language": "Julia",
@@ -673,7 +673,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/SPSInterface.jl",
     "showReadme": true,
-    "weight": 0
+    "weight": 10
   },
   {
     "language": "Jupyter Notebook",
@@ -751,7 +751,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/Hiccup.jl",
     "showReadme": true,
-    "weight": 0
+    "weight": 100
   },
   {
     "language": "HTML",
@@ -829,7 +829,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/SCUDEMFiles",
     "showReadme": true,
-    "weight": 0
+    "weight": 1
   },
   {
     "language": "C",
@@ -881,7 +881,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/SiloBuilder",
     "showReadme": true,
-    "weight": 0
+    "weight": 1
   },
   {
     "language": "JavaScript",
@@ -907,7 +907,7 @@
     "showOSSListing": true,
     "url": "https://github.com/jgoldfar/ww_install",
     "showReadme": true,
-    "weight": 0
+    "weight": 15
   },
   {
     "language": "Julia",

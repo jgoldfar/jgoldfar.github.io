@@ -283,7 +283,7 @@
     "showOSSListing": true,
     "url": "https://bitbucket.org/jgoldfar/jgoldfar-cms",
     "showReadme": true,
-    "weight": 0
+    "weight": 50
   },
   {
     "language": "Julia",
@@ -309,7 +309,7 @@
     "showOSSListing": true,
     "url": "https://bitbucket.org/jgoldfar/misc-explore",
     "showReadme": true,
-    "weight": 0
+    "weight": 10
   },
   {
     "language": "Julia",
@@ -348,7 +348,7 @@
     "showOSSListing": true,
     "url": "https://bitbucket.org/jgoldfar/worksitemonit",
     "showReadme": true,
-    "weight": 0
+    "weight": 10
   },
   {
     "language": "",
@@ -374,7 +374,7 @@
     "showOSSListing": true,
     "url": "https://bitbucket.org/jgoldfar/juliatut",
     "showReadme": true,
-    "weight": 0
+    "weight": 90
   },
   {
     "language": "html/css",
