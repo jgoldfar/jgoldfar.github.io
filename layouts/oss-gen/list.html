@@ -1,0 +1,7 @@
+{{ define "mainContent" }}
+
+{{ .Content }}
+
+{{ partial "processOSSListings.html" (dict "Data" $.Site.Data.oss.combined) }}
+
+{{ end }}
