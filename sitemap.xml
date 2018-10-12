@@ -184,6 +184,10 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/oss-gen/</loc>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/tags/oss/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
