@@ -44,10 +44,10 @@ reading-group-deps:
 	)
 
 ### CV/Resume
-CVDownloadPath=https://bitbucket.org/jgoldfar/resumepublic/downloads
+CVDownloadPath=https://bintray.com/jgoldfar/ResumePublic/download_file?file_path=
 CVPath=static/cv
 InstallDirs+=$(CVPath)
-CVFiles=cv@default.pdf res@default.pdf
+CVFiles=cv@default.pdf res@default.pdf cont-talks.bib inv-talks.bib posters.bib pubs.bib
 cv-deps-pull:
 	mkdir -p $(CVPath)
 	$(foreach file, $(CVFiles), \
