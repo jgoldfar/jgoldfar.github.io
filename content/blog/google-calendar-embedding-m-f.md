@@ -1,6 +1,7 @@
 ---
 title: "Full-width M-F Embedded Google Calendars"
 tags: ["WebDev"]
+date: 2018-10-19T09:46:00-04:00
 draft: false
 ---
 
