@@ -6,10 +6,19 @@
     <description>Recent content in Webdev on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Oct 2018 09:46:00 -0400</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Full-width M-F Embedded Google Calendars</title>
+      <link>https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/</link>
+      <pubDate>Fri, 19 Oct 2018 09:46:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/</guid>
+      <description>Our university transitioned earlier this semester to a new CMS, and as part of that move, all of our content was basically pasted into a new template. Mostly this works: our center&amp;rsquo;s page is quite simple, and the constraints of the new CMS will keep it that way&amp;hellip; However, the calendars we embed in the page didn&amp;rsquo;t transfer well; Google calendar embedding is quite nice, but not super flexible! In particular, the option one has in their own view to hide the weekends doesn&amp;rsquo;t exist for embedded calendars.</description>
+    </item>
     
     <item>
       <title>One more round with Hyde</title>
@@ -19,15 +28,6 @@
       <guid>https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/</guid>
       <description>Let&amp;rsquo;s say you&amp;rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
 1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc.</description>
-    </item>
-    
-    <item>
-      <title>Full-width M-F Embedded Google Calendars</title>
-      <link>https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/</guid>
-      <description>Our university transitioned earlier this semester to a new CMS, and as part of that move, all of our content was basically pasted into a new template. Mostly this works: our center&amp;rsquo;s page is quite simple, and the constraints of the new CMS will keep it that way&amp;hellip; However, the calendars we embed in the page didn&amp;rsquo;t transfer well; Google calendar embedding is quite nice, but not super flexible! In particular, the option one has in their own view to hide the weekends doesn&amp;rsquo;t exist for embedded calendars.</description>
     </item>
     
   </channel>
