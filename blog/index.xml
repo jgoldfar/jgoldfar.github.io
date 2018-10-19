@@ -77,5 +77,14 @@ A backup is no good if you can&amp;rsquo;t open it, and even if it opens or runs
       <description>I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you&#39;d like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.</description>
     </item>
     
+    <item>
+      <title>Full-width M-F Embedded Google Calendars</title>
+      <link>https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/</guid>
+      <description>Our university transitioned earlier this semester to a new CMS, and as part of that move, all of our content was basically pasted into a new template. Mostly this works: our center&amp;rsquo;s page is quite simple, and the constraints of the new CMS will keep it that way&amp;hellip; However, the calendars we embed in the page didn&amp;rsquo;t transfer well; Google calendar embedding is quite nice, but not super flexible! In particular, the option one has in their own view to hide the weekends doesn&amp;rsquo;t exist for embedded calendars.</description>
+    </item>
+    
   </channel>
 </rss>
