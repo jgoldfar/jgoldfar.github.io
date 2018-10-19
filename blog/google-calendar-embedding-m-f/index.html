@@ -396,8 +396,13 @@ frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;
 &lt;/div&gt;
 </code></pre>
 
+<p>You can see the result <a href="https://www.fit.edu/math-advancement-center/our-tutors--gsas/">on this page</a>, for example.</p>
+
 <p>Most of the settings one would normally apply to the actual <code>src</code> part of the iframe can be changed any way one would usually do; obviously, one should keep the height parameters synced up.
 The key here is to adjust the width of the outer div and inner paragraph to hide exactly enough of the embedded calendar (at least, the part to the right of what we want to keep.)</p>
+
+<p>It didn&rsquo;t occur to me initially, but of course, for our application, there&rsquo;s no need to have a horizontal scroll bar.
+To eliminate it, simply set <code>overflow-x: hidden</code>.</p>
 
 
 <div id="disqus_thread"></div>
