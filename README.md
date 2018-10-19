@@ -10,6 +10,8 @@ done on the CI platform Bitbucket Pipelines.
 Rsync is just used to reduce the overhead of generating and moving multiple files over an
 existing built site.
 
+My website is currently being hosted [by github Pages](http://jgoldfar.github.io/).
+
 ### Usage ##
 
 First, clone the website generator into the correct path; to install all of the remotely generated sources, run
@@ -18,9 +20,13 @@ First, clone the website generator into the correct path; to install all of the 
     
 `pull-deps` currently brings in the following source material:
 
-* [Algebra Reading Group Notes](https://bitbucket.org/jgoldfar/algebrareadinggroupnotes)
+* [Algebra Reading Group Notes](https://bitbucket.org/jgoldfar/algebrareadinggroupnotes).
 
-* [Resume and CV files](https://bitbucket.org/jgoldfar/resumepublic)
+* [Resume and CV files](https://bintray.com/jgoldfar/ResumePublic).
+
+* Listings of Open Source contributions from [Github](https://github.com/jgoldfar) and [Bitbucket](https://bitbucket.org/jgoldfar/), parsed into a data file appropriate for Hugo to convert into a [data page](http://jgoldfar.github.io/oss-contributions/).
+
+* (currently unused, and with a private link) Calendar files from Google Calendar.
 
 In the future, it is planned that the schedule file will also be generated automatically,
 along with other files related to e.g. OSS repositories.

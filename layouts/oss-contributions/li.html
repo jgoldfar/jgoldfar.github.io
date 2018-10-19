@@ -1,7 +1,7 @@
 <div class="ossContainer">
 <article class="ossListing">
 <header>
-	<a href="{{ .Permalink }}">{{ with .Params.postImage }}<img src="{{.}}" />{{ end }}
+    <a href="{{ .Permalink }}">{{ with .Params.postImage }}<img src="{{.}}" />{{ end }}
     <h3>{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</h3>
     {{ with .Params.subtitle }}
     <span class="ossSubtitle">{{ . }}</span>
