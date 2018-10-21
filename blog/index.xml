@@ -6,10 +6,20 @@
     <description>Recent content on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Oct 2018 09:46:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 20 Oct 2018 20:44:16 +0000</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reviving an ancient MacBook</title>
+      <link>https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/</link>
+      <pubDate>Sat, 20 Oct 2018 20:44:16 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/</guid>
+      <description>Well, it finally happened: my ancient (by modern, consumerist standards) macbook finally kicked the bucket. The fact that a 6 year old laptop is on death&amp;rsquo;s door is a sad statement about the reliability and repairability of the technology we rely on, and it&amp;rsquo;s by no means unique to Apple products, since I&amp;rsquo;ve had similarly flaky Dell and Acer machines.
+I&amp;rsquo;ve been expecting this for a while, of course, hence my obsession with backups and continuous integration, which offers some kind of guarantee that moving to another machine won&amp;rsquo;t break everything I&amp;rsquo;m working on.</description>
+    </item>
     
     <item>
       <title>Full-width M-F Embedded Google Calendars</title>

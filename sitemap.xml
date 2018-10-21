@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/</loc>
+    <lastmod>2018-10-20T20:44:16+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/</loc>
     <lastmod>2018-10-19T09:46:00-04:00</lastmod>
   </url>
@@ -48,8 +53,14 @@
   </url>
   
   <url>
+    <loc>https://jgoldfar.github.io/tags/</loc>
+    <lastmod>2018-10-20T20:44:16+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/blog/</loc>
-    <lastmod>2018-10-19T09:46:00-04:00</lastmod>
+    <lastmod>2018-10-20T20:44:16+00:00</lastmod>
   </url>
   
   <url>
@@ -144,7 +155,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/</loc>
-    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-20T20:44:16+00:00</lastmod>
     <priority>0</priority>
   </url>
   
