@@ -175,8 +175,7 @@ HOMEBREW_CURLRC=~/.curlrc brew update --force
 
 finishes the job.
 Homebrew wasn't necessarily a requirement, but it'd be a pain to have to go through this later when I'd really like to get something working.
-
-
+Of course, this isn't the end of the story when it comes to getting Homebrew working, because OpenSSL (a `git` build requirement, since apparently our funny git installation doesn't work...) doesn't build right away, but that's for another time.
 
 ## Installing TeXLive
 
@@ -185,6 +184,21 @@ This is an aside, but I would say that Spacemacs is an excellent way to transiti
 
 Now, TeXLive 2013 is apparently the newest version that will run successfully on this machine, and it's not available through the regular mirrors anymore.
 The torrent network provides an installer though; I was able to install a minimal torrent client and grab the corresponding installer (if only a 2013 BasicTeX installer were available... too bad.)
+
+I had to freeze the package repository that `tlmgr` uses:
+
+```
+sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2013/tlnet-final
+```
+
+after which `tlmgr` itself needed updating:
+
+```
+sudo tlmgr update --self
+```
+
+after which I finally got some new files to compile on this ancient machine!
+So there you have it, continuous integration works, even in reverse.
 
 ## Future Work
 
