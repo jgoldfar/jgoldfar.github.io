@@ -15,6 +15,14 @@ Luckily, I have another, even older tool to dig up!
 That's right, I've had a unibody MacBook sitting at the back of a shelf for quite some time.
 I originally stopped using this machine because the battery started swelling up in an alarming way, but luckily, this happened back when batteries could be removed, so it's perfectly usable as long as you don't move it.
 It runs OSX 10.6.8, and doesn't seem to be in the mood to update anything anymore.
+This presents a significant issue, since just about 0% of the software I take for granted will work "out of the box" on such an old platform; though this is purely a personal journey (preserved here in case this is useful to anyone else ever), I find it instructive to think about how many people in the world are caught between the "supported" platforms, and those they can afford or understand.
+It's astounding how much of the web is simply unavailable, or will not display correctly, to the long tail of users on Safari 5, which I now count myself among.
+The README and INSTALL files for widespread utilities can't cover every eventuality, of course, but there is practically no documentation of known-good configurations, dependencies, etc. independent of the context the software was originally found.
+Many, if not all, of the software that I write is guilty of this same issue: it works well against my system, and is tested to work in some capacity guaranteed by whatever tests I can think to write against a few others.
+But that doesn't really give the whole story, when it comes to how that software works.
+It brings to mind the classic apple pie recipe, which could be shoehorned into something like "in order to run this software, you must first create the universe."
+
+## Goals
 
 Now, I know this will never again be a computational powerhouse, but these days there's easy and cheap enough access to other people's servers that I probably won't have such a machine as a daily driver anyways.
 A glorified PDF reader and typewriter/code terminal will serve 90% of my needs, which are
