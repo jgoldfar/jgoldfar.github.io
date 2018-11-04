@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Full-width M-F Embedded Google Calendars | jgoldfar&#39;s home on the web
+        jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -252,6 +252,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/blog/index.xml">
     </head>
 
 
@@ -291,22 +292,10 @@
                                     
                                 </td>
                             
-<td class="postTitle">
-    
-    <div class="postTitle">
-        Full-width M-F Embedded Google Calendars
-    </div>
-    
-    
-<ul class="tags">
-<span class="date">
-    Published: Oct 19, 2018
-</span>
-    
-        : <span class="tag">WebDev</span>
-    
-</ul>
-</td>
+  <td class="postTitle">
+  
+  
+  </td>
 
 
                             </tr>
@@ -396,51 +385,141 @@
                             <td class="mainbody">
                                 
                                 
-<p>Our university transitioned earlier this semester to a new CMS, and as part of that move, all of our content was basically pasted into a new template.
-Mostly this works: <a href="https://www.fit.edu/math-advancement-center/">our center&rsquo;s page</a> is quite simple, and the constraints of the new CMS will keep it that way&hellip;
-However, the calendars we embed in the page didn&rsquo;t transfer well; Google calendar embedding is quite nice, but not super flexible!
-In particular, the option one has in their own view to hide the weekends doesn&rsquo;t exist for embedded calendars.
-This morning I decided to go ahead and fix this issue, and I&rsquo;m recording it here so I don&rsquo;t have to look it up again.
-Luckily, <a href="https://productforums.google.com/forum/#!topic/calendar/w-YSMmONAQY">someone already solved</a> most of the problem; their solution required a few more tweaks (and I&rsquo;m sure format changes on our side down the line will continue requiring maintenance&hellip;) but the result is below:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;div style=&#34;border: 1px solid black; width: 85%; height: 600px; overflow-y: scroll; overflow-x: scroll;&#34;&gt;
-&lt;p style=&#34;width: 140%;&#34;&gt;
-&lt;iframe
-style=&#34;border: 0px #777;&#34;
-src=&#34;https://www.google.com/calendar/embed?showTitle=0&amp;amp;showDate=0&amp;amp;showPrint=0&amp;amp;showTabs=0&amp;amp;showCalendars=0&amp;amp;showTz=0&amp;amp;mode=WEEK&amp;amp;height=600&amp;amp;wkst=2&amp;amp;bgcolor=%23FFFFFF&amp;amp;src=rve7oijjit4pa8d3doa673nav0%40group.calendar.google.com&amp;amp;color=%23875509&amp;amp;ctz=America%2FNew_York&#34;
-width=&#34;100%&#34; height=&#34;600px&#34;
-frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt;
-&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;/div&gt;</pre></div>
-<p>You can see the result <a href="https://www.fit.edu/math-advancement-center/our-tutors--gsas/">on this page</a>, for example.</p>
+<!--
+     Testing blog functionality
 
-<p>Most of the settings one would normally apply to the actual <code>src</code> part of the iframe can be changed any way one would usually do; obviously, one should keep the height parameters synced up.
-The key here is to adjust the width of the outer div and inner paragraph to hide exactly enough of the embedded calendar (at least, the part to the right of what we want to keep.)</p>
+     \[
+     u_t = {(a u_x)}_x + b u_x
+     \]
 
-<p>It didn&rsquo;t occur to me initially, but of course, for our application, there&rsquo;s no need to have a horizontal scroll bar.
-To eliminate it, simply set <code>overflow-x: hidden</code>.</p>
+     Which, in $n$-dimensions, may be written \(u_t = \text{div} {(A \nabla u)}\)
+-->
 
 
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
+
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/">One more round with Hyde </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Sep 17, 2018
+    </span>
     
+        : <span class="tag">OSS</span>
     
+        : <span class="tag">DevOps</span>
     
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        : <span class="tag">WebDev</span>
+    
+    </ul>
+</header>
+
+<div>
+Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
+1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/why-oss/">Why Open Source Software? </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Aug 15, 2018
+    </span>
+    
+        : <span class="tag">OSS</span>
+    
+    </ul>
+</header>
+
+<div>
+These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&rsquo;s not always the path of least resistance. I&rsquo;m not here to evangelize for open source, and I&rsquo;m not a purist: closed-source and proprietary work has its place in our society. However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/why-oss/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/building-octave-osx/">Building GNU Octave From Source on OSX </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Aug 15, 2018
+    </span>
+    
+        : <span class="tag">build-the-world</span>
+    
+        : <span class="tag">OSS</span>
+    
+    </ul>
+</header>
+
+<div>
+Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/building-octave-osx/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/about/">About </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Aug 14, 2018
+    </span>
+    
+    </ul>
+</header>
+
+<div>
+I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you'd like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/about/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+
+
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/blog/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 3 of 3</span>
+    
+  </nav>
+</div>
+
+
+
 
                                 
                             </td>
@@ -451,11 +530,7 @@ To eliminate it, simply set <code>overflow-x: hidden</code>.</p>
                             <td>
                                 <div class="prevNext">
                                     
-                                    <a class="previous" href="https://jgoldfar.github.io/blog/quick-julia-sha256/">&lArr; Quick SHA256 Generation using Julia</a>
                                     
-                                    
-                                    <a class="next" href="https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/"> Reviving an ancient MacBook &rArr;</a>
-                            
                         </div>
                             </td>
                         </tr>

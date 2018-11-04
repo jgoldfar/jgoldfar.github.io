@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        One more round with Hyde | jgoldfar&#39;s home on the web
+        Visualizing Attendance Data using Idiomatic Julia | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -294,20 +294,20 @@
 <td class="postTitle">
     
     <div class="postTitle">
-        One more round with Hyde
+        Visualizing Attendance Data using Idiomatic Julia
     </div>
     
     
 <ul class="tags">
 <span class="date">
-    Published: Sep 17, 2018
+    Published: Nov 4, 2018
 </span>
     
         : <span class="tag">OSS</span>
     
-        : <span class="tag">DevOps</span>
+        : <span class="tag">DataViz</span>
     
-        : <span class="tag">WebDev</span>
+        : <span class="tag">Julia-Lang</span>
     
 </ul>
 </td>
@@ -402,94 +402,66 @@
                                 
 
 
-<p>Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update.
-What to do?
-Clearly, there are at least two options:</p>
+<p>In <a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data/">a previous post</a> I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports.
+This script dates back to when local environments/dependencies didn&rsquo;t have quite as nice a story as Julia v1.0 does, so I made sure to only use standard library packages.
+But to make a fair comparison with the other codes in R and Python (in particular, to see how semantically clear one could make the code) one should use high-quality data analysis packages provided by the Julia ecosystem!</p>
 
-<p>1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc. until the output is just right.
-That&rsquo;s what I did with this website some time back, and it was quite a bit more time consuming than I&rsquo;d care to admit; the results are hosted in the corresponding public repository <a href="https://bitbucket.org/jgoldfar/personal-site">here</a>, and perhaps I&rsquo;ll write about the experience some day.
-Suffice it to say that, despite the relatively friendly initial experience, as a non Gopher, it is clear that configuring Hugo to do what I want will take a while.</p>
+<h2 id="manage-packages-a-one-time-deal">Manage Packages (a One-Time Deal)</h2>
 
-<p>or,</p>
+<p>If you start julia from the command line using</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia --project<span style="color:#666">=</span><span style="color:#b44">&#34;.&#34;</span></code></pre></div>
+<p>The package loading and management code will use a local environment, which will allow you to manage the explicit requirements for your script and track the versions and their dependencies like a <code>requirements.txt</code> file might.</p>
 
-<p>2) Pick up the old, unmaintained static website generator (<a href="https://jgoldfar.github.io/blog/why-oss/">Yay for FOSS!</a>), make it work in a reproducible way, and package it up so you won&rsquo;t have to bother with the technical side of this problem again (one hopes)</p>
+<p>The first time you run Julia in your project directory, you&rsquo;ll need to add the necessary packages:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Pkg
+<span style="color:#a2f;font-weight:bold">for</span> c <span style="color:#a2f">in</span> [<span style="color:#b44">&#34;CSV&#34;</span>, <span style="color:#b44">&#34;DataFrames&#34;</span>, <span style="color:#b44">&#34;ImageMagick&#34;</span>, <span style="color:#b44">&#34;QuartzImageIO&#34;</span>, <span style="color:#b44">&#34;Makie&#34;</span>]
+    Pkg<span style="color:#666">.</span>add(c)
+<span style="color:#a2f;font-weight:bold">end</span></code></pre></div>
+<p>This will build and install the dependencies for the script below, though you may need slightly different packages to support visualization on another platform (Makie will warn you if that&rsquo;s the case.)</p>
 
-<p>Given that the old static website generator, <a href="http://hyde.github.io/">Hyde</a> (Github repository <a href="https://github.com/hyde/hyde">here</a>) was written in Python 2, with some steps towards Python 3 support, obviously the latter was a more attractive solution.
-It gave me an opportunity to play around with some sides of Python I haven&rsquo;t messed with in a while, as well as tools like <a href="https://pipenv.readthedocs.io/en/latest/">pipenv</a> (which I&rsquo;m going to be using as much as I can! Very friendly!) and <a href="https://pypi.org/project/tox/">tox</a>.</p>
+<p>After that, starting Julia with the above invocation, or, from any Julia session in your project directory, running</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Pkg
+Pkg<span style="color:#666">.</span>activate(pwd())
+Pkg<span style="color:#666">.</span>instantiate()</code></pre></div>
+<p>will bring those packages into your scripts&rsquo;s scope.
+The latter is particularly useful when working with a <code>Project.toml</code> file in a Jupyter notebook.</p>
 
-<h2 id="patching-up-hyde">Patching up Hyde</h2>
+<h2 id="loading-the-data-using-csv-jl-and-dataframes-jl">Loading the Data using CSV.jl and DataFrames.jl</h2>
 
-<p>Hyde hasn&rsquo;t had a commit to its main repository for almost 3 years now; while this isn&rsquo;t disqualifying for a project that could be considered mature written in Python 2 (which also isn&rsquo;t going anywhere soon) I found that I couldn&rsquo;t load the script on my machine, and though PRs hadn&rsquo;t been accepted since 2016, all of the recent ones failed CI, so something is amiss.
-I&rsquo;m a <a href=" ref &quot;blog/too-much-ci.md&quot; ">big fan</a> of continuous integration, in particular on <a href="https://travis-ci.org/">Travis CI</a> and make active use of Travis&rsquo; Cron jobs to keep tabs on whether I can reliably come back to a previous project and expect it to work, at least in some capacity.</p>
+<p>First, we define the date format used in our data:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Dates
 
-<p>So, first things first, I cloned the Hyde repository and ran the tests according to the CI configuration.
-No go (as expected.)
-That is, the tests themselves didn&rsquo;t run.
-Flipping the switch on the repo&rsquo;s corresponding Travis page unsurprisingly gave a failure as well.
-But, the package itself did load when built from the <code>master</code> branch, so there wouldn&rsquo;t need to be <em>too</em> much poking around in the main package codebase, at least to get the tests passing.
-There are some bits that are interesting to think about and read, though, such as the plugin and backend management system; Python makes those kinds of things relatively ergonomic, even with conditional dependencies.
-Since the original test framework <code>nose</code> is in maintenance mode, I figured it would be a good time to play around with <a href="https://github.com/nose-devs/nose2"><code>nose2</code></a>, which would better support a Python 2 + 3 package.</p>
+<span style="color:#a2f;font-weight:bold">const</span> lineDateFormat <span style="color:#666">=</span> DateFormat(<span style="color:#b44">&#34;y-m-d H:M:S&#34;</span>)</code></pre></div>
+<p>and then load the data; normalizing the names so they&rsquo;re Julia identifiers has no downside for us:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> CSV, DataFrames
+swipeData <span style="color:#666">=</span> CSV<span style="color:#666">.</span>File(<span style="color:#b44">&#34;Swipes-Time-Only.csv&#34;</span>, normalizenames <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">true</span>, dateformat <span style="color:#666">=</span> lineDateFormat) <span style="color:#666">|&gt;</span> DataFrame</code></pre></div>
+<p>We&rsquo;ll go ahead and add the hour the student came in as a new column:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">swipeData<span style="color:#666">.</span>Hour_In <span style="color:#666">=</span> map(Dates<span style="color:#666">.</span>hour, swipeData<span style="color:#666">.</span>Time_In)</code></pre></div>
+<p>and aggregate it as we did before:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">hourData <span style="color:#666">=</span> sort!(by(swipeData, <span style="color:#666">:</span>Hour_In, size), <span style="color:#666">:</span>Hour_In)</code></pre></div>
+<h2 id="create-the-visualization-using-makie">Create the Visualization using Makie</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Makie</code></pre></div>
+<p>Create (and grab a handle to) the Scene object:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">scene <span style="color:#666">=</span> Scene(resolution <span style="color:#666">=</span> (<span style="color:#666">500</span>, <span style="color:#666">500</span>))</code></pre></div>
+<p>Extract the pertinent data from the aggregated DataFrame we created above (adjusting the plot limits so things show up &ldquo;nicely&rdquo;)</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">hours <span style="color:#666">=</span> hourData<span style="color:#666">.</span>Hour_In
+visitors <span style="color:#666">=</span> [first(x) <span style="color:#a2f;font-weight:bold">for</span> x <span style="color:#a2f">in</span> hourData<span style="color:#666">.</span>x1]
+minHour <span style="color:#666">=</span> minimum(hours)
+hourDiff <span style="color:#666">=</span> maximum(hours) <span style="color:#666">-</span> minHour
+barplot!(scene, hours, visitors, limits <span style="color:#666">=</span> FRect(minHour <span style="color:#666">-</span> <span style="color:#666">0.5</span>, <span style="color:#666">0</span>, hourDiff <span style="color:#666">+</span> <span style="color:#666">0.5</span>, maximum(visitors) <span style="color:#666">+</span> <span style="color:#666">10</span>))</code></pre></div>
+<p>Name the axes, and export the graphic:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">axis <span style="color:#666">=</span> scene[Axis]
+axis[<span style="color:#666">:</span>names, <span style="color:#666">:</span>axisnames] <span style="color:#666">=</span> (<span style="color:#b44">&#34;Hour&#34;</span>, <span style="color:#b44">&#34;Number of Visitors&#34;</span>)
+Makie<span style="color:#666">.</span>save(<span style="color:#b44">&#34;Busy-Hours-Julia.png&#34;</span>, scene)</code></pre></div>
+<p>As before, the output should look like the plot below:</p>
 
-<p>As promised, some features from <code>nose</code> that were heavily used in the Hyde tests were not yet implemented in <code>nose2</code>; in particular, the <code>@raise</code> decorator, and <code>@with_setup</code>/<code>@with_teardown</code> don&rsquo;t yet work with class-based tests.
-Though it&rsquo;s obviously sub-optimal, it was trivial to &ldquo;inline&rdquo; the action of those decorators into the tests.
-One test dependency of Hyde, asciidoc, just wouldn&rsquo;t run on my machine in the couple hours I had given myself for this project, so I disabled the corresponding test while getting the test scripts running; a couple other tests for the output of Javascript dependencies were documented to be fragile , and will need to be updated (and is it within scope of the site generator to check that external projects like <code>uglifyjs</code> behave? Maybe?)
-A couple of the plugin tests don&rsquo;t behave anymore either, which would require a bit more digging.</p>
+<p><img src="/blog/vizualizing-attendance-data-images/Busy-Hours-Julia.png" alt="Busy-Hours-Julia" /></p>
 
-<p>While I was at it, I figured it would make sense to use a <code>npm</code> <code>package.json</code> script to track the Javascript dependencies, rather than hard-coding those in the CI file.
-<code>npm</code> helpfully nags you if the versions of your dependent packages have security issues, which the pinned versions did. <code>npm audit</code> is a neat tool!</p>
-
-<p>Hyde also tests for PEP8 conformity using <code>flake8</code>, which is nice, but the package had fallen behind the times; those issues were quite easy to fix.
-Lastly, the documentation build needed some tweaks.</p>
-
-<p>According to my commit history, the whole process took a couple of hours of work; the branch with the current state of things, such as they are, is <a href="https://github.com/jgoldfar/hyde/commits/fixes-for-python27">here</a>.
-I wouldn&rsquo;t say it&rsquo;s fixed (given a test coverage sitting at 61%, it very well might fail in unfortunate and surprising ways&hellip;), but it&rsquo;s at least reproducibly in its current state, and it works for my purposes!</p>
-
-<h2 id="future-proofing-the-whole-deal">Future-proofing the whole deal</h2>
-
-<p>That still leaves the question of generating these changes, and making sure that I wouldn&rsquo;t have to bother with this nonsense again.
-It&rsquo;s all well and good to have a working dependency today, but there&rsquo;s not much chance Hyde will be resurrected and become active (or even reach version 1.0) ever.
-Moreover, when I used it in the past and it <em>was</em> being maintained more actively, Hyde would have perennial conflicts with other tools I had installed over dependency resolution.
-This is where <code>pipenv</code> comes in; simply running</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">pipenv --two install -e git+https://github.com/jgoldfar/hyde.git@fixes-for-python2.7#egg=hyde</pre></div>
-<p>in the website directory was enough to grab my updated Hyde source tree, along with its dependencies, and make it all available only to this project (if necessary) with a Python 2 virtual environment.
-This also created a nice <code>Pipfile</code> that records the Python version and package dependencies, so simply running</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">pipenv install</pre></div>
-<p>would be enough next time.
-Once Hyde was up-and-running in this environment, I could make my template changes as necessary, and regenerate the output like I did long ago.
-Nostalgia!</p>
-
-<p>Is that enough?
-Of course not!
-My laptop is far from rock solid machine, as I&rsquo;ve written, which is part of <a href=" ref &quot;blog/too-much-ci.md&quot; ">my reason</a> for assiduously setting up continuous integration for as much as I can.
-The website code was already up on Bitbucket, and they&rsquo;ve just started offering their very nice <a href="https://confluence.atlassian.com/bitbucket/build-test-and-deploy-with-pipelines-792496469.html">Pipelines</a> service, which allows you to run a test script using any docker image you&rsquo;d like.
-The top <a href="https://hub.docker.com/r/kennethreitz/pipenv/">existing <code>pipenv</code> image</a> didn&rsquo;t seem to support Python2, but it was relatively simple to <a href="https://github.com/jgoldfar/circleci-pipenv">fork</a> a Dockerfile and set up an automated build on docker hub for <a href="https://hub.docker.com/r/jgoldfar/circleci-pipenv/">my own image</a>.</p>
-
-<p>With this docker image in hand, and a bit of automation hidden away in a simple <code>Makefile</code>, simply creating a <code>bitbucket-pipelines.yml</code> file with the contents</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">image: jgoldfar/circleci-pipenv:latest
-
-pipelines:
-  default:
-    - step:
-        script:
-          - make generate</pre></div>
-<p>will automatically complete the previous couple steps within that docker image and check that the package generation completes successfully.</p>
-
-<p>I then added a packaging step to the <code>Makefile</code> so I can easily send the generated HTML files upstream, and the <a href="https://developer.atlassian.com/bitbucket/api/2/reference/">Bitbucket API</a> allows authorized apps to upload files to repositories to be made available as downloads, so I can just go there any time I&rsquo;d like access to those files.</p>
-
-<p>The finished product, as it were, is in the repository <a href="https://bitbucket.org/jgoldfar/drabdullasitegenerator/">here</a>.
-I take no ownership of the content of the website itself; there I was just transcribing what I was told to add, and I certainly don&rsquo;t claim responsibility for the color choices, but the templates and configuration are my work.
-If I had to do it all over again, I probably wouldn&rsquo;t, but at least the technical part was interesting!</p>
-
-<h2 id="todos">TODOs</h2>
+<h2 id="future-work">Future Work</h2>
 
 <ul>
-<li><p>Document the process for getting the necessary dependencies and running tests locally in <code>test/README.rst</code></p></li>
-
-<li><p>Update the expected output, or (even better) robustify the tests for external tools</p></li>
-
-<li><p>Run tests on OSX to catch possible future build errors like the one I originally ran into.</p></li>
-
-<li><p>Add some regression checks for the output of this particular website.</p></li>
+<li>We should be able to create the <em>exact</em> same visualization as in our Python example by using <code>PyPlot.jl</code>, which would allow us to leverage our Julia processing codes while taking advantage of all of <code>matplotlib</code>&rsquo;s niceties.
+In this case, since we&rsquo;re not doing any kind of interactive or animated visualizatio, <code>Makie</code> is a bit of overkill&hellip;</li>
 </ul>
 
 
@@ -523,11 +495,9 @@ If I had to do it all over again, I probably wouldn&rsquo;t, but at least the te
                             <td>
                                 <div class="prevNext">
                                     
-                                    <a class="previous" href="https://jgoldfar.github.io/blog/building-octave-osx/">&lArr; Building GNU Octave From Source on OSX</a>
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/vizualizing-attendance-data/">&lArr; Visualizing Attendance Data</a>
                                     
                                     
-                                    <a class="next" href="https://jgoldfar.github.io/blog/too-much-ci/"> Continuous Integration Ad Nauseam? &rArr;</a>
-                            
                         </div>
                             </td>
                         </tr>

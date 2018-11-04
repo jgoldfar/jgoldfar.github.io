@@ -411,27 +411,18 @@ Anyways, enough blabbing, here&rsquo;s the steps, in their current form:</p>
 <ul>
 <li>Clone the Octave repository and update to the <code>release-4.4.1</code> tag:</li>
 </ul>
-
-<pre><code>hg clone https://www.octave.org/hg/octave
-hg update -r 25771 # release-4.4.1
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hg clone https://www.octave.org/hg/octave
+hg update -r 25771 # release-4.4.1</pre></div>
 <ul>
 <li>Use Homebrew to download a few dependencies:</li>
 </ul>
-
-<pre><code>brew install autoconf automake gnuplot gcc hdf5 qt
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew install autoconf automake gnuplot gcc hdf5 qt</pre></div>
 <ul>
 <li>Set up a directory in which we&rsquo;ll build some other dependencies, including a Makefile to build each from source:</li>
 </ul>
-
-<pre><code>mkdir -p octave/deps
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">mkdir -p octave/deps
 wget -O octave/deps/Makefile https://gist.github.com/jgoldfar/37312d6ee5834d85542b1e0b35e8db94/raw
-wget -O octave/deps/qrupdate-1.1.2_Makeconf.patch https://gist.github.com/jgoldfar/4f8f295841d68248d93426f82ab6d931/raw
-</code></pre>
-
+wget -O octave/deps/qrupdate-1.1.2_Makeconf.patch https://gist.github.com/jgoldfar/4f8f295841d68248d93426f82ab6d931/raw</pre></div>
 <ul>
 <li><p>Download <a href="https://www.gnu.org/software/bison/">Bison v3.0.4</a>, <a href="https://curl.haxx.se/">Curl v7.60.0</a>, <a href="https://www.gnu.org/software/gawk/">Gawk v4.2.1</a>, <a href="https://www.gnu.org/software/sed/">Sed v4.5</a>, <a href="http://www.geuz.org/gl2ps/">GL2PS v1.4.0</a>, <a href="http://www.qhull.org/">QHull v2015-7.2.0</a>, <a href="http://www.fftw.org/">FFTW v3.3.7</a>, <a href="https://www.gnu.org/software/glpk/">GLPK v4.65</a>, <a href="http://www.openblas.net/">OpenBLAS v</a>, <a href="https://www.pcre.org/">PCRE2-v10.31</a>, <a href="https://sourceforge.net/projects/qrupdate/">QRUpdate v1.1.2</a>, <a href="https://ftp.gnu.org/gnu/readline/">Readline v8.0-alpha</a>, <a href="http://faculty.cse.tamu.edu/davis/suitesparse.html">SuiteSparse v5.2.0</a>, and <a href="https://www.nongnu.org/icoutils/">icoutils v0.32.3</a> to <code>deps</code>.</p></li>
 
@@ -439,25 +430,18 @@ wget -O octave/deps/qrupdate-1.1.2_Makeconf.patch https://gist.github.com/jgoldf
 
 <li><p>From the main source directory, generate the configuration script using Autotools and configure the build:</p></li>
 </ul>
-
-<pre><code>./bootstrap --gnulib-srcdir=`pwd`/gnulib --bootstrap-sync
-./configure --prefix=`pwd`/usr --without-sndfile --without-portaudio --without-sundials_nvecserial --without-sundials_ida --without-arpack --without-qscintilla --without-fltk --with-blas=`pwd`/usr/lib/libopenblas.a PKG_CONFIG_PATH=&quot;`pwd`/usr/lib/pkgconfig:/usr/local/opt/qt/lib/pkgconfig&quot; PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} LDFLAGS=&quot;-L`pwd`/usr/lib -L/usr/local/opt/qt/lib&quot; CPPFLAGS=&quot;-I`pwd`/usr/include -I/usr/local/opt/qt/include&quot;
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">./bootstrap --gnulib-srcdir=`pwd`/gnulib --bootstrap-sync
+./configure --prefix=`pwd`/usr --without-sndfile --without-portaudio --without-sundials_nvecserial --without-sundials_ida --without-arpack --without-qscintilla --without-fltk --with-blas=`pwd`/usr/lib/libopenblas.a PKG_CONFIG_PATH=&#34;`pwd`/usr/lib/pkgconfig:/usr/local/opt/qt/lib/pkgconfig&#34; PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} LDFLAGS=&#34;-L`pwd`/usr/lib -L/usr/local/opt/qt/lib&#34; CPPFLAGS=&#34;-I`pwd`/usr/include -I/usr/local/opt/qt/include&#34;</pre></div>
 <ul>
 <li>Build the package:</li>
 </ul>
-
-<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make</pre></div>
 <p>This will only get so far, perhaps due to our fussing with local dependencies&hellip;</p>
 
 <ul>
 <li>First, the path to <code>gl2ps</code> will need to be set:</li>
 </ul>
-
-<pre><code>install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/src/.libs/octave-cli
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/src/.libs/octave-cli
 install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/src/.libs/octave-gui
 install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libgui/.libs/liboctgui.4.dylib
 install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/.libs/liboctinterp.6.dylib
@@ -467,14 +451,11 @@ install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/
 install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/__voronoi__.oct
 install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/convhulln.oct
 install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/qr.oct
-install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/__init_gnuplot__.oct
-</code></pre>
-
+install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib `pwd`/libinterp/dldfcn/__init_gnuplot__.oct</pre></div>
 <ul>
 <li>Then, the path to <code>qrupdate</code> will need to be fixed:</li>
 </ul>
-
-<pre><code>install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/src/.libs/octave-cli
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/src/.libs/octave-cli
 install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/src/.libs/octave-gui
 install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libgui/.libs/liboctgui.4.dylib
 install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/.libs/liboctinterp.6.dylib
@@ -484,56 +465,36 @@ install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/lib
 install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/__delaunayn__.oct
 install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/__voronoi__.oct
 install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/convhulln.oct
-install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/qr.oct
-</code></pre>
-
+install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib `pwd`/libinterp/dldfcn/qr.oct</pre></div>
 <p>You can check manually that these changes took place by running e.g.</p>
-
-<pre><code>otool -L `pwd`/libinterp/dldfcn/qr.oct
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">otool -L `pwd`/libinterp/dldfcn/qr.oct</pre></div>
 <p>and looking to the paths this binary is expecting the above libraries.</p>
 
 <ul>
 <li>Copy over some files for building <code>texinfo</code> documentation:</li>
 </ul>
-
-<pre><code>cp build-aux/texinfo.tex doc/interpreter/
-cp deps/gawk-4.2.1/doc/it/epsf.tex doc/interpreter/
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cp build-aux/texinfo.tex doc/interpreter/
+cp deps/gawk-4.2.1/doc/it/epsf.tex doc/interpreter/</pre></div>
 <ul>
 <li><em>Now</em> we should be able to finish the build:</li>
 </ul>
-
-<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make</pre></div>
 <ul>
 <li>The check target should pass:</li>
 </ul>
-
-<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make check
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make check</pre></div>
 <ul>
 <li>Then we can install Octave locally:</li>
 </ul>
-
-<pre><code>PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make install
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">PATH=`pwd`/usr/bin:/usr/local/opt/qt/bin:${PATH} make install</pre></div>
 <ul>
 <li>Oh no! More <code>oct</code> files!</li>
 </ul>
-
-<pre><code>for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do otool -L $file | grep qrupdate; done
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do otool -L $file | grep qrupdate; done
 # This is no good!
 
 for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do install_name_tool -change /usr/local/lib64/libqrupdate.1.dylib `pwd`/usr/lib/libqrupdate.dylib $file ; done
-for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib $file ; done
-</code></pre>
-
+for file in $( ls /Users/jgoldfar/Public/octave/usr/lib/octave/4.4.1/oct/x86_64-apple-darwin16.7.0/*.oct ); do install_name_tool -change libgl2ps.1.dylib `pwd`/usr/lib/libgl2ps.1.dylib $file ; done</pre></div>
 <ul>
 <li>Finally, enjoy your Octave installation!</li>
 </ul>

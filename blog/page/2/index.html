@@ -401,15 +401,37 @@
 
     <article class="blogPostListing">
 <header>
-    <h3><a href="https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/">One more round with Hyde </a> </h3>
+    <h3><a href="https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/">Reviving an ancient MacBook </a> </h3>
     <ul class="tags">
     <span class="date">
-    Published: Sep 17, 2018
+    Published: Oct 20, 2018
     </span>
     
-        : <span class="tag">OSS</span>
+        : <span class="tag"></span>
     
-        : <span class="tag">DevOps</span>
+    </ul>
+</header>
+
+<div>
+Well, it finally happened: my ancient (by modern, consumerist standards) macbook finally kicked the bucket. The fact that a 6 year old laptop is on death&rsquo;s door is a sad statement about the reliability and repairability of the technology we rely on, and it&rsquo;s by no means unique to Apple products, since I&rsquo;ve had similarly flaky Dell and Acer machines.
+I&rsquo;ve been expecting this for a while, of course, hence my obsession with backups and continuous integration, which offers some kind of guarantee that moving to another machine won&rsquo;t break everything I&rsquo;m working on.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/">Full-width M-F Embedded Google Calendars </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Oct 19, 2018
+    </span>
     
         : <span class="tag">WebDev</span>
     
@@ -417,13 +439,12 @@
 </header>
 
 <div>
-Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update. What to do? Clearly, there are at least two options:
-1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc.
+Our university transitioned earlier this semester to a new CMS, and as part of that move, all of our content was basically pasted into a new template. Mostly this works: our center&rsquo;s page is quite simple, and the constraints of the new CMS will keep it that way&hellip; However, the calendars we embed in the page didn&rsquo;t transfer well; Google calendar embedding is quite nice, but not super flexible! In particular, the option one has in their own view to hide the weekends doesn&rsquo;t exist for embedded calendars.
 </div>
 
 
 <footer>
-        <a href='https://jgoldfar.github.io/blog/maintaining-legacy-website-hyde/'><nobr>Read more →</nobr></a>
+        <a href='https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
@@ -431,24 +452,48 @@ Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained sta
 
     <article class="blogPostListing">
 <header>
-    <h3><a href="https://jgoldfar.github.io/blog/why-oss/">Why Open Source Software? </a> </h3>
+    <h3><a href="https://jgoldfar.github.io/blog/quick-julia-sha256/">Quick SHA256 Generation using Julia </a> </h3>
     <ul class="tags">
     <span class="date">
-    Published: Aug 15, 2018
+    Published: Oct 11, 2018
+    </span>
+    
+    </ul>
+</header>
+
+<div>
+When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
+using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end
+</div>
+
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/">Containerizing and (Eventually) Updating pdf2htmlEX </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Oct 10, 2018
     </span>
     
         : <span class="tag">OSS</span>
     
+        : <span class="tag">DevOps</span>
+    
+        : <span class="tag">Docker</span>
+    
     </ul>
 </header>
 
 <div>
-These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&rsquo;s not always the path of least resistance. I&rsquo;m not here to evangelize for open source, and I&rsquo;m not a purist: closed-source and proprietary work has its place in our society. However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.
+We&rsquo;ve all been there: you&rsquo;re asked to solve a technical problem (&ldquo;compiling&rdquo; a TeX file to the web with minimal changes to the content) and someone has done an impressive job towards solving this problem, just a few short years ago. And, the project, pdf2htmlEX, is open source! But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author. Some kind contributors seem to have picked up where the original author left off, but this project, too has languished.
 </div>
 
 
 <footer>
-        <a href='https://jgoldfar.github.io/blog/why-oss/'><nobr>Read more →</nobr></a>
+        <a href='https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
@@ -456,49 +501,25 @@ These days, free and open source software (FOSS) is in vogue across many fields,
 
     <article class="blogPostListing">
 <header>
-    <h3><a href="https://jgoldfar.github.io/blog/building-octave-osx/">Building GNU Octave From Source on OSX </a> </h3>
+    <h3><a href="https://jgoldfar.github.io/blog/too-much-ci/">Continuous Integration Ad Nauseam? </a> </h3>
     <ul class="tags">
     <span class="date">
-    Published: Aug 15, 2018
+    Published: Sep 18, 2018
     </span>
     
-        : <span class="tag">build-the-world</span>
-    
-        : <span class="tag">OSS</span>
+        : <span class="tag">CI</span>
     
     </ul>
 </header>
 
 <div>
-Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
+Anyone who&rsquo;s tried to look back on a document from years ago probably knows how difficult it can be for anything more than the simplest files. There are good reasons why, over a long enough time scale, such problems are likely unavoidable (though that doesn&rsquo;t stop us from trying, with completely unknown results.)
+A backup is no good if you can&rsquo;t open it, and even if it opens or runs on your machine, how do you know the recipient of your work has a chance of having the same luck.
 </div>
 
 
 <footer>
-        <a href='https://jgoldfar.github.io/blog/building-octave-osx/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/about/">About </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Aug 14, 2018
-    </span>
-    
-    </ul>
-</header>
-
-<div>
-I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you'd like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/about/'><nobr>Read more →</nobr></a>
+        <a href='https://jgoldfar.github.io/blog/too-much-ci/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
@@ -513,7 +534,11 @@ I am an applied mathematician with a background in partial differential equation
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 2</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 3</span>
+    
+      <a href="/blog/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
     
   </nav>
 </div>

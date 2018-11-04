@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        One more round with Hyde | jgoldfar&#39;s home on the web
+        Installing Jupyter with IJulia and IRkernel | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -294,20 +294,18 @@
 <td class="postTitle">
     
     <div class="postTitle">
-        One more round with Hyde
+        Installing Jupyter with IJulia and IRkernel
     </div>
     
     
 <ul class="tags">
 <span class="date">
-    Published: Sep 17, 2018
+    Published: Nov 2, 2018
 </span>
     
         : <span class="tag">OSS</span>
     
-        : <span class="tag">DevOps</span>
-    
-        : <span class="tag">WebDev</span>
+        : <span class="tag">DataViz</span>
     
 </ul>
 </td>
@@ -402,96 +400,56 @@
                                 
 
 
-<p>Let&rsquo;s say you&rsquo;ve got a legacy website built with an unmaintained static website generator, but a new change comes around requiring a minor update.
-What to do?
-Clearly, there are at least two options:</p>
+<p>In this post, I&rsquo;ll share the commands I followed to install <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> using <a href="https://conda.io/docs/index.html">Miniconda</a> on an OSX platform, as part of the preparation I&rsquo;m doing for our open source data analysis course; it&rsquo;s important to me that .
+The following is all executed from the command line, assuming that Julia is available as <code>julia</code> and R is available as <code>R</code></p>
 
-<p>1) Choose a new static website generator that supports all of the bells and whistles of your old one, convert all of the old content to the new template language, and keep tweaking the configuration, themes, etc. until the output is just right.
-That&rsquo;s what I did with this website some time back, and it was quite a bit more time consuming than I&rsquo;d care to admit; the results are hosted in the corresponding public repository <a href="https://bitbucket.org/jgoldfar/personal-site">here</a>, and perhaps I&rsquo;ll write about the experience some day.
-Suffice it to say that, despite the relatively friendly initial experience, as a non Gopher, it is clear that configuring Hugo to do what I want will take a while.</p>
+<h2 id="miniconda-installation">Miniconda installation</h2>
 
-<p>or,</p>
+<p>Just to make things easier path-wise, I like to install packages &ldquo;close&rdquo; to my Homebrew installation:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo mkdir -p /usr/local/miniconda3
+sudo chown jgoldfar /usr/local/miniconda3</pre></div>
+<p>Now, install things:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+bash Miniconda3-latest-MacOSX-x86_64.sh -f -p /usr/local/miniconda3</pre></div>
+<h2 id="jupyterlab-installation">JupyterLab Installation</h2>
 
-<p>2) Pick up the old, unmaintained static website generator (<a href="https://jgoldfar.github.io/blog/why-oss/">Yay for FOSS!</a>), make it work in a reproducible way, and package it up so you won&rsquo;t have to bother with the technical side of this problem again (one hopes)</p>
+<p>Install:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">conda install -c conda-forge jupyterlab</pre></div>
+<p>Check:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">jupyter notebook --version # 5.7.0 at the time of this writing</pre></div>
+<p>To run Jupyter Notebook:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">jupyter notebook</pre></div>
+<p>To run JupyterLab:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">jupyter lab</pre></div>
+<h2 id="ijulia-installation">IJulia Installation</h2>
 
-<p>Given that the old static website generator, <a href="http://hyde.github.io/">Hyde</a> (Github repository <a href="https://github.com/hyde/hyde">here</a>) was written in Python 2, with some steps towards Python 3 support, obviously the latter was a more attractive solution.
-It gave me an opportunity to play around with some sides of Python I haven&rsquo;t messed with in a while, as well as tools like <a href="https://pipenv.readthedocs.io/en/latest/">pipenv</a> (which I&rsquo;m going to be using as much as I can! Very friendly!) and <a href="https://pypi.org/project/tox/">tox</a>.</p>
+<p>Install (using Julia installed as <code>julia</code>):</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">julia -e &#39;ENV[&#34;JUPYTER&#34;]=&#34;`which jupyter`&#34;; using Pkg; Pkg.add(&#34;IJulia&#34;)&#39;</pre></div>
+<p>I have a shortcut defined in my <code>bashrc</code> file to run IJulia in the current directory, though this is only useful if you&rsquo;re using Julia&rsquo;s private (Conda) distribution of Jupyter:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">alias notebook=&#34;julia -e &#39;using IJulia; notebook(dir=pwd())&#39;&#34;</pre></div>
+<p>Installing the kernel this way will allow you to simply run</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">jupyter notebook</pre></div>
+<p>and access all of the installed kernels in your global installation.
+This kind of trade-off is common: you can keep your dependencies isolated and your environment reproducible at the expense of disk space and some convenience (of which the latter is easy to resolve) or bring everything into your global environment, which can hurt reproducibility later down the line.
+This is why I prioritize the conversion of any script I&rsquo;ve put into &ldquo;production&rdquo; into an actual package or module with tests run on a continuous integration service.</p>
 
-<h2 id="patching-up-hyde">Patching up Hyde</h2>
+<h2 id="irkernel-installation">IRkernel Installation</h2>
 
-<p>Hyde hasn&rsquo;t had a commit to its main repository for almost 3 years now; while this isn&rsquo;t disqualifying for a project that could be considered mature written in Python 2 (which also isn&rsquo;t going anywhere soon) I found that I couldn&rsquo;t load the script on my machine, and though PRs hadn&rsquo;t been accepted since 2016, all of the recent ones failed CI, so something is amiss.
-I&rsquo;m a <a href=" ref &quot;blog/too-much-ci.md&quot; ">big fan</a> of continuous integration, in particular on <a href="https://travis-ci.org/">Travis CI</a> and make active use of Travis&rsquo; Cron jobs to keep tabs on whether I can reliably come back to a previous project and expect it to work, at least in some capacity.</p>
+<p>Install (using R installed as <code>R</code>)</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew install libgit2
+R -e &#34;install.packages(&#39;devtools&#39;)&#34; -e &#34;devtools::install_github(&#39;IRkernel/IRkernel&#39;)&#34; -e &#34;IRkernel::installspec(name = &#39;ir35&#39;, displayname=&#39;R 3.5&#39;)&#34;</pre></div>
+<h2 id="check-your-jupyer-installation">Check your Jupyer installation</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">jupyter notebook # or jupyter lab</pre></div>
+<p>You should be able to open a notebook in each of Julia, Python, and R; to check that all of the core functionality is available:</p>
 
-<p>So, first things first, I cloned the Hyde repository and ran the tests according to the CI configuration.
-No go (as expected.)
-That is, the tests themselves didn&rsquo;t run.
-Flipping the switch on the repo&rsquo;s corresponding Travis page unsurprisingly gave a failure as well.
-But, the package itself did load when built from the <code>master</code> branch, so there wouldn&rsquo;t need to be <em>too</em> much poking around in the main package codebase, at least to get the tests passing.
-There are some bits that are interesting to think about and read, though, such as the plugin and backend management system; Python makes those kinds of things relatively ergonomic, even with conditional dependencies.
-Since the original test framework <code>nose</code> is in maintenance mode, I figured it would be a good time to play around with <a href="https://github.com/nose-devs/nose2"><code>nose2</code></a>, which would better support a Python 2 + 3 package.</p>
-
-<p>As promised, some features from <code>nose</code> that were heavily used in the Hyde tests were not yet implemented in <code>nose2</code>; in particular, the <code>@raise</code> decorator, and <code>@with_setup</code>/<code>@with_teardown</code> don&rsquo;t yet work with class-based tests.
-Though it&rsquo;s obviously sub-optimal, it was trivial to &ldquo;inline&rdquo; the action of those decorators into the tests.
-One test dependency of Hyde, asciidoc, just wouldn&rsquo;t run on my machine in the couple hours I had given myself for this project, so I disabled the corresponding test while getting the test scripts running; a couple other tests for the output of Javascript dependencies were documented to be fragile , and will need to be updated (and is it within scope of the site generator to check that external projects like <code>uglifyjs</code> behave? Maybe?)
-A couple of the plugin tests don&rsquo;t behave anymore either, which would require a bit more digging.</p>
-
-<p>While I was at it, I figured it would make sense to use a <code>npm</code> <code>package.json</code> script to track the Javascript dependencies, rather than hard-coding those in the CI file.
-<code>npm</code> helpfully nags you if the versions of your dependent packages have security issues, which the pinned versions did. <code>npm audit</code> is a neat tool!</p>
-
-<p>Hyde also tests for PEP8 conformity using <code>flake8</code>, which is nice, but the package had fallen behind the times; those issues were quite easy to fix.
-Lastly, the documentation build needed some tweaks.</p>
-
-<p>According to my commit history, the whole process took a couple of hours of work; the branch with the current state of things, such as they are, is <a href="https://github.com/jgoldfar/hyde/commits/fixes-for-python27">here</a>.
-I wouldn&rsquo;t say it&rsquo;s fixed (given a test coverage sitting at 61%, it very well might fail in unfortunate and surprising ways&hellip;), but it&rsquo;s at least reproducibly in its current state, and it works for my purposes!</p>
-
-<h2 id="future-proofing-the-whole-deal">Future-proofing the whole deal</h2>
-
-<p>That still leaves the question of generating these changes, and making sure that I wouldn&rsquo;t have to bother with this nonsense again.
-It&rsquo;s all well and good to have a working dependency today, but there&rsquo;s not much chance Hyde will be resurrected and become active (or even reach version 1.0) ever.
-Moreover, when I used it in the past and it <em>was</em> being maintained more actively, Hyde would have perennial conflicts with other tools I had installed over dependency resolution.
-This is where <code>pipenv</code> comes in; simply running</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">pipenv --two install -e git+https://github.com/jgoldfar/hyde.git@fixes-for-python2.7#egg=hyde</pre></div>
-<p>in the website directory was enough to grab my updated Hyde source tree, along with its dependencies, and make it all available only to this project (if necessary) with a Python 2 virtual environment.
-This also created a nice <code>Pipfile</code> that records the Python version and package dependencies, so simply running</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">pipenv install</pre></div>
-<p>would be enough next time.
-Once Hyde was up-and-running in this environment, I could make my template changes as necessary, and regenerate the output like I did long ago.
-Nostalgia!</p>
-
-<p>Is that enough?
-Of course not!
-My laptop is far from rock solid machine, as I&rsquo;ve written, which is part of <a href=" ref &quot;blog/too-much-ci.md&quot; ">my reason</a> for assiduously setting up continuous integration for as much as I can.
-The website code was already up on Bitbucket, and they&rsquo;ve just started offering their very nice <a href="https://confluence.atlassian.com/bitbucket/build-test-and-deploy-with-pipelines-792496469.html">Pipelines</a> service, which allows you to run a test script using any docker image you&rsquo;d like.
-The top <a href="https://hub.docker.com/r/kennethreitz/pipenv/">existing <code>pipenv</code> image</a> didn&rsquo;t seem to support Python2, but it was relatively simple to <a href="https://github.com/jgoldfar/circleci-pipenv">fork</a> a Dockerfile and set up an automated build on docker hub for <a href="https://hub.docker.com/r/jgoldfar/circleci-pipenv/">my own image</a>.</p>
-
-<p>With this docker image in hand, and a bit of automation hidden away in a simple <code>Makefile</code>, simply creating a <code>bitbucket-pipelines.yml</code> file with the contents</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">image: jgoldfar/circleci-pipenv:latest
-
-pipelines:
-  default:
-    - step:
-        script:
-          - make generate</pre></div>
-<p>will automatically complete the previous couple steps within that docker image and check that the package generation completes successfully.</p>
-
-<p>I then added a packaging step to the <code>Makefile</code> so I can easily send the generated HTML files upstream, and the <a href="https://developer.atlassian.com/bitbucket/api/2/reference/">Bitbucket API</a> allows authorized apps to upload files to repositories to be made available as downloads, so I can just go there any time I&rsquo;d like access to those files.</p>
-
-<p>The finished product, as it were, is in the repository <a href="https://bitbucket.org/jgoldfar/drabdullasitegenerator/">here</a>.
-I take no ownership of the content of the website itself; there I was just transcribing what I was told to add, and I certainly don&rsquo;t claim responsibility for the color choices, but the templates and configuration are my work.
-If I had to do it all over again, I probably wouldn&rsquo;t, but at least the technical part was interesting!</p>
-
-<h2 id="todos">TODOs</h2>
-
-<ul>
-<li><p>Document the process for getting the necessary dependencies and running tests locally in <code>test/README.rst</code></p></li>
-
-<li><p>Update the expected output, or (even better) robustify the tests for external tools</p></li>
-
-<li><p>Run tests on OSX to catch possible future build errors like the one I originally ran into.</p></li>
-
-<li><p>Add some regression checks for the output of this particular website.</p></li>
-</ul>
-
+<p>Julia:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">GeneralizedHarmonicNumber=sum(1/i^2 for i in 1:100)</pre></div>
+<p>Python:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">import math
+GeneralizedHarmonicNumber=sum([math.pow(i, -2) for i in range(1, 101)])
+print(GeneralizedHarmonicNumber)</pre></div>
+<p>R:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">GeneralizedHarmonicNumber &lt;- sum(sapply(1:100, function (i) 1/(i**2), simplify=TRUE))</pre></div>
 
 <div id="disqus_thread"></div>
 <script>
@@ -523,10 +481,10 @@ If I had to do it all over again, I probably wouldn&rsquo;t, but at least the te
                             <td>
                                 <div class="prevNext">
                                     
-                                    <a class="previous" href="https://jgoldfar.github.io/blog/building-octave-osx/">&lArr; Building GNU Octave From Source on OSX</a>
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/">&lArr; Installing R (MRO) on OSX Sierra</a>
                                     
                                     
-                                    <a class="next" href="https://jgoldfar.github.io/blog/too-much-ci/"> Continuous Integration Ad Nauseam? &rArr;</a>
+                                    <a class="next" href="https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/"> Developing and Testing LaTeX Documents &rArr;</a>
                             
                         </div>
                             </td>

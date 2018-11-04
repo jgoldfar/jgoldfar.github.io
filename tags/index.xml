@@ -32,9 +32,18 @@
     <item>
       <title>Ci</title>
       <link>https://jgoldfar.github.io/tags/ci/</link>
-      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 03 Nov 2018 08:57:59 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dataviz</title>
+      <link>https://jgoldfar.github.io/tags/dataviz/</link>
+      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/tags/dataviz/</guid>
       <description></description>
     </item>
     
@@ -57,11 +66,38 @@
     </item>
     
     <item>
+      <title>Julia Lang</title>
+      <link>https://jgoldfar.github.io/tags/julia-lang/</link>
+      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/tags/julia-lang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>https://jgoldfar.github.io/tags/latex/</link>
+      <pubDate>Sat, 03 Nov 2018 08:57:59 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Oss</title>
       <link>https://jgoldfar.github.io/tags/oss/</link>
-      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/tags/oss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Lang</title>
+      <link>https://jgoldfar.github.io/tags/r-lang/</link>
+      <pubDate>Sat, 03 Nov 2018 14:57:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/tags/r-lang/</guid>
       <description></description>
     </item>
     

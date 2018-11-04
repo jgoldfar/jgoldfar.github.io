@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <title>
+        Visualizing Attendance Data | jgoldfar&#39;s home on the web
+    </title>
+
+    <style>
+ html body {
+     font-family: Raleway, sans-serif;
+     background-color: white;
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: #2196F3;
+     --border-width:  0 ;
+ }
+
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+  
+ thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+
+  
+ thead td.postTitle {
+     background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ }
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+    
+ thead td.postTitle ul.tags {
+ }
+  
+ article.blogPostListing header {
+ }
+ article.blogPostListing header h3 { margin-bottom: 4pt; }
+  
+ article.blogPostListing header ul.tags { margin-bottom: 4pt; }
+ article.blogPostListing div {
+ }
+
+ article.blogPostListing footer {
+     margin-top: 2px;
+     text-align: justify;
+     font-size: small;
+ }
+ 
+  
+ div.ossFlex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: 10px;
+ }
+ 
+  
+  
+ div.ossContainer {
+     flex: 1 0 calc(25% - 10px);
+     box-sizing: border-box;
+     
+     min-width: 46%;
+     background-color: #f2f2f2;
+     padding: 10px;
+     margin-left: 10px;
+     margin-top: 10px;
+     border-radius: 2px;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),  
+     0px 2px 2px 0px rgba(0,0,0,0.14),  
+     0px 1px 5px 0px rgba(0,0,0,0.12)  ;
+  }
+
+ article.ossListing header {
+     font-family:Oswald, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+     text-align: left;
+ }
+ article.ossListing header span.ossLanguage {
+     text-decoration: none;
+     font-style: oblique;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
+
+  
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:Oswald, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+  
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+  
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+  
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000;  }
+
+  
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+  
+ table.main td.mainbody {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  vertical-align: top;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+  
+ footer {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+     font-size: x-small;
+ }
+
+  
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+  
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px; }
+
+  
+ table.info td.inforight { font-size: 12px; padding: 5px 5px 5px 20px; }
+ 
+  
+ div.pagination { padding-top: 10px; }
+ 
+  
+ ul.tags { font-size: x-small; padding-left: 20pt; margin-top: 0px; margin-bottom: 0px;}
+ 
+</style>
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+
+    <meta name="generator" content="Hugo 0.40.3" />
+
+    
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config(
+	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	}
+ );
+</script>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <div class="name">
+                                        <a href="https://jgoldfar.github.io">Jonathan Goldfarb</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Visualizing Attendance Data
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Nov 3, 2018
+</span>
+    
+        : <span class="tag">OSS</span>
+    
+        : <span class="tag">DataViz</span>
+    
+        : <span class="tag">R-lang</span>
+    
+</ul>
+</td>
+
+
+                            </tr>
+                            
+                            
+                        </thead>
+                        <tr>
+                            
+<td class="sidebar">
+    <table width="100%">
+        <tbody>
+            
+            <tr><td class="navbutton">
+                <a href="/blog">
+                    Blog Home
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/blog/about/">
+                    About
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/cv/cv.pdf">
+                    CV
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/oss-contributions/">
+                    Software
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/">
+                    Home
+                </a>
+            </td></tr>
+            
+        </tbody>
+    </table>
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://github.com/jgoldfar"><i class="fab fa-github"></i> Github</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://bitbucket.org/jgoldfar/"><i class="fab fa-bitbucket"></i> Bitbucket</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://gitlab.com/jgoldfar"><i class="fab fa-gitlab"></i> Gitlab</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://www.researchgate.net/profile/Jonathan_Goldfarb"><i class="fab fa-researchgate"></i> ResearchGate</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://hub.docker.com/u/jgoldfar/"><i class="fab fa-docker"></i> Docker Hub</a></td>
+	</tr>
+	
+	
+	
+</table>
+
+	
+	<hr width="90%" size=3 />
+	
+</td>
+
+
+                            <td class="mainbody">
+                                
+                                
+
+
+<p>In this post I&rsquo;m going to share some simple data munging and visualization techniques I use to analyze attendance data recorded from a card swipe machine in our tutoring lab, which I use to make sure we use our office hours (a human time resource!) as effectively as possible, and report that internally.
+I&rsquo;ve had this running on a regular basis since I was first asked to report this data some time back; in the past, Excel was used to prepare these charts, but it had to be done basically entirely &ldquo;by hand&rdquo; each time.
+My implementation language of choice for the data processing codes (generating these graphs among many others) was Julia, but I&rsquo;ve decided to go ahead and implement them in R and Python as an exercise.</p>
+
+<h2 id="data-format">Data Format</h2>
+
+<p>The attendance data comes in CSV files following the data format</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;FIT ID&#34;,&#34;TRACKS&#34;,&#34;First Name&#34;,&#34;Last Name&#34;,&#34;Email&#34;,&#34;Class&#34;,&#34;Context&#34;,&#34;Time In&#34;,&#34;Time Out&#34;,&#34;Total Time&#34;</pre></div>
+<p>Assume this data is available in a file named <code>Swipes.csv</code>.
+Due to how the app itself was implemented, there&rsquo;s quite a bit of noise in the data, but even so, clearly there&rsquo;s a lot that can be done with this information&hellip;
+Today, I&rsquo;m interested in reporting the busiest hours of the day in order to give a first approximation to the kind of schedule I should be deciding; the way this report has been generated in the past only included the time students arrived.
+Though we could segment out the appropriate columns in nearly any language, I usually preprocess the data to a separate file, since I&rsquo;ll be running multiple analyses on the same collection of columns; <a name="awknote-source"><code>awk</code></a><sup><a href="#awknote">1</a></sup> supports this use-case with very little code:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#b44">&#39;BEGIN {FS=&#34;,&#34;} { print $8 &#34;, &#34; $9 }&#39;</span> Swipes.csv &gt; Swipes-Time-Only.csv</code></pre></div>
+<p>We ensure that the field separator is a comma by setting <code>FS=&quot;,&quot;</code> in the <code>BEGIN</code> block, and then select only the 8th and 9th columns, which correspond to the time-in and time-out fields.</p>
+
+<p>The file <code>Swipes-Time-Only.csv</code> will be used as input to the following codes.</p>
+
+<h2 id="julia-implementation">Julia Implementation</h2>
+
+<p><em>Update</em> I&rsquo;ve started updating this Q&amp;D code with something much better, leveraging some of Julia&rsquo;s features; see <a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/">here for a better implementation</a>.</p>
+
+<p>We&rsquo;ll start by reading in the CSV-formatted data:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> DelimitedFiles
+swipeData <span style="color:#666">=</span> readdlm(<span style="color:#b44">&#34;Swipes-Time-Only.csv&#34;</span>, <span style="color:#b44">&#39;,&#39;</span>)</code></pre></div>
+<p>Awk leaves some cruft that the Julia CSV parser doesn&rsquo;t remove, so we&rsquo;ll remove that.
+We&rsquo;ll go ahead and set the out time to the in time if it&rsquo;s missing at this step as well.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">nr, nc <span style="color:#666">=</span> size(swipeData)
+<span style="color:#a2f;font-weight:bold">for</span> i <span style="color:#a2f">in</span> <span style="color:#666">1</span><span style="color:#666">:</span>nr
+    swipeData[i, <span style="color:#666">2</span>] <span style="color:#666">=</span> strip(swipeData[i, <span style="color:#666">2</span>], [<span style="color:#b44">&#39; &#39;</span>, <span style="color:#b44">&#39;&#34;&#39;</span>])
+    <span style="color:#a2f;font-weight:bold">if</span> isempty(swipeData[i, <span style="color:#666">2</span>])
+        swipeData[i, <span style="color:#666">2</span>] <span style="color:#666">=</span> swipeData[i, <span style="color:#666">1</span>]
+    <span style="color:#a2f;font-weight:bold">end</span>
+<span style="color:#a2f;font-weight:bold">end</span></code></pre></div>
+<p>Julia provides a parser that will converts strings to native Date objects, which we can use to make the rest of the processing easier:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Dates
+
+<span style="color:#a2f;font-weight:bold">const</span> lineDateFormat <span style="color:#666">=</span> DateFormat(<span style="color:#b44">&#34;y-m-d H:M:S&#34;</span>)
+
+swipeInDates <span style="color:#666">=</span> [
+    <span style="color:#0b0;font-weight:bold">DateTime</span>(swipeData[i, <span style="color:#666">1</span>], lineDateFormat) <span style="color:#a2f;font-weight:bold">for</span> i <span style="color:#a2f">in</span> <span style="color:#666">2</span><span style="color:#666">:</span>nr
+]</code></pre></div>
+<p>We&rsquo;ll divide the the day into 1 hour bins, and count all entries in a particular hour.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">hourBins <span style="color:#666">=</span> zeros(<span style="color:#0b0;font-weight:bold">Int</span>, <span style="color:#666">23</span>)
+hours <span style="color:#666">=</span> <span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">23</span>
+<span style="color:#a2f;font-weight:bold">for</span> inDate <span style="color:#a2f">in</span> swipeInDates
+    hourBins[hour(inDate)] <span style="color:#666">+=</span> <span style="color:#666">1</span>
+<span style="color:#a2f;font-weight:bold">end</span></code></pre></div>
+<p><a href="http://makie.juliaplots.org/stable/">Makie</a> provides a nice, simple interface to plotting utilities for Julia (with plenty of room for customization and even interactive, data-intensive plots).</p>
+
+<p>We&rsquo;ll initialize a <code>Scene</code> object so we have full control over the axes and other properties of the plot.</p>
+
+<p>The <code>limits</code> argument is set to a <code>FRect(xmin, ymin, xdist, ydist)</code> so the plot fits exactly in the given bounds.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Makie
+
+scene <span style="color:#666">=</span> Scene(resolution <span style="color:#666">=</span> (<span style="color:#666">500</span>, <span style="color:#666">500</span>))
+
+nonzeroHours <span style="color:#666">=</span> hours[hourBins <span style="color:#666">.&gt;</span> <span style="color:#666">0</span>]
+minHour <span style="color:#666">=</span> minimum(nonzeroHours)
+hourDiff <span style="color:#666">=</span> maximum(nonzeroHours) <span style="color:#666">-</span> minHour
+barplot!(scene, nonzeroHours, hourBins[hourBins <span style="color:#666">.&gt;</span> <span style="color:#666">0</span>], limits <span style="color:#666">=</span> FRect(minHour <span style="color:#666">-</span> <span style="color:#666">0.5</span>, <span style="color:#666">0</span>, hourDiff <span style="color:#666">+</span> <span style="color:#666">0.5</span>, maximum(hourBins) <span style="color:#666">+</span> <span style="color:#666">10</span>))
+
+axis <span style="color:#666">=</span> scene[Axis]
+axis[<span style="color:#666">:</span>names, <span style="color:#666">:</span>axisnames] <span style="color:#666">=</span> (<span style="color:#b44">&#34;Hour&#34;</span>, <span style="color:#b44">&#34;Number of Visitors&#34;</span>)</code></pre></div>
+<p>To save this plot to a file, we write</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">Makie<span style="color:#666">.</span>save(<span style="color:#b44">&#34;Busy-Hours-Julia.png&#34;</span>, scene)</code></pre></div>
+<p>which is reproduced below:</p>
+
+<p><img src="/blog/vizualizing-attendance-data-images/Busy-Hours-Julia.png" alt="Busy-Hours-Julia" /></p>
+
+<h2 id="r-implementation">R Implementation</h2>
+
+<p>Since R (and the tidyverse) have been around for so long, there are excellent tools that do most of the work I did &ldquo;manually&rdquo; above behind the scenes, so this implementation is quite a bit shorter.
+This is more an indictment of my inexperience with the Julia data munging toolset than any actual issue, since I am admittedly more fluent with the linear algebra &amp; ML subsets of Julia than the data analysis/viz subsets.
+Anyways, we start by reading in the same CSV file:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">df <span style="color:#666">&lt;-</span> read.csv(<span style="color:#b44">&#34;Swipes-Time-Only.csv&#34;</span>, header<span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">TRUE</span>)</code></pre></div>
+<p>Load <a href="https://dplyr.tidyverse.org/"><code>dplyr</code></a> for general data manipulation and <a href="https://lubridate.tidyverse.org/"><code>lubridate</code></a> for some convenience functions related to datetime objects:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a2f;font-weight:bold">library</span>(lubridate)
+<span style="color:#a2f;font-weight:bold">library</span>(dplyr)</code></pre></div>
+<p>Save the hour component of the time the student came in as a new column for possible future processing purposes:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">df<span style="color:#666">$</span>TimeInHour <span style="color:#666">&lt;-</span> df<span style="color:#666">$</span>Time.In <span style="color:#666">%&gt;%</span> ymd_hms <span style="color:#666">%&gt;%</span> hour</code></pre></div>
+<p>and store the users entering in each hour to a new variable:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">UsersInEachHour <span style="color:#666">&lt;-</span> df <span style="color:#666">%&gt;%</span> count(TimeInHour)</code></pre></div>
+<p>Now, we&rsquo;ll load the venerable <code>ggplot2</code> graphing library and generate a nice looking output plot.
+The x- and y-labels will be customized (the third line below) and we&rsquo;ll add the actual value as a label to each bar (the fourth line below) for good measure:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a2f;font-weight:bold">library</span>(ggplot2)
+p<span style="color:#666">&lt;-</span>ggplot(data<span style="color:#666">=</span>UsersInEachHour, aes(x<span style="color:#666">=</span>TimeInHour, y<span style="color:#666">=</span>n)) <span style="color:#666">+</span>
+  geom_bar(stat<span style="color:#666">=</span><span style="color:#b44">&#34;identity&#34;</span>, fill<span style="color:#666">=</span><span style="color:#b44">&#34;black&#34;</span>)<span style="color:#666">+</span>
+  xlab(<span style="color:#b44">&#34;Hour of Day&#34;</span>) <span style="color:#666">+</span> ylab(<span style="color:#b44">&#34;Number of Visitors&#34;</span>)<span style="color:#666">+</span>
+  geom_text(aes(label<span style="color:#666">=</span>n), vjust<span style="color:#666">=</span><span style="color:#666">1.6</span>, color<span style="color:#666">=</span><span style="color:#b44">&#34;white&#34;</span>, size<span style="color:#666">=</span><span style="color:#666">3.5</span>)<span style="color:#666">+</span>
+  theme_minimal()</code></pre></div>
+<p>This graphic can be exported using <code>ggsave</code> (I&rsquo;ve modified the dimensions to match the plot above):</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggsave(<span style="color:#b44">&#34;Busy-Hours-R.png&#34;</span>, p, width<span style="color:#666">=</span><span style="color:#666">5.56</span>, height<span style="color:#666">=</span><span style="color:#666">5.35</span>, units<span style="color:#666">=</span><span style="color:#b44">&#34;in&#34;</span>, dpi<span style="color:#666">=</span><span style="color:#b44">&#34;screen&#34;</span>)</code></pre></div>
+<p>By way of comparison with the above output, the corresponding graphic is reproduced below:</p>
+
+<p><img src="/blog/vizualizing-attendance-data-images/Busy-Hours-R.png" alt="Busy-Hours-R" /></p>
+
+<h2 id="python-implementation">Python Implementation</h2>
+
+<p>Below I&rsquo;ll share a Python 3 implementation, though the relatively simple nature of this particular processing task implies the code would probably be portable to Python 2 with minimal changes.</p>
+
+<p>We&rsquo;ll do the data analysis in <a href="https://pandas.pydata.org/"><code>pandas</code></a> and <a href="https://matplotlib.org/"><code>matplotlib</code></a> for visualization.</p>
+
+<p>First, we&rsquo;ll load the data:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">pandas</span>
+df <span style="color:#666">=</span> pandas<span style="color:#666">.</span>read_csv(<span style="color:#b44">&#39;Swipes-Time-Only.csv&#39;</span>, sep<span style="color:#666">=</span><span style="color:#b44">&#39;,&#39;</span>, parse_dates<span style="color:#666">=</span>[<span style="color:#666">0</span>, <span style="color:#666">1</span>])</code></pre></div>
+<p>The equivalent code to the R process above for saving the hour component of the time the student came in as a new column is</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[<span style="color:#b44">&#39;TimeInHour&#39;</span>] <span style="color:#666">=</span> [v<span style="color:#666">.</span>hour <span style="color:#a2f;font-weight:bold">for</span> v <span style="color:#a2f;font-weight:bold">in</span> df[<span style="color:#b44">&#34;Time In&#34;</span>]]</code></pre></div>
+<p>Similarly, calculating thie histogram information for user entry times is simply</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">NumberOfVisitors <span style="color:#666">=</span> df<span style="color:#666">.</span>groupby(<span style="color:#b44">&#39;TimeInHour&#39;</span>)<span style="color:#666">.</span>count()</code></pre></div>
+<p>This actually produces a dataframe with two, identical columns (since the original data had two columns), but we&rsquo;ll select out only one for our plot.</p>
+
+<p>For the plotting step, let&rsquo;s load <code>matplotlib</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.pyplot</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">plt</span></code></pre></div>
+<p>and then generate the figure using the <code>index</code> and one column of the <code>values</code> of the dataframe we generated above:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#666">=</span> plt<span style="color:#666">.</span>figure(figsize<span style="color:#666">=</span>(<span style="color:#666">5.56</span>, <span style="color:#666">5.35</span>))
+p <span style="color:#666">=</span> plt<span style="color:#666">.</span>bar(NumberOfVisitors<span style="color:#666">.</span>index, NumberOfVisitors<span style="color:#666">.</span>values[:, <span style="color:#666">1</span>])
+plt<span style="color:#666">.</span>ylabel(<span style="color:#b44">&#39;Number of Visitors&#39;</span>)
+plt<span style="color:#666">.</span>xlabel(<span style="color:#b44">&#39;Hour of Day&#39;</span>)
+plt<span style="color:#666">.</span>show()</code></pre></div>
+<p>This plot can be exported to an image file like we did with the other examples:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig<span style="color:#666">.</span>savefig(<span style="color:#b44">&#39;Busy-Hours-Python.png&#39;</span>, dpi<span style="color:#666">=</span><span style="color:#666">72</span>)</code></pre></div>
+<p>which is included below:</p>
+
+<p><img src="/blog/vizualizing-attendance-data-images/Busy-Hours-Python.png" alt="Busy-Hours-Python" /></p>
+
+<h2 id="future-work">Future Work</h2>
+
+<ul>
+<li><p>I&rsquo;ve run some other, rather more complicated processes on the data we collect on attendance in MAC that would be interesting to share some time.</p></li>
+
+<li><p>While we usually report this information internally, it might be good to produce charts like this on a regular basis and post them online, so I&rsquo;ll look at creating a regularly released &ldquo;product&rdquo; and work it into some kind of regular post.</p></li>
+
+<li><p>The bar chart we created here is a bit misleading, since it only reports the time the student comes in to the center, but students may stay for any amount of time.
+More careful histogram creation, perhaps presented as a heatmap in continuous time, would make more sense.</p></li>
+
+<li><p>Experiment with isolating the dependencies using a <a href="https://docs.anaconda.com/anaconda/user-guide/tasks/use-r-language"><code>conda</code></a> or <a href="http://rstudio.github.io/packrat/walkthrough.html"><code>packrat</code></a> and <code>pipenv</code> environments.</p></li>
+
+<li><p>My code, particularly in Julia, is not particularly idiomatic (in particular, I don&rsquo;t use DataFrames, which are essential for larger tabular data.)
+It would be good all around to update that code.</p></li>
+</ul>
+
+<h2 id="footnotes">Footnotes</h2>
+
+<p><a name="awknote" href="#awknote-source">[1]</a> <a href="https://github.com/onetrueawk/awk">GNU Awk</a> is one of the more interesting software tools, dating back to 1977.
+The <a href="https://web.archive.org/web/20080410180555/http://www-db-out.research.bell-labs.com/cm/cs/awkbook">AWK Programming Language</a> book (which I have read, but unfortunately do not own) is one of the clearest expositions on the development and uses of a programming language one can read.</p>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/">&lArr; Developing and Testing LaTeX Documents</a>
+                                    
+                                    
+                                    <a class="next" href="https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/"> Visualizing Attendance Data using Idiomatic Julia &rArr;</a>
+                            
+                        </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <footer>
+
+  <p class="copyright text-muted">Copyright 2018, All rights reserved.</p>
+
+</footer>
+
+            </div>
+        </main>
+
+
+    </body>
+</html>

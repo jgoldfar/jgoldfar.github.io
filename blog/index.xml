@@ -6,10 +6,56 @@
     <description>Recent content on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Oct 2018 20:44:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 12:30:00 -0400</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Visualizing Attendance Data using Idiomatic Julia</title>
+      <link>https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/</link>
+      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/</guid>
+      <description>In a previous post I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports. This script dates back to when local environments/dependencies didn&amp;rsquo;t have quite as nice a story as Julia v1.0 does, so I made sure to only use standard library packages. But to make a fair comparison with the other codes in R and Python (in particular, to see how semantically clear one could make the code) one should use high-quality data analysis packages provided by the Julia ecosystem!</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Attendance Data</title>
+      <link>https://jgoldfar.github.io/blog/vizualizing-attendance-data/</link>
+      <pubDate>Sat, 03 Nov 2018 14:57:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/vizualizing-attendance-data/</guid>
+      <description>In this post I&amp;rsquo;m going to share some simple data munging and visualization techniques I use to analyze attendance data recorded from a card swipe machine in our tutoring lab, which I use to make sure we use our office hours (a human time resource!) as effectively as possible, and report that internally. I&amp;rsquo;ve had this running on a regular basis since I was first asked to report this data some time back; in the past, Excel was used to prepare these charts, but it had to be done basically entirely &amp;ldquo;by hand&amp;rdquo; each time.</description>
+    </item>
+    
+    <item>
+      <title>Developing and Testing LaTeX Documents</title>
+      <link>https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/</link>
+      <pubDate>Sat, 03 Nov 2018 08:57:59 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/</guid>
+      <description>I&amp;rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool. I&amp;rsquo;ve even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to not be something to mess with on a deadline. It&amp;rsquo;s perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX an d KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.</description>
+    </item>
+    
+    <item>
+      <title>Installing Jupyter with IJulia and IRkernel</title>
+      <link>https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/</link>
+      <pubDate>Fri, 02 Nov 2018 14:55:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/</guid>
+      <description>In this post, I&amp;rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&amp;rsquo;m doing for our open source data analysis course; it&amp;rsquo;s important to me that . The following is all executed from the command line, assuming that Julia is available as julia and R is available as R
+Miniconda installation Just to make things easier path-wise, I like to install packages &amp;ldquo;close&amp;rdquo; to my Homebrew installation:</description>
+    </item>
+    
+    <item>
+      <title>Installing R (MRO) on OSX Sierra</title>
+      <link>https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/</link>
+      <pubDate>Fri, 02 Nov 2018 11:49:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/</guid>
+      <description>As someone who works regularly with various statistical and scientific software stacks (I always say I prefer to use the best tool for the job, rather than fitting my favorite tool into every job) I am pretty impressed by the leaps in visibility R has taken in the past few years. I first used R for a &amp;ldquo;big data&amp;rdquo; project years ago (for a size of N too large for Excel, not what one would consider &amp;ldquo;big&amp;rdquo; these days&amp;hellip;) and in the intervening years have worked with R in my teaching and for statistical analysis projects intermittently, but without stepping back and looking at all of the progress that has been made!</description>
+    </item>
     
     <item>
       <title>Reviving an ancient MacBook</title>
@@ -37,7 +83,7 @@ I&amp;rsquo;ve been expecting this for a while, of course, hence my obsession wi
       
       <guid>https://jgoldfar.github.io/blog/quick-julia-sha256/</guid>
       <description>When generating reproducible software, you&amp;rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&amp;rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
-using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end  </description>
+using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end</description>
     </item>
     
     <item>

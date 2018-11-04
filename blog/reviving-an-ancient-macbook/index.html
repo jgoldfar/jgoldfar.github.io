@@ -436,17 +436,11 @@ But, good news: I&rsquo;m typing this right now on my revived MacBook!</p>
 <p>The available version of Safari is so old that practically no websites will load, since SSL/TLS won&rsquo;t allow it (in particular, <a href="brew.sh">Homebrew&rsquo;s site</a> won&rsquo;t load.)
 However, since Bitbucket somewhat-works on Safari, navigating directly to my account settings allowed clicking to the SSH key settings page, after which following <a href="https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html">the standard directions</a> worked just fine.
 To make sure your SSH identity continues to work after the current session, add a line like</p>
-
-<pre><code>Host *
- IdentityFile /path/to/id_bitbucket
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Host *
+ IdentityFile /path/to/id_bitbucket</pre></div>
 <p>to <code>~/.ssh/config</code>.
 You can check that things are working, as suggested in the above documentation, by running</p>
-
-<pre><code>ssh -T git@bitbucket.org
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ssh -T git@bitbucket.org</pre></div>
 <h2 id="getting-mercurial-working">Getting Mercurial working</h2>
 
 <p>Now that SSH is running, it makes sense to check if Mercurial will work.
@@ -471,14 +465,10 @@ I&rsquo;ve used <a href="https://www.syntevo.com/smartgit/">SmartGit</a> in the 
 That would have to be pretty severe&hellip;
 But anyways, I had autotools already available, so that was nice.
 The git repository doesn&rsquo;t come with much, so I first had to run</p>
-
-<pre><code>autoreconf --install
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">autoreconf --install</pre></div>
 <p>to make sure all of the <code>m4</code> macros we could make available would be, but <code>cURL</code> still expects a slightly newer autotools installation, apparently.
 I had to apply the patch below:</p>
-
-<pre><code>diff --git a/configure.ac b/configure.ac
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">diff --git a/configure.ac b/configure.ac
 index 82ff503..dd7912c 100755
 --- a/configure.ac
 +++ b/configure.ac
@@ -491,82 +481,50 @@ index 82ff503..dd7912c 100755
 +         [AC_SUBST([AM_DEFAULT_VERBOSITY], [1])])
  
  CURL_CHECK_OPTION_DEBUG
- CURL_CHECK_OPTION_OPTIMIZE
-</code></pre>
-
+ CURL_CHECK_OPTION_OPTIMIZE</pre></div>
 <p>to set <code>AM_DEFAULT_VERBOSITY</code>, after which</p>
-
-<pre><code>./buildconf
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">./buildconf
 ./configure
 make
-sudo make install
-</code></pre>
-
+sudo make install</pre></div>
 <p>worked just fine.</p>
 
 <p>Of course, this wasn&rsquo;t quite enough: a newer SSL library had to be installed along with cURL; I went with <a href="https://tls.mbed.org/">MbedTLS</a>, which is used by other projects I&rsquo;m involved in.
 I figured the minimiality of the package might help it successfully compile, and it did: after downloading the source, patch the Makefile under <code>library/</code> to fix a ranlib option according to</p>
-
-<pre><code>50c50
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">50c50
 &lt; RLFLAGS = -no_warning_for_no_symbols -c
 ---
-&gt; RLFLAGS = -c
-</code></pre>
-
+&gt; RLFLAGS = -c</pre></div>
 <p>and disable the tests by patching the main Makefile as</p>
-
-<pre><code>21d20
-&lt;	$(MAKE) -C tests
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">21d20
+&lt;	$(MAKE) -C tests</pre></div>
 <p>before running</p>
-
-<pre><code>make
-sudo make install
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">make
+sudo make install</pre></div>
 <p>Then, back in the <code>cURL</code> install directory, re-run the last three steps to compile against <code>mbedTLS</code>:</p>
-
-<pre><code>./configure --enable-tls-srp --with-mbedtls=/usr/local
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">./configure --enable-tls-srp --with-mbedtls=/usr/local
 make
-sudo make install
-</code></pre>
-
+sudo make install</pre></div>
 <h2 id="back-to-homebrew">Back to Homebrew</h2>
 
 <p>Since I didn&rsquo;t want to fiddle with the <code>PATH</code>, I had to move the old <code>curl</code> out of the way:</p>
-
-<pre><code>sudo mv /usr/bin/curl /usr/bin/curl-old
-sudo ln -s /usr/local/bin/curl /usr/bin/
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo mv /usr/bin/curl /usr/bin/curl-old
+sudo ln -s /usr/local/bin/curl /usr/bin/</pre></div>
 <p>The installation script needed some help:</p>
-
-<pre><code>curl -fsSLk https://raw.githubusercontent.com/Homebrew/install/master/install &gt; install-homebrew
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">curl -fsSLk https://raw.githubusercontent.com/Homebrew/install/master/install &gt; install-homebrew</pre></div>
 <p>and I applied the necessary patch to get <code>curl</code> to allow insecure connections:</p>
-
-<pre><code>391c391
-&lt;     curl_flags += &quot;k&quot; if macos_version &lt; &quot;10.6&quot;
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">391c391
+&lt;     curl_flags += &#34;k&#34; if macos_version &lt; &#34;10.6&#34;
 ---
-&gt;     curl_flags += &quot;k&quot; if macos_version &lt;= &quot;10.6&quot;
-</code></pre>
-
+&gt;     curl_flags += &#34;k&#34; if macos_version &lt;= &#34;10.6&#34;</pre></div>
 <p>Now, we can allow ruby to finish its work:</p>
-
-<pre><code>ruby install-homebrew
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ruby install-homebrew</pre></div>
 <p>Homebrew dutifully informs us that OSX 10.6 is unsupported, so we&rsquo;re on our own; evidently, this is fine with me.</p>
 
 <p>Our lack of certs is still an issue though; we&rsquo;ll have to set <code>cURL</code> to allow insecure connections by placing <code>insecure</code> in <code>~/.curlrc</code> and prepend all of our Homebrew commands with <code>HOMEBREW_CURLRC=~/.curlrc</code>.</p>
 
 <p>So, running</p>
-
-<pre><code>HOMEBREW_CURLRC=~/.curlrc brew update --force
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">HOMEBREW_CURLRC=~/.curlrc brew update --force</pre></div>
 <p>finishes the job.
 Homebrew wasn&rsquo;t necessarily a requirement, but it&rsquo;d be a pain to have to go through this later when I&rsquo;d really like to get something working.
 Of course, this isn&rsquo;t the end of the story when it comes to getting Homebrew working, because OpenSSL (a <code>git</code> build requirement, since apparently our funny git installation doesn&rsquo;t work&hellip;) doesn&rsquo;t build right away, but that&rsquo;s for another time.</p>
@@ -580,15 +538,9 @@ This is an aside, but I would say that Spacemacs is an excellent way to transiti
 The torrent network provides an installer though; I was able to install a minimal torrent client and grab the corresponding installer (if only a 2013 BasicTeX installer were available&hellip; too bad.)</p>
 
 <p>I had to freeze the package repository that <code>tlmgr</code> uses:</p>
-
-<pre><code>sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2013/tlnet-final
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2013/tlnet-final</pre></div>
 <p>after which <code>tlmgr</code> itself needed updating:</p>
-
-<pre><code>sudo tlmgr update --self
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo tlmgr update --self</pre></div>
 <p>after which I finally got some new files to compile on this ancient machine!
 So there you have it, continuous integration works, even in reverse.</p>
 
@@ -635,6 +587,8 @@ I would note that I&rsquo;ll not be downloading software regularly on this machi
                                     <a class="previous" href="https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/">&lArr; Full-width M-F Embedded Google Calendars</a>
                                     
                                     
+                                    <a class="next" href="https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/"> Installing R (MRO) on OSX Sierra &rArr;</a>
+                            
                         </div>
                             </td>
                         </tr>

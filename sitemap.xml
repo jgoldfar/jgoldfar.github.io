@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/</loc>
+    <lastmod>2018-11-04T12:30:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/vizualizing-attendance-data/</loc>
+    <lastmod>2018-11-03T14:57:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/</loc>
+    <lastmod>2018-11-03T08:57:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/</loc>
+    <lastmod>2018-11-02T14:55:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/</loc>
+    <lastmod>2018-11-02T11:49:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/</loc>
     <lastmod>2018-10-20T20:44:16+00:00</lastmod>
   </url>
@@ -60,7 +85,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/blog/</loc>
-    <lastmod>2018-10-20T20:44:16+00:00</lastmod>
+    <lastmod>2018-11-04T12:30:00-04:00</lastmod>
   </url>
   
   <url>
@@ -71,12 +96,18 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/ci/</loc>
-    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-03T08:57:59+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jgoldfar.github.io/presentations/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/dataviz/</loc>
+    <lastmod>2018-11-04T12:30:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -88,6 +119,18 @@
   <url>
     <loc>https://jgoldfar.github.io/tags/docker/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/julia-lang/</loc>
+    <lastmod>2018-11-04T12:30:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/latex/</loc>
+    <lastmod>2018-11-03T08:57:59+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -141,7 +184,13 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/oss/</loc>
-    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-04T12:30:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/r-lang/</loc>
+    <lastmod>2018-11-03T14:57:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

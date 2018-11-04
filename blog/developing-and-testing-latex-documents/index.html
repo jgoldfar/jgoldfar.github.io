@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <title>
+        Developing and Testing LaTeX Documents | jgoldfar&#39;s home on the web
+    </title>
+
+    <style>
+ html body {
+     font-family: Raleway, sans-serif;
+     background-color: white;
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: #2196F3;
+     --border-width:  0 ;
+ }
+
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+  
+ thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+
+  
+ thead td.postTitle {
+     background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ }
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+    
+ thead td.postTitle ul.tags {
+ }
+  
+ article.blogPostListing header {
+ }
+ article.blogPostListing header h3 { margin-bottom: 4pt; }
+  
+ article.blogPostListing header ul.tags { margin-bottom: 4pt; }
+ article.blogPostListing div {
+ }
+
+ article.blogPostListing footer {
+     margin-top: 2px;
+     text-align: justify;
+     font-size: small;
+ }
+ 
+  
+ div.ossFlex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: 10px;
+ }
+ 
+  
+  
+ div.ossContainer {
+     flex: 1 0 calc(25% - 10px);
+     box-sizing: border-box;
+     
+     min-width: 46%;
+     background-color: #f2f2f2;
+     padding: 10px;
+     margin-left: 10px;
+     margin-top: 10px;
+     border-radius: 2px;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),  
+     0px 2px 2px 0px rgba(0,0,0,0.14),  
+     0px 1px 5px 0px rgba(0,0,0,0.12)  ;
+  }
+
+ article.ossListing header {
+     font-family:Oswald, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+     text-align: left;
+ }
+ article.ossListing header span.ossLanguage {
+     text-decoration: none;
+     font-style: oblique;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
+
+  
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:Oswald, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+  
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+  
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+  
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000;  }
+
+  
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+  
+ table.main td.mainbody {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  vertical-align: top;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+  
+ footer {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+     font-size: x-small;
+ }
+
+  
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+  
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px; }
+
+  
+ table.info td.inforight { font-size: 12px; padding: 5px 5px 5px 20px; }
+ 
+  
+ div.pagination { padding-top: 10px; }
+ 
+  
+ ul.tags { font-size: x-small; padding-left: 20pt; margin-top: 0px; margin-bottom: 0px;}
+ 
+</style>
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+
+    <meta name="generator" content="Hugo 0.40.3" />
+
+    
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config(
+	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	}
+ );
+</script>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <div class="name">
+                                        <a href="https://jgoldfar.github.io">Jonathan Goldfarb</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Developing and Testing LaTeX Documents
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Nov 3, 2018
+</span>
+    
+        : <span class="tag">CI</span>
+    
+        : <span class="tag">LaTeX</span>
+    
+</ul>
+</td>
+
+
+                            </tr>
+                            
+                            
+                        </thead>
+                        <tr>
+                            
+<td class="sidebar">
+    <table width="100%">
+        <tbody>
+            
+            <tr><td class="navbutton">
+                <a href="/blog">
+                    Blog Home
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/blog/about/">
+                    About
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/cv/cv.pdf">
+                    CV
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/oss-contributions/">
+                    Software
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/">
+                    Home
+                </a>
+            </td></tr>
+            
+        </tbody>
+    </table>
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://github.com/jgoldfar"><i class="fab fa-github"></i> Github</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://bitbucket.org/jgoldfar/"><i class="fab fa-bitbucket"></i> Bitbucket</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://gitlab.com/jgoldfar"><i class="fab fa-gitlab"></i> Gitlab</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://www.researchgate.net/profile/Jonathan_Goldfarb"><i class="fab fa-researchgate"></i> ResearchGate</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://hub.docker.com/u/jgoldfar/"><i class="fab fa-docker"></i> Docker Hub</a></td>
+	</tr>
+	
+	
+	
+</table>
+
+	
+	<hr width="90%" size=3 />
+	
+</td>
+
+
+                            <td class="mainbody">
+                                
+                                
+
+
+<p>I&rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool.
+I&rsquo;ve even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to <em>not</em> be something to mess with on a deadline.
+It&rsquo;s perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX an d KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.
+Apparently, it&rsquo;s a local minimum in the space of technical information input languages.</p>
+
+<p>As a typesetting system, TeX could be considered a mixed bag: the learning curve can be steep, which can be an unfortunate barrier to entry, but the stability and quality of the output, as well as the possibility of integration with version control and content generation systems are nearly unrivaled.
+As an educator, I believe the solution to the first problem is, of course, education, and careful selection of a template and documentation to get started.
+From a pragmatic standpoint, the LaTeX macro package built on TeX provides a nice starting point, since it reduces the barrier of entry a bit, and enables the use of safer, semantically clear code to represent the writer&rsquo;s intent.
+My own entry in the template category <a href="https://bitbucket.org/jgoldfar/git-latex-template">is available here</a> (as a <code>git</code> repository) or <a href="https://bitbucket.org/jgoldfar/hg-latex-template">here</a> (as a <code>mercurial</code> repository), and since TeX is a programming language written in ASCII format, it integrates well with standard software engineering tools, which provide the same kinds of benefits that they do anywhere else.
+In fact, even with one user, I would state that the utility of these kind of tools easily outweighs the one-time cost of learning LaTeX.
+In this entry, I would like to share some of the tools I use to track and develop LaTeX documents.</p>
+
+<h2 id="a-most-important-tool">A Most Important Tool</h2>
+
+<p>The first and perhaps most essential recommendation I can make is to use a version control system.
+There are myriad options available, but <code>git</code>, and to a lesser extend, <code>mercurial</code> have available free hosting services, which serve as a backup for what I would assume to be some of the most important documents you have around.
+If you&rsquo;re going to be using a version control system, there are a couple rules-of-thumb to keep in mind when writing your document.</p>
+
+<p>1) Version control tends to be most sensitive to per-line changes; since LaTeX only breaks a paragraph after an entire blank line, there&rsquo;s no harm in putting each sentence on its own line in the file.</p>
+
+<p>2) When working on a file with multiple collaborators, or where certain content would be used in multiple places, using separate files can be easier.
+At least one file per section or chapter is manageable, but search from TeX to the compiled file and vice-versa, which is supported by most editor-viewer combinations, you can feel free to use as many or as few files as you&rsquo;d like.</p>
+
+<h2 id="build-tooling">Build Tooling</h2>
+
+<p>One of the nice things about LaTeX is that you can start with a very simple document (containing only text and equations with no references, say) and compile it once with good results, but once in-text references, indexes, and other niceties are involved, one <a name="onecompilationnote-source">compilation won&rsquo;t work.</a><sup><a href="#onecompilationnote">1</a></sup></p>
+
+<p>Unfortunately (or, depending on your point-of-view, fortunately) achieving visually pleasing output sometimes necessitates, for instance, moving an equation to another page, which can change page references: what is really necessary is to run the compiler and all of the supporting programs in the correct order until a fixed point is found.
+That is exactly the intent of the <a href="https://mg.readthedocs.io/latexmk.html"><code>Latexmk</code></a> program; it encapsulates most of this compilation complication.</p>
+
+<p>If you&rsquo;re comfortable programming in Perl, you can extend <code>latexmk</code> to handle just about any other need, but for many applications, using <code>make</code> is a bit more ergonomic.
+A simple <code>Makefile</code> for the generation of a PDF file from a TeX file named <code>main.tex</code> would look like</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">LATEX=latexmk -pdf
+
+main.pdf: main.tex
+    $(LATEX) $&lt;</pre></div>
+<p>Having this, generating your PDF file is as simple as running <code>make</code>, but if you like to be a bit more verbose, <code>make main.pdf</code>.</p>
+
+<p>If you have multiple source files included into <code>main.tex</code>, you can teach <code>make</code> about these dependencies by building a list of TeX sources and putting them after <code>main.tex</code>.
+In order to keep your work organized, I recommend to put your sub-files into their own directory (or directories), but that is, of course, optional.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">SOURCES=$(wildcard subfile-directory/*.tex)
+SOURCENAMES=$(basename $(SOURCES))
+LATEX=latexmk -pdf
+
+main.pdf: main.tex $(SOURCES)
+    $(LATEX) $&lt;</pre></div>
+<h2 id="cleaning-up">Cleaning up</h2>
+
+<p>Because of its compilation strategy, TeX generates a bunch of auxiliary files, but <code>latexmk</code> has a built-in facility to clean up after itself.
+The corresponding <code>Makefile</code> snippet looks like</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">clean-src-%: %.tex
+    $(LATEX) -c $&lt;
+
+clean-all-src-%: %.tex
+    $(LATEX) -C $&lt;
+
+clean-srcs: $(addprefix clean-src-,$(SOURCENAMES))
+
+clean-all-srcs: $(addprefix clean-all-src-,$(SOURCENAMES))</pre></div>
+<p>Now, running <code>make clean-srcs</code> will remove all of the auxiliary files that <code>latexmk</code> knows about, and running <code>make clean-all-srcs</code> will remove auxiliary files as well as the output PDF.
+You can also run other cleanup steps corresponding to each source file if you need to; for instance, if compiling <code>main.tex</code> generates <code>main.gnuplot</code>, you could add</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$(RM) $*.gnuplot</pre></div>
+<p>to the corresponding target.
+Be careful here to only remove those files you can regenerate automatically!</p>
+
+<h2 id="reference-management">Reference Management</h2>
+
+<p>Managing references really could be its own topic, with quite a few GUI applications and websites available that claim to help manage your research process.
+We&rsquo;ve all been through the process of learning to format citations and references according to APA, MLA, etc. formats: of course, the TeX ecosystem has come up with a solution to this problem, making reformatting and managing references a write-once situation.
+I have found that the most widely supported option is <a href="http://www.bibtex.org/">BibTeX</a>; on my Mac, I now use BibDesk to manage the citations, but writing the necessary information by hand isn&rsquo;t too tricky.
+In fact, the current recommendation is to keep one big reference file for all of your research, since you can always choose a subset and save it as a separate file for submission to a journal.
+Take a look at the link above for more information on implementing BibTeX references in your paper; since this post is just about the build and testing process, I&rsquo;ll just show how the corresponding <code>Makefile</code> should look, assuming your references live in <code>refs.bib</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">SOURCES=$(wildcard subfile-directory/*.tex)
+LATEX=latexmk -bibtex -pdf
+
+main.pdf: main.tex refs.bib $(SOURCES)
+    $(LATEX) $&lt;</pre></div>
+<h2 id="testing-linting-tex-code">Testing (Linting) TeX Code</h2>
+
+<p>There is so much that can go wrong with your TeX document (here, I&rsquo;m thinking mostly about the more interesting, technical parts of your work, as well as the plain old compilation and typography) that it&rsquo;s hard to think about a starting point when it comes to &ldquo;software testing&rdquo; in this context.
+There&rsquo;s no way to automatically check a TeX file for mathematical or logical mistakes yet, though one hopes <a href="https://en.wikipedia.org/wiki/Automated_theorem_proving">formal methods</a> do (or perhaps don&rsquo;t!) put us out of business; right now the available tools are fascinating, but aren&rsquo;t really &ldquo;automated&rdquo; in the way we would think of automation.
+Leave that to the side: even if you have already crystallized a &ldquo;perfect&rdquo; version of your main results, you would like to ensure that the typeset version of those results will compile reliably, and perhaps ensure there aren&rsquo;t any obvious issues like mis-matched parentheses.</p>
+
+<p>This is where <a href="http://www.nongnu.org/chktex/">chktex</a> comes in; it checks TeX documents for a bevy of errors of different severities.
+The documentation is worth a look (it doesn&rsquo;t actually parse TeX, but operates on rather simpler principles including pattern matching, so for instance its handling of macros isn&rsquo;t perfect) but the simplest way of using it in your <code>Makefile</code> is to add a <code>check</code> target, and use that to test that all of the chktex output is empty:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">check: $(addprefix check-src-,$(basename $(SOURCES)))
+
+CHKTEXARGS ?= -n3 -n22 -n30 -n6
+CHKTEX ?= chktex -q $(CHKTEXARGS)
+
+check-src-%: %.lint
+       test ! -s $&lt;
+
+%.lint: %.tex
+        $(CHKTEX) $&lt; 2&gt;/dev/null | tee $@
+
+clean-check:
+    $(RM) *.lint</pre></div>
+<p>Having this, running <code>make check</code> will automatically run some simple syntax checks over your source files.
+No more missmatched or missing parentheses, among other things!</p>
+
+<h2 id="generating-calculations-using-maxima">Generating Calculations using Maxima</h2>
+
+<p>Now for some of the really fun stuff!
+Though such calculations don&rsquo;t typically appear in journal articles, there is sometimes a need to complete tedious calculations and include the result in your TeX file.
+<a href="http://maxima.sourceforge.net/">Maxima</a> is a computer algebra system that supports operation on the command line as well as export to TeX.
+I&rsquo;ve found this particularly useful for generating step-by-step solutions to problems in quizzes.
+To give a simple example, if we&rsquo;d like to calculate an explicit form for the cube of four terms and export the result into <code>expand-four-term-cubes.tex</code>, we could put the following in <code>expand-four-term-cube.mac</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">expandedTerm: expand((d1term + d2term + d3term + d4term)^3);
+
+load(&#34;mactex-utilities&#34;)$
+texput(d1term, &#34;\\left[a_1\\right]&#34;)$
+texput(d2term, &#34;\\left[a_2\\right]&#34;)$
+texput(d3term, &#34;\\left[a_3\\right]&#34;)$
+texput(d4term, &#34;\\left[a_4\\right]&#34;)$
+with_stdout(&#34;expand-four-term-cubes.tex&#34;, tex(expandedTerm))$</pre></div>
+<p>The directive <code>texput</code> tells Maxima how to typeset the corresponding internal symbols as TeX.
+The resulting TeX file can be included directly into your main file by writing</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">\input{expand-four-term-cubes}</pre></div>
+<h2 id="future-work">Future Work</h2>
+
+<ul>
+<li><p>For larger projects, I&rsquo;ve implemented automated grammar and spelling checks; as with any tool, these are of limited utility, but spelling can be interpreted as a kind of consistency particularly with respect to the names of cited theorems, and for my dissertation, the grammar check did find a couple errors that could be resolved, so there&rsquo;s my 2c.
+I&rsquo;ll have to document these options at some point.</p></li>
+
+<li><p>Oftentimes for data-intensive projects, the size of generated graphics precludes the use of PGFPlots directly (in particular, the memory requirements for the visualization overwhelm the relatively small requirements of the actual output file.)
+One solution is to automate the graphic generation using PGF/Tikz externalization, or something like GNUPlot; both of these options can be explored later on.</p></li>
+</ul>
+
+<h2 id="footnotes">Footnotes</h2>
+
+<p><a name="onecompilationnote" href="onecompilationnote-source">[1]</a>: The reason is a bit interesting: <code>pdflatex</code> is a one-pass compiler, so it produces the necessary information to get correct references and saves it to an <code>aux</code> file the first time it&rsquo;s run, and reads this information in on the second run.
+Other compilation-type stages output intermediate information to files with other extensions; this is why clearing out all of the intermediate files is sometimes necessary to complete the compilation process: sometimes <code>latex</code> or another program writes invalid commands to an auxiliary file, which causes another compilation to break.</p>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/">&lArr; Installing Jupyter with IJulia and IRkernel</a>
+                                    
+                                    
+                                    <a class="next" href="https://jgoldfar.github.io/blog/vizualizing-attendance-data/"> Visualizing Attendance Data &rArr;</a>
+                            
+                        </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <footer>
+
+  <p class="copyright text-muted">Copyright 2018, All rights reserved.</p>
+
+</footer>
+
+            </div>
+        </main>
+
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Lang on jgoldfar&#39;s home on the web</title>
+    <link>https://jgoldfar.github.io/tags/r-lang/</link>
+    <description>Recent content in R Lang on jgoldfar&#39;s home on the web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Nov 2018 14:57:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://jgoldfar.github.io/tags/r-lang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visualizing Attendance Data</title>
+      <link>https://jgoldfar.github.io/blog/vizualizing-attendance-data/</link>
+      <pubDate>Sat, 03 Nov 2018 14:57:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/vizualizing-attendance-data/</guid>
+      <description>In this post I&amp;rsquo;m going to share some simple data munging and visualization techniques I use to analyze attendance data recorded from a card swipe machine in our tutoring lab, which I use to make sure we use our office hours (a human time resource!) as effectively as possible, and report that internally. I&amp;rsquo;ve had this running on a regular basis since I was first asked to report this data some time back; in the past, Excel was used to prepare these charts, but it had to be done basically entirely &amp;ldquo;by hand&amp;rdquo; each time.</description>
+    </item>
+    
+  </channel>
+</rss>

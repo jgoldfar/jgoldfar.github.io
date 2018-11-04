@@ -396,14 +396,11 @@
                                 
 <p>When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file.
 Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in <code>fname</code>, write</p>
-
-<pre><code>using SHA: sha256
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">using SHA: sha256
 
 open(fname) do file
     return bytes2hex(sha256(file))
-end
-</code></pre>
-
+end</pre></div>
 
 <div id="disqus_thread"></div>
 <script>
