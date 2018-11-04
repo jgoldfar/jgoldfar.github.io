@@ -6,6 +6,10 @@ metaDataFormat = "yaml"
 enableGitInfo = false # TODO: make this a git repo, enable
 paginate = 5
 disqusShortname = "jgoldfar-blog"
+pygmentsCodeFences = true
+pygmentsOptions = "nobackground=True"
+pygmentsStyle = "emacs"
+pygmentsCodefencesGuessSyntax = true
 
 [taxonomies]
     tags = "tags"
