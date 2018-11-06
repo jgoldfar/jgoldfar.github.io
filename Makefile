@@ -54,50 +54,51 @@ cv-deps-pull:
 		curl -L "$(CVDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
 	)
 
-cv-deps: cv-deps-pull $(addprefix $(CVPath)/,cv.pdf res.pdf)
+cv-deps: cv-deps-pull
+	mv $(CVPath)/cv@default.pdf $(CVPath)/cv.pdf
+	mv $(CVPath)/res@default.pdf $(CVPath)/res.pdf
 
-$(CVPath)/%.pdf: $(CVPath)/%@default.pdf
-	mv $< $@
 
 ### Schedule/Calendar
 # Note: Set these variables in the environment (in particular, on CI) for this target
 # to work.
 CourseAppointmentIcalLink?=
 SeminarScheduleIcalLink?=
-IcalDir:=deps/ical
+IcalPath:=deps/ical
+InstallDirs+=$(IcalPath)
 IcalTargetFiles=$(addsuffix .ical,CourseAppointment SeminarSchedule)
 
 # Pull ical files from given links
-$(IcalDir)/CourseAppointment.ical:
+$(IcalPath)/CourseAppointment.ical:
 	[ ! -z "$(CourseAppointmentIcalLink)" ]
 	mkdir -p $(dir $@)
 	@curl -L "$(CourseAppointmentIcalLink)" -o "$@"
 
-$(IcalDir)/SeminarSchedule.ical:
+$(IcalPath)/SeminarSchedule.ical:
 	[ ! -z "$(SeminarScheduleIcalLink)" ]
 	mkdir -p $(dir $@)
 	@curl -L "$(SeminarScheduleIcalLink)" -o "$@"
-		
-cal-deps-pull: $(addprefix $(IcalDir)/,$(IcalTargetFiles))
+
+cal-deps-pull: $(addprefix $(IcalPath)/,$(IcalTargetFiles))
 
 ## Generate schedule file from ical files
-cal-deps-generate: deps/generateScheduleFile.jl Project.toml $(addprefix $(IcalDir)/,$(IcalTargetFiles))
-	$(JULIA) --project="." $@ $(addprefix $(IcalDir)/,$(IcalTargetFiles))
+cal-deps-generate: deps/generateScheduleFile.jl Project.toml $(addprefix $(IcalPath)/,$(IcalTargetFiles))
+	$(JULIA) --project="." $@ $(addprefix $(IcalPath)/,$(IcalTargetFiles))
 
 cal-deps: cal-deps-pull
 
 
 ### OSS contribution/repository listing generator
 # Note: These depend on deps/getRepos.jl and Project.toml
-data/oss/github.json: 
+data/oss/github.json:
 	mkdir -p $(dir $@)
 	$(JULIA) --project="." deps/getRepos.jl $@ --github
 
-data/oss/bitbucket.json: 
+data/oss/bitbucket.json:
 	mkdir -p $(dir $@)
 	$(JULIA) --project="." deps/getRepos.jl $@ --bitbucket
 
-oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json 
+oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json
 
 data/oss/combined.json: $(addprefix data/oss/, github.json bitbucket.json)
 	$(JULIA) --project="." -e "using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
@@ -150,6 +151,5 @@ push-git: init-git gen-git
 clean:
 	$(RM) -r public
 	$(RM) -r $(InstallDirs)
-	$(RM) -r $(CloneDirs)
 	$(RM) -r jgoldfar.github.io
 	$(RM) bin/hugo bin/LICENSE bin/README.md
