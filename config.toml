@@ -65,6 +65,12 @@ pygmentsCodefencesGuessSyntax = true
     identifier = "schedule"
     url = "/schedule"
 
+[[menu.sidebar]]
+    name = "Blog"
+    weight = 2
+    identifier = "blog"
+    url = "/blog"
+
 ## sidebar for Blog
 [[menu.sidebarBlog]]
     name = "Home"
