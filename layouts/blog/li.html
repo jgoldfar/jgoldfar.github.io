@@ -1,6 +1,14 @@
 <article class="blogPostListing">
 <header>
     <h3><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</a> {{ with .Params.subtitle }}: <span class="blogSubtitle">{{ . }}</span> {{ end }}</h3>
+    <ul class="tags">
+    <span class="date">
+    Published: {{ .Date | dateFormat "Jan 2, 2006" }}
+    </span>
+    {{ range .Params.tags }}
+        : <span class="tag"><!--<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">-->{{ . }}<!--</a>--></span>
+    {{ end }}
+    </ul>
 </header>
 
 <div>

@@ -13,10 +13,25 @@ $(HUGO): bin/hugo_0.40.3_Linux-64bit.tar.gz
 	cd bin && tar xvzf $(notdir $<)
 endif
 
-### Dependencies
-pull-deps: reading-group-deps cv-deps
+## Dependencies
+pull-deps: julia-pre-deps reading-group-deps cv-deps cal-deps oss-contribs-deps
 
+## Julia package installation & instantiation
+# Override JULIA variable to set a different Julia version
+JULIA?=$(shell which julia)
+# URI for Libical. Override with local path if setting LIBICALDEV=1
+LIBICALURI?=https://github.com/jgoldfar/Libical.jl
+# Use local development version of Libical (==1) or not (==0)?
+LIBICALDEV?=0
+julia-pre-deps:
+ifeq ($(LIBICALDEV),0)
+	$(JULIA) --project="." -e 'using Pkg; Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
+else
+	$(JULIA) --project="." -e 'using Pkg; Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
+endif
+	$(JULIA) --project="." -e 'using Pkg; Pkg.instantiate();'
 
+### Algebra Reading Group
 ARGDownloadPath=https://bitbucket.org/jgoldfar/algebrareadinggroupnotes/downloads
 ARGCoursePath=static/AlgebraReadingGroup
 ARGFiles=hersteinExercises.pdf munkresExercises.pdf index.htm
@@ -28,10 +43,11 @@ reading-group-deps:
 		curl -L "$(ARGDownloadPath)/$(file)" -o "$(ARGCoursePath)/$(file)"; \
 	)
 
-CVDownloadPath=https://bitbucket.org/jgoldfar/resumepublic/downloads
+### CV/Resume
+CVDownloadPath=https://bintray.com/jgoldfar/ResumePublic/download_file?file_path=
 CVPath=static/cv
 InstallDirs+=$(CVPath)
-CVFiles=cv@default.pdf res@default.pdf
+CVFiles=cv@default.pdf res@default.pdf cont-talks.bib inv-talks.bib posters.bib pubs.bib
 cv-deps-pull:
 	mkdir -p $(CVPath)
 	$(foreach file, $(CVFiles), \
@@ -43,10 +59,69 @@ cv-deps: cv-deps-pull $(addprefix $(CVPath)/,cv.pdf res.pdf)
 $(CVPath)/%.pdf: $(CVPath)/%@default.pdf
 	mv $< $@
 
+### Schedule/Calendar
+# Note: Set these variables in the environment (in particular, on CI) for this target
+# to work.
+CourseAppointmentIcalLink?=
+SeminarScheduleIcalLink?=
+IcalDir:=deps/ical
+IcalTargetFiles=$(addsuffix .ical,CourseAppointment SeminarSchedule)
+
+# Pull ical files from given links
+$(IcalDir)/CourseAppointment.ical:
+	[ ! -z "$(CourseAppointmentIcalLink)" ]
+	mkdir -p $(dir $@)
+	@curl -L "$(CourseAppointmentIcalLink)" -o "$@"
+
+$(IcalDir)/SeminarSchedule.ical:
+	[ ! -z "$(SeminarScheduleIcalLink)" ]
+	mkdir -p $(dir $@)
+	@curl -L "$(SeminarScheduleIcalLink)" -o "$@"
+		
+cal-deps-pull: $(addprefix $(IcalDir)/,$(IcalTargetFiles))
+
+## Generate schedule file from ical files
+cal-deps-generate: deps/generateScheduleFile.jl Project.toml $(addprefix $(IcalDir)/,$(IcalTargetFiles))
+	$(JULIA) --project="." $@ $(addprefix $(IcalDir)/,$(IcalTargetFiles))
+
+cal-deps: cal-deps-pull
+
+
+### OSS contribution/repository listing generator
+# Note: These depend on deps/getRepos.jl and Project.toml
+data/oss/github.json: 
+	mkdir -p $(dir $@)
+	$(JULIA) --project="." deps/getRepos.jl $@ --github
+
+data/oss/bitbucket.json: 
+	mkdir -p $(dir $@)
+	$(JULIA) --project="." deps/getRepos.jl $@ --bitbucket
+
+oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json 
+
+data/oss/combined.json: $(addprefix data/oss/, github.json bitbucket.json)
+	$(JULIA) --project="." -e "using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
+
+oss-contribs-deps: data/oss/combined.json
+
+## Hugo Generation
 HUGOFILE := config.toml
 
 serve: $(HUGOFILE) $(HUGO)
 	$(HUGO) --verbose server
+
+FileName?=
+new: $(HUGOFILE) $(HUGO)
+ifeq ($(FileName),)
+	@echo "Usage: make new FileName=..."
+	@echo "i.e. make new FileName=blog/newBlogPost.md"
+else # FileName set
+ifeq ($(basename $(FileName)),$(FileName))
+	$(HUGO) new $(FileName).md
+else # Already has an extension
+	$(HUGO) new $(FileName)
+endif # Switch on existence of extension
+endif # Switch on definition of FileName
 
 ### Generate site
 GitRepoName=jgoldfar.github.io

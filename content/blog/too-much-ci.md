@@ -2,6 +2,7 @@
 title: "Continuous Integration Ad Nauseam?"
 tags: ["CI"]
 draft: false
+date: 2018-09-18
 ---
 
 Anyone who's tried to look back on a document from years ago probably knows how difficult it can be for anything more than the simplest files.

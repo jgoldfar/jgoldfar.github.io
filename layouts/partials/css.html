@@ -53,9 +53,15 @@
      font-style: oblique;
      margin-left: 20px;
  }
+  /* Lists of Tags with under the title) */ 
+ thead td.postTitle ul.tags {
+ }
  /* Style for article body in list form */
  article.blogPostListing header {
  }
+ article.blogPostListing header h3 { margin-bottom: 4pt; }
+ /* Adjust margin in listing setting */
+ article.blogPostListing header ul.tags { margin-bottom: 4pt; }
  article.blogPostListing div {
  }
 
@@ -64,23 +70,32 @@
      text-align: justify;
      font-size: small;
  }
+ 
+ /* Style for OSS cards container */
+ div.ossFlex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: 10px;
+ }
+ 
  /* Style for OSS pages/cards */
  /* TODO: Use material card here instead of all of this... */
  div.ossContainer {
-     width: 45%;
-     background-color: #f2f2f2;
-     padding-top: 5px;
-     padding-left: 5px;
-     border-radius: 2px;
-
-     display: flex;
-     flex-direction: column;
+     flex: 1 0 calc(25% - 10px);
      box-sizing: border-box;
+     
+     min-width: 46%;
+     background-color: #f2f2f2;
+     padding: 10px;
+     margin-left: 10px;
+     margin-top: 10px;
+     border-radius: 2px;
 
      box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), /*Umbra*/
      0px 2px 2px 0px rgba(0,0,0,0.14), /*Penumbra */
      0px 1px 5px 0px rgba(0,0,0,0.12) /*Ambient*/;
- }
+  }
 
  article.ossListing header {
      font-family:{{ .Site.Params.fontAlternate }}, sans-serif;
@@ -101,6 +116,13 @@
  }
  article.ossListing header span.ossSubtitle {
      text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+     text-align: left;
+ }
+ article.ossListing header span.ossLanguage {
+     text-decoration: none;
+     font-style: oblique;
      font-size: 80%;
      margin: 0 0 0 0;
  }
@@ -177,10 +199,17 @@
  /* Sidebar/infobox style */
  table.info { width: 200px; }
  table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
- table.info h4 { margin: 0px;}
+ table.info h4 { margin: 0px; }
 
  /* Sub-sidebar styles */
- td.inforight { font-size: 11pt; }
+ table.info td.inforight { font-size: 12px; padding: 5px 5px 5px 20px; }
+ 
+ /* Pagination tools */
+ div.pagination { padding-top: 10px; }
+ 
+ /* Lists of Tags (i.e. under the title) */
+ ul.tags { font-size: x-small; padding-left: 20pt; margin-top: 0px; margin-bottom: 0px;}
+ 
 </style>
 
 <!-- custom -->
@@ -188,6 +217,9 @@
 
 <!-- PureCSS -->
 <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 <!-- google fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}" />

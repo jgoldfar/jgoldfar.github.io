@@ -2,6 +2,7 @@
 title: "Why Open Source Software?"
 tags: ["OSS"]
 draft: false
+date: 2018-08-15
 ---
 
 These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it's not always the path of least resistance.

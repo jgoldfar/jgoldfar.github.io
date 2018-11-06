@@ -1,7 +1,8 @@
 ---
 title: "Developing and Testing LaTeX Documents"
+date: 2018-11-03T08:57:59
 tags: ["CI", "LaTeX"]
-draft: true
+draft: false
 ---
 
 I've been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool.
@@ -12,7 +13,7 @@ Apparently, it's a local minimum in the space of technical information input lan
 As a typesetting system, TeX could be considered a mixed bag: the learning curve can be steep, which can be an unfortunate barrier to entry, but the stability and quality of the output, as well as the possibility of integration with version control and content generation systems are nearly unrivaled.
 As an educator, I believe the solution to the first problem is, of course, education, and careful selection of a template and documentation to get started.
 From a pragmatic standpoint, the LaTeX macro package built on TeX provides a nice starting point, since it reduces the barrier of entry a bit, and enables the use of safer, semantically clear code to represent the writer's intent.
-My own entry in the template category [is available here](), and since TeX is a programming language written in ASCII format, it integrates well with standard software engineering tools, which provide the same kinds of benefits that they do anywhere else.
+My own entry in the template category [is available here](https://bitbucket.org/jgoldfar/git-latex-template) (as a `git` repository) or [here](https://bitbucket.org/jgoldfar/hg-latex-template) (as a `mercurial` repository), and since TeX is a programming language written in ASCII format, it integrates well with standard software engineering tools, which provide the same kinds of benefits that they do anywhere else.
 In fact, even with one user, I would state that the utility of these kind of tools easily outweighs the one-time cost of learning LaTeX.
 In this entry, I would like to share some of the tools I use to track and develop LaTeX documents.
 
@@ -29,7 +30,7 @@ At least one file per section or chapter is manageable, but search from TeX to t
 
 ## Build Tooling
 
-One of the nice things about LaTeX is that you can start with a very simple document (containing only text and equations with no references, say) and compile it once with good results, but once in-text references, indexes, and other niceties are involved, one compilation won't work.[^1]
+One of the nice things about LaTeX is that you can start with a very simple document (containing only text and equations with no references, say) and compile it once with good results, but once in-text references, indexes, and other niceties are involved, one <a name="onecompilationnote-source">compilation won't work.</a><sup>[1](#onecompilationnote)</sup>
 
 Unfortunately (or, depending on your point-of-view, fortunately) achieving visually pleasing output sometimes necessitates, for instance, moving an equation to another page, which can change page references: what is really necessary is to run the compiler and all of the supporting programs in the correct order until a fixed point is found.
 That is exactly the intent of the [`Latexmk`](https://mg.readthedocs.io/latexmk.html) program; it encapsulates most of this compilation complication.
@@ -41,7 +42,7 @@ A simple `Makefile` for the generation of a PDF file from a TeX file named `main
 LATEX=latexmk -pdf
 
 main.pdf: main.tex
-	$(LATEX) $<
+    $(LATEX) $<
 ```
 
 Having this, generating your PDF file is as simple as running `make`, but if you like to be a bit more verbose, `make main.pdf`.
@@ -55,7 +56,7 @@ SOURCENAMES=$(basename $(SOURCES))
 LATEX=latexmk -pdf
 
 main.pdf: main.tex $(SOURCES)
-	$(LATEX) $<
+    $(LATEX) $<
 ```
 
 ## Cleaning up
@@ -65,10 +66,10 @@ The corresponding `Makefile` snippet looks like
 
 ```
 clean-src-%: %.tex
-	$(LATEX) -c $<
+    $(LATEX) -c $<
 
 clean-all-src-%: %.tex
-	$(LATEX) -C $<
+    $(LATEX) -C $<
 
 clean-srcs: $(addprefix clean-src-,$(SOURCENAMES))
 
@@ -97,8 +98,36 @@ SOURCES=$(wildcard subfile-directory/*.tex)
 LATEX=latexmk -bibtex -pdf
 
 main.pdf: main.tex refs.bib $(SOURCES)
-	$(LATEX) $<
+    $(LATEX) $<
 ```
+
+## Testing (Linting) TeX Code
+
+There is so much that can go wrong with your TeX document (here, I'm thinking mostly about the more interesting, technical parts of your work, as well as the plain old compilation and typography) that it's hard to think about a starting point when it comes to "software testing" in this context.
+There's no way to automatically check a TeX file for mathematical or logical mistakes yet, though one hopes [formal methods](https://en.wikipedia.org/wiki/Automated_theorem_proving) do (or perhaps don't!) put us out of business; right now the available tools are fascinating, but aren't really "automated" in the way we would think of automation.
+Leave that to the side: even if you have already crystallized a "perfect" version of your main results, you would like to ensure that the typeset version of those results will compile reliably, and perhaps ensure there aren't any obvious issues like mis-matched parentheses.
+
+This is where [chktex](http://www.nongnu.org/chktex/) comes in; it checks TeX documents for a bevy of errors of different severities.
+The documentation is worth a look (it doesn't actually parse TeX, but operates on rather simpler principles including pattern matching, so for instance its handling of macros isn't perfect) but the simplest way of using it in your `Makefile` is to add a `check` target, and use that to test that all of the chktex output is empty:
+
+```
+check: $(addprefix check-src-,$(basename $(SOURCES)))
+
+CHKTEXARGS ?= -n3 -n22 -n30 -n6
+CHKTEX ?= chktex -q $(CHKTEXARGS)
+
+check-src-%: %.lint
+       test ! -s $<
+
+%.lint: %.tex
+        $(CHKTEX) $< 2>/dev/null | tee $@
+
+clean-check:
+    $(RM) *.lint
+```
+
+Having this, running `make check` will automatically run some simple syntax checks over your source files.
+No more missmatched or missing parentheses, among other things!
 
 ## Generating Calculations using Maxima
 
@@ -120,14 +149,21 @@ with_stdout("expand-four-term-cubes.tex", tex(expandedTerm))$
 ```
 
 The directive `texput` tells Maxima how to typeset the corresponding internal symbols as TeX.
-The resulting TeX file can be included directly into your main file by writing 
+The resulting TeX file can be included directly into your main file by writing
 
 ```
 \input{expand-four-term-cubes}
 ```
 
+## Future Work
+
+* For larger projects, I've implemented automated grammar and spelling checks; as with any tool, these are of limited utility, but spelling can be interpreted as a kind of consistency particularly with respect to the names of cited theorems, and for my dissertation, the grammar check did find a couple errors that could be resolved, so there's my 2c.
+I'll have to document these options at some point.
+
+* Oftentimes for data-intensive projects, the size of generated graphics precludes the use of PGFPlots directly (in particular, the memory requirements for the visualization overwhelm the relatively small requirements of the actual output file.)
+One solution is to automate the graphic generation using PGF/Tikz externalization, or something like GNUPlot; both of these options can be explored later on.
 
 ## Footnotes
 
-[^1]: The reason is a bit interesting: `pdflatex` is a one-pass compiler, so it produces the necessary information to get correct references and saves it to an `aux` file the first time it's run, and reads this information in on the second run.
+<a name="onecompilationnote" href="onecompilationnote-source">[1]</a>: The reason is a bit interesting: `pdflatex` is a one-pass compiler, so it produces the necessary information to get correct references and saves it to an `aux` file the first time it's run, and reads this information in on the second run.
 Other compilation-type stages output intermediate information to files with other extensions; this is why clearing out all of the intermediate files is sometimes necessary to complete the compilation process: sometimes `latex` or another program writes invalid commands to an auxiliary file, which causes another compilation to break.

@@ -1,9 +1,9 @@
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: jgoldfar/latex-docker:plus-julia-release-latest
+image: jgoldfar/latex-julia-docker:release-latest
 
 pipelines:
   default:
     - step:
         script:
-          - apt-get update && apt-get install -y make curl mercurial rsync git
-          - make pull-deps push-git
+          - apt-get update && apt-get install -y make curl git
+          - make pull-deps push-git RSYNC="cp -R -v"

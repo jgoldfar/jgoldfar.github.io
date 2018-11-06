@@ -7,3 +7,4 @@ static/AlgebraReadingGroup/index.htm
 bin/hugo
 bin/LICENSE
 bin/README.md
+data/oss/combined\.json
