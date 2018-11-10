@@ -47,17 +47,29 @@ reading-group-deps:
 CVDownloadPath=https://bintray.com/jgoldfar/ResumePublic/download_file?file_path=
 CVPath=static/cv
 InstallDirs+=$(CVPath)
-CVFiles=cv@default.pdf res@default.pdf cont-talks.bib inv-talks.bib posters.bib pubs.bib
+CVBibFiles=cont-talks.bib inv-talks.bib posters.bib pubs.bib
+CVFiles=cv@default.pdf res@default.pdf $(CVBibFiles)
+
 cv-deps-pull:
 	mkdir -p $(CVPath)
 	$(foreach file, $(CVFiles), \
 		curl -L "$(CVDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
 	)
 
-cv-deps: cv-deps-pull
+cv-deps: cv-deps-pull cv-bibjson-datafiles
 	mv $(CVPath)/cv@default.pdf $(CVPath)/cv.pdf
 	mv $(CVPath)/res@default.pdf $(CVPath)/res.pdf
 
+deps/bib2json.py:
+	curl -L "https://raw.githubusercontent.com/jgoldfar/bibserver/jgoldfar-bibtexparser-23-support/parserscrapers_plugins/bibtex.py" -o $@
+	chmod a+x $@
+
+data/cv/%.json: $(CVPath)/%.bib deps/bib2json.py
+	mkdir -p $(dir $@)
+	cat $< | deps/bib2json.py > $@
+	-cp $@ $(subst -,,$@)
+
+cv-bibjson-datafiles: $(addprefix data/cv/,$(CVBibFiles:.bib=.json))
 
 ### Schedule/Calendar
 # Note: Set these variables in the environment (in particular, on CI) for this target
