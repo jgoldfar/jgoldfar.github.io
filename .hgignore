@@ -8,3 +8,7 @@ bin/hugo
 bin/LICENSE
 bin/README.md
 data/oss/combined\.json
+data/cv/*
+deps/bib2json.py
+deps/ical/*.ical
+static/cv/*
