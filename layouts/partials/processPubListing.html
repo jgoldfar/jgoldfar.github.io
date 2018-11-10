@@ -1,0 +1,45 @@
+{{/* printf "%#v" . */}}
+<li class="pubListing">
+  {{ if (index . "booktitle")}}
+  {{ if (gt (len (index . "booktitle")) 0) }}{{- index . "booktitle" -}},
+  {{ end }}{{ end }}
+  {{/**/}}
+  
+  {{ if (index . "month")}}{{ if (gt (len (index . "month")) 0) }}&nbsp;
+  {{- replace (index . "month") "--" "&mdash;" | safeHTML -}}
+  {{ end }}{{ end }}&nbsp;
+  
+  {{ if (index . "year")}}{{ if (gt (len (index . "year")) 0) }}
+  {{- index . "year" -}}
+  {{ end }}{{ end }}
+  {{/**/}}
+  :&nbsp;
+  {{ if (index . "link") }}{{ if (gt (len (index . "link")) 0) }}
+  {{ range (index . "link") }}
+  <!-- {{.}} -->
+  <a href="{{- (index . "url") -}}">
+  {{ end }}{{ end }}{{ end }}
+  {{/**/}}
+  {{ if (index . "title")}}
+  {{ if (gt (len (index . "title")) 0) }}
+  <i>{{- index . "title" -}}</i>
+  {{ end }}{{ end }}
+  {{/**/}}
+  {{ if (index . "link") }}{{ if (gt (len (index . "link")) 0) }}</a>{{ end }}{{ end }}
+  {{/**/}}
+  {{ if (index . "author")}}{{ if (gt (len (index . "author")) 0) }}
+  {{ range (index . "author") }},&nbsp;
+  {{- partial "normalizeAuthorName.html" (dict "Data" (index . "name")) -}}
+  {{ end }}{{ end }}{{ end }}
+  {{/**/}}
+  .
+  {{ if (index . "url-direct") }}{{ if (gt (len (index . "url-direct")) 0) }}
+  <a href="{{- (index . "url-direct") -}}">Direct Link</a>
+  {{ end }}
+  {{ end }}
+  {{/**/}}
+  {{ if (index . "note")}}
+  {{ if (gt (len (index . "note")) 0) }}&nbsp;
+  {{- index . "note" -}}
+  {{ end }}{{ end }}
+</li>

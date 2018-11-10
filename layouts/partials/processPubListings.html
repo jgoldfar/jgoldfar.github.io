@@ -1,0 +1,8 @@
+{{/* printf "%#v" . */}}
+{{ $p := .Data }}
+<ul class="pubListing">
+{{ range (sort $p ".year" "desc") }}
+	{{ partial "processPubListing.html" . }}
+{{ end }}
+</ul>
+("*" indicates presenter.)
