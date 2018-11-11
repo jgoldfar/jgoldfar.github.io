@@ -56,7 +56,7 @@ cv-deps-pull:
 		curl -L "$(CVDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
 	)
 
-cv-deps: cv-deps-pull cv-bibjson-datafiles
+cv-deps: cv-deps-pull deps/bib2json.py cv-bibjson-datafiles
 	mv $(CVPath)/cv@default.pdf $(CVPath)/cv.pdf
 	mv $(CVPath)/res@default.pdf $(CVPath)/res.pdf
 
