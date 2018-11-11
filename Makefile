@@ -64,7 +64,10 @@ deps/bib2json.py:
 	curl -L "https://raw.githubusercontent.com/jgoldfar/bibserver/jgoldfar-bibtexparser-23-support/parserscrapers_plugins/bibtex.py" -o $@
 	chmod a+x $@
 
-data/cv/%.json: $(CVPath)/%.bib deps/bib2json.py
+data/cv/%.json: $(CVPath)/%.bib
+	if [ ! -f "deps/bib2json.py" ] ; then \
+		$(MAKE) deps/bib2json.py ; \
+	fi
 	mkdir -p $(dir $@)
 	cat $< | deps/bib2json.py > $@
 	-cp $@ $(subst -,,$@)
