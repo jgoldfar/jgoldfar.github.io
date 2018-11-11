@@ -50,24 +50,33 @@ InstallDirs+=$(CVPath)
 CVBibFiles=cont-talks.bib inv-talks.bib posters.bib pubs.bib
 CVFiles=cv@default.pdf res@default.pdf $(CVBibFiles)
 
-cv-deps-pull:
-	mkdir -p $(CVPath)
-	$(foreach file, $(CVFiles), \
-		curl -L "$(CVDownloadPath)/$(file)" -o "$(CVPath)/$(file)"; \
-	)
+# Define template for downloading a single cv file using curl
+define CVPULL_template
+cv-dep-pull-$(1): $$(CVPath)/$(1)
 
-cv-deps: cv-deps-pull deps/bib2json.py cv-bibjson-datafiles
+$$(CVPath)/$(1):
+	mkdir -p $$(CVPath)
+	curl -L "$$(CVDownloadPath)/$(1)" -o $$@
+endef
+
+# Evaluate the template above for each file in CVFiles
+$(foreach file,$(CVFiles),$(eval $(call CVPULL_template,$(file))))
+
+# cv-deps-pull calls each templated target
+cv-deps-pull: $(addprefix cv-dep-pull-,$(CVFiles))
+	ls -R static
+
+cv-deps: cv-deps-pull cv-bibjson-datafiles
 	mv $(CVPath)/cv@default.pdf $(CVPath)/cv.pdf
 	mv $(CVPath)/res@default.pdf $(CVPath)/res.pdf
 
+# Download bibtex 2 bibjson converter from github repo
 deps/bib2json.py:
 	curl -L "https://raw.githubusercontent.com/jgoldfar/bibserver/jgoldfar-bibtexparser-23-support/parserscrapers_plugins/bibtex.py" -o $@
 	chmod a+x $@
 
-data/cv/%.json: $(CVPath)/%.bib
-	if [ ! -f "deps/bib2json.py" ] ; then \
-		$(MAKE) deps/bib2json.py ; \
-	fi
+# Convert bibfile into bibJSON files
+data/cv/%.json: $(CVPath)/%.bib deps/bib2json.py
 	mkdir -p $(dir $@)
 	cat $< | deps/bib2json.py > $@
 	-cp $@ $(subst -,,$@)
