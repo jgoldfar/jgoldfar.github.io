@@ -312,13 +312,13 @@ thead div.tagListTitle {
     Published: Sep 17, 2018
 </span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/oss">OSS</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/devops">DevOps</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/webdev">WebDev</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/webdev">WebDev</a></span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/python-lang">Python-lang</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/python-lang">Python-lang</a></span>
     
 </ul>
 </td>
@@ -434,7 +434,7 @@ It gave me an opportunity to play around with some sides of Python I haven&rsquo
 <h2 id="patching-up-hyde">Patching up Hyde</h2>
 
 <p>Hyde hasn&rsquo;t had a commit to its main repository for almost 3 years now; while this isn&rsquo;t disqualifying for a project that could be considered mature written in Python 2 (which also isn&rsquo;t going anywhere soon) I found that I couldn&rsquo;t load the script on my machine, and though PRs hadn&rsquo;t been accepted since 2016, all of the recent ones failed CI, so something is amiss.
-I&rsquo;m a <a href=" ref &quot;blog/too-much-ci.md&quot; ">big fan</a> of continuous integration, in particular on <a href="https://travis-ci.org/">Travis CI</a> and make active use of Travis&rsquo; Cron jobs to keep tabs on whether I can reliably come back to a previous project and expect it to work, at least in some capacity.</p>
+I&rsquo;m a <a href="https://jgoldfar.github.io/blog/too-much-ci/">big fan</a> of continuous integration, in particular on <a href="https://travis-ci.org/">Travis CI</a> and make active use of Travis&rsquo; Cron jobs to keep tabs on whether I can reliably come back to a previous project and expect it to work, at least in some capacity.</p>
 
 <p>So, first things first, I cloned the Hyde repository and ran the tests according to the CI configuration.
 No go (as expected.)
@@ -474,7 +474,7 @@ Nostalgia!</p>
 
 <p>Is that enough?
 Of course not!
-My laptop is far from rock solid machine, as I&rsquo;ve written, which is part of <a href=" ref &quot;blog/too-much-ci.md&quot; ">my reason</a> for assiduously setting up continuous integration for as much as I can.
+My laptop is far from rock solid machine, as I&rsquo;ve written, which is part of <a href="https://jgoldfar.github.io/blog/too-much-ci/">my reason</a> for assiduously setting up continuous integration for as much as I can.
 The website code was already up on Bitbucket, and they&rsquo;ve just started offering their very nice <a href="https://confluence.atlassian.com/bitbucket/build-test-and-deploy-with-pipelines-792496469.html">Pipelines</a> service, which allows you to run a test script using any docker image you&rsquo;d like.
 The top <a href="https://hub.docker.com/r/kennethreitz/pipenv/">existing <code>pipenv</code> image</a> didn&rsquo;t seem to support Python2, but it was relatively simple to <a href="https://github.com/jgoldfar/circleci-pipenv">fork</a> a Dockerfile and set up an automated build on docker hub for <a href="https://hub.docker.com/r/jgoldfar/circleci-pipenv/">my own image</a>.</p>
 
