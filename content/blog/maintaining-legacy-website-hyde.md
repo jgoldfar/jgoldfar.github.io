@@ -1,6 +1,6 @@
 ---
 title: "One more round with Hyde"
-tags: ["OSS", "DevOps", "WebDev"]
+tags: ["OSS", "DevOps", "WebDev", "Python-lang"]
 draft: false
 date: 2018-09-17
 ---

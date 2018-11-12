@@ -1,7 +1,7 @@
 ---
 title: "Reviving an ancient MacBook"
 date: 2018-10-20T20:44:16
-tags: [""]
+tags: ["build-the-world"]
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Installing Jupyter with IJulia and IRkernel"
 date: 2018-11-02T14:55:00-04:00
-tags: ["OSS", "DataViz"]
+tags: ["OSS", "DataViz", "Julia-lang", "R-lang"]
 draft: false
 ---
 

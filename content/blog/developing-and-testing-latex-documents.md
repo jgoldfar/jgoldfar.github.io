@@ -7,8 +7,8 @@ draft: false
 
 I've been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool.
 I've even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to _not_ be something to mess with on a deadline.
-It's perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX an d KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.
-Apparently, it's a local minimum in the space of technical information input languages.
+It's perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX and KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.
+Apparently, it's a local maximum with respect to ease of input and expressiveness in the space of technical information input languages.
 
 As a typesetting system, TeX could be considered a mixed bag: the learning curve can be steep, which can be an unfortunate barrier to entry, but the stability and quality of the output, as well as the possibility of integration with version control and content generation systems are nearly unrivaled.
 As an educator, I believe the solution to the first problem is, of course, education, and careful selection of a template and documentation to get started.

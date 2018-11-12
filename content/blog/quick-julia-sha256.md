@@ -1,6 +1,7 @@
 ---
 title: "Quick SHA256 Generation using Julia"
 date: 2018-10-11T13:15:29-04:00
+tags: ["Julia-lang"]
 draft: false
 ---
 

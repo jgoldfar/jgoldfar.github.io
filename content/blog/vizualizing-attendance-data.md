@@ -1,6 +1,6 @@
 ---
 title: "Visualizing Attendance Data"
-tags: ["OSS", "DataViz", "R-lang"]
+tags: ["OSS", "DataViz", "R-lang", "Julia-lang"]
 date: 2018-11-03T14:57:00-04:00
 draft: false
 ---

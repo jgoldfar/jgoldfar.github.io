@@ -1,6 +1,6 @@
 ---
 title: "Visualizing Attendance Data using Idiomatic Julia"
-tags: ["OSS", "DataViz", "Julia-Lang"]
+tags: ["OSS", "DataViz", "Julia-lang"]
 date: 2018-11-04T12:30:00-04:00
 draft: false
 ---

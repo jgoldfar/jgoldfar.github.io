@@ -1,7 +1,7 @@
 ---
 title: "Installing R (MRO) on OSX Sierra"
 date: 2018-11-02T11:49:00-04:00
-tags: ["OSS"]
+tags: ["OSS", "R-lang"]
 draft: false
 ---
 
