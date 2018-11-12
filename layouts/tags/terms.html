@@ -1,0 +1,34 @@
+{{ define "aboveHeader" }}
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+{{ end }}
+
+{{ define "sidebar" }}
+{{ partialCached "blog/sidebar.html" . }}
+{{ end }}
+
+{{ define "mainContent" }}
+{{ .Content }}
+
+{{ $data := .Data }}
+<table class="tagList">
+<tr>
+<th>Tag Name</th>
+<th>Number of Pages</th>
+</tr>
+{{ range $key,$value := $data.Terms.ByCount }}
+<tr>
+<!--{{ $value }}-->
+<td><a href="{{ $.Site.BaseURL }}tags/{{ $value.Name | urlize }}"> {{ $value.Name }} </a></td>
+<td>{{ $value.Count }}</td>
+</tr>
+{{ end }}
+</table>
+{{ end }}
