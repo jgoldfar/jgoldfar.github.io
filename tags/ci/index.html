@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        jgoldfar&#39;s home on the web
+        Ci | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -261,7 +261,7 @@ thead div.tagListTitle {
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/blog/index.xml">
+    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/tags/ci/index.xml">
     </head>
 
 
@@ -301,10 +301,13 @@ thead div.tagListTitle {
                                     
                                 </td>
                             
-  <td class="postTitle">
-  
-  
-  </td>
+	
+		<td>
+			<div class="tagListTitle">
+				Posts Tagged "ci"
+			</div>
+		</td>
+	
 
 
                             </tr>
@@ -397,123 +400,37 @@ thead div.tagListTitle {
                             <td class="mainbody">
                                 
                                 
-<!--
-     Testing blog functionality
 
-     \[
-     u_t = {(a u_x)}_x + b u_x
-     \]
+<ul class="taxonomyListing">
 
-     Which, in $n$-dimensions, may be written \(u_t = \text{div} {(A \nabla u)}\)
--->
-
-
-
-
-
-    <article class="blogPostListing">
+<article class="blogPostListing">
 <header>
-    <h3><a href="https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/">Reviving an ancient MacBook </a> </h3>
+    <h3><a href="https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/">Developing and Testing LaTeX Documents </a> </h3>
     <ul class="tags">
     <span class="date">
-    Published: Oct 20, 2018
+    Published: Nov 3, 2018
     </span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/build-the-world">build-the-world</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.iotags/ci">CI</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.iotags/latex">LaTeX</a></span>
     
     </ul>
 </header>
 
 <div>
-Well, it finally happened: my ancient (by modern, consumerist standards) macbook finally kicked the bucket. The fact that a 6 year old laptop is on death&rsquo;s door is a sad statement about the reliability and repairability of the technology we rely on, and it&rsquo;s by no means unique to Apple products, since I&rsquo;ve had similarly flaky Dell and Acer machines.
-I&rsquo;ve been expecting this for a while, of course, hence my obsession with backups and continuous integration, which offers some kind of guarantee that moving to another machine won&rsquo;t break everything I&rsquo;m working on.
+I&rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool. I&rsquo;ve even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to not be something to mess with on a deadline. It&rsquo;s perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX and KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.
 </div>
 
 
 <footer>
-        <a href='https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/'><nobr>Read more →</nobr></a>
+        <a href='https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
 
 
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/">Full-width M-F Embedded Google Calendars </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Oct 19, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/webdev">WebDev</a></span>
-    
-    </ul>
-</header>
-
-<div>
-Our university transitioned earlier this semester to a new CMS, and as part of that move, all of our content was basically pasted into a new template. Mostly this works: our center&rsquo;s page is quite simple, and the constraints of the new CMS will keep it that way&hellip; However, the calendars we embed in the page didn&rsquo;t transfer well; Google calendar embedding is quite nice, but not super flexible! In particular, the option one has in their own view to hide the weekends doesn&rsquo;t exist for embedded calendars.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/quick-julia-sha256/">Quick SHA256 Generation using Julia </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Oct 11, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/julia-lang">Julia-lang</a></span>
-    
-    </ul>
-</header>
-
-<div>
-When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
-using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end
-</div>
-
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/">Containerizing and (Eventually) Updating pdf2htmlEX </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Oct 10, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/devops">DevOps</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.iotags/docker">Docker</a></span>
-    
-    </ul>
-</header>
-
-<div>
-We&rsquo;ve all been there: you&rsquo;re asked to solve a technical problem (&ldquo;compiling&rdquo; a TeX file to the web with minimal changes to the content) and someone has done an impressive job towards solving this problem, just a few short years ago. And, the project, pdf2htmlEX, is open source! But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author. Some kind contributors seem to have picked up where the original author left off, but this project, too has languished.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
+<article class="blogPostListing">
 <header>
     <h3><a href="https://jgoldfar.github.io/blog/too-much-ci/">Continuous Integration Ad Nauseam? </a> </h3>
     <ul class="tags">
@@ -539,26 +456,9 @@ A backup is no good if you can&rsquo;t open it, and even if it opens or runs on 
 </article>
 
 
+</ul>
 
-
-<div class="pagination">
-  <nav role="pagination" class="post-list-pagination">
-      
-      <a href="/blog/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
-        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
-      </a>
-      
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 3</span>
-    
-      <a href="/blog/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
-        Older&nbsp;<i class="fa fa-angle-double-right"></i>
-      </a>
-    
-  </nav>
-</div>
-
-
-
+<a href="https://jgoldfar.github.iotags/">Back to Tag Listing</a>
 
                                 
                             </td>

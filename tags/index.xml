@@ -6,24 +6,35 @@
     <description>Recent content in Tags on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Oct 2018 20:44:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 12:30:00 -0400</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://jgoldfar.github.io/tags/</link>
-      <pubDate>Sat, 20 Oct 2018 20:44:16 +0000</pubDate>
+      <link>https://jgoldfar.github.io/tags/julia-lang/</link>
+      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
       
-      <guid>https://jgoldfar.github.io/tags/</guid>
-      <description></description>
+      <guid>https://jgoldfar.github.io/tags/julia-lang/</guid>
+      <description>Julia is a dynamic, optionally typed, high-performance, open-source programming language.
+While initially devised as a language and runtime for scientific computing a-la MATLAB, it promises to be the ultimate prototyping-to-production language: performance akin to a traditional compiled language, but with programming productivity (enabled by the flexible, expressive, and dynamic nature of the language itself) akin to Python or R. Julia is an excellent &amp;ldquo;glue&amp;rdquo; language, enabling the utilization of codes written in anything from C and C++ to Python and R in a coherent way.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jgoldfar.github.io/tags/oss/</link>
+      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/tags/oss/</guid>
+      <description>Open source software (OSS) is a fundamental concept in the development of the internet as a system, starting with its roots as a network for sharing scientific information.
+I wrote a post about why I use open source software when I can here.</description>
     </item>
     
     <item>
       <title>Build the World</title>
       <link>https://jgoldfar.github.io/tags/build-the-world/</link>
-      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Oct 2018 20:44:16 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/tags/build-the-world/</guid>
       <description></description>
@@ -66,15 +77,6 @@
     </item>
     
     <item>
-      <title>Julia Lang</title>
-      <link>https://jgoldfar.github.io/tags/julia-lang/</link>
-      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
-      
-      <guid>https://jgoldfar.github.io/tags/julia-lang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Latex</title>
       <link>https://jgoldfar.github.io/tags/latex/</link>
       <pubDate>Sat, 03 Nov 2018 08:57:59 +0000</pubDate>
@@ -84,11 +86,11 @@
     </item>
     
     <item>
-      <title>Oss</title>
-      <link>https://jgoldfar.github.io/tags/oss/</link>
-      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
+      <title>Python Lang</title>
+      <link>https://jgoldfar.github.io/tags/python-lang/</link>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://jgoldfar.github.io/tags/oss/</guid>
+      <guid>https://jgoldfar.github.io/tags/python-lang/</guid>
       <description></description>
     </item>
     

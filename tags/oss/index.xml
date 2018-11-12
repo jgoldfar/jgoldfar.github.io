@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oss on jgoldfar&#39;s home on the web</title>
+    <title>jgoldfar&#39;s home on the web</title>
     <link>https://jgoldfar.github.io/tags/oss/</link>
-    <description>Recent content in Oss on jgoldfar&#39;s home on the web</description>
+    <description>Recent content on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Nov 2018 12:30:00 -0400</lastBuildDate>
@@ -82,7 +82,8 @@ Miniconda installation Just to make things easier path-wise, I like to install p
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/why-oss/</guid>
-      <description>These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&amp;rsquo;s not always the path of least resistance. I&amp;rsquo;m not here to evangelize for open source, and I&amp;rsquo;m not a purist: closed-source and proprietary work has its place in our society. However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.</description>
+      <description>These days, free and open source software (FOSS) is in vogue across many fields, both in academia and in industry, though there are holdouts, and it&amp;rsquo;s not always the path of least resistance. I&amp;rsquo;m not here to evangelize exclusively for open source, and I&amp;rsquo;m not a purist or idealogue: closed-source and proprietary work has its place in our society.
+However, when it comes to research, it seems to me that open source should be the default, for the libraries and products we make, as well as the tools we use to make them.</description>
     </item>
     
   </channel>

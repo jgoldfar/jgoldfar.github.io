@@ -20,5 +20,24 @@
       <description>In this post I&amp;rsquo;m going to share some simple data munging and visualization techniques I use to analyze attendance data recorded from a card swipe machine in our tutoring lab, which I use to make sure we use our office hours (a human time resource!) as effectively as possible, and report that internally. I&amp;rsquo;ve had this running on a regular basis since I was first asked to report this data some time back; in the past, Excel was used to prepare these charts, but it had to be done basically entirely &amp;ldquo;by hand&amp;rdquo; each time.</description>
     </item>
     
+    <item>
+      <title>Installing Jupyter with IJulia and IRkernel</title>
+      <link>https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/</link>
+      <pubDate>Fri, 02 Nov 2018 14:55:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/</guid>
+      <description>In this post, I&amp;rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&amp;rsquo;m doing for our open source data analysis course; it&amp;rsquo;s important to me that . The following is all executed from the command line, assuming that Julia is available as julia and R is available as R
+Miniconda installation Just to make things easier path-wise, I like to install packages &amp;ldquo;close&amp;rdquo; to my Homebrew installation:</description>
+    </item>
+    
+    <item>
+      <title>Installing R (MRO) on OSX Sierra</title>
+      <link>https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/</link>
+      <pubDate>Fri, 02 Nov 2018 11:49:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/</guid>
+      <description>As someone who works regularly with various statistical and scientific software stacks (I always say I prefer to use the best tool for the job, rather than fitting my favorite tool into every job) I am pretty impressed by the leaps in visibility R has taken in the past few years. I first used R for a &amp;ldquo;big data&amp;rdquo; project years ago (for a size of N too large for Excel, not what one would consider &amp;ldquo;big&amp;rdquo; these days&amp;hellip;) and in the intervening years have worked with R in my teaching and for statistical analysis projects intermittently, but without stepping back and looking at all of the progress that has been made!</description>
+    </item>
+    
   </channel>
 </rss>

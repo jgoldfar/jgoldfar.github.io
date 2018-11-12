@@ -17,7 +17,7 @@
       <pubDate>Sat, 03 Nov 2018 08:57:59 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/</guid>
-      <description>I&amp;rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool. I&amp;rsquo;ve even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to not be something to mess with on a deadline. It&amp;rsquo;s perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX an d KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.</description>
+      <description>I&amp;rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool. I&amp;rsquo;ve even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to not be something to mess with on a deadline. It&amp;rsquo;s perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX and KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.</description>
     </item>
     
   </channel>
