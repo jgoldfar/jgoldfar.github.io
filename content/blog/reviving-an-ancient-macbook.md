@@ -56,15 +56,16 @@ ssh -T git@bitbucket.org
 ## Getting Mercurial working
 Now that SSH is running, it makes sense to check if Mercurial will work.
 We're in luck!
-The [Mercurial website](mercurial-scm.org/) also allows super old secure connections, so we can just navigate there; of course, Mercurial dropped support for Python 2.6 way back [in version 4.2.3](https://www.mercurial-scm.org/wiki/SupportedPythonVersions), but [the available installer](https://www.mercurial-scm.org/downloads) "just works" (I went even older to a 3.x release.)
+The [Mercurial website](https://www.mercurial-scm.org/) also allows super old secure connections, so we can just navigate there; of course, Mercurial dropped support for Python 2.6 way back [in version 4.2.3](https://www.mercurial-scm.org/wiki/SupportedPythonVersions), but [the available installer](https://www.mercurial-scm.org/downloads) "just works" (I went even older to a 3.x release.)
 
 Having that, I've been able to clone my CMS without any issue (modulo directories that have been replaced by subrepositores, of course)
 
 ## Getting Homebrew Back in Business
 The most obvious way to bootstrap this system back into usability was to install all of the necessary tools through Homebrew.
-However, the available version of Safari is so old that practically no websites will load, since SSL/TLS won't allow it (in particular, [Homebrew's site](brew.sh) won't load.)
+However, the available version of Safari is so old that practically no websites will load, since SSL/TLS won't allow it (in particular, [Homebrew's site](https://brew.sh/) won't load.)
 By the same token, the available Curl installation is too old to allow installing Homebrew, even if we could get to the site (thanks, `curl | sh` installation! Not that I have a better, more ergonomic option.)
-We could go ahead and build Curl, but of course [its website](https://curl.haxx.se/) won't allow us to connect; can we clone [the repository](https://github.com/curl/curl)? of course not! `git` isn't available; we would apparently need a version as far back as v1.6, which [isn't available](https://mirrors.edge.kernel.org/pub/software/scm/git/); all of the versions I tried ran into linking issues, leaving us the option of a binary distribution.
+We could go ahead and build Curl, but of course [its website](https://curl.haxx.se/) won't allow us to connect; can we clone [the repository](https://github.com/curl/curl)? of course not!
+`git` isn't available; we would apparently need a version as far back as v1.6, which [isn't available](https://mirrors.edge.kernel.org/pub/software/scm/git/); all of the versions I tried ran into linking issues, leaving us the option of a binary distribution.
 I've used [SmartGit](https://www.syntevo.com/smartgit/) in the past, and they have a version still available that will install and run on this machine, and includes its own git installation, so that's what I went with.
 
 Now that `git` is available, we can clone `curl`'s repository and work on building that:
