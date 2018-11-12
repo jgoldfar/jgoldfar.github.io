@@ -16,7 +16,7 @@ Indeed, some days it refuses to.
 I'm going to give my solution for the short-term problem of being able to reliably open and run _your own_ work for about as long as you care to keep it around.
 Long story short, I've developed some techniques for running all kinds of codes on multiple CI services, as well as my own package for checking that my "mono-repo" correctly integrates changes and can continue to compile, well, everything I've worked on dating back to 2005 or so (I am lucky to be an early TeX and OSS adopter for my own work, so I'm not stuck with many opaque binary files; that would be a significant limitation...)
 
-The base repository wasn't designed to be open source from the outset, so it contains possibly sensitive work information (ah, isn't it nice to know that nothing you commit, even by accident, can be lost...)[1]
+The base repository wasn't designed to be open source from the outset, so it contains possibly sensitive work information (ah, isn't it nice to know that nothing you commit, even by accident, <a name="scrubnote-source">can be lost...)</a><sup>[1](#scrubnote)</sup>
 While I can't share that, I can show how my CI system works.
 
 ## Requirements
@@ -84,4 +84,4 @@ Once a sentinel value is found in the log file, uniquely showing that the build 
 
 ## Footnotes
 
-[1] While I know it's well possible to scrub data from commits, I don't think it's worth the effort.
+<a name="scrubnote" href="#scrubnote-source">[1]</a>: While I know it's well possible to scrub data from commits, I don't think it's worth the effort.

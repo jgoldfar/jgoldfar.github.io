@@ -165,5 +165,5 @@ One solution is to automate the graphic generation using PGF/Tikz externalizatio
 
 ## Footnotes
 
-<a name="onecompilationnote" href="onecompilationnote-source">[1]</a>: The reason is a bit interesting: `pdflatex` is a one-pass compiler, so it produces the necessary information to get correct references and saves it to an `aux` file the first time it's run, and reads this information in on the second run.
+<a name="onecompilationnote" href="#onecompilationnote-source">[1]</a>: The reason is a bit interesting: `pdflatex` is a one-pass compiler, so it produces the necessary information to get correct references and saves it to an `aux` file the first time it's run, and reads this information in on the second run.
 Other compilation-type stages output intermediate information to files with other extensions; this is why clearing out all of the intermediate files is sometimes necessary to complete the compilation process: sometimes `latex` or another program writes invalid commands to an auxiliary file, which causes another compilation to break.

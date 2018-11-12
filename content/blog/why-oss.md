@@ -35,10 +35,10 @@ What a shame it would be for all of that information to be indecipherable (perha
 Though my code may not be particularly good, and not all of it can (or will) be open-sourced, take a look [here](/oss-contributions/) for some of what I've done.
 
 ## Footnotes
-<a name="reimplementnote" href="reimplementnote-source">[1]</a>: This can result in both increased correctness and performance; one example comes to mind: in one of my research areas, I solve (many) PDEs numerically as part of an optimization process.
+<a name="reimplementnote" href="#reimplementnote-source">[1]</a>: This can result in both increased correctness and performance; one example comes to mind: in one of my research areas, I solve (many) PDEs numerically as part of an optimization process.
 With enough time, just about anyone could develop the breadth and depth of knowledge necessary to implement custom optimization routines, time-stepping algorithms, linear solvers for sparse matrices, floating point arithmetic, and so on; sure, I've written more or less sophisticated PDE solvers and linear algebra routines, but I'm not an expert: I trust experts to work on those problems, enabling me to experiment with far better codes than I could produce in a reasonable amount of time.
 
-<a name="julialangnote" href="julialangnote-source">[2]</a>: This point comes from experience, as my university once (quite controversially) decided to drop their MATLAB license, and some of the codes I was using to produce my research results were only implemented in MATLAB files.
+<a name="julialangnote" href="#julialangnote-source">[2]</a>: This point comes from experience, as my university once (quite controversially) decided to drop their MATLAB license, and some of the codes I was using to produce my research results were only implemented in MATLAB files.
 This, after having already faced multiple rewrites due to the use of MATLAB functionality that changed subtly between releases!
 I wrote shim code to get the package to work on [Octave]({{< ref "blog/building-octave-osx.md" >}}), the open source competitor, I found an almost two order-of-magnitude slowdown, meaning that the PDE constrained optimization codes that previously took perhaps an hour to complete a parameter sweep over a region of interest would become simply impractical to continue using.
 
