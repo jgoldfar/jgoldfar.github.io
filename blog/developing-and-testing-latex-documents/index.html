@@ -543,7 +543,7 @@ One solution is to automate the graphic generation using PGF/Tikz externalizatio
 
 <h2 id="footnotes">Footnotes</h2>
 
-<p><a name="onecompilationnote" href="onecompilationnote-source">[1]</a>: The reason is a bit interesting: <code>pdflatex</code> is a one-pass compiler, so it produces the necessary information to get correct references and saves it to an <code>aux</code> file the first time it&rsquo;s run, and reads this information in on the second run.
+<p><a name="onecompilationnote" href="#onecompilationnote-source">[1]</a>: The reason is a bit interesting: <code>pdflatex</code> is a one-pass compiler, so it produces the necessary information to get correct references and saves it to an <code>aux</code> file the first time it&rsquo;s run, and reads this information in on the second run.
 Other compilation-type stages output intermediate information to files with other extensions; this is why clearing out all of the intermediate files is sometimes necessary to complete the compilation process: sometimes <code>latex</code> or another program writes invalid commands to an auxiliary file, which causes another compilation to break.</p>
 
 
