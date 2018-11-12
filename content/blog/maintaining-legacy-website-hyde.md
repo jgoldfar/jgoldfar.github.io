@@ -23,7 +23,7 @@ It gave me an opportunity to play around with some sides of Python I haven't mes
 ## Patching up Hyde
 
 Hyde hasn't had a commit to its main repository for almost 3 years now; while this isn't disqualifying for a project that could be considered mature written in Python 2 (which also isn't going anywhere soon) I found that I couldn't load the script on my machine, and though PRs hadn't been accepted since 2016, all of the recent ones failed CI, so something is amiss.
-I'm a [big fan](< ref "blog/too-much-ci.md" >) of continuous integration, in particular on [Travis CI](https://travis-ci.org/) and make active use of Travis' Cron jobs to keep tabs on whether I can reliably come back to a previous project and expect it to work, at least in some capacity.
+I'm a [big fan]({{< ref "blog/too-much-ci.md" >}}) of continuous integration, in particular on [Travis CI](https://travis-ci.org/) and make active use of Travis' Cron jobs to keep tabs on whether I can reliably come back to a previous project and expect it to work, at least in some capacity.
 
 So, first things first, I cloned the Hyde repository and ran the tests according to the CI configuration.
 No go (as expected.)
@@ -72,7 +72,7 @@ Nostalgia!
 
 Is that enough?
 Of course not!
-My laptop is far from rock solid machine, as I've written, which is part of [my reason](< ref "blog/too-much-ci.md" >) for assiduously setting up continuous integration for as much as I can.
+My laptop is far from rock solid machine, as I've written, which is part of [my reason]({{< ref "blog/too-much-ci.md" >}}) for assiduously setting up continuous integration for as much as I can.
 The website code was already up on Bitbucket, and they've just started offering their very nice [Pipelines](https://confluence.atlassian.com/bitbucket/build-test-and-deploy-with-pipelines-792496469.html) service, which allows you to run a test script using any docker image you'd like.
 The top [existing `pipenv` image](https://hub.docker.com/r/kennethreitz/pipenv/) didn't seem to support Python2, but it was relatively simple to [fork](https://github.com/jgoldfar/circleci-pipenv) a Dockerfile and set up an automated build on docker hub for [my own image](https://hub.docker.com/r/jgoldfar/circleci-pipenv/).
 

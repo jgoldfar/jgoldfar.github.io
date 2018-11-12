@@ -8,7 +8,7 @@ draft: false
 Well, it finally happened: my ancient (by modern, consumerist standards) macbook finally kicked the bucket.
 The fact that a 6 year old laptop is on death's door is a sad statement about the reliability and repairability of the technology we rely on, and it's by no means unique to Apple products, since I've had similarly flaky Dell and Acer machines.
 
-I've been expecting this for a while, of course, hence my obsession with backups and [continuous integration]({{ ref "blog/too-much-ci.md" }}), which offers some kind of guarantee that moving to another machine won't break everything I'm working on.
+I've been expecting this for a while, of course, hence my obsession with backups and [continuous integration]({{< ref "blog/too-much-ci.md" >}}), which offers some kind of guarantee that moving to another machine won't break everything I'm working on.
 
 That said, there's never a good time to lose use of a tool.
 Luckily, I have another, even older tool to dig up!
