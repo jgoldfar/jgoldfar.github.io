@@ -18,7 +18,9 @@
      --accent: #2196F3;
      --border-width:  0 ;
  }
-
+ figure {
+ 	text-align: center
+ }
  div.prevNext {
      margin-left: 10px;
  }
@@ -87,6 +89,24 @@ thead div.tagListTitle {
      margin-top: 2px;
      text-align: justify;
      font-size: small;
+ }
+ 
+  
+ article.newsListing header {
+ }
+ article.newsListing header span.date {
+ 	font-size: 70%;
+ }
+ article.newsListing div.summary {
+ 	font-size: 70%;
+ 	text-align: justify;
+ }
+ article.newsListing header h3 {
+ 	margin-bottom: 4pt; 
+ 	font-size: small;
+ }
+  
+ article.newsListing div {
  }
  
   
@@ -249,17 +269,22 @@ thead div.tagListTitle {
 </script>
 <script type="text/x-mathjax-config">
  MathJax.Hub.Config(
-	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	{
+	tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']]
+		},
+	
 	}
- );
+);
 </script>
-
 
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 
     <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+
+	<meta name="author" content="Jonathan Goldfarb" />
 
     <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/blog/index.xml">
     </head>
@@ -413,6 +438,31 @@ thead div.tagListTitle {
 
     <article class="blogPostListing">
 <header>
+    <h3><a href="https://jgoldfar.github.io/blog/brief-ift/">A Brief Introduction to the Implicit Function Theorem </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Nov 19, 2018
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
+    
+    </ul>
+</header>
+
+<div>
+Motivating Example Consider a curve such as that defining a unit circle in the plane, \[x^{2} + y^{2}=1\] Note that this definition is a special case of a more general situation, a curve defined as a level set of a function \[f(x,y):= x^{2} + y^{2}= 1 =:z_{0}\] Since this is a relatively simple curve, we can draw it and observe that, while it is not a function with respect to either \(x\) or \(y\) (that is, in general we cannot solve the equation for either \(y\) or \(x\), respectively), in a small neighborhood of any point (signified by a dashed circle in Figure 1 about the given point) the curve is indeed a function, as we can see:
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/brief-ift/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
     <h3><a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/">Visualizing Attendance Data using Idiomatic Julia </a> </h3>
     <ul class="tags">
     <span class="date">
@@ -525,33 +575,6 @@ Miniconda installation Just to make things easier path-wise, I like to install p
 
 <footer>
         <a href='https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/">Installing R (MRO) on OSX Sierra </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 2, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/r-lang">R-lang</a></span>
-    
-    </ul>
-</header>
-
-<div>
-As someone who works regularly with various statistical and scientific software stacks (I always say I prefer to use the best tool for the job, rather than fitting my favorite tool into every job) I am pretty impressed by the leaps in visibility R has taken in the past few years. I first used R for a &ldquo;big data&rdquo; project years ago (for a size of N too large for Excel, not what one would consider &ldquo;big&rdquo; these days&hellip;) and in the intervening years have worked with R in my teaching and for statistical analysis projects intermittently, but without stepping back and looking at all of the progress that has been made!
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/installing-mro-on-osx-sierra/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>

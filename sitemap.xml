@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jgoldfar.github.io/blog/brief-ift/</loc>
+    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/news/</loc>
+    <lastmod>2018-11-13T11:33:47-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/</loc>
     <lastmod>2018-11-04T12:30:00-04:00</lastmod>
   </url>
@@ -79,7 +89,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/blog/</loc>
-    <lastmod>2018-11-04T12:30:00-04:00</lastmod>
+    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -174,6 +184,12 @@
   
   <url>
     <loc>https://jgoldfar.github.io/teaching/mth5401/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jgoldfar.github.io/tags/math/</loc>
+    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

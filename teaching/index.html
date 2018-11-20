@@ -18,7 +18,9 @@
      --accent: #2196F3;
      --border-width:  0 ;
  }
-
+ figure {
+ 	text-align: center
+ }
  div.prevNext {
      margin-left: 10px;
  }
@@ -87,6 +89,24 @@ thead div.tagListTitle {
      margin-top: 2px;
      text-align: justify;
      font-size: small;
+ }
+ 
+  
+ article.newsListing header {
+ }
+ article.newsListing header span.date {
+ 	font-size: 70%;
+ }
+ article.newsListing div.summary {
+ 	font-size: 70%;
+ 	text-align: justify;
+ }
+ article.newsListing header h3 {
+ 	margin-bottom: 4pt; 
+ 	font-size: small;
+ }
+  
+ article.newsListing div {
  }
  
   
@@ -249,17 +269,22 @@ thead div.tagListTitle {
 </script>
 <script type="text/x-mathjax-config">
  MathJax.Hub.Config(
-	{tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	{
+	tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']]
+		},
+	
 	}
- );
+);
 </script>
-
 
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 
     <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+
+	<meta name="author" content="Jonathan Goldfarb" />
 
     <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/teaching/index.xml">
     </head>

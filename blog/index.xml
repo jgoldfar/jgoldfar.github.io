@@ -6,10 +6,19 @@
     <description>Recent content on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Nov 2018 12:30:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Brief Introduction to the Implicit Function Theorem</title>
+      <link>https://jgoldfar.github.io/blog/brief-ift/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/brief-ift/</guid>
+      <description>Motivating Example Consider a curve such as that defining a unit circle in the plane, \[x^{2} + y^{2}=1\] Note that this definition is a special case of a more general situation, a curve defined as a level set of a function \[f(x,y):= x^{2} + y^{2}= 1 =:z_{0}\] Since this is a relatively simple curve, we can draw it and observe that, while it is not a function with respect to either \(x\) or \(y\) (that is, in general we cannot solve the equation for either \(y\) or \(x\), respectively), in a small neighborhood of any point (signified by a dashed circle in Figure 1 about the given point) the curve is indeed a function, as we can see:</description>
+    </item>
     
     <item>
       <title>Visualizing Attendance Data using Idiomatic Julia</title>

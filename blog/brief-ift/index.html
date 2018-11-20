@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <title>
+        A Brief Introduction to the Implicit Function Theorem | jgoldfar&#39;s home on the web
+    </title>
+
+    <style>
+ html body {
+     font-family: Raleway, sans-serif;
+     background-color: white;
+     table-layout: fixed;
+ }
+
+ :root {
+     --accent: #2196F3;
+     --border-width:  0 ;
+ }
+ figure {
+ 	text-align: center
+ }
+ div.prevNext {
+     margin-left: 10px;
+ }
+ div.prevNext a {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+ }
+
+  
+ thead div.blogTitle {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+ }
+ thead div.blogSubtitle {
+     float: right;
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     font-style: oblique;
+     margin-bottom: 5px;
+ }
+
+ 
+thead div.tagListTitle {
+     font-size: 100%;
+     width: 100%;
+     text-align: center;
+     margin-top: 5px;
+     margin-bottom: 2px;
+}
+
+  
+ thead td.postTitle {
+     background-color: #f6f6ef;
+ }
+ thead div.postTitle {
+     font-size: 120%;
+     width: 100%;
+     text-align: left;
+     margin-left: 20px;
+ }
+ thead span.subtitle {
+     font-size: 90%;
+     width: 100%;
+     text-align: left;
+     font-style: oblique;
+     margin-left: 20px;
+ }
+    
+ thead td.postTitle ul.tags {
+ }
+  
+ article.blogPostListing header {
+ }
+ article.blogPostListing header h3 { margin-bottom: 4pt; }
+  
+ article.blogPostListing header ul.tags { margin-bottom: 4pt; }
+ article.blogPostListing div {
+ }
+
+ article.blogPostListing footer {
+     margin-top: 2px;
+     text-align: justify;
+     font-size: small;
+ }
+ 
+  
+ article.newsListing header {
+ }
+ article.newsListing header span.date {
+ 	font-size: 70%;
+ }
+ article.newsListing div.summary {
+ 	font-size: 70%;
+ 	text-align: justify;
+ }
+ article.newsListing header h3 {
+ 	margin-bottom: 4pt; 
+ 	font-size: small;
+ }
+  
+ article.newsListing div {
+ }
+ 
+  
+ div.ossFlex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: 10px;
+ }
+ 
+  
+  
+ div.ossContainer {
+     flex: 1 0 calc(25% - 10px);
+     box-sizing: border-box;
+     
+     min-width: 46%;
+     background-color: #f2f2f2;
+     padding: 10px;
+     margin-left: 10px;
+     margin-top: 10px;
+     border-radius: 2px;
+
+     box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),  
+     0px 2px 2px 0px rgba(0,0,0,0.14),  
+     0px 1px 5px 0px rgba(0,0,0,0.12)  ;
+  }
+
+ article.ossListing header {
+     font-family:Oswald, sans-serif;
+     font-size: 110%;
+ }
+
+ article.ossListing header img {
+     width: 90%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article.ossListing header a {
+     text-decoration: none;
+ }
+ article.ossListing header h3 {
+     margin: 0 0 0 0;
+ }
+ article.ossListing header span.ossSubtitle {
+     text-decoration: none;
+     font-size: 80%;
+     margin: 0 0 0 0;
+     text-align: left;
+ }
+ article.ossListing header span.ossLanguage {
+     text-decoration: none;
+     font-style: oblique;
+     font-size: 80%;
+     margin: 0 0 0 0;
+ }
+
+  
+ thead {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 5px;
+     background-color: #EFEFE3;
+ }
+ thead div.name {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-family:Oswald, sans-serif;
+     font-size: 150%;
+ }
+ thead div.title {
+     float: right;
+     font-size: 200%;
+     width: 100%;
+     text-align: center;
+ }
+
+  
+ body a {color: #000;}
+ hr {color: #005196;}
+ table {border-style: none; border-spacing: 0; border-collapse: collapse; width: 100%}
+ table td, table th {padding: 0; }
+
+  
+ table.main {width: 800px; margin-left: auto; margin-right: auto; text-align: justify;}
+ table.main h1 { color: #005196; font-size: 50px; vertical-align: middle; margin-left: 2%;}
+ table.main td.titleimage { display: flex; padding-left: 2%; padding-right: 0%}
+
+  
+ td.spacer {height: 5px; background-color: #efefe3; color:#000; padding: 1% 0% 1% 5%; font-size: 80%;}
+ td.spacer a {color: #000;  }
+
+  
+ td.sidebar { background-color: #EFEFE3; width: 200px; vertical-align: top;}
+ td.sidebar strong {font-family:Impact,monospace; font-size:1.5em;}
+
+  
+ table.main td.mainbody {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  vertical-align: top;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+  
+ footer {
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: justify;
+     font-size: x-small;
+ }
+
+  
+ .navbutton { padding:5px 4px 5px 4px; text-align: center;}
+ .navbutton:hover {background-color: #ffffff; color: #000000;}
+ .navbuttonInvisible { padding:5px 4px 5px 4px; text-align: center; opacity: 0;}
+
+ .displaynone {display: none;}
+
+  
+ table.info { width: 200px; }
+ table.info td { padding: 5px 5px 5px 5px; font-size: 12px;}
+ table.info h4 { margin: 0px; }
+
+  
+ table.info td.inforight { font-size: 12px; padding: 5px 5px 5px 20px; }
+ 
+  
+ div.pagination { padding-top: 10px; }
+ 
+  
+ ul.tags { font-size: x-small; padding-left: 20pt; margin-top: 0px; margin-bottom: 0px;}
+ 
+</style>
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+
+    <meta name="generator" content="Hugo 0.40.3" />
+
+    
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_SVG">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config(
+	{
+	tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']]
+		},
+	
+	TeX: {
+		Macros: {
+		bk: ["{\left\{ #1\right\}}",1],
+R: "{\\mathbb{R}}",
+dD: ["{\\frac{d #1}{d #2}}",2],
+D: ["{\\frac{\\partial #1}{\\partial #2}}",2]
+		}
+    }
+	
+	}
+);
+</script>
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+
+	<meta name="author" content="Jonathan Goldfarb" />
+
+    </head>
+
+
+    <body>
+
+        <main aria-role="main">
+
+            <div class="main-content">
+                <table class="main">
+                    <col />
+                    <col />
+                    <tbody>
+                        <thead>
+                        
+<tr><td class="blogTitle" colspan="2">
+    <div class="blogTitle">
+        n+1 Problems, &varepsilon; Progress
+    </div>
+    <div class="blogSubtitle">
+        a mathematical blog
+    </div>
+</td>
+</tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <div class="name">
+                                        <a href="https://jgoldfar.github.io">Jonathan Goldfarb</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        A Brief Introduction to the Implicit Function Theorem
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Nov 19, 2018
+</span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
+    
+</ul>
+</td>
+
+
+                            </tr>
+                            
+                            
+                        </thead>
+                        <tr>
+                            
+<td class="sidebar">
+    <table width="100%">
+        <tbody>
+            
+            <tr><td class="navbutton">
+                <a href="/blog">
+                    Blog Home
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/blog/about/">
+                    About
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/cv/cv.pdf">
+                    CV
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/oss-contributions/">
+                    Software
+                </a>
+            </td></tr>
+            
+            <tr><td class="navbutton">
+                <a href="/">
+                    Home
+                </a>
+            </td></tr>
+            
+        </tbody>
+    </table>
+    <hr width="90%" size=3 />
+    
+	<table align="center" class="info">
+	<tr>
+		<td class="inforight">
+			Assistant Professor <br />and Director of MAC
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight">
+			Mathematical Sciences Dept.<br /> Florida Institute of Technology
+		</td>
+	</tr>
+	<tr>
+		<td class="inforight" colspan="2">E-mail: <a href="mailto:jgoldfar@my.fit.edu">jgoldfar@my.fit.edu</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://github.com/jgoldfar"><i class="fab fa-github"></i> Github</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://bitbucket.org/jgoldfar/"><i class="fab fa-bitbucket"></i> Bitbucket</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://gitlab.com/jgoldfar"><i class="fab fa-gitlab"></i> Gitlab</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://www.researchgate.net/profile/Jonathan_Goldfarb"><i class="fab fa-researchgate"></i> ResearchGate</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://hub.docker.com/u/jgoldfar/"><i class="fab fa-docker"></i> Docker Hub</a></td>
+	</tr>
+	<tr>
+		<td class="inforight"><a href="https://travis-ci.org/jgoldfar/"> Travis-CI</a></td>
+	</tr>
+	
+	
+	
+</table>
+
+	
+	<hr width="90%" size=3 />
+	
+</td>
+
+
+                            <td class="mainbody">
+                                
+                                
+<h3 id="motivating-example">Motivating Example</h3>
+<p>Consider a curve such as that defining a unit circle in the plane, <span class="math display">\[x^{2} + y^{2}=1\]</span> Note that this definition is a special case of a more general situation, a curve defined as a level set of a function <span class="math display">\[f(x,y):=
+x^{2} + y^{2}= 1
+=:z_{0}\]</span>
+Since this is a relatively simple curve, we can draw it and observe that, while it is not a function with respect to either <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> (that is, in general we cannot solve the equation for either <span class="math inline">\(y\)</span> or <span class="math inline">\(x\)</span>, respectively), in a small neighborhood of any point (signified by a dashed circle in Figure <a href="#fig:locally-explicit-circle" data-reference-type="ref" data-reference="fig:locally-explicit-circle">1</a> about the given point) the curve is indeed a function, as we can see:</p>
+<figure><a name="fig:locally-explicit-circle">
+<img src="53e7acd884f931e65e6c801874ced1a46eff82f2.png" />
+<figcaption>
+Figure 1: Implicit functions are locally explicit
+</figcaption>
+</figure>
+<p>When is it <em>not</em> possible to solve this equation locally for, say, <span class="math inline">\(y\)</span>? Evidently, the issue arises in any neighborhood of <span class="math inline">\((1,0)\)</span> or <span class="math inline">\((-1,0)\)</span>, where the slope of the tangent line with respect to the <em>other</em> variable is undefined. This is a bit hard to quantify and/or generalize to more than 2 dimensions, but it is equivalent to check that <span class="math inline">\(\frac{\partial{} f}{\partial{} y} \neq 0\)</span>.</p>
+<p>Now, most of the time, we have no idea how an implicit function looks: how does the graph of <span class="math display">\[\tan(y) - y = x + e^{x}\]</span> look? Where can it be solved for <span class="math inline">\(y\)</span> in some sense? Evidently, we won’t be able to write down a representation <span class="math inline">\(y=f(x)\)</span> in an explicit closed form, but the notion of a closed form solution itself depends on the set of functions one considers to be elementary, so this isn’t a particularly useful criterion anyways. The existence of such a representation, even if we can’t find it in closed form, is still useful: indeed, this is exactly the trick used in the implicit differentiation technique commonly used in freshman-level Calculus courses.</p>
+<p>Note that the previous equation can be written in the implicit form <span class="math display">\[F(x,y) := \tan(y) - y - x - e^x \equiv 0\]</span> and if an explicit representation <span class="math inline">\(y=f(x)\)</span> existed, it must satisfy <span class="math inline">\(F(x,f(x))=0\)</span>. Implicit function theorem offers a way to prove that such a representation exists under certain conditions.</p>
+<h3 id="statement-of-implicit-function-theorem">Statement of Implicit Function Theorem</h3>
+<p>Implicit function theorem can be found in many references; we will use that from <span class="citation" data-cites="evans98">(Evans 1998, vol. 19, sec. C.5.7)</span>. Fix any <span class="math inline">\(n,m \in \mathbb{Z}_{+}\)</span>. We will consider points in <span class="math inline">\(\mathbb{R}^{n+m}\)</span> as pairs of points in the Cartesian product <span class="math display">\[\mathbb{R}^{n}\times \mathbb{R}^{m} = \left\{(x,y):~x=(x_{1},\ldots,x_{n}) \in \mathbb{R}^{n},~y=(y_{1},\ldots,y_{m})\right\}\]</span></p>
+<p>Let <span class="math inline">\(U\subset \R^{n+m}\)</span> be open and <span class="math inline">\(f:U \to \R^{m}\)</span> be a <span class="math inline">\(C^{1}\)</span> map. That is, <span class="math inline">\(f \in C^{1}(U; \R^{m})\)</span>. Denote the components of <span class="math inline">\(f(x,y) \in \R^{m}\)</span> as <span class="math inline">\(f^{1},\ldots,f^{m}\)</span>. Fix any <span class="math inline">\(\big(x_{0}, y_{0}\big) \in U\)</span> and set <span class="math inline">\(z_{0} = f(x_{0}, y_{0})\)</span>. Suppose that <span class="math display">\[\text{det}(\nabla_{y} f)
+= \begin{vmatrix}
+f_{y_{1}}^{1} &amp; \cdots &amp; f_{y_{m}}^{1}
+\\
+&amp; \ddots &amp;
+\\
+f_{y_{1}}^{m} &amp; \cdots &amp; f_{y_{m}}^{m}
+\end{vmatrix}
+\neq 0\]</span> Then there is an open set <span class="math inline">\(V\)</span> with <span class="math inline">\(U \supset V \ni (x_{0}, y_{0})\)</span>, an open set <span class="math inline">\(W\)</span> with <span class="math inline">\(\R^{n} \supset W \ni x_{0}\)</span> and a function <span class="math inline">\(g \in C^{1}(W;\R^{m})\)</span> such that <span class="math display">\[g(x_{0}) = y_{0}~
+\text{and}~
+f(x, g(x)) = z_{0}~\text{for}~x \in W\]</span> <span class="math inline">\(g\)</span> is unique, in that if <span class="math inline">\((x,y) \in V\)</span> and <span class="math inline">\(f(x,y) = z_{0}\)</span>, then <span class="math inline">\(y=g(x)\)</span>. Moreover, increasing the regularity of <span class="math inline">\(f\)</span> increases the regularity of <span class="math inline">\(g\)</span>.</p>
+<h3 id="application-and-extension">Application and Extension</h3>
+<p>Consider the implicit form for the equation defining a unit circle, <span class="math display">\[F(x,y) := x^2 + y^2 - 1 \equiv 0\]</span></p>
+<p>We calculate <span class="math display">\[\nabla_y F = F_y = 2y\]</span> and hence <span class="math inline">\(\text{det} (\nabla_y F) = 0\)</span> for <span class="math inline">\(y \neq 0\)</span>; that is, the implicit function has an explicit form for <span class="math inline">\(y \neq 0\)</span>. Revisiting Figure <a href="#fig:locally-explicit-circle" data-reference-type="ref" data-reference="fig:locally-explicit-circle">1</a>, we see that this makes perfect sense: anywhere <span class="math inline">\(y=0\)</span>, the graph is locally vertical. The set <span class="math inline">\(V\)</span> of the implicit function theorem can be identified with, for example, the interior of the dashed circle in Figure <a href="#fig:locally-explicit-circle" data-reference-type="ref" data-reference="fig:locally-explicit-circle">1</a>, and its projection to the <span class="math inline">\(x\)</span>-axis with the set <span class="math inline">\(W\)</span> of the implicit function theorem.</p>
+<p>In freshman-level Calculus courses, we typically use implicit function theorem to give a justification for implicit differentiation; recall that we can use chain rule as a kind of change of variables rule: <span class="math display">\[\dD{f}{x} = \dD{f}{y}\dD{y}{x}\]</span> which we use to differentiate a (perhaps complicated) implicit function of the form <span class="math inline">\(F(x,y)=0\)</span>. From one side, we could use multivariable Calculus to complete this task, since it follows that <span class="math display">\[0 = \D{}{x}F(x,y) = F_x + F_y y&#39;\]</span> so <span class="math display">\[y&#39; = \frac{-F_x}{F_y}\]</span> Note that this is exactly why we don’t encourage students to think of differentials as quotients, since the above formula would read <span class="math display">\[\dD{y}{x} = - \D{F}{x} \Big/ \D{F}{y}\]</span> That is, cancellation does <em>not</em> work with all differentials, so learning it as a rule would be a mistake.</p>
+<p>If multivariable Calculus is not available, we actually have to use implicit function theorem “behind the scenes”, even though the prerequisites for the result include multivariable calculus! Given an implicit function <span class="math inline">\(F(x,y) = 0\)</span>, we know that we can “solve” this equation for <span class="math inline">\(y\)</span> in a neighborhood <span class="math inline">\(V\)</span> of a solution <span class="math inline">\((x_0,y_0)\)</span> to get a differentiable representation <span class="math inline">\(y=g(x)\)</span> such that <span class="math inline">\(F(x,g(x))=0\)</span> for <span class="math inline">\((x,y) \in V\)</span>. Therefore <span class="math display">\[y&#39; = g&#39;(x)\]</span> exists; by uniqueness of the derivative, the two derivative functions must be identical. The important thing here is that the representation is differentiable, which justifies seeking a derivative in the first place!</p>
+<h3 id="sketch-of-the-proof">Sketch of the Proof</h3>
+<p>Implicit function theorem actually follows from another, more “powerful” result, the inverse function theorem.</p>
+<p>Let <span class="math inline">\(A \subset \R^n\)</span> be open and <span class="math inline">\(f:A \to \R^n\)</span> be continuously differentiable with Jacobian <span class="math inline">\(Df\)</span>. Let <span class="math inline">\(x_0 \in A\)</span> satisfy <span class="math inline">\(Jf(x_0) := \text{det}(Df(x_0)) \neq 0\)</span>. Then there exists a neighborhood <span class="math inline">\(U \ni x_0\)</span> with <span class="math inline">\(U \subset A\)</span> and an open neighborhood <span class="math inline">\(W\)</span> of <span class="math inline">\(f(x_0)\)</span> such that <span class="math inline">\(f(U)=W\)</span> and the restriction of <span class="math inline">\(f\)</span> to <span class="math inline">\(U\)</span> has a continuously differentiable inverse <span class="math inline">\(f^{-1}:W \to U\)</span>. Moreover, for any <span class="math inline">\(y \in W\)</span> and corresponding <span class="math inline">\(x=f^{-1}(y)\)</span>, the Jacobian of the inverse <span class="math inline">\(Df^{-1}(y)\)</span> is given by <span class="math display">\[Df^{-1}(y) = [Df(x)]^{-1}\]</span></p>
+<p>Inverse function theorem is actually true in quite general spaces The idea of the proof of the implicit function theorem is to consider a function <span class="math inline">\(F(x,y) = (x,f(x,y))\)</span>; if we want to find <span class="math inline">\(y=g(x)\)</span> such that <span class="math inline">\(f(x,g(x))=0\)</span>, it is enough to show that <span class="math inline">\(F^{-1}\)</span> exists near some solution of <span class="math inline">\(f(x,y)=0\)</span>.</p>
+<h3 id="future-work">Future Work</h3>
+<p>Implicit function theorem can be generalized quite a bit. This will be the topic of a subsequent post if it will be useful. The same could be said of the inverse function theorem.</p>
+<p>Plotting packages for implicit equations are based on the implicit function theorem along with other facts and heuristics; it would be interesting to see how far an implicit plotting package could get with <em>just</em> implicit function theorem, in some sense.</p>
+
+<h3 id="references">References</h3>
+<div id="refs" class="references">
+<div id="ref-evans98">
+<p>Evans, L. C. 1998. <em>Partial Differential Equations</em>. Vol. 19. Graduate Studies in Mathematics. American Mathematical Society.</p>
+</div>
+<div id="ref-marsden93">
+<p>Marsden, Jerrold E., and Micheal J. Hoffman. 1993. <em>Elementary Classical Analysis</em>. Second. W. H. Freeman; Company.</p>
+</div>
+<div id="ref-yosida96">
+<p>Yosida, Kosaku. 1996. <em>Functional Analysis</em>. Classics in Mathematics. Springer.</p>
+</div>
+</div>
+</body>
+</html>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/">&lArr; Visualizing Attendance Data using Idiomatic Julia</a>
+                                    
+                                    
+                        </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <footer>
+
+  <p class="copyright text-muted">Copyright 2018, All rights reserved.</p>
+
+</footer>
+
+            </div>
+        </main>
+
+
+    </body>
+</html>
