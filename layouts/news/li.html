@@ -1,0 +1,18 @@
+<article class="newsListing">
+<header>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a> {{ with .Params.subtitle }}: <span class="newsSubtitle">{{ . }}</span> {{ end }}</h3>
+    <span class="date">
+    Published: {{ .Date | dateFormat "Jan 2, 2006" }}
+    </span>
+</header>
+
+<div class="summary">
+{{ .Summary }}
+</div>
+
+{{ if .Truncated }}
+<footer>
+        <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+</footer>
+{{ end }}
+</article>
