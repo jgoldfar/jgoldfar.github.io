@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        jgoldfar&#39;s home on the web
+        Hosting Binaries on Bintray | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -286,7 +286,6 @@ thead div.tagListTitle {
 
 	<meta name="author" content="Jonathan Goldfarb" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/blog/index.xml">
     </head>
 
 
@@ -326,10 +325,22 @@ thead div.tagListTitle {
                                     
                                 </td>
                             
-  <td class="postTitle">
-  
-  
-  </td>
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Hosting Binaries on Bintray
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Nov 30, 2018
+</span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
+    
+</ul>
+</td>
 
 
                             </tr>
@@ -422,173 +433,77 @@ thead div.tagListTitle {
                             <td class="mainbody">
                                 
                                 
-<!--
-     Testing blog functionality
-
-     \[
-     u_t = {(a u_x)}_x + b u_x
-     \]
-
-     Which, in $n$-dimensions, may be written \(u_t = \text{div} {(A \nabla u)}\)
--->
 
 
+<p>As a part of my never-ending quest to make my research materials highly available (in the <a href="https://en.wikipedia.org/wiki/High_availability">system uptime</a>, or reproducibility sense of the phrase), I do my best to make sure that the data and other portions of my work that can be made open are hosted on publicly available servers, preferably behind a <a href="https://en.wikipedia.org/wiki/Content_delivery_network">CDN</a>.
+<a href="https://jgoldfar.github.io/blog/too-much-ci/">Backups and version control</a> (particularly, distributed version control) avoids a good portion of the single-point-of-failure issue, and with a bit more effort (luckily, only a one-time cost, too!) one can avoid vendor lockin for your content distribution by relying on <a href="https://jgoldfar.github.io/blog/why-oss/">open source tools</a> as much as possible.
+While the jury is still out on my level of sanity, particularly when it comes to these sorts of issues, I can confidently say that the number of times a colleague, student, or (more often) a portion of a data-processing pipeline I&rsquo;ve set up has come up short when it comes to accessing my data has dropped significantly since I&rsquo;ve invested in learning how to set things up this way.</p>
+
+<p><a href="https://bintray.com/">Bintray</a> is a popular host for versioned software binaries; I&rsquo;ve used it in the past to host test-only data dependencies, for instance, and you would probably find that it provides the actual data behind the download links for much of your favorite software.
+However, the ease with which it can be used in an automated fashion makes it ideal for archiving versions of documents and other research artifacts, particularly when the generation of those artifacts is closed source or otherwise cannot be shared.
+I&rsquo;ve recently started using Bintray to host public data related to my CV and the slides for presentations I&rsquo;ve given; I think it makes sense to archive things like datasets that are expensive to recompute, or data visualizations in the same way.</p>
+
+<p>In this post, I&rsquo;ll share how to set up a repository on Bintray for this purpose and integrate it into your build process.
+You&rsquo;ll notice that (as one might expect from its &ldquo;intended&rdquo; purpose) some of the terminology needs some translation for our purposes, and we won&rsquo;t be using all of the features of the service.</p>
+
+<h2 id="steps-to-upload-and-publish-files">Steps to Upload and Publish Files</h2>
+
+<p>Bintray organizes files under your user account into &ldquo;repositories&rdquo;, which are just collections of (hopefully related) packages, which are themselves collections of files.
+After making your account, creating a new repository is as simple as clicking &ldquo;Add New Repository&rdquo;.
+I&rsquo;m only interested in public file hosting (private hosting requires a paid account anyways) so go ahead and choose that option, as well as a name.
+Under the &ldquo;Type&rdquo; drop-down box, select &ldquo;Generic&rdquo;.</p>
+
+<p>I&rsquo;ll demonstrate how to upload files from the command line using my &ldquo;all-talk-slides&rdquo; repository as an example.
+You&rsquo;ll need to create a package within your repository using the &ldquo;Add New&rdquo; button and provide a name, license, and link to your version control repository for your files.
+<a href="https://choosealicense.com/">Choosing a license</a> can be tricky; generally, anything you post online is assumed to have your copyright (please, keep in mind I&rsquo;m not a lawyer!) but Bintray requires that you explicitly specify in what way you are making your files available.</p>
+
+<p>Once you have a package, you&rsquo;ll need to tag a version to upload to.
+I&rsquo;ll use my <code>slide-binaries</code> package as an example.
+If you&rsquo;re uploading a &ldquo;finished product&rdquo; it probably makes sense to create a version 1.0, but one can imagine work-in-progress scenarios where another system of versioning your files makes sense.</p>
+
+<p>Having all of this, check your Bintray <code>API_KEY</code>; this is accessible by clicking your name in the Bintray UI, selecting &ldquo;Edit Profile&rdquo;, and clicking to &ldquo;API Key&rdquo;.
+Either save this value in a variable locally, or make it available in your (e.g. CI) environment.</p>
+
+<p>The UI also provides directions to upload your files via <code>cURL</code>; when I automate this step, I typically use the direct upload method (if there&rsquo;s some advantage to another method, let me know in the comments!)
+You&rsquo;ll have to make the obvious changes to specify your username, repository, package, and version; it&rsquo;s easiest to store these in environment variables or your <code>Makefile</code> as well:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">export BT_REPO=all-talk-slides
+export BT_PACKAGE=slide-binaries
+export BT_VERSION=1.0
+export BT_USERNAME=jgoldfar
+export BT_API_KEY=...
+curl -T &lt;path/to/FILE.EXT&gt; -u${BT_USERNAME}:${BT_API_KEY} https://api.bintray.com/content/${BT_USERNAME}/${BT_REPO}/${BT_PACKAGE}/${BT_VERSION}/&lt;FILE_TARGET_PATH&gt;</pre></div>
+<p>You can upload as many files as you would like this way, using the above command repeatedly.
+Once you&rsquo;re ready to make those files available, the whole package and version needs to be published, which you can do by running</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">curl -X POST -u${BT_USERNAME}:${BT_API_KEY} https://api.bintray.com/content/${BT_USERNAME}/${BT_REPO}/${BT_PACKAGE}/${BT_VERSION}/publish</pre></div>
+<p>Using <code>cURL</code> and Bintray&rsquo;s REST API this way makes the whole process nearly pain-free; all of the packages and repositories you see on <a href="https://bintray.com/jgoldfar">my Bintray page</a> are generated automatically as part of build processes on private services using these steps.</p>
+
+<h2 id="future-work">Future Work</h2>
+
+<ul>
+<li>Bintray offers a lot of features, including analytics, that can be run on your files, packages, repos, etc. that would be interesting to explore at some point.</li>
+</ul>
 
 
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/hosting-binaries-on-bintray/">Hosting Binaries on Bintray </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 30, 2018
-    </span>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
     
-    </ul>
-</header>
-
-<div>
-As a part of my never-ending quest to make my research materials highly available (in the system uptime, or reproducibility sense of the phrase), I do my best to make sure that the data and other portions of my work that can be made open are hosted on publicly available servers, preferably behind a CDN. Backups and version control (particularly, distributed version control) avoids a good portion of the single-point-of-failure issue, and with a bit more effort (luckily, only a one-time cost, too!
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/hosting-binaries-on-bintray/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/brief-ift/">A Brief Introduction to the Implicit Function Theorem </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 19, 2018
-    </span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
-    
-    </ul>
-</header>
-
-<div>
-Motivating Example Consider a curve such as that defining a unit circle in the plane, \[x^{2} + y^{2}=1\] Note that this definition is a special case of a more general situation, a curve defined as a level set of a function \[f(x,y):= x^{2} + y^{2}= 1 =:z_{0}\] Since this is a relatively simple curve, we can draw it and observe that, while it is not a function with respect to either \(x\) or \(y\) (that is, in general we cannot solve the equation for either \(y\) or \(x\), respectively), in a small neighborhood of any point (signified by a dashed circle in Figure 1 about the given point) the curve is indeed a function, as we can see:
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/brief-ift/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/">Visualizing Attendance Data using Idiomatic Julia </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 4, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
-    
-    </ul>
-</header>
-
-<div>
-In a previous post I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports. This script dates back to when local environments/dependencies didn&rsquo;t have quite as nice a story as Julia v1.0 does, so I made sure to only use standard library packages. But to make a fair comparison with the other codes in R and Python (in particular, to see how semantically clear one could make the code) one should use high-quality data analysis packages provided by the Julia ecosystem!
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data/">Visualizing Attendance Data </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 3, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/r-lang">R-lang</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
-    
-    </ul>
-</header>
-
-<div>
-In this post I&rsquo;m going to share some simple data munging and visualization techniques I use to analyze attendance data recorded from a card swipe machine in our tutoring lab, which I use to make sure we use our office hours (a human time resource!) as effectively as possible, and report that internally. I&rsquo;ve had this running on a regular basis since I was first asked to report this data some time back; in the past, Excel was used to prepare these charts, but it had to be done basically entirely &ldquo;by hand&rdquo; each time.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/vizualizing-attendance-data/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/">Developing and Testing LaTeX Documents </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 3, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/ci">CI</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/latex">LaTeX</a></span>
-    
-    </ul>
-</header>
-
-<div>
-I&rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool. I&rsquo;ve even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to not be something to mess with on a deadline. It&rsquo;s perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX and KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-
-
-<div class="pagination">
-  <nav role="pagination" class="post-list-pagination">
-      
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 4</span>
-    
-      <a href="/blog/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
-        Older&nbsp;<i class="fa fa-angle-double-right"></i>
-      </a>
-    
-  </nav>
-</div>
-
-
-
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
                                 
                             </td>
@@ -598,6 +513,8 @@ I&rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for m
                             <td></td>
                             <td>
                                 <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/brief-ift/">&lArr; A Brief Introduction to the Implicit Function Theorem</a>
                                     
                                     
                         </div>

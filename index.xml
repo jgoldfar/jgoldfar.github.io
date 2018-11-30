@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Hosting Binaries on Bintray</title>
+      <link>https://jgoldfar.github.io/blog/hosting-binaries-on-bintray/</link>
+      <pubDate>Fri, 30 Nov 2018 08:57:59 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/hosting-binaries-on-bintray/</guid>
+      <description>As a part of my never-ending quest to make my research materials highly available (in the system uptime, or reproducibility sense of the phrase), I do my best to make sure that the data and other portions of my work that can be made open are hosted on publicly available servers, preferably behind a CDN. Backups and version control (particularly, distributed version control) avoids a good portion of the single-point-of-failure issue, and with a bit more effort (luckily, only a one-time cost, too!</description>
+    </item>
+    
+    <item>
       <title>A Brief Introduction to the Implicit Function Theorem</title>
       <link>https://jgoldfar.github.io/blog/brief-ift/</link>
       <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
