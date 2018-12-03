@@ -36,6 +36,8 @@ Take a look and leave a comment or question!
 
 ## Future Work
 
+* Look to other installations that I can automate!v
+
 * Add TeX package installation to playbook.
 
 * Leverage Ansible's git repository management to replace my semi-automated version of the same.
