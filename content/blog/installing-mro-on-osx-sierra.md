@@ -10,6 +10,15 @@ I first used R for a "big data" project years ago (for a size of N too large for
 So when I started a new data analysis project (on a newly formatted machine, no less), I figured it might be time to update my R setup.
 
 [Microsoft R Open (MRO)](https://mran.microsoft.com/open) is [apparently](https://www.r-bloggers.com/a-data-scientists-perspective-on-microsoft-r/) the way to go, since it handles the integration of R with multithreaded libraries on multiple platforms; in the past, I've used Homebrew's installation, but figured I would give MRO a go.
+
+*Update* The installation of MRO and the tidyverse. are now automated for MacOS using Ansible; see [this post]({{< ref "blog/automating-personal-devops.md" >}}).
+If you're following those directions, after installing Ansible and the corresponding playbook, simply run
+
+```
+ansible-playbook -i inventory --ask-become-pass --tags "homebrew,mro" --extra-vars='{configure_tidyverse:yes}' main.yml
+```
+
+
 The installation process for MRO itself isn't too tricky, but since many R packages are written using C, C++, or Fortran code behind the scenes, a working compiler is required.
 So here we turn to [Homebrew](https://brew.sh/): the GCC package provides compilers for each of those languages:
 

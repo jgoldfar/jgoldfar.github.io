@@ -5,8 +5,16 @@ tags: ["OSS", "DataViz", "Julia-lang", "R-lang"]
 draft: false
 ---
 
-In this post, I'll share the commands I followed to install [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) using [Miniconda](https://conda.io/docs/index.html) on an OSX platform, as part of the preparation I'm doing for our open source data analysis course; it's important to me that .
-The following is all executed from the command line, assuming that Julia is available as `julia` and R is available as `R`
+In this post, I'll share the commands I followed to install [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) using [Miniconda](https://conda.io/docs/index.html) on an OSX platform, as part of the preparation I'm doing for our open source data analysis course; it's important to me that everyone is able to reproduce the examples on their own machine and experiment for themselves.
+
+*Update* The installation of R, Julia, etc. are now automated for MacOS using Ansible; see [this post]({{< ref "blog/automating-personal-devops.md" >}}).
+If you're following those directions, after installing Ansible and the corresponding playbook, simply run
+
+```
+ansible-playbook -i inventory --ask-become-pass --tags "mro,jupyter_ijulia" main.yml
+```
+
+The following is all executed from the command line, assuming that Julia is available as `julia` and R is available as `R`.
 
 ## Miniconda installation
 
