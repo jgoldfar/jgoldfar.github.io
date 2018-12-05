@@ -438,6 +438,33 @@ thead div.tagListTitle {
 
     <article class="blogPostListing">
 <header>
+    <h3><a href="https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/">Developing and Testing LaTeX Documents </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Nov 3, 2018
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/ci">CI</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/latex">LaTeX</a></span>
+    
+    </ul>
+</header>
+
+<div>
+I&rsquo;ve been using TeX (in particular, LaTeX) for years, at this point; for mathematicians and many in the technical fields, it would be nearly impossible to work efficiently without some ability with the tool. I&rsquo;ve even offered my typesetting services semi-professionally, since programming in LaTeX is just tricky enough to not be something to mess with on a deadline. It&rsquo;s perhaps surprising to find the use of LaTeX is spreading, not diminishing: MathJaX and KaTeX make the use of the syntax possible on the web, which means we can all avoid writing the objectively worse MathML, or exporting everything to image files, which would be unfortunate.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/developing-and-testing-latex-documents/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
     <h3><a href="https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/">Installing Jupyter with IJulia and IRkernel </a> </h3>
     <ul class="tags">
     <span class="date">
@@ -456,8 +483,8 @@ thead div.tagListTitle {
 </header>
 
 <div>
-In this post, I&rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&rsquo;m doing for our open source data analysis course; it&rsquo;s important to me that . The following is all executed from the command line, assuming that Julia is available as julia and R is available as R
-Miniconda installation Just to make things easier path-wise, I like to install packages &ldquo;close&rdquo; to my Homebrew installation:
+In this post, I&rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&rsquo;m doing for our open source data analysis course; it&rsquo;s important to me that everyone is able to reproduce the examples on their own machine and experiment for themselves.
+Update The installation of R, Julia, etc. are now automated for MacOS using Ansible; see this post. If you&rsquo;re following those directions, after installing Ansible and the corresponding playbook, simply run
 </div>
 
 
@@ -542,28 +569,6 @@ Our university transitioned earlier this semester to a new CMS, and as part of t
 <footer>
         <a href='https://jgoldfar.github.io/blog/google-calendar-embedding-m-f/'><nobr>Read more →</nobr></a>
 </footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/quick-julia-sha256/">Quick SHA256 Generation using Julia </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Oct 11, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
-    
-    </ul>
-</header>
-
-<div>
-When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
-using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end
-</div>
-
 
 </article>
 

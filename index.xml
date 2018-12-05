@@ -12,12 +12,42 @@
     
     
     <item>
+      <title>Personal DevOps: using Ansible</title>
+      <link>https://jgoldfar.github.io/blog/automating-personal-devops/</link>
+      <pubDate>Mon, 03 Dec 2018 15:28:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/automating-personal-devops/</guid>
+      <description>I&amp;rsquo;ve now been in the position of setting up my build environment on multiple Mac computers in the past couple weeks. It can be a real impediment to my productivity when things (software, resources) aren&amp;rsquo;t in the places I expect: search for the missing package, download, build, and install it (dealing with any issues as they come up), etc.
+Luckily, as a copious note-taker I already know where to find most packages I end up needing, and the steps I&amp;rsquo;ll need to complete to get things built.</description>
+    </item>
+    
+    <item>
       <title>Hosting Binaries on Bintray</title>
       <link>https://jgoldfar.github.io/blog/hosting-binaries-on-bintray/</link>
       <pubDate>Fri, 30 Nov 2018 08:57:59 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/hosting-binaries-on-bintray/</guid>
       <description>As a part of my never-ending quest to make my research materials highly available (in the system uptime, or reproducibility sense of the phrase), I do my best to make sure that the data and other portions of my work that can be made open are hosted on publicly available servers, preferably behind a CDN. Backups and version control (particularly, distributed version control) avoids a good portion of the single-point-of-failure issue, and with a bit more effort (luckily, only a one-time cost, too!</description>
+    </item>
+    
+    <item>
+      <title>Undergraduate Research Candidates Welcome!</title>
+      <link>https://jgoldfar.github.io/news/undergrad-research/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/news/undergrad-research/</guid>
+      <description>Our research group is focussed on developing new theoretical and computational tools for the slution of applied problems related to the phase transition processes, image processing, and optimization.
+As a part of our group, you will learn powerful mathematical techniques to attack new problems, as well as state-of-the-art tools for scientific computing and data analysis.
+Students from any major are invited to come discuss research directions and topics; my research interests and work cover wide range of topics, so if you have a project or problem in mind, contact me or stop by any time.</description>
+    </item>
+    
+    <item>
+      <title>Work Study for Software/App Development Needed!</title>
+      <link>https://jgoldfar.github.io/news/work-study-positions/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/news/work-study-positions/</guid>
+      <description>A work study position is currently available in the MAC for projects related to the development of novel visualization, communication, and analysis tools to serve our students effectively.  We will complete all of the necessary training on-the-job; you will learn how to formulate and solve problems using modern tools in collaboration with our staff here in MAC. If you&#39;d like to work on interesting applications of data visualization and analysis, while positively impacting your fellow students, stop by the MAC, or contact me directly.</description>
     </item>
     
     <item>
@@ -62,8 +92,8 @@
       <pubDate>Fri, 02 Nov 2018 14:55:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/</guid>
-      <description>In this post, I&amp;rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&amp;rsquo;m doing for our open source data analysis course; it&amp;rsquo;s important to me that . The following is all executed from the command line, assuming that Julia is available as julia and R is available as R
-Miniconda installation Just to make things easier path-wise, I like to install packages &amp;ldquo;close&amp;rdquo; to my Homebrew installation:</description>
+      <description>In this post, I&amp;rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&amp;rsquo;m doing for our open source data analysis course; it&amp;rsquo;s important to me that everyone is able to reproduce the examples on their own machine and experiment for themselves.
+Update The installation of R, Julia, etc. are now automated for MacOS using Ansible; see this post. If you&amp;rsquo;re following those directions, after installing Ansible and the corresponding playbook, simply run</description>
     </item>
     
     <item>

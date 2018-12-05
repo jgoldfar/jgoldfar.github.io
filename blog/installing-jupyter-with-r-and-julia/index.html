@@ -441,8 +441,12 @@ thead div.tagListTitle {
                                 
 
 
-<p>In this post, I&rsquo;ll share the commands I followed to install <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> using <a href="https://conda.io/docs/index.html">Miniconda</a> on an OSX platform, as part of the preparation I&rsquo;m doing for our open source data analysis course; it&rsquo;s important to me that .
-The following is all executed from the command line, assuming that Julia is available as <code>julia</code> and R is available as <code>R</code></p>
+<p>In this post, I&rsquo;ll share the commands I followed to install <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> using <a href="https://conda.io/docs/index.html">Miniconda</a> on an OSX platform, as part of the preparation I&rsquo;m doing for our open source data analysis course; it&rsquo;s important to me that everyone is able to reproduce the examples on their own machine and experiment for themselves.</p>
+
+<p><em>Update</em> The installation of R, Julia, etc. are now automated for MacOS using Ansible; see <a href="https://jgoldfar.github.io/blog/automating-personal-devops/">this post</a>.
+If you&rsquo;re following those directions, after installing Ansible and the corresponding playbook, simply run</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ansible-playbook -i inventory --ask-become-pass --tags &#34;mro,jupyter_ijulia&#34; main.yml</pre></div>
+<p>The following is all executed from the command line, assuming that Julia is available as <code>julia</code> and R is available as <code>R</code>.</p>
 
 <h2 id="miniconda-installation">Miniconda installation</h2>
 

@@ -26,8 +26,8 @@
       <pubDate>Fri, 02 Nov 2018 14:55:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/</guid>
-      <description>In this post, I&amp;rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&amp;rsquo;m doing for our open source data analysis course; it&amp;rsquo;s important to me that . The following is all executed from the command line, assuming that Julia is available as julia and R is available as R
-Miniconda installation Just to make things easier path-wise, I like to install packages &amp;ldquo;close&amp;rdquo; to my Homebrew installation:</description>
+      <description>In this post, I&amp;rsquo;ll share the commands I followed to install JupyterLab using Miniconda on an OSX platform, as part of the preparation I&amp;rsquo;m doing for our open source data analysis course; it&amp;rsquo;s important to me that everyone is able to reproduce the examples on their own machine and experiment for themselves.
+Update The installation of R, Julia, etc. are now automated for MacOS using Ansible; see this post. If you&amp;rsquo;re following those directions, after installing Ansible and the corresponding playbook, simply run</description>
     </item>
     
     <item>

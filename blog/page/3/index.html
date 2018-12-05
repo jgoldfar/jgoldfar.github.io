@@ -438,6 +438,28 @@ thead div.tagListTitle {
 
     <article class="blogPostListing">
 <header>
+    <h3><a href="https://jgoldfar.github.io/blog/quick-julia-sha256/">Quick SHA256 Generation using Julia </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Oct 11, 2018
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
+    
+    </ul>
+</header>
+
+<div>
+When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
+using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end
+</div>
+
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
     <h3><a href="https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/">Containerizing and (Eventually) Updating pdf2htmlEX </a> </h3>
     <ul class="tags">
     <span class="date">
@@ -544,33 +566,6 @@ However, when it comes to research, it seems to me that open source should be th
 
 <footer>
         <a href='https://jgoldfar.github.io/blog/why-oss/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/building-octave-osx/">Building GNU Octave From Source on OSX </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Aug 15, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/build-the-world">build-the-world</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-    </ul>
-</header>
-
-<div>
-Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/building-octave-osx/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>

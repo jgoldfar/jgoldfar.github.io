@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Installing R (MRO) on OSX Sierra | jgoldfar&#39;s home on the web
+        Personal DevOps: using Ansible | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -328,18 +328,16 @@ thead div.tagListTitle {
 <td class="postTitle">
     
     <div class="postTitle">
-        Installing R (MRO) on OSX Sierra
+        Personal DevOps: using Ansible
     </div>
     
     
 <ul class="tags">
 <span class="date">
-    Published: Nov 2, 2018
+    Published: Dec 3, 2018
 </span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/r-lang">R-lang</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
     
 </ul>
 </td>
@@ -435,47 +433,128 @@ thead div.tagListTitle {
                             <td class="mainbody">
                                 
                                 
-<p>As someone who works regularly with various statistical and scientific software stacks (I always say I prefer to use the best tool for the job, rather than fitting my favorite tool into every job) I am pretty impressed by the leaps in visibility R has taken in the past few years.
-I first used R for a &ldquo;big data&rdquo; project years ago (for a size of N too large for Excel, not what one would consider &ldquo;big&rdquo; these days&hellip;) and in the intervening years have worked with R in my teaching and for statistical analysis projects intermittently, but without stepping back and looking at all of the progress that has been made!
-So when I started a new data analysis project (on a newly formatted machine, no less), I figured it might be time to update my R setup.</p>
 
-<p><a href="https://mran.microsoft.com/open">Microsoft R Open (MRO)</a> is <a href="https://www.r-bloggers.com/a-data-scientists-perspective-on-microsoft-r/">apparently</a> the way to go, since it handles the integration of R with multithreaded libraries on multiple platforms; in the past, I&rsquo;ve used Homebrew&rsquo;s installation, but figured I would give MRO a go.</p>
 
-<p><em>Update</em> The installation of MRO and the tidyverse. are now automated for MacOS using Ansible; see <a href="https://jgoldfar.github.io/blog/automating-personal-devops/">this post</a>.
-If you&rsquo;re following those directions, after installing Ansible and the corresponding playbook, simply run</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ansible-playbook -i inventory --ask-become-pass --tags &#34;homebrew,mro&#34; --extra-vars=&#39;{configure_tidyverse:yes}&#39; main.yml</pre></div>
-<p>The installation process for MRO itself isn&rsquo;t too tricky, but since many R packages are written using C, C++, or Fortran code behind the scenes, a working compiler is required.
-So here we turn to <a href="https://brew.sh/">Homebrew</a>: the GCC package provides compilers for each of those languages:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew install gcc</pre></div>
-<p>However, they aren&rsquo;t provided in a location that R expects when installing packages.
-To inform R where to find its dependencies, we set some variables in the file <code>~/.R/Makevars</code>:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">VERSHORT=8
-VERLONG=$(VERSHORT).2.0
-VER=-$(VERSHORT)
-CC=gcc$(VER)
-CXX=g++$(VER)
-CXX1X=g++$(VER)
-CXX11=$(CXX1X)
-CFLAGS=-mtune=native -g -O2 -Wall -pedantic -Wconversion
-CXXFLAGS=-mtune=native -g -O2 -Wall -pedantic -Wconversion
-FLIBS=-L/usr/local/Cellar/gcc/$(VERLONG)/lib/gcc/$(VERSHORT)</pre></div>
-<p>Note that you&rsquo;ll need to set <code>VERSHORT</code> and <code>VERLONG</code> according to the version installed by Homebrew in the previous step.
-The added <code>CXX11</code> flag (which duplicates <code>CXX1X</code>) is apparently only necessary for <code>lubridate</code>, which doesn&rsquo;t respect the other flag.
-With these environment variables set, we can now install our favorite packages:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">install.packages(&#34;tidyverse&#34;)</pre></div>
-<p>Having that, the rest should <em>just work</em>:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">library(ggplot2)
+<p>I&rsquo;ve now been in the position of setting up my build environment on multiple Mac computers
+in the past couple weeks.
+It can be a real impediment to my productivity when things (software, resources) aren&rsquo;t in the places I expect:
+search for the missing package, download, build, and install it (dealing with any issues as they come up), etc.</p>
 
-data &lt;- data.frame(
-  course=c(&#34;Calc 1&#34;, &#34;Calc 2&#34;),
-  visitors=c(100, 20)
-)
+<p>Luckily, as a copious note-taker I already know where to find most packages I end up needing, and the steps I&rsquo;ll
+need to complete to get things built.
+But it&rsquo;s still a lot of &ldquo;manual&rdquo; work, and quite a bit of that is sensitive to the order operations are performed.</p>
 
-plot &lt;- ggplot(
-  data = data,
-  aes(x=course, y=visitors)) +
-  geom_bar(stat=&#34;identity&#34;)
-ggsave(&#34;courseVisitors.pdf&#34;, plot=plot)</pre></div>
+<p>This is the perfect opportunity to learn a new tool, since I&rsquo;m also familiar with the concept of configuration
+management, &ldquo;IT-speak&rdquo; for the use-case I&rsquo;ve found.
+I experimented a bit with <a href="https://www.terraform.io">Terraform</a> and <a href="https://puppet.com">Puppet</a>, and while these are expressive tools, I found their &ldquo;focus&rdquo; was a bit outside my needs, so I landed on <a href="https://www.ansible.com">Ansible</a>.
+Now that this is all automated, I can just share <a href="https://github.com/jgoldfar/mac-dev-playbook">the link</a> to the result of this experiment, and its build status: <a href="https://travis-ci.org/jgoldfar/mac-dev-playbook"><img src="https://travis-ci.org/jgoldfar/mac-dev-playbook.svg?branch=master" alt="Build Status" /></a> but I&rsquo;ll share the basics of what I learned about Ansible below, and as an &ldquo;appendix&rdquo;, the sequence of steps I used to have to complete.
+This new solution actually sets things up <em>much</em> nicer than when I had to do everything &ldquo;by hand&rdquo;.</p>
+
+<p>The fundamental object in Ansible is a <em>playbook</em>, which contain a sequence of steps or tasks the software will complete.
+Ansible has access to a wide variety of built-in functionality, as well as community-contributed packages through <a href="https://galaxy.ansible.com">Ansible Galaxy</a>.
+The core functionality relates to ensuring that files are in place, and (using templates) constructing them if necessary, as well as installing packages and shelling out when necessary.</p>
+
+<p>I&rsquo;m sure my playbook isn&rsquo;t terribly idiomatic (I would note that MacOS isn&rsquo;t quite a first-class citizen with Ansible, it seems) and there&rsquo;s much more that Ansible can do to make my life easier, it wasn&rsquo;t too difficult to use Ansible&rsquo;s functionality to automate all of the package installation, setting of settings, etc.
+Moreover, the playbook can be tested through Travis&rsquo; CI infrastructure, so I&rsquo;ll know when I go to set up my next workstation whether I can expect everything to work or not.
+By using Ansible&rsquo;s tag feature, the separate build steps can be shared: obviously, cloning my monorepo isn&rsquo;t terribly useful for anyone else, but if you&rsquo;d like to (for instance) install BasicTeX, spacemacs, and my &ldquo;Open in Emacs&rdquo; automator workflow, you could follow the directions at the repository above, and run</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ansible-playbook -i inventory --ask-become-pass --tags &#34;basictex,spacemacs,openInEmacs&#34; main.yml</pre></div>
+<p>Take a look and leave a comment or question!</p>
+
+<h2 id="future-work">Future Work</h2>
+
+<ul>
+<li><p>Look to other installations that I can automate!v</p></li>
+
+<li><p>Add TeX package installation to playbook.</p></li>
+
+<li><p>Leverage Ansible&rsquo;s git repository management to replace my semi-automated version of the same.</p></li>
+
+<li><p>Complete a Linux playbook (I have a collection of similar notes for Linux&hellip;)</p></li>
+
+<li><p>Abstract away the PATH settings currently growing in my <code>.bashrc</code> file by adding paths during package installation, or template it completely using Ansible.</p></li>
+
+<li><p>Consider contributing some more generally useful tasks back to Ansible Galaxy</p></li>
+</ul>
+
+<h2 id="manual-setup-steps">Manual Setup Steps</h2>
+
+<p>1) Get <a href="https://brew.sh/">Homebrew</a></p>
+
+<p>2) Start installing homebrew packages. Minimal list:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">autoconf automake aspell cmake curl gcc imagemagick mercurial python sbcl stow bash-completion</pre></div>
+<p>2a) Install <code>gnuplot</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew install --verbose gnuplot --with-cairo --with-latex --with-pdflib-lite</pre></div>
+<p>3) Generate new SSH keys and install them on bitbucket and github.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ssh-keygen
+ssh-add -K ~/.ssh/privateKeyFile</pre></div>
+<p>3a) To avoid issues in the future, add those identities to <code>~/.ssh/config</code>, which should look as follows:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Host bitbucket
+  HostName bitbucket.org
+  User hg
+  IdentityFile ~/.ssh/id_bitbucket
+
+Host github
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_github</pre></div>
+<p>3b) It is convenient to generate keys for code01.fit.edu and any other servers I regularly access; a similar command to that above will generate them, and they can be installed by running, for instance,</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ssh-copy-id -i ~/.ssh/privateKeyFile jgoldfar@code01.fit.edu</pre></div>
+<p>4) After <code>mercurial</code> is available, hg clone main CMS into Documents directory.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hg clone ssh://hg@bitbucket.org/jgoldfar/jgoldfar-cms ~/Documents</pre></div>
+<p>This will likely require some manual clones using &ndash;uncompressed ,since the clone takes so darn long. In particular, I had to run</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hg clone --uncompressed ssh://hg@bitbucket.org/jgoldfar/researchrepos research
+hg clone --uncompressed ssh://hg@bitbucket.org/jgoldfar/ugradfiles ugrad</pre></div>
+<p>among other things.</p>
+
+<p>5) Stow files from <code>Documents/misc/env</code> and <code>Documents/misc/tex-include</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">make -C ~/Documents/misc/env stow
+make -C ~/Documents/misc/tex-include stow</pre></div>
+<p>6) Initialize my Public directory how I like it:</p>
+
+<p>6a) Clone public files:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd ~/Public
+hg clone ssh://hg@bitbucket.org/jgoldfar/publicfiles ~/Public/publicfiles
+mv publicfiles/* .
+mv publicfiles/.hg .
+mv publicfiles/.hgignore .</pre></div>
+<p>6b) git clone <a href="https://julialang.org/">Julia</a> and <a href="http://maxima.sourceforge.net/">maxima</a> into <code>~/Public</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd ~/Public
+git clone git@github.com:JuliaLang/julia.git
+git clone git@github.com:jgoldfar/maxima-clone.git maxima</pre></div>
+<p>and follow the directions in <code>Public/README.md</code>.</p>
+
+<p>6c) in <code>maxima</code> directory, run</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">./bootstrap
+./configure —-prefix=`pwd`/usr AND OTHER OPTIONS
+make &amp;&amp; make install</pre></div>
+<p>6d) in <code>julia</code> directory, run <code>make</code> (that should do it.)</p>
+
+<p>7) Install Spacemacs, and its dependencies:</p>
+
+<p>7a) Install the font I use:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew tap caskroom/fonts
+brew cask install font-source-code-pro --fontdir=/Library/Fonts</pre></div>
+<p>7b) Install emacs</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew tap d12frosted/emacs-plus
+brew install emacs-plus --without-spacemacs-icon</pre></div>
+<p>7c) Install <a href="http://spacemacs.org/">spacemacs</a></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d</pre></div>
+<p>7d) Install <a href="https://bintray.com/jgoldfar/BlogPostSources/download_file?file_path=OpenInEmacs.tar.gz">the Automator workflow</a> I created to add an &ldquo;Open in Emacs&rdquo; command to the service menu.</p>
+
+<p>8) Install <a href="https://www.spectacleapp.com/">Spectacle</a>, <a href="https://www.syntevo.com/smartgit/">SmartGit</a>, <a href="https://code.visualstudio.com/">VSCode</a>, <a href="https://skim-app.sourceforge.io/">Skim</a>, and <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></p>
+
+<p>8a) Set up Skim reverse search for emacs: under the &ldquo;Sync&rdquo; preference pane, set the command as <code>/usr/local/bin/emacsclient</code> and arguments to <code>--no-wait +%line &quot;%file&quot;</code>.</p>
+
+<p>9) Download the source for tortoisehg</p>
+
+<p>13) Install QLStephen (<a href="https://github.com/whomwah/qlstephen">https://github.com/whomwah/qlstephen</a>)</p>
+
+<h3 id="note">Note</h3>
+
+<ul>
+<li>The ruby package included with OSX will not allow you to do much, in particular, its SSL version is very outdated. If you install a ruby tool, like <code>gist</code>, you&rsquo;ll have to follow Homebrew&rsquo;s instructions for making sure that your new ruby is called first in the PATH.</li>
+</ul>
+
 
 <div id="disqus_thread"></div>
 <script>
@@ -507,11 +586,9 @@ ggsave(&#34;courseVisitors.pdf&#34;, plot=plot)</pre></div>
                             <td>
                                 <div class="prevNext">
                                     
-                                    <a class="previous" href="https://jgoldfar.github.io/blog/reviving-an-ancient-macbook/">&lArr; Reviving an ancient MacBook</a>
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/hosting-binaries-on-bintray/">&lArr; Hosting Binaries on Bintray</a>
                                     
                                     
-                                    <a class="next" href="https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/"> Installing Jupyter with IJulia and IRkernel &rArr;</a>
-                            
                         </div>
                             </td>
                         </tr>
