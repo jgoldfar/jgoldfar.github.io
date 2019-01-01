@@ -12,3 +12,4 @@ data/cv/*
 deps/bib2json.py
 deps/ical/*.ical
 static/cv/*
+content/blog/automating-attendance-reports/SwiperDataDownloader
