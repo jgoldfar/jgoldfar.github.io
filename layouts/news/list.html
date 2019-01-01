@@ -21,7 +21,7 @@
 {{/* See https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/ */}}
 {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "news") }}
 {{ range $paginator.Pages }}
-    {{ .Render "li"}}
+    {{ .Render "li" }}
 {{ end }}
 
 {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
