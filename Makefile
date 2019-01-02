@@ -133,7 +133,7 @@ oss-contribs-deps: data/oss/combined.json
 HUGOFILE := config.toml
 
 serve: $(HUGOFILE) $(HUGO)
-	$(HUGO) --verbose server
+	$(HUGO) --disableFastRender --verbose server
 
 FileName?=
 new: $(HUGOFILE) $(HUGO)
