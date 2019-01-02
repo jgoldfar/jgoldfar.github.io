@@ -1,13 +1,19 @@
+---
+title: "Automating Attendance Data Reporting"
+tags: ["DevOps", "DataViz", "Julia-lang"]
+date: 2019-01-02T14:29:00-04:00
+draft: false
+---
+
 Today, I'd like to start generating posts for our mathematics center as part of a marketing effort.
-In a [past post]({{< ref "blog/vizualizing-attendance-data/index.md" >}} I described how the raw data is exported and can be processed to create one graphic we typically report; in the interest of modularity, I leverage [a separate package](https://github.com/FITMath/SwiperDataDownloader) to download and manage the data files.
-My goal is to "operationalize" that report by generating the corresponding graphs regularly along with a stub blog post;  that is, we need to make sure the script is robust enough for our environment and (to ensure that) test it extensively.
+In a [past post]({{< ref "/blog/vizualizing-attendance-data/index.md" >}}) I described how the raw data is exported and can be processed to create one graphic we typically report; in the interest of modularity, I leverage [a separate package](https://github.com/FITMath/SwiperDataDownloader) to download and manage the data files.
+My goal is to "operationalize" that report by generating the corresponding graphs regularly along with a stub blog post; that is, we need to make sure the script is robust enough for our environment and (to ensure that) test it extensively.
 
 Our regular reporting includes metrics for the busiest times of the day, busiest day of the week, and the breakdown of student activities, etc. and I figure there's no reason we shouldn't at least share the busy hours with students for planning purposes.
 
 I currently have a script running on our university server that generates detailed report information in a CSV format; we'll need to extract only the data we're interested in, process it, and create the graphs.
 
 I have some other plans for reports and algorithms to run on this data, so let's leverage some existing packages to do this work. I'm going to use [Julia](https://julialang.org/) as my implementation language this time around since it's easy to get up-and-running in a CI situation, which will help generate these pages automatically in the future; [there are other advantages, as well](https://github.com/malmaud/TensorFlow.jl/blob/master/docs/src/why_julia.md), nearly all of this would work just as well in Python.
-[See this post](https://jgoldfar.github.io/blog/vizualizing-attendance-data/) for a comparison with similar data.
 
 [CSV.jl](http://juliadata.github.io/CSV.jl/stable/) will provide basic data import functionality, and [Plots.jl](https://github.com/JuliaPlots/Plots.jl) (most likely with the default backend) will be used for plotting.
 

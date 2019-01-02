@@ -13,3 +13,5 @@ deps/bib2json.py
 deps/ical/*.ical
 static/cv/*
 content/blog/automating-attendance-reports/SwiperDataDownloader
+*.csv
+*/Manifest.toml

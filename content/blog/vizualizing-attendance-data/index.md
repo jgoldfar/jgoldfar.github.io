@@ -232,7 +232,8 @@ which is included below:
 
 * I've run some other, rather more complicated processes on the data we collect on attendance in MAC that would be interesting to share some time.
 
-* While we usually report this information internally, it might be good to produce charts like this on a regular basis and post them online, so I'll look at creating a regularly released "product" and work it into some kind of regular post. *Update*: This is now completed; see the post [here]({{< ref "blog/automating-attendance-reports/index.md" >}})
+* While we usually report this information internally, it might be good to produce charts like this on a regular basis and post them online, so I'll look at creating a regularly released "product" and work it into some kind of regular post.
+*Update*: This is now completed; see the post [here]({{< ref "/blog/automating-attendance-reports/index.md" >}})
 
 * The bar chart we created here is a bit misleading, since it only reports the time the student comes in to the center, but students may stay for any amount of time.
 More careful histogram creation, perhaps presented as a heatmap in continuous time, would make more sense.
