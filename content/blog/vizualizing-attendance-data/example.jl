@@ -1,8 +1,5 @@
-using Pkg
-pkg"up; add AbstractPlotting#master GLMakie#master Makie#master"
-
 using DelimitedFiles
-swipeData = readdlm("Swipes-Time-Only.csv", ',', String) # Datafile name, delimiter, cell type
+const swipeData = readdlm("Swipes-Time-Only.csv", ',', String) # Datafile name, delimiter, cell type
 nr, nc = size(swipeData)
 
 using Dates
@@ -20,16 +17,23 @@ for dateIndex in 2:nr
     end
 end
 
-using Makie
+using PyCall
+pygui(:tk)
+import PyPlot
+const plt = PyPlot
 
-scene = Scene(resolution = (500, 500))
+const fig = plt.figure(figsize=(6.4, 6.4))
 
 nonzeroHours = hours[hourBins .> 0]
-minHour = minimum(nonzeroHours)
-hourDiff = maximum(nonzeroHours) - minHour
-barplot!(scene, nonzeroHours, hourBins[hourBins .> 0], limits = FRect(minHour - 0.5, 0, hourDiff + 0.5, maximum(hourBins) + 10))
+minHour, maxHour = extrema(nonzeroHours)
+hourDiff = maxHour - minHour
 
-axis = scene[Axis]
-axis[:names, :axisnames] = ("Hour", "Number of Visitors")
+const caxes = plt.axes(
+#    (minHour - 0.5, 0, hourDiff + 0.5, maxHour + 10),
+    xlabel="Hour",
+    ylabel="Number of Visitors"
+)
 
-Makie.save("Busy-Hours-Julia.png", scene)
+plt.bar(nonzeroHours, hourBins[hourBins .> 0], axes = caxes)
+
+plt.savefig("Busy-Hours-Julia.png", quality=100, dpi=300)

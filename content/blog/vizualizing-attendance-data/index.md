@@ -67,39 +67,57 @@ swipeInDates = [
 ```
 
 We'll divide the the day into 1 hour bins, and count all entries in a particular hour.
+This requires a bit of care in case our data has any spurious or non-date entries:
 
 ```julia
 hourBins = zeros(Int, 23)
 hours = 1:23
-for inDate in swipeInDates
-    hourBins[hour(inDate)] += 1
+for dateIndex in 2:nr
+    try
+      inDate = DateTime(strip(swipeData[dateIndex, 1], ['\"', ' ']), lineDateFormat)
+      hourBins[hour(inDate)] += 1
+    catch e
+      @warn "Failed to parse $(swipeData[dateIndex, 1]) as a DateTime"
+    end
 end
 ```
 
-[Makie](http://makie.juliaplots.org/stable/) provides a nice, simple interface to plotting utilities for Julia (with plenty of room for customization and even interactive, data-intensive plots).
-
-We'll initialize a `Scene` object so we have full control over the axes and other properties of the plot.
-
-The `limits` argument is set to a `FRect(xmin, ymin, xdist, ydist)` so the plot fits exactly in the given bounds.
-
-```julia
-using Makie
-
-scene = Scene(resolution = (500, 500))
-
-nonzeroHours = hours[hourBins .> 0]
-minHour = minimum(nonzeroHours)
-hourDiff = maximum(nonzeroHours) - minHour
-barplot!(scene, nonzeroHours, hourBins[hourBins .> 0], limits = FRect(minHour - 0.5, 0, hourDiff + 0.5, maximum(hourBins) + 10))
-
-axis = scene[Axis]
-axis[:names, :axisnames] = ("Hour", "Number of Visitors")
+[PyPlot](https://github.com/JuliaPy/PyPlot.jl) provides a Julia interface to [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html); nearly the whole API translates over without modification.
+I found it easiest to use my system Conda installation rather than use the PyPlot.jl managed one, which requires calling Julia with something like
+```shell
+PYTHON="`which python`" julia --project=. ...
 ```
 
-To save this plot to a file, we write
+In order to ensure things work across platforms in a consistent way, we'll set an explicit matplotlib backend.
 
 ```julia
-Makie.save("Busy-Hours-Julia.png", scene)
+using PyCall
+pygui(:tk)
+import PyPlot
+const plt = PyPlot
+```
+
+We'll initialize a `Figure` object so we can adjust the size of the plot, as well as an Axes object, so we can set the axis labels.
+
+```julia
+const fig = plt.figure(figsize=(6.4, 6.4))
+
+nonzeroHours = hours[hourBins .> 0]
+minHour, maxHour = extrema(nonzeroHours)
+hourDiff = maxHour - minHour
+
+const caxes = plt.axes(
+    xlabel="Hour",
+    ylabel="Number of Visitors"
+)
+```
+
+Then we simply create the plot and save it:
+
+```julia
+plt.bar(nonzeroHours, hourBins[hourBins .> 0], axes = caxes)
+
+plt.savefig("Busy-Hours-Julia.png", quality=100, dpi=300)
 ```
 
 which is reproduced below:

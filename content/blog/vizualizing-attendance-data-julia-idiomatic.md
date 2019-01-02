@@ -5,7 +5,7 @@ date: 2018-11-04T12:30:00-04:00
 draft: false
 ---
 
-In [a previous post]({{< ref "blog/vizualizing-attendance-data.md" >}}) I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports.
+In [a previous post]({{< ref "blog/vizualizing-attendance-data-julia-idiomatic.md" >}}) I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports.
 This script dates back to when local environments/dependencies didn't have quite as nice a story as Julia v1.0 does, so I made sure to only use standard library packages.
 But to make a fair comparison with the other codes in R and Python (in particular, to see how semantically clear one could make the code) one should use high-quality data analysis packages provided by the Julia ecosystem!
 
