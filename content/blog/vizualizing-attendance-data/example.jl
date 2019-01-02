@@ -36,4 +36,4 @@ const caxes = plt.axes(
 
 plt.bar(nonzeroHours, hourBins[hourBins .> 0], axes = caxes)
 
-plt.savefig("Busy-Hours-Julia.png", quality=100, dpi=300)
+plt.savefig("Busy-Hours-Julia.png", quality=100, dpi=80)

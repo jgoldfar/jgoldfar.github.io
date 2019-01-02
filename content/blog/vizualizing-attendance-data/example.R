@@ -13,4 +13,4 @@ p<-ggplot(data=UsersInEachHour, aes(x=TimeInHour, y=n)) +
   geom_text(aes(label=n), vjust=1.6, color="white", size=3.5)+
   theme_minimal()
 
-ggsave("Busy-Hours-R.png", p, width=5.56, height=5.35, units="in", dpi="screen")
+ggsave("Busy-Hours-R.png", p, width=6.4, height=6.4, units="in", dpi=80)

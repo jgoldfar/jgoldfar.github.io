@@ -1,5 +1,7 @@
 SHELL=/bin/bash
 
+all: $(addsuffix .png,$(addprefix Busy-Hours-,Julia R Python))
+
 Manifest.toml: Project.toml
 	julia --project=. -e 'ENV["PYTHON"]="$(shell which python)"; using Pkg; Pkg.instantiate(); Pkg.build()'
 

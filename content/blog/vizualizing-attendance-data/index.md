@@ -117,12 +117,12 @@ Then we simply create the plot and save it:
 ```julia
 plt.bar(nonzeroHours, hourBins[hourBins .> 0], axes = caxes)
 
-plt.savefig("Busy-Hours-Julia.png", quality=100, dpi=300)
+plt.savefig("Busy-Hours-Julia.png", quality=100, dpi=80)
 ```
 
 which is reproduced below:
 
-![Busy-Hours-Julia](/blog/vizualizing-attendance-data-images/Busy-Hours-Julia.png)
+![Busy-Hours-Julia](/blog/vizualizing-attendance-data/Busy-Hours-Julia.png)
 
 ## R Implementation
 
@@ -168,12 +168,12 @@ p<-ggplot(data=UsersInEachHour, aes(x=TimeInHour, y=n)) +
 This graphic can be exported using `ggsave` (I've modified the dimensions to match the plot above):
 
 ```R
-ggsave("Busy-Hours-R.png", p, width=5.56, height=5.35, units="in", dpi="screen")
+ggsave("Busy-Hours-R.png", p, width=6.4, height=6.4, units="in", dpi=80)
 ```
 
 By way of comparison with the above output, the corresponding graphic is reproduced below:
 
-![Busy-Hours-R](/blog/vizualizing-attendance-data-images/Busy-Hours-R.png)
+![Busy-Hours-R](/blog/vizualizing-attendance-data/Busy-Hours-R.png)
 
 ## Python Implementation
 
@@ -211,7 +211,7 @@ import matplotlib.pyplot as plt
 and then generate the figure using the `index` and one column of the `values` of the dataframe we generated above:
 
 ```python
-fig = plt.figure(figsize=(5.56, 5.35))
+fig = plt.figure(figsize=(6.4, 6.4))
 p = plt.bar(NumberOfVisitors.index, NumberOfVisitors.values[:, 1])
 plt.ylabel('Number of Visitors')
 plt.xlabel('Hour of Day')
@@ -221,18 +221,18 @@ plt.show()
 This plot can be exported to an image file like we did with the other examples:
 
 ```python
-fig.savefig('Busy-Hours-Python.png', dpi=72)
+fig.savefig('Busy-Hours-Python.png', dpi=80)
 ```
 
 which is included below:
 
-![Busy-Hours-Python](/blog/vizualizing-attendance-data-images/Busy-Hours-Python.png)
+![Busy-Hours-Python](/blog/vizualizing-attendance-data/Busy-Hours-Python.png)
 
 ## Future Work
 
 * I've run some other, rather more complicated processes on the data we collect on attendance in MAC that would be interesting to share some time.
 
-* While we usually report this information internally, it might be good to produce charts like this on a regular basis and post them online, so I'll look at creating a regularly released "product" and work it into some kind of regular post.
+* While we usually report this information internally, it might be good to produce charts like this on a regular basis and post them online, so I'll look at creating a regularly released "product" and work it into some kind of regular post. *Update*: This is now completed; see the post [here]({{< ref "blog/automating-attendance-reports/index.md" >}})
 
 * The bar chart we created here is a bit misleading, since it only reports the time the student comes in to the center, but students may stay for any amount of time.
 More careful histogram creation, perhaps presented as a heatmap in continuous time, would make more sense.
@@ -240,7 +240,8 @@ More careful histogram creation, perhaps presented as a heatmap in continuous ti
 * Experiment with isolating the dependencies using a [`conda`](https://docs.anaconda.com/anaconda/user-guide/tasks/use-r-language) or [`packrat`](http://rstudio.github.io/packrat/walkthrough.html) and `pipenv` environments.
 
 * My code, particularly in Julia, is not particularly idiomatic (in particular, I don't use DataFrames, which are essential for larger tabular data.)
-It would be good all around to update that code.
+It would be good all around to update that code. *Update*: As stated above, this is also completed.
+See [here]({{< ref "blog/vizualizing-attendance-data-julia-idiomatic.md" >}})
 
 ## Footnotes
 

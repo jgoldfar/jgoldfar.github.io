@@ -5,7 +5,7 @@ date: 2018-11-04T12:30:00-04:00
 draft: false
 ---
 
-In [a previous post]({{< ref "blog/vizualizing-attendance-data-julia-idiomatic.md" >}}) I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports.
+In [a previous post]({{< ref "blog/vizualizing-attendance-data/index.md" >}}) I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports.
 This script dates back to when local environments/dependencies didn't have quite as nice a story as Julia v1.0 does, so I made sure to only use standard library packages.
 But to make a fair comparison with the other codes in R and Python (in particular, to see how semantically clear one could make the code) one should use high-quality data analysis packages provided by the Julia ecosystem!
 
@@ -70,41 +70,11 @@ and aggregate it as we did before:
 hourData = sort!(by(swipeData, :Hour_In, size), :Hour_In)
 ```
 
-## Create the Visualization using Makie
+The rest of the vizualization can be completed [as in the previous post]({{< ref "blog/vizualizing-attendance-data/index.md" >}}).
 
-```julia
-using Makie
-```
-
-Create (and grab a handle to) the Scene object:
-
-```julia
-scene = Scene(resolution = (500, 500))
-```
-
-Extract the pertinent data from the aggregated DataFrame we created above (adjusting the plot limits so things show up "nicely")
-
-```julia
-hours = hourData.Hour_In
-visitors = [first(x) for x in hourData.x1]
-minHour = minimum(hours)
-hourDiff = maximum(hours) - minHour
-barplot!(scene, hours, visitors, limits = FRect(minHour - 0.5, 0, hourDiff + 0.5, maximum(visitors) + 10))
-```
-
-Name the axes, and export the graphic:
-
-```julia
-axis = scene[Axis]
-axis[:names, :axisnames] = ("Hour", "Number of Visitors")
-Makie.save("Busy-Hours-Julia.png", scene)
-```
-
-As before, the output should look like the plot below:
-
-![Busy-Hours-Julia](/blog/vizualizing-attendance-data-images/Busy-Hours-Julia.png)
+![Busy-Hours-Julia](/blog/vizualizing-attendance-data/Busy-Hours-Julia.png)
 
 ## Future Work
 
 * We should be able to create the _exact_ same visualization as in our Python example by using `PyPlot.jl`, which would allow us to leverage our Julia processing codes while taking advantage of all of `matplotlib`'s niceties.
-In this case, since we're not doing any kind of interactive or animated visualizatio, `Makie` is a bit of overkill...
+*Update*: The current viz steps use `PyPlot`.

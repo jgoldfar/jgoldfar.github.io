@@ -24,9 +24,9 @@ NumberOfVisitors = df.groupby('TimeInHour').count().drop(-1)
 
 import matplotlib.pyplot as plt
 
-fig = plt.figure(figsize=(5.56, 5.35))
+fig = plt.figure(figsize=(6.4, 6.4))
 p = plt.bar(NumberOfVisitors.index, NumberOfVisitors.values[:, 1])
 plt.ylabel('Number of Visitors')
 plt.xlabel('Hour of Day')
 
-fig.savefig('Busy-Hours-Python.png', dpi=72)
+fig.savefig('Busy-Hours-Python.png', dpi=80)
