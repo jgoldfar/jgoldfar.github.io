@@ -441,6 +441,9 @@ That instance actually motivated me to switch to <a href="https://www.julialang.
 MATLAB, in particular, seems naturally opposed to &ldquo;modern&rdquo; continuous integration tools like Travis, so even if Octave exists only to enable automated assurance that code continues to run, that seems valuable.
 Moreover, if it can be improved in any way (certainly a Sisyphean task), any step towards parity is a step away from absolute dependence on a closed-source implementation.</p>
 
+<p><em>Update</em>: This build process is now automated in the [octave-builder]() repository <a href="https://travis-ci.org/jgoldfar/octave-builder"><img src="https://travis-ci.org/jgoldfar/octave-builder.svg?branch=master" alt="Build Status" /></a>, which runs automatically on a regular basis to verify that the same setup continues to work.
+The next step will be making Octave available as part of a command-line <a href="https://jgoldfar.github.io/blog/too-much-ci/">continuous integration</a> service, probably enabled by Docker or Singuarity.</p>
+
 <p>Building a package from source is always interesting, but building the package on OSX without too much complaining from the build system was another challenge; I chose to build some of the GNU packages rather than mess with my global (Homebrew) configuration.
 I&rsquo;ll document the exact versions that worked on my setup below.
 Anyways, enough blabbing, here&rsquo;s the steps, in their current form:</p>

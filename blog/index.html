@@ -438,6 +438,62 @@ thead div.tagListTitle {
 
     <article class="blogPostListing">
 <header>
+    <h3><a href="https://jgoldfar.github.io/blog/automating-attendance-reports/">Automating Attendance Data Reporting </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Jan 2, 2019
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
+    
+    </ul>
+</header>
+
+<div>
+Today, I&rsquo;d like to start generating posts for our mathematics center as part of a marketing effort. In a past post I described how the raw data is exported and can be processed to create one graphic we typically report; in the interest of modularity, I leverage a separate package to download and manage the data files. My goal is to &ldquo;operationalize&rdquo; that report by generating the corresponding graphs regularly along with a stub blog post; that is, we need to make sure the script is robust enough for our environment and (to ensure that) test it extensively.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/automating-attendance-reports/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/mount-hfsplus-on-linux/">Mounting HFS&#43; Volumes on Ubuntu </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Jan 1, 2019
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/linux">Linux</a></span>
+    
+    </ul>
+</header>
+
+<div>
+I recently had a need to transfer a large amount of data between a Linux and OSX host. Isn&rsquo;t big data fun! This is easiest to do from the Linux side, of course; I followed the directions here, and am just recording the steps I followed here for posterity.
+Install hfsprogs:
+sudo apt-get install hfsprogs Ubuntu can read, but not write (by default) to HFS+ drives, so they&rsquo;ll need to be remounted.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/mount-hfsplus-on-linux/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
     <h3><a href="https://jgoldfar.github.io/blog/automating-personal-devops/">Personal DevOps: using Ansible </a> </h3>
     <ul class="tags">
     <span class="date">
@@ -507,66 +563,6 @@ Motivating Example Consider a curve such as that defining a unit circle in the p
 
 <footer>
         <a href='https://jgoldfar.github.io/blog/brief-ift/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/">Visualizing Attendance Data using Idiomatic Julia </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 4, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
-    
-    </ul>
-</header>
-
-<div>
-In a previous post I shared a quick-and-dirty code I wrote as part of a larger script that generates a bunch of reports. This script dates back to when local environments/dependencies didn&rsquo;t have quite as nice a story as Julia v1.0 does, so I made sure to only use standard library packages. But to make a fair comparison with the other codes in R and Python (in particular, to see how semantically clear one could make the code) one should use high-quality data analysis packages provided by the Julia ecosystem!
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data/">Visualizing Attendance Data </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 3, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/r-lang">R-lang</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
-    
-    </ul>
-</header>
-
-<div>
-In this post I&rsquo;m going to share some simple data munging and visualization techniques I use to analyze attendance data recorded from a card swipe machine in our tutoring lab, which I use to make sure we use our office hours (a human time resource!) as effectively as possible, and report that internally. I&rsquo;ve had this running on a regular basis since I was first asked to report this data some time back; in the past, Excel was used to prepare these charts, but it had to be done basically entirely &ldquo;by hand&rdquo; each time.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/vizualizing-attendance-data/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>

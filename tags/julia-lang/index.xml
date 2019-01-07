@@ -6,10 +6,19 @@
     <description>Recent content on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Nov 2018 12:30:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jan 2019 14:29:00 -0400</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/julia-lang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Automating Attendance Data Reporting</title>
+      <link>https://jgoldfar.github.io/blog/automating-attendance-reports/</link>
+      <pubDate>Wed, 02 Jan 2019 14:29:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/automating-attendance-reports/</guid>
+      <description>Today, I&amp;rsquo;d like to start generating posts for our mathematics center as part of a marketing effort. In a past post I described how the raw data is exported and can be processed to create one graphic we typically report; in the interest of modularity, I leverage a separate package to download and manage the data files. My goal is to &amp;ldquo;operationalize&amp;rdquo; that report by generating the corresponding graphs regularly along with a stub blog post; that is, we need to make sure the script is robust enough for our environment and (to ensure that) test it extensively.</description>
+    </item>
     
     <item>
       <title>Visualizing Attendance Data using Idiomatic Julia</title>

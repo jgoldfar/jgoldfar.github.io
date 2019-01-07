@@ -12,6 +12,26 @@
     
     
     <item>
+      <title>Automating Attendance Data Reporting</title>
+      <link>https://jgoldfar.github.io/blog/automating-attendance-reports/</link>
+      <pubDate>Wed, 02 Jan 2019 14:29:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/automating-attendance-reports/</guid>
+      <description>Today, I&amp;rsquo;d like to start generating posts for our mathematics center as part of a marketing effort. In a past post I described how the raw data is exported and can be processed to create one graphic we typically report; in the interest of modularity, I leverage a separate package to download and manage the data files. My goal is to &amp;ldquo;operationalize&amp;rdquo; that report by generating the corresponding graphs regularly along with a stub blog post; that is, we need to make sure the script is robust enough for our environment and (to ensure that) test it extensively.</description>
+    </item>
+    
+    <item>
+      <title>Mounting HFS&#43; Volumes on Ubuntu</title>
+      <link>https://jgoldfar.github.io/blog/mount-hfsplus-on-linux/</link>
+      <pubDate>Tue, 01 Jan 2019 13:15:29 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/mount-hfsplus-on-linux/</guid>
+      <description>I recently had a need to transfer a large amount of data between a Linux and OSX host. Isn&amp;rsquo;t big data fun! This is easiest to do from the Linux side, of course; I followed the directions here, and am just recording the steps I followed here for posterity.
+Install hfsprogs:
+sudo apt-get install hfsprogs Ubuntu can read, but not write (by default) to HFS+ drives, so they&amp;rsquo;ll need to be remounted.</description>
+    </item>
+    
+    <item>
       <title>Personal DevOps: using Ansible</title>
       <link>https://jgoldfar.github.io/blog/automating-personal-devops/</link>
       <pubDate>Mon, 03 Dec 2018 15:28:00 -0400</pubDate>
@@ -57,6 +77,16 @@ Students from any major are invited to come discuss research directions and topi
       
       <guid>https://jgoldfar.github.io/blog/brief-ift/</guid>
       <description>Motivating Example Consider a curve such as that defining a unit circle in the plane, \[x^{2} + y^{2}=1\] Note that this definition is a special case of a more general situation, a curve defined as a level set of a function \[f(x,y):= x^{2} + y^{2}= 1 =:z_{0}\] Since this is a relatively simple curve, we can draw it and observe that, while it is not a function with respect to either \(x\) or \(y\) (that is, in general we cannot solve the equation for either \(y\) or \(x\), respectively), in a small neighborhood of any point (signified by a dashed circle in Figure 1 about the given point) the curve is indeed a function, as we can see:</description>
+    </item>
+    
+    <item>
+      <title>Colophon</title>
+      <link>https://jgoldfar.github.io/blog/colophon/</link>
+      <pubDate>Sat, 10 Nov 2018 16:45:18 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/colophon/</guid>
+      <description>This page is generated using Hugo from a repository here. The theme is based on an old site layout I had used, but I&amp;rsquo;m growing a bit tired of it. You&amp;rsquo;d probably guess that I don&amp;rsquo;t have much design in my background, despite an appreciation for good aesthetics.
+In particular, Bitbuckets CI automatically builds the site in this Docker image, which includes some additional tools that we use to generate some files.</description>
     </item>
     
     <item>

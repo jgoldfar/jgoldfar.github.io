@@ -6,15 +6,24 @@
     <description>Recent content in Tags on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Nov 2018 12:30:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 10 Nov 2018 16:45:18 +0000</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
+      <link>https://jgoldfar.github.io/tags/</link>
+      <pubDate>Sat, 10 Nov 2018 16:45:18 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jgoldfar.github.io/tags/julia-lang/</link>
-      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
+      <pubDate>Wed, 02 Jan 2019 14:29:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/tags/julia-lang/</guid>
       <description>Julia is a dynamic, optionally typed, high-performance, open-source programming language.
@@ -52,7 +61,7 @@ I wrote a post about why I use open source software when I can here.</descriptio
     <item>
       <title>Dataviz</title>
       <link>https://jgoldfar.github.io/tags/dataviz/</link>
-      <pubDate>Sun, 04 Nov 2018 12:30:00 -0400</pubDate>
+      <pubDate>Wed, 02 Jan 2019 14:29:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/tags/dataviz/</guid>
       <description></description>
@@ -61,7 +70,7 @@ I wrote a post about why I use open source software when I can here.</descriptio
     <item>
       <title>Devops</title>
       <link>https://jgoldfar.github.io/tags/devops/</link>
-      <pubDate>Mon, 03 Dec 2018 15:28:00 -0400</pubDate>
+      <pubDate>Wed, 02 Jan 2019 14:29:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/tags/devops/</guid>
       <description></description>
@@ -82,6 +91,15 @@ I wrote a post about why I use open source software when I can here.</descriptio
       <pubDate>Sat, 03 Nov 2018 08:57:59 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://jgoldfar.github.io/tags/linux/</link>
+      <pubDate>Tue, 01 Jan 2019 13:15:29 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/tags/linux/</guid>
       <description></description>
     </item>
     

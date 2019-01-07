@@ -44,29 +44,29 @@
 <link rel="shortcut icon" href="/assets/favicon.png"/>
 <script type="text/javascript" src="/assets/lib/jquery-1.11.1.min.js"></script>
 <script type="text/javascript"
-        src="/assets/lib/jquery-ui.js?v=11145"></script>
+        src="/assets/lib/jquery-ui.js?v=11531"></script>
 <script type="text/javascript"
-        src="/assets/lib/bootstrap.min.js?v=11145"></script>
+        src="/assets/lib/bootstrap.min.js?v=11531"></script>
 <script type="text/javascript"
-        src="/assets/lib/handlebars.js?v=11145"></script>
+        src="/assets/lib/handlebars.js?v=11531"></script>
 <script type="text/javascript" src="/assets/lib/select2.min.js"></script>
 <script type="text/javascript" src="/assets/lib/datatables.min.js"></script>
-<script type="text/javascript" src="/assets/lib/widgeter.js?v=11145"></script>
-<script type="text/javascript" src="/assets/lib/resident.js?v=11145"></script>
-<script type="text/javascript" src="/assets/lib/flow.js?v=11145"></script>
+<script type="text/javascript" src="/assets/lib/widgeter.js?v=11531"></script>
+<script type="text/javascript" src="/assets/lib/resident.js?v=11531"></script>
+<script type="text/javascript" src="/assets/lib/flow.js?v=11531"></script>
 <script type="text/javascript"
-        src="/assets/lib/perfect-scrollbar.min.js?v=11145"></script>
+        src="/assets/lib/perfect-scrollbar.min.js?v=11531"></script>
 <script type="text/javascript"
-        src="/assets/lib/clipboard.min.js?v=11145"></script>
+        src="/assets/lib/clipboard.min.js?v=11531"></script>
 <script type="text/javascript"
-        src="/assets/lib/filesize.min.js?v=11145"></script>
+        src="/assets/lib/filesize.min.js?v=11531"></script>
 <script type="text/javascript"
-        src="/assets/lib/moment.min.js?v=11145"></script>
+        src="/assets/lib/moment.min.js?v=11531"></script>
 <script type="text/javascript"
-        src="/assets/lib/moment.time.js?v=11145"></script>
+        src="/assets/lib/moment.time.js?v=11531"></script>
 <script type="text/javascript" src="/assets/lib/hammer.min.js"></script>
-<script type="text/javascript" src="/assets/lib/require.js?v=11145"></script>
-<script type="text/javascript" src="/assets/utils/StringUtils.js?v=11145"></script>
+<script type="text/javascript" src="/assets/lib/require.js?v=11531"></script>
+<script type="text/javascript" src="/assets/utils/StringUtils.js?v=11531"></script>
 <script>
     requirejs.config({
         baseUrl: '/assets/bintray-widgets/',
@@ -77,7 +77,7 @@
             templates  : '../../assets',
             css        : '../../stylesheets'
         },
-	    urlArgs    : 'v=11145'
+	    urlArgs    : 'v=11531'
     });
 </script>
 <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap.min.css"/>
@@ -96,7 +96,7 @@
     <link rel="shortcut icon" href="https://www.bintray.com/favicon.ico"/>
     
 
-    <script type="text/javascript" src="/assets/core-122c1e86ac269c81cb1a45020012c998.js" ></script><link rel="stylesheet" href="/assets/bintray-179c60265840e4cfce3057e1da6f33bf.css"/>
+    <script type="text/javascript" src="/assets/core-122c1e86ac269c81cb1a45020012c998.js" ></script><link rel="stylesheet" href="/assets/bintray-6f1634f79fe5c7ea999e3c406dc48f6d.css"/>
 
     <script>trayGeneral.testIfFrame();</script>
     
@@ -107,6 +107,7 @@
     }
 
     function buildUpgradePlanButton() {
+    	return
         var element = $.parseHTML('');
         return element.pop().data;
     }

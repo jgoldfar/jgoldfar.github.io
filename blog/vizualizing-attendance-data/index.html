@@ -482,33 +482,44 @@ We&rsquo;ll go ahead and set the out time to the in time if it&rsquo;s missing a
 swipeInDates <span style="color:#666">=</span> [
     <span style="color:#0b0;font-weight:bold">DateTime</span>(swipeData[i, <span style="color:#666">1</span>], lineDateFormat) <span style="color:#a2f;font-weight:bold">for</span> i <span style="color:#a2f">in</span> <span style="color:#666">2</span><span style="color:#666">:</span>nr
 ]</code></pre></div>
-<p>We&rsquo;ll divide the the day into 1 hour bins, and count all entries in a particular hour.</p>
+<p>We&rsquo;ll divide the the day into 1 hour bins, and count all entries in a particular hour.
+This requires a bit of care in case our data has any spurious or non-date entries:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">hourBins <span style="color:#666">=</span> zeros(<span style="color:#0b0;font-weight:bold">Int</span>, <span style="color:#666">23</span>)
 hours <span style="color:#666">=</span> <span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">23</span>
-<span style="color:#a2f;font-weight:bold">for</span> inDate <span style="color:#a2f">in</span> swipeInDates
-    hourBins[hour(inDate)] <span style="color:#666">+=</span> <span style="color:#666">1</span>
+<span style="color:#a2f;font-weight:bold">for</span> dateIndex <span style="color:#a2f">in</span> <span style="color:#666">2</span><span style="color:#666">:</span>nr
+    <span style="color:#a2f;font-weight:bold">try</span>
+      inDate <span style="color:#666">=</span> <span style="color:#0b0;font-weight:bold">DateTime</span>(strip(swipeData[dateIndex, <span style="color:#666">1</span>], [<span style="color:#b44">&#39;\&#34;&#39;</span>, <span style="color:#b44">&#39; &#39;</span>]), lineDateFormat)
+      hourBins[hour(inDate)] <span style="color:#666">+=</span> <span style="color:#666">1</span>
+    <span style="color:#a2f;font-weight:bold">catch</span> <span style="color:#a2f">e</span>
+      <span style="color:#a2f">@warn</span> <span style="color:#b44">&#34;Failed to parse </span><span style="color:#b68;font-weight:bold">$</span>(swipeData[dateIndex, <span style="color:#666">1</span>])<span style="color:#b44"> as a DateTime&#34;</span>
+    <span style="color:#a2f;font-weight:bold">end</span>
 <span style="color:#a2f;font-weight:bold">end</span></code></pre></div>
-<p><a href="http://makie.juliaplots.org/stable/">Makie</a> provides a nice, simple interface to plotting utilities for Julia (with plenty of room for customization and even interactive, data-intensive plots).</p>
-
-<p>We&rsquo;ll initialize a <code>Scene</code> object so we have full control over the axes and other properties of the plot.</p>
-
-<p>The <code>limits</code> argument is set to a <code>FRect(xmin, ymin, xdist, ydist)</code> so the plot fits exactly in the given bounds.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Makie
-
-scene <span style="color:#666">=</span> Scene(resolution <span style="color:#666">=</span> (<span style="color:#666">500</span>, <span style="color:#666">500</span>))
+<p><a href="https://github.com/JuliaPy/PyPlot.jl">PyPlot</a> provides a Julia interface to <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html">matplotlib.pyplot</a>; nearly the whole API translates over without modification.
+I found it easiest to use my system Conda installation rather than use the PyPlot.jl managed one, which requires calling Julia with something like</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b8860b">PYTHON</span><span style="color:#666">=</span><span style="color:#b44">&#34;`which python`&#34;</span> julia --project<span style="color:#666">=</span>. ...</code></pre></div>
+<p>In order to ensure things work across platforms in a consistent way, we&rsquo;ll set an explicit matplotlib backend.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> PyCall
+pygui(<span style="color:#666">:</span>tk)
+<span style="color:#a2f;font-weight:bold">import</span> PyPlot
+<span style="color:#a2f;font-weight:bold">const</span> plt <span style="color:#666">=</span> PyPlot</code></pre></div>
+<p>We&rsquo;ll initialize a <code>Figure</code> object so we can adjust the size of the plot, as well as an Axes object, so we can set the axis labels.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">const</span> fig <span style="color:#666">=</span> plt<span style="color:#666">.</span>figure(figsize<span style="color:#666">=</span>(<span style="color:#666">6.4</span>, <span style="color:#666">6.4</span>))
 
 nonzeroHours <span style="color:#666">=</span> hours[hourBins <span style="color:#666">.&gt;</span> <span style="color:#666">0</span>]
-minHour <span style="color:#666">=</span> minimum(nonzeroHours)
-hourDiff <span style="color:#666">=</span> maximum(nonzeroHours) <span style="color:#666">-</span> minHour
-barplot!(scene, nonzeroHours, hourBins[hourBins <span style="color:#666">.&gt;</span> <span style="color:#666">0</span>], limits <span style="color:#666">=</span> FRect(minHour <span style="color:#666">-</span> <span style="color:#666">0.5</span>, <span style="color:#666">0</span>, hourDiff <span style="color:#666">+</span> <span style="color:#666">0.5</span>, maximum(hourBins) <span style="color:#666">+</span> <span style="color:#666">10</span>))
+minHour, maxHour <span style="color:#666">=</span> extrema(nonzeroHours)
+hourDiff <span style="color:#666">=</span> maxHour <span style="color:#666">-</span> minHour
 
-axis <span style="color:#666">=</span> scene[Axis]
-axis[<span style="color:#666">:</span>names, <span style="color:#666">:</span>axisnames] <span style="color:#666">=</span> (<span style="color:#b44">&#34;Hour&#34;</span>, <span style="color:#b44">&#34;Number of Visitors&#34;</span>)</code></pre></div>
-<p>To save this plot to a file, we write</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">Makie<span style="color:#666">.</span>save(<span style="color:#b44">&#34;Busy-Hours-Julia.png&#34;</span>, scene)</code></pre></div>
+<span style="color:#a2f;font-weight:bold">const</span> caxes <span style="color:#666">=</span> plt<span style="color:#666">.</span>axes(
+    xlabel<span style="color:#666">=</span><span style="color:#b44">&#34;Hour&#34;</span>,
+    ylabel<span style="color:#666">=</span><span style="color:#b44">&#34;Number of Visitors&#34;</span>
+)</code></pre></div>
+<p>Then we simply create the plot and save it:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">plt<span style="color:#666">.</span>bar(nonzeroHours, hourBins[hourBins <span style="color:#666">.&gt;</span> <span style="color:#666">0</span>], axes <span style="color:#666">=</span> caxes)
+
+plt<span style="color:#666">.</span>savefig(<span style="color:#b44">&#34;Busy-Hours-Julia.png&#34;</span>, quality<span style="color:#666">=</span><span style="color:#666">100</span>, dpi<span style="color:#666">=</span><span style="color:#666">80</span>)</code></pre></div>
 <p>which is reproduced below:</p>
 
-<p><img src="/blog/vizualizing-attendance-data-images/Busy-Hours-Julia.png" alt="Busy-Hours-Julia" /></p>
+<p><img src="/blog/vizualizing-attendance-data/Busy-Hours-Julia.png" alt="Busy-Hours-Julia" /></p>
 
 <h2 id="r-implementation">R Implementation</h2>
 
@@ -532,10 +543,10 @@ p<span style="color:#666">&lt;-</span>ggplot(data<span style="color:#666">=</spa
   geom_text(aes(label<span style="color:#666">=</span>n), vjust<span style="color:#666">=</span><span style="color:#666">1.6</span>, color<span style="color:#666">=</span><span style="color:#b44">&#34;white&#34;</span>, size<span style="color:#666">=</span><span style="color:#666">3.5</span>)<span style="color:#666">+</span>
   theme_minimal()</code></pre></div>
 <p>This graphic can be exported using <code>ggsave</code> (I&rsquo;ve modified the dimensions to match the plot above):</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggsave(<span style="color:#b44">&#34;Busy-Hours-R.png&#34;</span>, p, width<span style="color:#666">=</span><span style="color:#666">5.56</span>, height<span style="color:#666">=</span><span style="color:#666">5.35</span>, units<span style="color:#666">=</span><span style="color:#b44">&#34;in&#34;</span>, dpi<span style="color:#666">=</span><span style="color:#b44">&#34;screen&#34;</span>)</code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">ggsave(<span style="color:#b44">&#34;Busy-Hours-R.png&#34;</span>, p, width<span style="color:#666">=</span><span style="color:#666">6.4</span>, height<span style="color:#666">=</span><span style="color:#666">6.4</span>, units<span style="color:#666">=</span><span style="color:#b44">&#34;in&#34;</span>, dpi<span style="color:#666">=</span><span style="color:#666">80</span>)</code></pre></div>
 <p>By way of comparison with the above output, the corresponding graphic is reproduced below:</p>
 
-<p><img src="/blog/vizualizing-attendance-data-images/Busy-Hours-R.png" alt="Busy-Hours-R" /></p>
+<p><img src="/blog/vizualizing-attendance-data/Busy-Hours-R.png" alt="Busy-Hours-R" /></p>
 
 <h2 id="python-implementation">Python Implementation</h2>
 
@@ -555,23 +566,24 @@ df <span style="color:#666">=</span> pandas<span style="color:#666">.</span>read
 <p>For the plotting step, let&rsquo;s load <code>matplotlib</code>:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.pyplot</span> <span style="color:#a2f;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">plt</span></code></pre></div>
 <p>and then generate the figure using the <code>index</code> and one column of the <code>values</code> of the dataframe we generated above:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#666">=</span> plt<span style="color:#666">.</span>figure(figsize<span style="color:#666">=</span>(<span style="color:#666">5.56</span>, <span style="color:#666">5.35</span>))
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#666">=</span> plt<span style="color:#666">.</span>figure(figsize<span style="color:#666">=</span>(<span style="color:#666">6.4</span>, <span style="color:#666">6.4</span>))
 p <span style="color:#666">=</span> plt<span style="color:#666">.</span>bar(NumberOfVisitors<span style="color:#666">.</span>index, NumberOfVisitors<span style="color:#666">.</span>values[:, <span style="color:#666">1</span>])
 plt<span style="color:#666">.</span>ylabel(<span style="color:#b44">&#39;Number of Visitors&#39;</span>)
 plt<span style="color:#666">.</span>xlabel(<span style="color:#b44">&#39;Hour of Day&#39;</span>)
 plt<span style="color:#666">.</span>show()</code></pre></div>
 <p>This plot can be exported to an image file like we did with the other examples:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig<span style="color:#666">.</span>savefig(<span style="color:#b44">&#39;Busy-Hours-Python.png&#39;</span>, dpi<span style="color:#666">=</span><span style="color:#666">72</span>)</code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig<span style="color:#666">.</span>savefig(<span style="color:#b44">&#39;Busy-Hours-Python.png&#39;</span>, dpi<span style="color:#666">=</span><span style="color:#666">80</span>)</code></pre></div>
 <p>which is included below:</p>
 
-<p><img src="/blog/vizualizing-attendance-data-images/Busy-Hours-Python.png" alt="Busy-Hours-Python" /></p>
+<p><img src="/blog/vizualizing-attendance-data/Busy-Hours-Python.png" alt="Busy-Hours-Python" /></p>
 
 <h2 id="future-work">Future Work</h2>
 
 <ul>
 <li><p>I&rsquo;ve run some other, rather more complicated processes on the data we collect on attendance in MAC that would be interesting to share some time.</p></li>
 
-<li><p>While we usually report this information internally, it might be good to produce charts like this on a regular basis and post them online, so I&rsquo;ll look at creating a regularly released &ldquo;product&rdquo; and work it into some kind of regular post.</p></li>
+<li><p>While we usually report this information internally, it might be good to produce charts like this on a regular basis and post them online, so I&rsquo;ll look at creating a regularly released &ldquo;product&rdquo; and work it into some kind of regular post.
+<em>Update</em>: This is now completed; see the post <a href="https://jgoldfar.github.io/blog/automating-attendance-reports/">here</a></p></li>
 
 <li><p>The bar chart we created here is a bit misleading, since it only reports the time the student comes in to the center, but students may stay for any amount of time.
 More careful histogram creation, perhaps presented as a heatmap in continuous time, would make more sense.</p></li>
@@ -579,7 +591,8 @@ More careful histogram creation, perhaps presented as a heatmap in continuous ti
 <li><p>Experiment with isolating the dependencies using a <a href="https://docs.anaconda.com/anaconda/user-guide/tasks/use-r-language"><code>conda</code></a> or <a href="http://rstudio.github.io/packrat/walkthrough.html"><code>packrat</code></a> and <code>pipenv</code> environments.</p></li>
 
 <li><p>My code, particularly in Julia, is not particularly idiomatic (in particular, I don&rsquo;t use DataFrames, which are essential for larger tabular data.)
-It would be good all around to update that code.</p></li>
+It would be good all around to update that code. <em>Update</em>: As stated above, this is also completed.
+See <a href="https://jgoldfar.github.io/blog/vizualizing-attendance-data-julia-idiomatic/">here</a></p></li>
 </ul>
 
 <h2 id="footnotes">Footnotes</h2>
