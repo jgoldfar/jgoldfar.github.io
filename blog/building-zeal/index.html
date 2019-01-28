@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Math | jgoldfar&#39;s home on the web
+        Building Zeal | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -286,7 +286,6 @@ thead div.tagListTitle {
 
 	<meta name="author" content="Jonathan Goldfarb" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/tags/math/index.xml">
     </head>
 
 
@@ -326,13 +325,24 @@ thead div.tagListTitle {
                                     
                                 </td>
                             
-	
-		<td>
-			<div class="tagListTitle">
-				Posts Tagged "math"
-			</div>
-		</td>
-	
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Building Zeal
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Jan 25, 2019
+</span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/build-the-world">build-the-world</a></span>
+    
+</ul>
+</td>
 
 
                             </tr>
@@ -426,66 +436,54 @@ thead div.tagListTitle {
                                 
                                 
 
-<ul class="taxonomyListing">
 
-<article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/math-bio-workshop-sp19/">Mathematical Biology Numerics Workshop </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Jan 25, 2019
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/python">Python</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
-    
-    </ul>
-</header>
+<h2 id="motivation">Motivation</h2>
 
-<div>
-Below is the output from running this notebook on Google Colab; you&rsquo;ll need to select &ldquo;open in playground&rdquo; to make changes or run cells.
-We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}
-</div>
+<p>Since I do quite a bit of work remotely (or at least, not internet connected) and still lack a photographic memory, having documentation offline is pretty useful; I&rsquo;ve used <a href="https://github.com/zealdocs/zeal">Zeal</a> for a while on my Linux machine, but would really like to use it everywhere&hellip;
+But building Zeal on OSX is not trivial.</p>
 
+<p>The primary issue is that it depends on a Qt5 component, the Webkit interface, that has apparently been on the way out for a while.
+Luckily, everything we need is open source, and (given enough time) we can build just about anything (right?)</p>
 
-<footer>
-        <a href='https://jgoldfar.github.io/blog/math-bio-workshop-sp19/'><nobr>Read more →</nobr></a>
-</footer>
+<h2 id="building-qtwebkit">Building QtWebkit</h2>
 
-</article>
+<p>As you can see <a href="https://travis-ci.org/jgoldfar/qtwebkit">here</a>, my attempts to get Travis to build QtWebkit for me were not successful.
+I was mainly focussed on getting OSX up-and-running, which it would, if we could speed up the build at all; determining the correct prerequisite packages to install on a Linux platform is all that should be required to allow them to time-out as well&hellip;
+The resulting library and include files (built using Clang on OSX 10.12.6, using the same configuration as on CI, followed by <code>ninja install</code> in the build directory) are available <a href="https://bintray.com/jgoldfar/BlogPostSources/download_file?file_path=qtwebkit-4ad2c91b6d7a6d67e48f6b0252b33eb1d3a00135.x86_64-darwin.tar.gz">on Bintray here</a>.
+These work locally after &ldquo;pasting&rdquo; them somewhere accessible by the <code>Zeal</code> build system on your local machine and pointing it that direction, but this is not currently reproducible on CI.</p>
 
+<h2 id="building-zeal">Building Zeal</h2>
 
-<article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/brief-ift/">A Brief Introduction to the Implicit Function Theorem </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Nov 19, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
-    
-    </ul>
-</header>
+<p>As expected, <a href="https://travis-ci.org/jgoldfar/zeal">Travis refused</a> to build Zeal on OSX, but if you&rsquo;ve asked <code>brew</code> to install the necessary dependencies and follow the same <a href="https://github.com/jgoldfar/zeal/blob/enable-travis/.travis.yml">script</a> (changing any necessary paths) you should be able to build Zeal correctly.
+So far, I&rsquo;ve not run into any issues with the slightly mismatched versions of Qt being used at various stages of the build, but compiling everything against the same versions of the dependent packages would lead to a more reliable product.</p>
 
-<div>
-Motivating Example Consider a curve such as that defining a unit circle in the plane, \[x^{2} + y^{2}=1\] Note that this definition is a special case of a more general situation, a curve defined as a level set of a function \[f(x,y):= x^{2} + y^{2}= 1 =:z_{0}\] Since this is a relatively simple curve, we can draw it and observe that, while it is not a function with respect to either \(x\) or \(y\) (that is, in general we cannot solve the equation for either \(y\) or \(x\), respectively), in a small neighborhood of any point (signified by a dashed circle in Figure 1 about the given point) the curve is indeed a function, as we can see:
-</div>
+<h2 id="future-work">Future Work</h2>
 
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/brief-ift/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
+<ul>
+<li>Generate QtWebkit matching exactly with installed versions and use precompiled libraries and headers.</li>
 </ul>
 
-<a href="https://jgoldfar.github.iotags/">Back to Tag Listing</a>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
                                 
                             </td>
@@ -496,7 +494,11 @@ Motivating Example Consider a curve such as that defining a unit circle in the p
                             <td>
                                 <div class="prevNext">
                                     
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/automating-attendance-reports/">&lArr; Automating Attendance Data Reporting</a>
                                     
+                                    
+                                    <a class="next" href="https://jgoldfar.github.io/blog/math-bio-workshop-sp19/"> Mathematical Biology Numerics Workshop &rArr;</a>
+                            
                         </div>
                             </td>
                         </tr>

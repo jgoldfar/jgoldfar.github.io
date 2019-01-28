@@ -6,10 +6,20 @@
     <description>Recent content on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Nov 2018 12:30:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jan 2019 11:06:51 +0000</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/oss/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building Zeal</title>
+      <link>https://jgoldfar.github.io/blog/building-zeal/</link>
+      <pubDate>Fri, 25 Jan 2019 11:06:51 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/building-zeal/</guid>
+      <description>Motivation Since I do quite a bit of work remotely (or at least, not internet connected) and still lack a photographic memory, having documentation offline is pretty useful; I&amp;rsquo;ve used Zeal for a while on my Linux machine, but would really like to use it everywhere&amp;hellip; But building Zeal on OSX is not trivial.
+The primary issue is that it depends on a Qt5 component, the Webkit interface, that has apparently been on the way out for a while.</description>
+    </item>
     
     <item>
       <title>Visualizing Attendance Data using Idiomatic Julia</title>

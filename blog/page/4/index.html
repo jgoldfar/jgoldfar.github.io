@@ -438,6 +438,57 @@ thead div.tagListTitle {
 
     <article class="blogPostListing">
 <header>
+    <h3><a href="https://jgoldfar.github.io/blog/quick-julia-sha256/">Quick SHA256 Generation using Julia </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Oct 11, 2018
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia-lang">Julia-lang</a></span>
+    
+    </ul>
+</header>
+
+<div>
+When generating reproducible software, you&rsquo;re often in the position of checking and generating SHA256 checksums from a given file. Sure, there are command-line utilities that can do this on some platforms, but using a scripting language is more portable (thanks to the maintainers of that language, of course) and, if you&rsquo;ve got a REPL open, nearly immediate: if your file path is present in fname, write
+using SHA: sha256 open(fname) do file return bytes2hex(sha256(file)) end
+</div>
+
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/">Containerizing and (Eventually) Updating pdf2htmlEX </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Oct 10, 2018
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/docker">Docker</a></span>
+    
+    </ul>
+</header>
+
+<div>
+We&rsquo;ve all been there: you&rsquo;re asked to solve a technical problem (&ldquo;compiling&rdquo; a TeX file to the web with minimal changes to the content) and someone has done an impressive job towards solving this problem, just a few short years ago. And, the project, pdf2htmlEX, is open source! But as happens with projects that fill a particular niche, this particular project is unmaintained by the original author. Some kind contributors seem to have picked up where the original author left off, but this project, too has languished.
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/dockerizing-and-updating-codebase/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
     <h3><a href="https://jgoldfar.github.io/blog/too-much-ci/">Continuous Integration Ad Nauseam? </a> </h3>
     <ul class="tags">
     <span class="date">
@@ -520,56 +571,6 @@ However, when it comes to research, it seems to me that open source should be th
 </article>
 
 
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/building-octave-osx/">Building GNU Octave From Source on OSX </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Aug 15, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/build-the-world">build-the-world</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-    </ul>
-</header>
-
-<div>
-Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/building-octave-osx/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/about/">About </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Aug 14, 2018
-    </span>
-    
-    </ul>
-</header>
-
-<div>
-I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you'd like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/about/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
 
 
 <div class="pagination">
@@ -579,7 +580,11 @@ I am an applied mathematician with a background in partial differential equation
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 4 of 4</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 4 of 5</span>
+    
+      <a href="/blog/page/5/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
     
   </nav>
 </div>

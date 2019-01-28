@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Math | jgoldfar&#39;s home on the web
+        jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -286,7 +286,7 @@ thead div.tagListTitle {
 
 	<meta name="author" content="Jonathan Goldfarb" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/tags/math/index.xml">
+    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/blog/index.xml">
     </head>
 
 
@@ -326,13 +326,10 @@ thead div.tagListTitle {
                                     
                                 </td>
                             
-	
-		<td>
-			<div class="tagListTitle">
-				Posts Tagged "math"
-			</div>
-		</td>
-	
+  <td class="postTitle">
+  
+  
+  </td>
 
 
                             </tr>
@@ -425,67 +422,86 @@ thead div.tagListTitle {
                             <td class="mainbody">
                                 
                                 
+<!--
+     Testing blog functionality
 
-<ul class="taxonomyListing">
+     \[
+     u_t = {(a u_x)}_x + b u_x
+     \]
 
-<article class="blogPostListing">
+     Which, in $n$-dimensions, may be written \(u_t = \text{div} {(A \nabla u)}\)
+-->
+
+
+
+
+
+    <article class="blogPostListing">
 <header>
-    <h3><a href="https://jgoldfar.github.io/blog/math-bio-workshop-sp19/">Mathematical Biology Numerics Workshop </a> </h3>
+    <h3><a href="https://jgoldfar.github.io/blog/building-octave-osx/">Building GNU Octave From Source on OSX </a> </h3>
     <ul class="tags">
     <span class="date">
-    Published: Jan 25, 2019
+    Published: Aug 15, 2018
     </span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/python">Python</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/build-the-world">build-the-world</a></span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
     
     </ul>
 </header>
 
 <div>
-Below is the output from running this notebook on Google Colab; you&rsquo;ll need to select &ldquo;open in playground&rdquo; to make changes or run cells.
-We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}
+Below are the steps I followed to build GNU Octave from source on my Mac, together with some binary dependencies. My main motivation is improvement of the Octave environment as an alternative to MATLAB; my main reasons for pursuing this are elucidated on my post on the topic, but in particular, let me just say that I&rsquo;ve been bit once by a license expiration that brought a portion of my numerical work to a standstill in the past, and that seems like an unacceptable reason to allow progress to stop!
 </div>
 
 
 <footer>
-        <a href='https://jgoldfar.github.io/blog/math-bio-workshop-sp19/'><nobr>Read more →</nobr></a>
+        <a href='https://jgoldfar.github.io/blog/building-octave-osx/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
 
 
-<article class="blogPostListing">
+    <article class="blogPostListing">
 <header>
-    <h3><a href="https://jgoldfar.github.io/blog/brief-ift/">A Brief Introduction to the Implicit Function Theorem </a> </h3>
+    <h3><a href="https://jgoldfar.github.io/blog/about/">About </a> </h3>
     <ul class="tags">
     <span class="date">
-    Published: Nov 19, 2018
+    Published: Aug 14, 2018
     </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
     
     </ul>
 </header>
 
 <div>
-Motivating Example Consider a curve such as that defining a unit circle in the plane, \[x^{2} + y^{2}=1\] Note that this definition is a special case of a more general situation, a curve defined as a level set of a function \[f(x,y):= x^{2} + y^{2}= 1 =:z_{0}\] Since this is a relatively simple curve, we can draw it and observe that, while it is not a function with respect to either \(x\) or \(y\) (that is, in general we cannot solve the equation for either \(y\) or \(x\), respectively), in a small neighborhood of any point (signified by a dashed circle in Figure 1 about the given point) the curve is indeed a function, as we can see:
+I am an applied mathematician with a background in partial differential equations, meteorology, and software development, among other things. If you'd like to know more about my published work, or to contact me regarding an interesting problem or work to be done, please look to the contact information on the left.  This blog is a place for me to collect ideas and exposition on various projects I work on, or have an interest in.
 </div>
 
 
 <footer>
-        <a href='https://jgoldfar.github.io/blog/brief-ift/'><nobr>Read more →</nobr></a>
+        <a href='https://jgoldfar.github.io/blog/about/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
 
 
-</ul>
 
-<a href="https://jgoldfar.github.iotags/">Back to Tag Listing</a>
+
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/blog/page/4/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 5 of 5</span>
+    
+  </nav>
+</div>
+
+
+
 
                                 
                             </td>

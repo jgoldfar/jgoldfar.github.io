@@ -12,6 +12,26 @@
     
     
     <item>
+      <title>Mathematical Biology Numerics Workshop</title>
+      <link>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</link>
+      <pubDate>Fri, 25 Jan 2019 13:12:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</guid>
+      <description>Below is the output from running this notebook on Google Colab; you&amp;rsquo;ll need to select &amp;ldquo;open in playground&amp;rdquo; to make changes or run cells.
+We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}</description>
+    </item>
+    
+    <item>
+      <title>Building Zeal</title>
+      <link>https://jgoldfar.github.io/blog/building-zeal/</link>
+      <pubDate>Fri, 25 Jan 2019 11:06:51 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/building-zeal/</guid>
+      <description>Motivation Since I do quite a bit of work remotely (or at least, not internet connected) and still lack a photographic memory, having documentation offline is pretty useful; I&amp;rsquo;ve used Zeal for a while on my Linux machine, but would really like to use it everywhere&amp;hellip; But building Zeal on OSX is not trivial.
+The primary issue is that it depends on a Qt5 component, the Webkit interface, that has apparently been on the way out for a while.</description>
+    </item>
+    
+    <item>
       <title>Automating Attendance Data Reporting</title>
       <link>https://jgoldfar.github.io/blog/automating-attendance-reports/</link>
       <pubDate>Wed, 02 Jan 2019 14:29:00 -0400</pubDate>
@@ -85,7 +105,9 @@ Students from any major are invited to come discuss research directions and topi
       <pubDate>Sat, 10 Nov 2018 16:45:18 +0000</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/colophon/</guid>
-      <description>This page is generated using Hugo from a repository here. The theme is based on an old site layout I had used, but I&amp;rsquo;m growing a bit tired of it. You&amp;rsquo;d probably guess that I don&amp;rsquo;t have much design in my background, despite an appreciation for good aesthetics.
+      <description>This page is generated using Hugo from a repository here.
+The font is Raleway, and we use PureCSS and FontAwesome.
+The theme is based on an old site layout I had used, but I&amp;rsquo;m growing a bit tired of it. You&amp;rsquo;d probably guess that I don&amp;rsquo;t have much design in my background, despite an appreciation for good aesthetics.
 In particular, Bitbuckets CI automatically builds the site in this Docker image, which includes some additional tools that we use to generate some files.</description>
     </item>
     

@@ -6,10 +6,20 @@
     <description>Recent content in Dataviz on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Jan 2019 14:29:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jan 2019 13:12:00 -0400</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mathematical Biology Numerics Workshop</title>
+      <link>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</link>
+      <pubDate>Fri, 25 Jan 2019 13:12:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</guid>
+      <description>Below is the output from running this notebook on Google Colab; you&amp;rsquo;ll need to select &amp;ldquo;open in playground&amp;rdquo; to make changes or run cells.
+We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}</description>
+    </item>
     
     <item>
       <title>Automating Attendance Data Reporting</title>
