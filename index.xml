@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Mathematical Biology Numerics Workshop</title>
-      <link>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</link>
-      <pubDate>Fri, 25 Jan 2019 13:12:00 -0400</pubDate>
+      <title>Interpolating Data in a Vector Space</title>
+      <link>https://jgoldfar.github.io/blog/interpolations-jl-note/</link>
+      <pubDate>Mon, 28 Jan 2019 11:00:51 +0000</pubDate>
       
-      <guid>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</guid>
-      <description>Below is the output from running this notebook on Google Colab; you&amp;rsquo;ll need to select &amp;ldquo;open in playground&amp;rdquo; to make changes or run cells.
-We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}</description>
+      <guid>https://jgoldfar.github.io/blog/interpolations-jl-note/</guid>
+      <description>I&amp;rsquo;d like to show in this note that Julia&amp;rsquo;s &amp;ldquo;official&amp;rdquo; interpolation package, Interpolations.jl can work natively with any type of object that allows some vector space operations over the field of real (or floating point) numbers. That is, in order to interpolate between two values y_1 and y_2, those values must have compatible, closed scalar multiplication and vector addition operations.
+First, some preamble (to make sure we can load Interpolations in this workspace)</description>
     </item>
     
     <item>
@@ -29,6 +29,16 @@ We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, 
       <guid>https://jgoldfar.github.io/blog/building-zeal/</guid>
       <description>Motivation Since I do quite a bit of work remotely (or at least, not internet connected) and still lack a photographic memory, having documentation offline is pretty useful; I&amp;rsquo;ve used Zeal for a while on my Linux machine, but would really like to use it everywhere&amp;hellip; But building Zeal on OSX is not trivial.
 The primary issue is that it depends on a Qt5 component, the Webkit interface, that has apparently been on the way out for a while.</description>
+    </item>
+    
+    <item>
+      <title>Mathematical Biology Numerics Workshop</title>
+      <link>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</link>
+      <pubDate>Thu, 24 Jan 2019 13:12:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</guid>
+      <description>Below is the output from running this notebook on Google Colab; you&amp;rsquo;ll need to select &amp;ldquo;open in playground&amp;rdquo; to make changes or run cells.
+We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}</description>
     </item>
     
     <item>

@@ -438,29 +438,27 @@ thead div.tagListTitle {
 
     <article class="blogPostListing">
 <header>
-    <h3><a href="https://jgoldfar.github.io/blog/math-bio-workshop-sp19/">Mathematical Biology Numerics Workshop </a> </h3>
+    <h3><a href="https://jgoldfar.github.io/blog/interpolations-jl-note/">Interpolating Data in a Vector Space </a> </h3>
     <ul class="tags">
     <span class="date">
-    Published: Jan 25, 2019
+    Published: Jan 28, 2019
     </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/python">Python</a></span>
     
         : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia">Julia</a></span>
     
     </ul>
 </header>
 
 <div>
-Below is the output from running this notebook on Google Colab; you&rsquo;ll need to select &ldquo;open in playground&rdquo; to make changes or run cells.
-We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}
+I&rsquo;d like to show in this note that Julia&rsquo;s &ldquo;official&rdquo; interpolation package, Interpolations.jl can work natively with any type of object that allows some vector space operations over the field of real (or floating point) numbers. That is, in order to interpolate between two values y_1 and y_2, those values must have compatible, closed scalar multiplication and vector addition operations.
+First, some preamble (to make sure we can load Interpolations in this workspace)
 </div>
 
 
 <footer>
-        <a href='https://jgoldfar.github.io/blog/math-bio-workshop-sp19/'><nobr>Read more →</nobr></a>
+        <a href='https://jgoldfar.github.io/blog/interpolations-jl-note/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
@@ -489,6 +487,36 @@ The primary issue is that it depends on a Qt5 component, the Webkit interface, t
 
 <footer>
         <a href='https://jgoldfar.github.io/blog/building-zeal/'><nobr>Read more →</nobr></a>
+</footer>
+
+</article>
+
+
+    <article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/math-bio-workshop-sp19/">Mathematical Biology Numerics Workshop </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Jan 24, 2019
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/python">Python</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/dataviz">DataViz</a></span>
+    
+    </ul>
+</header>
+
+<div>
+Below is the output from running this notebook on Google Colab; you&rsquo;ll need to select &ldquo;open in playground&rdquo; to make changes or run cells.
+We will consider the solution of the problem \begin{align} \dot{x}(t) = f(t, x, u), \end{align} \begin{align} x(t_0) = x^0 \in \mathbb{R}^n \end{align} where \begin{align} x(t) = \big( x_1(t), x_2(t), \ldots, x_n(t)\big) \end{align} is the state vector, \begin{align} u = \big( u_1, u_2, \ldots, u_m\big) \in \mathbb{R}^m \end{align} is the parameter vector, and \begin{align} f(t,x,u) = \big( f_1(t, x, u), f_2(t, x, u),\ldots, f_n(t, x, u)\big): [t_0, T] \times \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \end{align}
+</div>
+
+
+<footer>
+        <a href='https://jgoldfar.github.io/blog/math-bio-workshop-sp19/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>
@@ -545,32 +573,6 @@ sudo apt-get install hfsprogs Ubuntu can read, but not write (by default) to HFS
 
 <footer>
         <a href='https://jgoldfar.github.io/blog/mount-hfsplus-on-linux/'><nobr>Read more →</nobr></a>
-</footer>
-
-</article>
-
-
-    <article class="blogPostListing">
-<header>
-    <h3><a href="https://jgoldfar.github.io/blog/automating-personal-devops/">Personal DevOps: using Ansible </a> </h3>
-    <ul class="tags">
-    <span class="date">
-    Published: Dec 3, 2018
-    </span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
-    
-    </ul>
-</header>
-
-<div>
-I&rsquo;ve now been in the position of setting up my build environment on multiple Mac computers in the past couple weeks. It can be a real impediment to my productivity when things (software, resources) aren&rsquo;t in the places I expect: search for the missing package, download, build, and install it (dealing with any issues as they come up), etc.
-Luckily, as a copious note-taker I already know where to find most packages I end up needing, and the steps I&rsquo;ll need to complete to get things built.
-</div>
-
-
-<footer>
-        <a href='https://jgoldfar.github.io/blog/automating-personal-devops/'><nobr>Read more →</nobr></a>
 </footer>
 
 </article>

@@ -6,7 +6,7 @@
     <description>Recent content in Dataviz on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Jan 2019 13:12:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jan 2019 13:12:00 -0400</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Mathematical Biology Numerics Workshop</title>
       <link>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</link>
-      <pubDate>Fri, 25 Jan 2019 13:12:00 -0400</pubDate>
+      <pubDate>Thu, 24 Jan 2019 13:12:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</guid>
       <description>Below is the output from running this notebook on Google Colab; you&amp;rsquo;ll need to select &amp;ldquo;open in playground&amp;rdquo; to make changes or run cells.

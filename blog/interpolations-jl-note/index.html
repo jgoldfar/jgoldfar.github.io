@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Building Zeal | jgoldfar&#39;s home on the web
+        Interpolating Data in a Vector Space | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -328,18 +328,18 @@ thead div.tagListTitle {
 <td class="postTitle">
     
     <div class="postTitle">
-        Building Zeal
+        Interpolating Data in a Vector Space
     </div>
     
     
 <ul class="tags">
 <span class="date">
-    Published: Jan 25, 2019
+    Published: Jan 28, 2019
 </span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
     
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/build-the-world">build-the-world</a></span>
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia">Julia</a></span>
     
 </ul>
 </td>
@@ -435,34 +435,62 @@ thead div.tagListTitle {
                             <td class="mainbody">
                                 
                                 
+<p>I&rsquo;d like to show in this note that Julia&rsquo;s &ldquo;official&rdquo; interpolation package, <a href="https://github.com/JuliaMath/Interpolations.jl">Interpolations.jl</a> can work natively with any type of object that allows some vector space operations over the field of real (or floating point) numbers.
+That is, in order to interpolate between two values <code>y_1</code> and <code>y_2</code>, those values must have compatible, closed scalar multiplication and vector addition operations.</p>
 
+<p>First, some preamble (to make sure we can load Interpolations in this workspace)</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Pkg
+Pkg<span style="color:#666">.</span>activate(<span style="color:#a2f">@__DIR__</span>)
+Pkg<span style="color:#666">.</span>add(<span style="color:#b44">&#34;Interpolations&#34;</span>)</code></pre></div>
+<p>We&rsquo;ll define a type quite helpfully named <code>mayInterpolate</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">struct mayInterpolate{T<span style="color:#666">&lt;:</span><span style="color:#0b0;font-weight:bold">Real</span>}
+    val<span style="color:#666">::</span>T
+<span style="color:#a2f;font-weight:bold">end</span></code></pre></div>
+<p>Though we &ldquo;know&rdquo; that this is a wrapper around some kind of real-number-like object, and hence can usually be interpreted as a member of a vector space, Julia knows nothing about this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">vTest <span style="color:#666">=</span> mayInterpolate(<span style="color:#666">-</span><span style="color:#666">1.0</span>)
+typeof(vTest) <span style="color:#666">&lt;:</span> <span style="color:#0b0;font-weight:bold">Real</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">false</pre></div>
+<p>Nevertheless, by defining the appropriate methods to operate on <code>mayInterpolate</code> objects as though they were vectors, we can still use the interpolation routines defined by <code>Interpolations.jl</code>.
+This follows naturally from Julia&rsquo;s multiple-dispatch strategy for choosing or compiling implementations of functions.</p>
 
-<h2 id="motivation">Motivation</h2>
+<p>More involved and cleverly applied versions of this kind of trick enable trait-like systems to be implemented in Julia, and the integration of packages like <a href="https://github.com/JuliaDiffEq/DifferentialEquations.jl">DifferentialEquations.jl</a> and <a href="https://github.com/FluxML/Flux.jl">Flux.jl</a> into <a href="https://github.com/JuliaDiffEq/DiffEqFlux.jl">DiffEqFlux.jl</a>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">import</span> Base<span style="color:#666">:</span> <span style="color:#666">*</span>
+<span style="color:#a2f;font-weight:bold">function</span> <span style="color:#666">*</span>(k<span style="color:#666">::</span>T, v<span style="color:#666">::</span>mayInterpolate) where {T<span style="color:#666">&lt;:</span><span style="color:#0b0;font-weight:bold">Real</span>}
+    mayInterpolate(k<span style="color:#666">*</span>v<span style="color:#666">.</span>val)
+<span style="color:#a2f;font-weight:bold">end</span>
 
-<p>Since I do quite a bit of work remotely (or at least, not internet connected) and still lack a photographic memory, having documentation offline is pretty useful; I&rsquo;ve used <a href="https://github.com/zealdocs/zeal">Zeal</a> for a while on my Linux machine, but would really like to use it everywhere&hellip;
-But building Zeal on OSX is not trivial.</p>
+<span style="color:#a2f;font-weight:bold">import</span> Base<span style="color:#666">:</span> <span style="color:#666">+</span>
+<span style="color:#a2f;font-weight:bold">function</span> <span style="color:#666">+</span>(v1<span style="color:#666">::</span>mayInterpolate, v2<span style="color:#666">::</span>mayInterpolate)
+    mayInterpolate(v1<span style="color:#666">.</span>val <span style="color:#666">+</span> v2<span style="color:#666">.</span>val)
+<span style="color:#a2f;font-weight:bold">end</span>
 
-<p>The primary issue is that it depends on a Qt5 component, the Webkit interface, that has apparently been on the way out for a while.
-Luckily, everything we need is open source, and (given enough time) we can build just about anything (right?)</p>
-
-<h2 id="building-qtwebkit">Building QtWebkit</h2>
-
-<p>As you can see <a href="https://travis-ci.org/jgoldfar/qtwebkit">here</a>, my attempts to get Travis to build QtWebkit for me were not successful.
-I was mainly focussed on getting OSX up-and-running, which it would, if we could speed up the build at all; determining the correct prerequisite packages to install on a Linux platform is all that should be required to allow them to time-out as well&hellip;
-The resulting library and include files (built using Clang on OSX 10.12.6, using the same configuration as on CI, followed by <code>ninja install</code> in the build directory) are available <a href="https://bintray.com/jgoldfar/BlogPostSources/download_file?file_path=qtwebkit-4ad2c91b6d7a6d67e48f6b0252b33eb1d3a00135.x86_64-darwin.tar.gz">on Bintray here</a>.
-These work locally after &ldquo;pasting&rdquo; them somewhere accessible by the <code>Zeal</code> build system on your local machine and pointing it that direction, but this is not currently reproducible on CI.</p>
-
-<h2 id="building-zeal">Building Zeal</h2>
-
-<p>As expected, <a href="https://travis-ci.org/jgoldfar/zeal">Travis refused</a> to build Zeal on OSX, but if you&rsquo;ve asked <code>brew</code> to install the necessary dependencies and follow the same <a href="https://github.com/jgoldfar/zeal/blob/enable-travis/.travis.yml">script</a> (changing any necessary paths) you should be able to build Zeal correctly.
-So far, I&rsquo;ve not run into any issues with the slightly mismatched versions of Qt being used at various stages of the build, but compiling everything against the same versions of the dependent packages would lead to a more reliable product.</p>
-
-<h2 id="future-work">Future Work</h2>
-
-<ul>
-<li>Generate QtWebkit matching exactly with installed versions and use precompiled libraries and headers.</li>
-</ul>
-
+<span style="color:#080;font-style:italic"># Interpolations.jl also assumes we can divide by scalars, and allows us to</span>
+<span style="color:#080;font-style:italic"># provide an &#34;optimized&#34; implementation if we please</span>
+<span style="color:#a2f;font-weight:bold">import</span> Base<span style="color:#666">:</span> <span style="color:#666">/</span>
+<span style="color:#a2f;font-weight:bold">function</span> <span style="color:#666">/</span>(v<span style="color:#666">::</span>mayInterpolate, k<span style="color:#666">::</span>T) where {T<span style="color:#666">&lt;:</span><span style="color:#0b0;font-weight:bold">Real</span>}
+    (<span style="color:#666">1</span><span style="color:#666">/</span>k)<span style="color:#666">*</span>v
+<span style="color:#a2f;font-weight:bold">end</span></code></pre></div>
+<p>Let&rsquo;s create some data to interpolate:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">xVals <span style="color:#666">=</span> range(<span style="color:#666">0</span>, stop<span style="color:#666">=</span><span style="color:#666">1</span>, length<span style="color:#666">=</span><span style="color:#666">10</span>)
+yVals <span style="color:#666">=</span> [mayInterpolate(t<span style="color:#666">+</span><span style="color:#666">1</span>) <span style="color:#a2f;font-weight:bold">for</span> t <span style="color:#a2f">in</span> xVals]</code></pre></div>
+<p>and create a linear interpolating function:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">using</span> Interpolations
+yFn <span style="color:#666">=</span> LinearInterpolation(xVals, yVals)</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">10-element extrapolate(scale(interpolate(::Array{mayInterpolate{Float64},1}, BSpline(Linear())), (0.0:0.1111111111111111:1.0,)), Throw()) with element type mayInterpolate{Float64}:
+ mayInterpolate{Float64}(1.0)
+ mayInterpolate{Float64}(1.1111111111111112)
+ mayInterpolate{Float64}(1.2222222222222223)
+ mayInterpolate{Float64}(1.3333333333333333)
+ mayInterpolate{Float64}(1.4444444444444444)
+ mayInterpolate{Float64}(1.5555555555555558)
+ mayInterpolate{Float64}(1.6666666666666665)
+ mayInterpolate{Float64}(1.7777777777777777)
+ mayInterpolate{Float64}(1.8888888888888888)
+ mayInterpolate{Float64}(2.0)</pre></div>
+<p>The weights are precomputed, so we would already know if we had failed here, but we can check that it works anyways:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#a2f;font-weight:bold">for</span> x <span style="color:#a2f">in</span> (<span style="color:#666">0</span>, <span style="color:#666">0.11</span>, <span style="color:#666">1</span>)
+    <span style="color:#a2f">@show</span> yFn(x)
+<span style="color:#a2f;font-weight:bold">end</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">yFn(x) = mayInterpolate{Float64}(1.0)
+yFn(x) = mayInterpolate{Float64}(1.11)
+yFn(x) = mayInterpolate{Float64}(2.0)</pre></div>
 
 <div id="disqus_thread"></div>
 <script>
@@ -494,11 +522,9 @@ So far, I&rsquo;ve not run into any issues with the slightly mismatched versions
                             <td>
                                 <div class="prevNext">
                                     
-                                    <a class="previous" href="https://jgoldfar.github.io/blog/math-bio-workshop-sp19/">&lArr; Mathematical Biology Numerics Workshop</a>
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/building-zeal/">&lArr; Building Zeal</a>
                                     
                                     
-                                    <a class="next" href="https://jgoldfar.github.io/blog/interpolations-jl-note/"> Interpolating Data in a Vector Space &rArr;</a>
-                            
                         </div>
                             </td>
                         </tr>

@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Building Zeal | jgoldfar&#39;s home on the web
+        Julia | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -286,6 +286,7 @@ thead div.tagListTitle {
 
 	<meta name="author" content="Jonathan Goldfarb" />
 
+    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/tags/julia/index.xml">
     </head>
 
 
@@ -325,24 +326,13 @@ thead div.tagListTitle {
                                     
                                 </td>
                             
-<td class="postTitle">
-    
-    <div class="postTitle">
-        Building Zeal
-    </div>
-    
-    
-<ul class="tags">
-<span class="date">
-    Published: Jan 25, 2019
-</span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
-    
-        : <span class="tag"><a href="https://jgoldfar.github.io/tags/build-the-world">build-the-world</a></span>
-    
-</ul>
-</td>
+	
+		<td>
+			<div class="tagListTitle">
+				Posts Tagged "julia"
+			</div>
+		</td>
+	
 
 
                             </tr>
@@ -436,54 +426,39 @@ thead div.tagListTitle {
                                 
                                 
 
+<ul class="taxonomyListing">
 
-<h2 id="motivation">Motivation</h2>
+<article class="blogPostListing">
+<header>
+    <h3><a href="https://jgoldfar.github.io/blog/interpolations-jl-note/">Interpolating Data in a Vector Space </a> </h3>
+    <ul class="tags">
+    <span class="date">
+    Published: Jan 28, 2019
+    </span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/math">Math</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/julia">Julia</a></span>
+    
+    </ul>
+</header>
 
-<p>Since I do quite a bit of work remotely (or at least, not internet connected) and still lack a photographic memory, having documentation offline is pretty useful; I&rsquo;ve used <a href="https://github.com/zealdocs/zeal">Zeal</a> for a while on my Linux machine, but would really like to use it everywhere&hellip;
-But building Zeal on OSX is not trivial.</p>
+<div>
+I&rsquo;d like to show in this note that Julia&rsquo;s &ldquo;official&rdquo; interpolation package, Interpolations.jl can work natively with any type of object that allows some vector space operations over the field of real (or floating point) numbers. That is, in order to interpolate between two values y_1 and y_2, those values must have compatible, closed scalar multiplication and vector addition operations.
+First, some preamble (to make sure we can load Interpolations in this workspace)
+</div>
 
-<p>The primary issue is that it depends on a Qt5 component, the Webkit interface, that has apparently been on the way out for a while.
-Luckily, everything we need is open source, and (given enough time) we can build just about anything (right?)</p>
 
-<h2 id="building-qtwebkit">Building QtWebkit</h2>
+<footer>
+        <a href='https://jgoldfar.github.io/blog/interpolations-jl-note/'><nobr>Read more →</nobr></a>
+</footer>
 
-<p>As you can see <a href="https://travis-ci.org/jgoldfar/qtwebkit">here</a>, my attempts to get Travis to build QtWebkit for me were not successful.
-I was mainly focussed on getting OSX up-and-running, which it would, if we could speed up the build at all; determining the correct prerequisite packages to install on a Linux platform is all that should be required to allow them to time-out as well&hellip;
-The resulting library and include files (built using Clang on OSX 10.12.6, using the same configuration as on CI, followed by <code>ninja install</code> in the build directory) are available <a href="https://bintray.com/jgoldfar/BlogPostSources/download_file?file_path=qtwebkit-4ad2c91b6d7a6d67e48f6b0252b33eb1d3a00135.x86_64-darwin.tar.gz">on Bintray here</a>.
-These work locally after &ldquo;pasting&rdquo; them somewhere accessible by the <code>Zeal</code> build system on your local machine and pointing it that direction, but this is not currently reproducible on CI.</p>
+</article>
 
-<h2 id="building-zeal">Building Zeal</h2>
 
-<p>As expected, <a href="https://travis-ci.org/jgoldfar/zeal">Travis refused</a> to build Zeal on OSX, but if you&rsquo;ve asked <code>brew</code> to install the necessary dependencies and follow the same <a href="https://github.com/jgoldfar/zeal/blob/enable-travis/.travis.yml">script</a> (changing any necessary paths) you should be able to build Zeal correctly.
-So far, I&rsquo;ve not run into any issues with the slightly mismatched versions of Qt being used at various stages of the build, but compiling everything against the same versions of the dependent packages would lead to a more reliable product.</p>
-
-<h2 id="future-work">Future Work</h2>
-
-<ul>
-<li>Generate QtWebkit matching exactly with installed versions and use precompiled libraries and headers.</li>
 </ul>
 
-
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<a href="https://jgoldfar.github.iotags/">Back to Tag Listing</a>
 
                                 
                             </td>
@@ -494,11 +469,7 @@ So far, I&rsquo;ve not run into any issues with the slightly mismatched versions
                             <td>
                                 <div class="prevNext">
                                     
-                                    <a class="previous" href="https://jgoldfar.github.io/blog/math-bio-workshop-sp19/">&lArr; Mathematical Biology Numerics Workshop</a>
                                     
-                                    
-                                    <a class="next" href="https://jgoldfar.github.io/blog/interpolations-jl-note/"> Interpolating Data in a Vector Space &rArr;</a>
-                            
                         </div>
                             </td>
                         </tr>

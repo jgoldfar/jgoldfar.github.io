@@ -6,15 +6,25 @@
     <description>Recent content in Math on jgoldfar&#39;s home on the web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Jan 2019 13:12:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jan 2019 11:00:51 +0000</lastBuildDate>
     
 	<atom:link href="https://jgoldfar.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Interpolating Data in a Vector Space</title>
+      <link>https://jgoldfar.github.io/blog/interpolations-jl-note/</link>
+      <pubDate>Mon, 28 Jan 2019 11:00:51 +0000</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/interpolations-jl-note/</guid>
+      <description>I&amp;rsquo;d like to show in this note that Julia&amp;rsquo;s &amp;ldquo;official&amp;rdquo; interpolation package, Interpolations.jl can work natively with any type of object that allows some vector space operations over the field of real (or floating point) numbers. That is, in order to interpolate between two values y_1 and y_2, those values must have compatible, closed scalar multiplication and vector addition operations.
+First, some preamble (to make sure we can load Interpolations in this workspace)</description>
+    </item>
+    
+    <item>
       <title>Mathematical Biology Numerics Workshop</title>
       <link>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</link>
-      <pubDate>Fri, 25 Jan 2019 13:12:00 -0400</pubDate>
+      <pubDate>Thu, 24 Jan 2019 13:12:00 -0400</pubDate>
       
       <guid>https://jgoldfar.github.io/blog/math-bio-workshop-sp19/</guid>
       <description>Below is the output from running this notebook on Google Colab; you&amp;rsquo;ll need to select &amp;ldquo;open in playground&amp;rdquo; to make changes or run cells.
