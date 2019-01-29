@@ -1,7 +1,7 @@
 ---
 title: 'Mathematical Biology Numerics Workshop'
 tags: ["Python", "Math", "DataViz"]
-date: 2019-01-25T13:12:00-04:00
+date: 2019-01-24T13:12:00-04:00
 mathJaxMacros:
 draft: false
 ---
