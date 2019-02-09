@@ -44,11 +44,11 @@ reading-group-deps:
 	)
 
 ### CV/Resume
-CVDownloadPath=https://bintray.com/jgoldfar/ResumePublic/download_file?file_path=
+CVDownloadPath=https://dl.bintray.com/jgoldfar/ResumePublic/
 CVPath=static/cv
 InstallDirs+=$(CVPath)
 CVBibFiles=cont-talks.bib inv-talks.bib posters.bib pubs.bib
-CVFiles=cv@default.pdf res@default.pdf $(CVBibFiles)
+CVFiles=cv-default.pdf res-default.pdf $(CVBibFiles)
 
 # Define template for downloading a single cv file using curl
 define CVPULL_template
@@ -64,11 +64,10 @@ $(foreach file,$(CVFiles),$(eval $(call CVPULL_template,$(file))))
 
 # cv-deps-pull calls each templated target
 cv-deps-pull: $(addprefix cv-dep-pull-,$(CVFiles))
-	ls -R static
 
 cv-deps: cv-deps-pull cv-bibjson-datafiles
-	mv $(CVPath)/cv@default.pdf $(CVPath)/cv.pdf
-	mv $(CVPath)/res@default.pdf $(CVPath)/res.pdf
+	mv $(CVPath)/cv-default.pdf $(CVPath)/cv.pdf
+	mv $(CVPath)/res-default.pdf $(CVPath)/res.pdf
 
 # Download bibtex 2 bibjson converter from github repo
 deps/bib2json.py:
