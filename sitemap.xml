@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jgoldfar.github.io/blog/testing-pipelines-locally/</loc>
+    <lastmod>2019-02-08T10:39:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jgoldfar.github.io/blog/interpolations-jl-note/</loc>
     <lastmod>2019-01-28T11:00:51+00:00</lastmod>
   </url>
@@ -145,7 +150,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/blog/</loc>
-    <lastmod>2019-01-28T11:00:51+00:00</lastmod>
+    <lastmod>2019-02-08T10:39:00-04:00</lastmod>
   </url>
   
   <url>
@@ -155,7 +160,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/oss/</loc>
-    <lastmod>2019-01-25T11:06:51+00:00</lastmod>
+    <lastmod>2019-02-08T10:39:00-04:00</lastmod>
   </url>
   
   <url>
@@ -182,7 +187,7 @@
   
   <url>
     <loc>https://jgoldfar.github.io/tags/devops/</loc>
-    <lastmod>2019-01-02T14:29:00-04:00</lastmod>
+    <lastmod>2019-02-08T10:39:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

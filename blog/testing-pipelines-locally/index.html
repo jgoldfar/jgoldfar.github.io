@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Tags | jgoldfar&#39;s home on the web
+        Testing CI Pipelines Locally | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -286,7 +286,6 @@ thead div.tagListTitle {
 
 	<meta name="author" content="Jonathan Goldfarb" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/tags/index.xml">
     </head>
 
 
@@ -326,15 +325,25 @@ thead div.tagListTitle {
                                     
                                 </td>
                             
-                            
-                                <td>
-                                    <div class="title">
-                                        Tags
-                                    </div>
-                                </td>
-                            
-                            
-                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Testing CI Pipelines Locally
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Feb 8, 2019
+</span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
+    
+</ul>
+</td>
+
 
                             </tr>
                             
@@ -428,110 +437,76 @@ thead div.tagListTitle {
                                 
 
 
+<p>Usually, continuous integration (CI) setups are portable and reliable.
+That is, tests that pass locally will pass in the same way on a CI service, but if that were always the case, there wouldn&rsquo;t be a need for remote servers!
+The purpose of a continuous integration service is <a href="https://jgoldfar.github.io/blog/too-much-ci/">outside the scope of this article</a>, since I&rsquo;d like to show how to duplicate a test environment locally to debug an issue that doesn&rsquo;t appear when running the tests in your development environment.</p>
 
-<table class="tagList">
-<tr>
-<th>Tag Name</th>
-<th>Number of Pages</th>
-</tr>
+<p><a href="https://www.docker.com/">Docker</a> is a popular containerization tool; it allows you to construct an &ldquo;image&rdquo;, which is akin to an entire operating system installation independent (for most purposes) from your existing operating system and software.
+That is, you could be running a Debian linux image on Centos, OSX, or Windows; moreover, as long as you&rsquo;re using executables available inside the image, the results of a process you run should be the same on each of those platforms (again, for most purposes).
+This makes Docker a good solution for isolating your test environment from system upgrades and other situations that can foul up your development environment.
+Docker is not without downsides, however: to some extent, you are trading this flexibility with your disk space and some performance overhead, among other things, and the requirement of learning a new tool can be considerable.</p>
 
-<tr>
+<p>Here I&rsquo;m going to describe the process I went through to debug and streamline <a href="https://bitbucket.org/jgoldfar/ndce-python">this repository</a>, which requires Python + NumPy for the numerical part, as well as LaTeX for the documentation.
+I find that it&rsquo;s best to combine an expressive programming language + inline comments and a robust document preparation system for expository and explanatory writing in this way.</p>
 
-<td><a href="https://jgoldfar.github.iotags/oss"> oss </a></td>
-<td>10</td>
-</tr>
+<p>I&rsquo;ll start this image using <a href="https://cloud.docker.com/repository/docker/jgoldfar/latex-docker">my minimal Debian Linux-based LaTeX image</a>; the command below runs <code>ls /data</code> in this image, where the current working directory is mounted inside the container as <code>/data/</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it -v <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#a2f">pwd</span><span style="color:#a2f;font-weight:bold">)</span>:/data jgoldfar/latex-docker:debian-minimal-latest ls /data</code></pre></div>
+<p>The smaller images lend themselves to faster startup and execution, as well as better isolation of your processes from additional packages that are installed in other distributions.
+After looking at <a href="https://jgoldfar.github.io/blog/installing-jupyter-with-r-and-julia/">how I might install Conda</a> Conda in a docker image (which <a href="https://cloud.docker.com/u/jgoldfar/repository/docker/jgoldfar/miniconda3">I use separately</a>, of course), I decided to make <a href="https://cloud.docker.com/u/jgoldfar/repository/docker/jgoldfar/miniconda3-latex">a new image</a> containing both Conda and the minimal LaTeX installation to bring down CI times: building the images is a one-time cost.</p>
 
-<tr>
+<p>Each build, however, will necessarily include package installation for a given project, instead of relying on them being present in the environment.
+This allows your CI configuration to document most of the dependencies for your project, but is a cost you&rsquo;ll pay each time.</p>
 
-<td><a href="https://jgoldfar.github.iotags/devops"> devops </a></td>
-<td>6</td>
-</tr>
+<p>Disk space is also not free, but nevertheless, I prefer to use Miniconda environments to further isolate python projects when working locally, and while this isn&rsquo;t necessary in a docker container, I&rsquo;ll test that it works in that setting.
+But this requires that several commands be run in your docker environment, and since multi-line commands need to be run from a script in a docker environment (that is, <code>docker run</code> takes only one command to run in your container, so you&rsquo;ve got to make it count) I think it makes sense to put most of the installation/setup steps in a script or Makefile in your repository.</p>
 
-<tr>
+<p>For instance, you can put</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#b8860b">SHELL</span><span style="color:#666">=</span>/bin/bash
 
-<td><a href="https://jgoldfar.github.iotags/dataviz"> dataviz </a></td>
-<td>5</td>
-</tr>
+<span style="color:#00a000">make-conda-env</span><span style="color:#666">:</span>
+  conda create -y --name ndce-python <span style="color:#b8860b">python</span><span style="color:#666">=</span><span style="color:#666">3</span>
+  <span style="color:#a2f">source</span> activate ndce-python <span style="color:#666">&amp;&amp;</span> <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>  pip install -r requirements.txt
+</code></pre></div>
+<p>in the makefile in the root of your repository, and run</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it -v <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#a2f">pwd</span><span style="color:#a2f;font-weight:bold">)</span>:/data jgoldfar/miniconda3-latex:minimal make -C data make-conda-env</code></pre></div>
+<p>to run those commands in your container.
+Note that I&rsquo;ve set an explicit shell, since the default shell even in a Debian environment doesn&rsquo;t seem to work well with the way the Miniconda installer sets things up.
+Once this is working for you, iterate on the test script (adding more targets if necessary) to get things working.
+Sometimes it makes sense to separate expensive and slowly-changing requirements into the image build phase and quicker build steps into the CI configuration, which can obfuscate the overall installation process and dependency list slightly, but can lead to overall smaller CI times.
+Deciding what instructions to put where would be an interesting optimization problem!</p>
 
-<tr>
+<h2 id="future-work">Future Work</h2>
 
-<td><a href="https://jgoldfar.github.iotags/julia-lang"> julia-lang </a></td>
-<td>5</td>
-</tr>
+<ul>
+<li><p>Build Miniconda3 from source on Alpine to further reduce the image size.</p></li>
 
-<tr>
+<li><p>In the past, I&rsquo;ve used tools Travis CI has made open source to approximate their build environment; documenting how to do this would be useful (otherwise I&rsquo;ll have to figure this out again).</p></li>
 
-<td><a href="https://jgoldfar.github.iotags/build-the-world"> build-the-world </a></td>
-<td>3</td>
-</tr>
+<li><p>Same with CircleCI</p></li>
+</ul>
 
-<tr>
 
-<td><a href="https://jgoldfar.github.iotags/math"> math </a></td>
-<td>3</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/r-lang"> r-lang </a></td>
-<td>3</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/ci"> ci </a></td>
-<td>2</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/webdev"> webdev </a></td>
-<td>2</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/">  </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/docker"> docker </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/julia"> julia </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/latex"> latex </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/linux"> linux </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/python"> python </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/python-lang"> python-lang </a></td>
-<td>1</td>
-</tr>
-
-</table>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
                                 
                             </td>
@@ -541,6 +516,8 @@ thead div.tagListTitle {
                             <td></td>
                             <td>
                                 <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/interpolations-jl-note/">&lArr; Interpolating Data in a Vector Space</a>
                                     
                                     
                         </div>
