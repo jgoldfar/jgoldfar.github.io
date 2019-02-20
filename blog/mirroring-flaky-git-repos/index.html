@@ -4,7 +4,7 @@
 
     <head>
     <title>
-        Tags | jgoldfar&#39;s home on the web
+        Mirroring Flaky Git Repositories | jgoldfar&#39;s home on the web
     </title>
 
     <style>
@@ -286,7 +286,6 @@ thead div.tagListTitle {
 
 	<meta name="author" content="Jonathan Goldfarb" />
 
-    <link rel="alternate" type="application/rss" href="https://jgoldfar.github.io/tags/index.xml">
     </head>
 
 
@@ -326,15 +325,25 @@ thead div.tagListTitle {
                                     
                                 </td>
                             
-                            
-                                <td>
-                                    <div class="title">
-                                        Tags
-                                    </div>
-                                </td>
-                            
-                            
-                            
+<td class="postTitle">
+    
+    <div class="postTitle">
+        Mirroring Flaky Git Repositories
+    </div>
+    
+    
+<ul class="tags">
+<span class="date">
+    Published: Feb 15, 2019
+</span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/oss">OSS</a></span>
+    
+        : <span class="tag"><a href="https://jgoldfar.github.io/tags/devops">DevOps</a></span>
+    
+</ul>
+</td>
+
 
                             </tr>
                             
@@ -428,110 +437,55 @@ thead div.tagListTitle {
                                 
 
 
+<p>As a Maxima user (and besides that, a user of open-source software dependent on code found all over the web) who occasionally hacks around the boundary of the Maxima and Lisp code that comprise the language, having an up-to-date mirror is essential.
+I also build Maxima into docker images we use to generate documentation and code (I know, I know: why bother with preprocessing in a homoiconic language, when you could just execute the generated code immediately, but it&rsquo;s actually a pretty good tool for generating MATLAB code, and can be persuaded to output Python and other languages as well)
+In the past, I&rsquo;ve run into issues with the main Maxima repository <a href="http://maxima.sourceforge.net/">on Sourceforge</a> not allowing me to <code>git fetch</code> or <code>git clone</code> at an inopportune time, so some time back I set up a GitHub clone, but it sat there becoming outdated most of the time.
+Looks like a job for some automation!</p>
 
-<table class="tagList">
-<tr>
-<th>Tag Name</th>
-<th>Number of Pages</th>
-</tr>
+<p>Having a CI service manage the clone would be much nicer; I opted for Travis-CI, but the setup is simple enough that any old platform should work.
+The finished result is <a href="https://github.com/jgoldfar/Mirror-Maxima-Repo">here</a>, where you can see the steps I followed to get the repository set-up.</p>
 
-<tr>
+<p>The main difficulty was ensuring that Travis could push the cloned files back to GitHub, which requires authentication.</p>
 
-<td><a href="https://jgoldfar.github.iotags/oss"> oss </a></td>
-<td>11</td>
-</tr>
+<p>1) Generate a new key (easier to revoke if compromised)</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh-keygen -t rsa -b <span style="color:#666">4096</span> -C <span style="color:#b44">&#34;jgoldfar+docker@gmail.com&#34;</span> -f id_rsa -P <span style="color:#b44">&#34;&#34;</span>
+cat id_rsa.pub</code></pre></div>
+<p>2) Copy the public key to a <a href="https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys">deploy key on GitHub</a>.</p>
 
-<tr>
+<p>3) Encrypt the private key and store the encrypted version on the server:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">travis encrypt-file id_rsa --add
+rm id_rsa id_rsa.pub
+git add id_rsa .travis.yml</code></pre></div>
+<p>Within the repository, I put all of the steps necessary to get a Travis <code>generic</code> environment ready and working on this process into the Makefile.
+Not too bad!</p>
 
-<td><a href="https://jgoldfar.github.iotags/devops"> devops </a></td>
-<td>7</td>
-</tr>
+<h2 id="future-work">Future Work</h2>
 
-<tr>
+<ul>
+<li>It would be nice to automatically rebase my testing branch onto the updated mirror</li>
+</ul>
 
-<td><a href="https://jgoldfar.github.iotags/dataviz"> dataviz </a></td>
-<td>5</td>
-</tr>
 
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/julia-lang"> julia-lang </a></td>
-<td>5</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/build-the-world"> build-the-world </a></td>
-<td>3</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/math"> math </a></td>
-<td>3</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/r-lang"> r-lang </a></td>
-<td>3</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/ci"> ci </a></td>
-<td>2</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/webdev"> webdev </a></td>
-<td>2</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/">  </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/docker"> docker </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/julia"> julia </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/latex"> latex </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/linux"> linux </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/python"> python </a></td>
-<td>1</td>
-</tr>
-
-<tr>
-
-<td><a href="https://jgoldfar.github.iotags/python-lang"> python-lang </a></td>
-<td>1</td>
-</tr>
-
-</table>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jgoldfar-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
                                 
                             </td>
@@ -541,6 +495,8 @@ thead div.tagListTitle {
                             <td></td>
                             <td>
                                 <div class="prevNext">
+                                    
+                                    <a class="previous" href="https://jgoldfar.github.io/blog/testing-pipelines-locally/">&lArr; Testing CI Pipelines Locally</a>
                                     
                                     
                         </div>

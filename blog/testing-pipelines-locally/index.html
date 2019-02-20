@@ -457,8 +457,9 @@ After looking at <a href="https://jgoldfar.github.io/blog/installing-jupyter-wit
 <p>Each build, however, will necessarily include package installation for a given project, instead of relying on them being present in the environment.
 This allows your CI configuration to document most of the dependencies for your project, but is a cost you&rsquo;ll pay each time.</p>
 
-<p>Disk space is also not free, but nevertheless, I prefer to use Miniconda environments to further isolate python projects when working locally, and while this isn&rsquo;t necessary in a docker container, I&rsquo;ll test that it works in that setting.
-But this requires that several commands be run in your docker environment, and since multi-line commands need to be run from a script in a docker environment (that is, <code>docker run</code> takes only one command to run in your container, so you&rsquo;ve got to make it count) I think it makes sense to put most of the installation/setup steps in a script or Makefile in your repository.</p>
+<p>Disk space is also not free, but nevertheless, I prefer to use Miniconda environments to further isolate python projects when working locally, and while this isn&rsquo;t necessary in a docker container, I&rsquo;ll test that it works in that setting.</p>
+
+<p>But this requires that several commands be run in your docker environment, and since multi-line commands need to be entered in a non-intuitive way anyways, I think it makes sense to put most of the installation/setup steps in a script or Makefile in your repository.</p>
 
 <p>For instance, you can put</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#b8860b">SHELL</span><span style="color:#666">=</span>/bin/bash
@@ -469,13 +470,17 @@ But this requires that several commands be run in your docker environment, and s
 </span><span style="color:#b62;font-weight:bold"></span>  pip install -r requirements.txt
 </code></pre></div>
 <p>in the makefile in the root of your repository, and run</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it -v <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#a2f">pwd</span><span style="color:#a2f;font-weight:bold">)</span>:/data jgoldfar/miniconda3-latex:minimal make -C data make-conda-env</code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it -v <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#a2f">pwd</span><span style="color:#a2f;font-weight:bold">)</span>:/data --workdir /data jgoldfar/miniconda3-latex:minimal make conda-env</code></pre></div>
 <p>to run those commands in your container.
-Note that I&rsquo;ve set an explicit shell, since the default shell even in a Debian environment doesn&rsquo;t seem to work well with the way the Miniconda installer sets things up.
+This command runs <code>make conda-env</code> in my [<code>miniconda3-latex:minimal</code>]() image with the pwd set to <code>/data</code>, which is mapped to your current user&rsquo;s pwd.</p>
+
+<p>Note that I&rsquo;ve set an explicit shell in the makefile, since the default shell even in a Debian environment doesn&rsquo;t seem to work well with the way the Miniconda installer sets things up.
 Once this is working for you, iterate on the test script (adding more targets if necessary) to get things working.
 Sometimes it makes sense to separate expensive and slowly-changing requirements into the image build phase and quicker build steps into the CI configuration, which can obfuscate the overall installation process and dependency list slightly, but can lead to overall smaller CI times.
 Deciding what instructions to put where would be an interesting optimization problem!</p>
 
+<p><em>Note</em>: If you&rsquo;re in need of a &ldquo;quick fix&rdquo; instead of a solution that can be tracked in a VCS, you can run multi-line scripts by passing them to <code>sh</code>:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run --interactive -v <span style="color:#a2f;font-weight:bold">$(</span><span style="color:#a2f">pwd</span><span style="color:#a2f;font-weight:bold">)</span>:/home --workdir /home --tty jgoldfar/latex-docker:alpine-minimal-latest sh -c <span style="color:#b44">&#34;ls -l &amp;&amp; make test&#34;</span></code></pre></div>
 <h2 id="future-work">Future Work</h2>
 
 <ul>
@@ -520,6 +525,8 @@ Deciding what instructions to put where would be an interesting optimization pro
                                     <a class="previous" href="https://jgoldfar.github.io/blog/interpolations-jl-note/">&lArr; Interpolating Data in a Vector Space</a>
                                     
                                     
+                                    <a class="next" href="https://jgoldfar.github.io/blog/mirroring-flaky-git-repos/"> Mirroring Flaky Git Repositories &rArr;</a>
+                            
                         </div>
                             </td>
                         </tr>

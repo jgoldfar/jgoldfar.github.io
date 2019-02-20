@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Mirroring Flaky Git Repositories</title>
+      <link>https://jgoldfar.github.io/blog/mirroring-flaky-git-repos/</link>
+      <pubDate>Fri, 15 Feb 2019 15:12:00 -0400</pubDate>
+      
+      <guid>https://jgoldfar.github.io/blog/mirroring-flaky-git-repos/</guid>
+      <description>As a Maxima user (and besides that, a user of open-source software dependent on code found all over the web) who occasionally hacks around the boundary of the Maxima and Lisp code that comprise the language, having an up-to-date mirror is essential. I also build Maxima into docker images we use to generate documentation and code (I know, I know: why bother with preprocessing in a homoiconic language, when you could just execute the generated code immediately, but it&amp;rsquo;s actually a pretty good tool for generating MATLAB code, and can be persuaded to output Python and other languages as well) In the past, I&amp;rsquo;ve run into issues with the main Maxima repository on Sourceforge not allowing me to git fetch or git clone at an inopportune time, so some time back I set up a GitHub clone, but it sat there becoming outdated most of the time.</description>
+    </item>
+    
+    <item>
       <title>Testing CI Pipelines Locally</title>
       <link>https://jgoldfar.github.io/blog/testing-pipelines-locally/</link>
       <pubDate>Fri, 08 Feb 2019 10:39:00 -0400</pubDate>
