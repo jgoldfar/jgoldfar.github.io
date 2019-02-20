@@ -31,7 +31,8 @@ Each build, however, will necessarily include package installation for a given p
 This allows your CI configuration to document most of the dependencies for your project, but is a cost you'll pay each time.
 
 Disk space is also not free, but nevertheless, I prefer to use Miniconda environments to further isolate python projects when working locally, and while this isn't necessary in a docker container, I'll test that it works in that setting.
-But this requires that several commands be run in your docker environment, and since multi-line commands need to be run from a script in a docker environment (that is, `docker run` takes only one command to run in your container, so you've got to make it count) I think it makes sense to put most of the installation/setup steps in a script or Makefile in your repository.
+
+But this requires that several commands be run in your docker environment, and since multi-line commands need to be entered in a non-intuitive way anyways, I think it makes sense to put most of the installation/setup steps in a script or Makefile in your repository.
 
 For instance, you can put
 
@@ -47,14 +48,22 @@ make-conda-env:
 in the makefile in the root of your repository, and run
 
 ```shell
-docker run -it -v $(pwd):/data jgoldfar/miniconda3-latex:minimal make -C data make-conda-env
+docker run -it -v $(pwd):/data --workdir /data jgoldfar/miniconda3-latex:minimal make conda-env
 ```
 
 to run those commands in your container.
-Note that I've set an explicit shell, since the default shell even in a Debian environment doesn't seem to work well with the way the Miniconda installer sets things up.
+This command runs `make conda-env` in my [`miniconda3-latex:minimal`]() image with the pwd set to `/data`, which is mapped to your current user's pwd.
+
+Note that I've set an explicit shell in the makefile, since the default shell even in a Debian environment doesn't seem to work well with the way the Miniconda installer sets things up.
 Once this is working for you, iterate on the test script (adding more targets if necessary) to get things working.
 Sometimes it makes sense to separate expensive and slowly-changing requirements into the image build phase and quicker build steps into the CI configuration, which can obfuscate the overall installation process and dependency list slightly, but can lead to overall smaller CI times.
 Deciding what instructions to put where would be an interesting optimization problem!
+
+*Note*: If you're in need of a "quick fix" instead of a solution that can be tracked in a VCS, you can run multi-line scripts by passing them to `sh`:
+
+```shell
+docker run --interactive -v $(pwd):/home --workdir /home --tty jgoldfar/latex-docker:alpine-minimal-latest sh -c "ls -l && make test"
+```
 
 ## Future Work
 
