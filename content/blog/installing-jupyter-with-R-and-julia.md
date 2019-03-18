@@ -109,3 +109,5 @@ R:
 ```
 GeneralizedHarmonicNumber <- sum(sapply(1:100, function (i) 1/(i**2), simplify=TRUE))
 ```
+
+*Note:* In order to export PDF files from Jupyter, you'll need a [TeX](http://tug.org/) installation; TeXLive/MacTeX will have all of the required packages, but if you're a [BasicTeX](http://tug.org/mactex/morepackages.html) user like myself, you'll need at least `adjustbox`, `collectbox` and `ucs` installed from CTAN.
