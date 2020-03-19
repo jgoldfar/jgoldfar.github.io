@@ -17,7 +17,7 @@ My website is currently being hosted [by github Pages](http://jgoldfar.github.io
 First, clone the website generator into the correct path; to install all of the remotely generated sources, run
 
     make pull-deps
-    
+
 `pull-deps` currently brings in the following source material:
 
 * [Algebra Reading Group Notes](https://bitbucket.org/jgoldfar/algebrareadinggroupnotes).
@@ -39,7 +39,7 @@ Generate the files and push them to the remote by running
 
     make push-git
 
-`push-git` runs `init-git` (documented above) as well as `gen-git`, which generates the 
+`push-git` runs `init-git` (documented above) as well as `gen-git`, which generates the
 HTML files into the correct location. The commands under the `push-git` target take care of
 just the commit & push steps.
 
@@ -60,4 +60,4 @@ To generate a new page (in particular, to automatically set the date) run
 
 In particular, to make a new blog post with the title (for instance) `ImplicitFunctionTheoremApplications`, run
 
-    make new FileName=blog/ImplicitFunctionTheoremApplications
+    make new FileName=posts/ImplicitFunctionTheoremApplications

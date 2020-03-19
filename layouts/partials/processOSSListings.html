@@ -1,5 +1,0 @@
-{{/*{{ printf "%#v" . }}*/}}
-{{ $p := .Data }}
-{{ range (sort $p ".weight" "asc") }}
-    {{ partial "processOSSListing.html" . }}
-{{ end }}

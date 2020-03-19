@@ -6,4 +6,4 @@ pipelines:
     - step:
         script:
           - apt-get update && apt-get install -y make curl git ssh
-          - make pull-deps push-git RSYNC="cp -R -v"
+          - make generate

@@ -1,7 +1,0 @@
-{{- $data := .Data -}}
-{{- $p := (split $data ",") -}}
-{{- if gt (len $p) 1 -}}
-{{- delimit (slice (index $p 1) (index $p 0)) " " -}}
-{{- else -}}
-{{- $data -}}
-{{- end -}}
