@@ -1,83 +1,53 @@
 SHELL:=/bin/bash
-RSYNC:=rsync -a
 UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
+HUGO_VERSION:=0.67.1
 
 # https://gohugo.io/getting-started/installing
 ifeq ($(UNAME),Darwin)
-bin/hugo_extended_0.67.1_macOS-64bit.tar.gz:
-	curl -L https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_extended_0.67.1_macOS-64bit.tar.gz -o $@
-$(HUGO): bin/hugo_extended_0.67.1_macOS-64bit.tar.gz
+bin/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz:
+	curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz -o $@
+$(HUGO): bin/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz
 	cd bin && tar xvzf $(notdir $<)
 endif
 
 ifeq ($(UNAME),Linux)
-bin/hugo_extended_0.67.1_Linux-64bit.tar.gz:
-	curl -L https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_extended_0.67.1_Linux-64bit.tar.gz -o $@
-$(HUGO): bin/hugo_extended_0.67.1_Linux-64bit.tar.gz
+bin/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz:
+	curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz -o $@
+$(HUGO): bin/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 	cd bin && tar xvzf $(notdir $<)
 endif
-
-## Dependencies
-pull-deps: julia-pre-deps reading-group-deps cv-deps cal-deps oss-contribs-deps
-
-## Julia package installation & instantiation
-# Override JULIA variable to set a different Julia version
-JULIA:=$(shell which julia)
-# URI for Libical. Override with local path if setting LIBICALDEV=1
-LIBICALURI:=https://github.com/jgoldfar/Libical.jl
-# Use local development version of Libical (==1) or not (==0)?
-LIBICALDEV?=0
-julia-pre-deps:
-ifeq ($(LIBICALDEV),0)
-	$(JULIA) --project="." -e 'using Pkg; Pkg.add(PackageSpec(url="$(LIBICALURI)", rev="master"))'
-else
-	$(JULIA) --project="." -e 'using Pkg; Pkg.develop(PackageSpec(url="$(LIBICALURI)"))'
-endif
-	$(JULIA) --project="." -e 'using Pkg; Pkg.instantiate();'
-
-### Algebra Reading Group
-ARGDownloadPath:=https://bitbucket.org/jgoldfar/algebrareadinggroupnotes/downloads
-ARGCoursePath:=static/AlgebraReadingGroup
-ARGFiles:=hersteinExercises.pdf munkresExercises.pdf index.htm
-InstallDirs+=$(ARGCoursePath)
-
-reading-group-deps:
-	mkdir -p $(ARGCoursePath)
-	$(foreach file, $(ARGFiles), \
-		curl -L "$(ARGDownloadPath)/$(file)" -o "$(ARGCoursePath)/$(file)"; \
-	)
 
 ### CV/Resume
 CVDownloadPath:=https://dl.bintray.com/jgoldfar/ResumePublic/
 CVPath:=static/cv
-InstallDirs+=$(CVPath)
+
+
 CVBibFiles:=cont-talks.bib inv-talks.bib posters.bib pubs.bib
 CVFiles:=cv-default.pdf res-default.pdf $(CVBibFiles)
 
+# Accumulator for cv-deps
+CV_DEP_TARGETS:=
+
 # Define template for downloading a single cv file using curl
 define CVPULL_template
-cv-dep-pull-$(1): $$(CVPath)/$(1)
-
 $$(CVPath)/$(1):
 	mkdir -p $$(CVPath)
 	curl -L "$$(CVDownloadPath)/$(1)" -o $$@
+CV_DEP_TARGETS+=$$(CVPath)/$(1)
 endef
 
 # Evaluate the template above for each file in CVFiles
 $(foreach file,$(CVFiles),$(eval $(call CVPULL_template,$(file))))
 
-# cv-deps-pull calls each templated target
-cv-deps-pull: $(addprefix cv-dep-pull-,$(CVFiles))
-
-cv-deps: cv-deps-pull cv-bibjson-datafiles
-	mv $(CVPath)/cv-default.pdf $(CVPath)/cv.pdf
-	mv $(CVPath)/res-default.pdf $(CVPath)/res.pdf
+cv-deps: ${CV_DEP_TARGETS} ## Pull in CV files. There must be a better way!
+.PHONY: cv-deps
 
 # Download bibtex 2 bibjson converter from github repo
 deps/bib2json.py:
 	curl -L "https://raw.githubusercontent.com/jgoldfar/bibserver/jgoldfar-bibtexparser-23-support/parserscrapers_plugins/bibtex.py" -o $@
 	chmod a+x $@
+.PHONY: deps/bib2json.py
 
 # Convert bibfile into bibJSON files
 data/cv/%.json: $(CVPath)/%.bib deps/bib2json.py
@@ -85,61 +55,22 @@ data/cv/%.json: $(CVPath)/%.bib deps/bib2json.py
 	cat $< | deps/bib2json.py > $@
 	-cp $@ $(subst -,,$@)
 
-cv-bibjson-datafiles: $(addprefix data/cv/,$(CVBibFiles:.bib=.json))
+cv-bibjson-datafiles: $(addprefix data/cv/,$(CVBibFiles:.bib=.json)) ## Generate JSON files from CV bibliography
+.PHONY: cv-bibjson-datafiles
 
-### Schedule/Calendar
-# Note: Set these variables in the environment (in particular, on CI) for this target
-# to work.
-CourseAppointmentIcalLink?=
-SeminarScheduleIcalLink?=
-IcalPath:=deps/ical
-InstallDirs+=$(IcalPath)
-IcalTargetFiles:=$(addsuffix .ical,CourseAppointment SeminarSchedule)
-
-# Pull ical files from given links
-$(IcalPath)/CourseAppointment.ical:
-	[ ! -z "$(CourseAppointmentIcalLink)" ]
-	mkdir -p $(dir $@)
-	@curl -L "$(CourseAppointmentIcalLink)" -o "$@"
-
-$(IcalPath)/SeminarSchedule.ical:
-	[ ! -z "$(SeminarScheduleIcalLink)" ]
-	mkdir -p $(dir $@)
-	@curl -L "$(SeminarScheduleIcalLink)" -o "$@"
-
-cal-deps-pull: $(addprefix $(IcalPath)/,$(IcalTargetFiles))
-
-## Generate schedule file from ical files
-cal-deps-generate: deps/generateScheduleFile.jl Project.toml $(addprefix $(IcalPath)/,$(IcalTargetFiles))
-	$(JULIA) --project="." $@ $(addprefix $(IcalPath)/,$(IcalTargetFiles))
-
-cal-deps: cal-deps-pull
-
-
-### OSS contribution/repository listing generator
-# Note: These depend on deps/getRepos.jl and Project.toml
-data/oss/github.json:
-	mkdir -p $(dir $@)
-	$(JULIA) --project="." deps/getRepos.jl $@ --github
-
-data/oss/bitbucket.json:
-	mkdir -p $(dir $@)
-	$(JULIA) --project="." deps/getRepos.jl $@ --bitbucket
-
-oss-contribs-generate: data/oss/github.json data/oss/bitbucket.json
-
-data/oss/combined.json: $(addprefix data/oss/, github.json bitbucket.json)
-	$(JULIA) --project="." -e "using JSON; open(\"$@\", \"w\") do st;  JSON.print(st, append!(map(JSON.parsefile, ARGS)...), 2); end" $^
-
-oss-contribs-deps: data/oss/combined.json
+clean-cv-deps:
+	$(RM) -r $(CVPath)
+.phony: clean-cv-deps
+CLEAN_TARGETS+=cv-deps
 
 ## Hugo Generation
 HUGOFILE:=config.toml
 
-serve: $(HUGOFILE) $(HUGO)
+serve: $(HUGOFILE) $(HUGO) ## Serve page for local development
 	$(HUGO) --disableFastRender --verbose server
+.PHONY: serve
 
-new: $(HUGOFILE) $(HUGO)
+new: $(HUGOFILE) $(HUGO) ## Make a new post (not super useful, just trying out Hugo)
 ifeq ($(FileName),)
 	@echo "Usage: make new FileName=..."
 	@echo "i.e. make new FileName=blog/newBlogPost.md"
@@ -153,38 +84,44 @@ endif # Switch on definition of FileName
 .PHONY: new
 
 ### Generate site
-generate: $(HUGO) $(HUGOFILE)
+generate: $(HUGO) $(HUGOFILE) ## Generate website
 	$(HUGO) --verbose
+.PHONY: generate
 
 GitRepoName:=jgoldfar.github.io
-gen-git: $(HUGOFILE) $(HUGO)
-	$(MAKE) generate
-	echo "moving public/ to $(GitRepoName) subdirectory."
-	$(RSYNC) ./public/* ./$(GitRepoName)/
-.PHONY: gen-git
 
 # Note: CI environment variable is (or should be) only set on CI services.
 # This is when config should be set.
-init-git:
-	if [[ ! -d $(GitRepoName) ]] ; then \
-	git clone git@github.com:jgoldfar/$(GitRepoName).git ;\
-	fi
-	$(RM) -r $(GitRepoName)/*
+init-git: ## Initialize git repository for Github Pages
+	@echo "WIP"
+	exit 1
+	$(RM) -r $(GitRepoName)
 ifdef CI
 	git -C ./$(GitRepoName) config user.email "ci@bitbucket.org" || echo "email set failed."
 	git -C ./$(GitRepoName) config user.name "Bitbucket CI" || echo "username set failed."
 endif
 .PHONY: init-git
 
-push-git: init-git gen-git
+generate-git: $(HUGOFILE) $(HUGO) ## Generate hugo site into git repository
+	$(HUGO) --verbose --destination ${GitRepoName}
+.PHONY: generate-git
+
+push-git: ## Push generated changes to git repository
+	[[ -d "${GitRepoName}" ]] || ( echo "No changes generated." ; exit 1 )
 	git -C ./$(GitRepoName) add -A .
-	git -C ./$(GitRepoName) commit -m "Update with changes generated by hg commit $(shell hg log --limit 1 -T '{node}')" || echo "Nothing to commit."
+	git -C ./$(GitRepoName) commit -m "Update with changes generated by commit $(shell )" || echo "Nothing to commit."
 	git -C ./$(GitRepoName) push || echo "No updates to content!"
 .PHONY: push-git
 
-clean:
-	$(RM) -r public
-	$(RM) -r $(InstallDirs)
-	$(RM) -r jgoldfar.github.io
+clean-git:
+	$(RM) -r ${GitRepoName}
+
+deploy-git: init-git generate-git push-git clean-git ## Run full deployment to Github Pages
+.PHONY: deploy-git
+
+
+
+clean: ${CLEAN_TARGETS} ## Cleanup generated files
+	$(RM) -r ${GitRepoName}
 	$(RM) ${HUGO} bin/LICENSE bin/README.md
 .PHONY: clean

@@ -1,20 +1,16 @@
 ## Personal Website Generator for Jonathan Goldfarb ##
 
-* v2018.1
+* v2020.0
 
-Generated using [Hugo v0.40.3](http://gohugo.io/).
+Generated using [Hugo](http://gohugo.io/).
 
-Currently the build requires a Unix-like platform, and `make`, `curl`, `rsync`, and `git`.
-`rsync` can be avoided by setting the option `RSYNC=cp` after your make invocation, as is
-done on the CI platform Bitbucket Pipelines.
-Rsync is just used to reduce the overhead of generating and moving multiple files over an
-existing built site.
+Currently the build requires a Unix-like platform, and `make`, `curl`, and `git`.
 
 My website is currently being hosted [by github Pages](http://jgoldfar.github.io/).
 
 ### Usage ##
 
-First, clone the website generator into the correct path; to install all of the remotely generated sources, run
+First, clone this repository somewhere; to install all of the remotely generated sources, run
 
     make pull-deps
 
