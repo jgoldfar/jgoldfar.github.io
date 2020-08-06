@@ -1,7 +1,7 @@
 baseURL = "https://jgoldfar.github.io"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "intentional chaos"
+title = "Jonathan Goldfarb"
 metaDataFormat = "yaml"
 enableGitInfo = true
 paginate = 20
@@ -18,16 +18,16 @@ pygmentsCodefencesGuessSyntax = true
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
     author = "Jonathan Goldfarb, Ph.D."
-    info = "Mathematics and Technical Problem Analysis"
-    description = "Jonathan Goldfarb Online"
-    keywords = "blog,mathematics,software,personal"
+    info = "Technology, Software, Algorithms"
+    description = "Jonathan Goldfarb, Online. Technical Problem Solving, Domain Modeling, Data Analysis."
+    keywords = "blog,mathematics,software,personal,technology"
     avatarurl = "https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/media/img/max.jpg"
 	# gravatarurl = "jgoldfar@gmail.com"
 
     # favicon_32 = "/img/favicon-32x32.png"
     # favicon_16 = "/img/favicon-16x16.png"
 
-    footercontent = "solve the world"
+    footercontent = "No Problem Too Small, No Perspective Unconsidered."
 
 	dateformat = "January 2, 2006"
 
@@ -86,6 +86,11 @@ pygmentsCodefencesGuessSyntax = true
     # icon = "fab fa-researchgate fa-2x"
     # weight = 5
     # url = "https://www.researchgate.net/profile/Jonathan_Goldfarb"
+# [[params.social]]
+    # name = "Google Scholar"
+    # icon = "fab fa-... fa-2x"
+    # weight = 5
+    # url = "https://..."
 [[params.social]]
     name = "Email"
     icon = "fas fa-envelope fa-2x"
@@ -96,11 +101,11 @@ pygmentsCodefencesGuessSyntax = true
     icon = "fas fa-phone fa-2x"
     weight = 5
     url = "tel:+1-321-895-4184"
-[[params.social]]
-    name = "Physical (By Appointment, Send Email!)"
-    icon = "fas fa-map-marker-alt fa-2x"
-    weight = 5
-    url = "https://goo.gl/maps/RQbuqrKWfhPenAX27"
+# [[params.social]]
+#     name = "Physical (By Appointment, Send Email!)"
+#     icon = "fas fa-map-marker-alt fa-2x"
+#     weight = 5
+#     url = "https://goo.gl/maps/RQbuqrKWfhPenAX27"
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
@@ -114,7 +119,7 @@ pygmentsCodefencesGuessSyntax = true
     rel = "alternate"
     type = "application/rss+xml"
 # [[params.social]]
-    # name = "Docjer Hub"
+    # name = "Docker Hub"
     # icon = "fab fa-docker"
     # weight = 5
 	# url = "https://hub.docker.com/u/jgoldfar/"
@@ -124,10 +129,10 @@ pygmentsCodefencesGuessSyntax = true
     name = "Blog"
     weight = 1
     url  = "/posts/"
-[[menu.main]]
-    name = "Projects"
-    weight = 2
-    url  = "/projects/"
+# [[menu.main]]
+#     name = "Projects"
+#     weight = 2
+#     url  = "/projects/"
 [[menu.main]]
     name = "About"
     weight = 3
