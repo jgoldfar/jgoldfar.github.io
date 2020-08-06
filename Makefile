@@ -1,3 +1,40 @@
+# We start by defining the path to this Makefile by parsing MAKEFILE_LIST.
+# This allows referring to dependencies in a precise way
+THIS_MAKEFILE_PATH:=$(abspath $(lastword $(MAKEFILE_LIST)))
+LOCAL_BASE_PATH:=$(patsubst %/,%,$(dir $(THIS_MAKEFILE_PATH)))
+
+# Print usage message (this must be first to avoid running something else when running
+# `make` with no arguments on non-compliant Make variants)
+usage:
+	@echo "Usage: make [target] [VAR=VALUE...]"
+	@echo "This Makefile defines automations and processes for my personal website."
+	@echo "For detailed documentation, look to the Makefile."
+	@echo ""
+	@echo "Targets:"
+	@$(MAKE) help 2>/dev/null
+	@echo ""
+	@echo "We benefit from the UX and parallelism of make, so we can run e.g."
+	@echo "- make -j4 ..."
+	@echo " to install your dotfiles at blazing speed (ha), or run "
+	@echo "- make -k ..."
+	@echo " to allow installation failures. Run as"
+	@echo "- make --silent ..."
+	@echo "to reduce the build verbosity, etc."
+	@echo "See make --help or man make for more details"
+# PHONY targets aren't considered to depend on anything, so they will always be generated.
+# or run.
+.PHONY: usage
+# Set usage message to run when the user enters `make`
+.DEFAULT_GOAL:=usage
+
+## Autogenerate Help Info
+# Borrowed from https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
+# Any target with two comment symbols is listed.
+.PHONY: help
+help: ## Display this help section
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_-]+:.*?## / {printf "\033[36m%-38s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+
+
 SHELL:=/bin/bash
 UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
