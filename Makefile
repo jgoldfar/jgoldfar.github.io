@@ -40,20 +40,20 @@ UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
 HUGO_VERSION:=0.67.1
 
-# https://gohugo.io/getting-started/installing
-ifeq ($(UNAME),Darwin)
-bin/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz:
-	curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz -o $@
-$(HUGO): bin/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz
-	cd bin && tar xvzf $(notdir $<)
+ifeq (${UNAME},Darwin)
+HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz
+endif
+ifeq (${UNAME},Linux)
+HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 endif
 
-ifeq ($(UNAME),Linux)
-bin/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz:
-	curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz -o $@
-$(HUGO): bin/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-	cd bin && tar xvzf $(notdir $<)
-endif
+# https://gohugo.io/getting-started/installing
+${HUGO}.tar.gz:
+	curl -L ${HUGO_DOWNLOAD_PATH} -o $@
+.PRECIOUS: ${HUGO}.tar.gz
+$(HUGO): ${HUGO}.tar.gz
+	cd $(dir $<) && tar xvzf $(notdir $<)
+.PRECIOUS: ${HUGO}
 
 ### CV/Resume
 CVDownloadPath:=https://dl.bintray.com/jgoldfar/ResumePublic/
