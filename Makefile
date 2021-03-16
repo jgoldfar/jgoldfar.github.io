@@ -120,11 +120,27 @@ endif # Switch on existence of extension
 endif # Switch on definition of FileName
 .PHONY: new
 
+icoSizes=16 32 48 128 256
+img-deps: static/img/favicon.ico static/img/apple-touch-icon.png ## Generate images for site
+
+static/img/favicon.ico: static/img/favicon-master.svg
+	$(foreach _icoSize,$(icoSizes),inkscape -w $(_icoSize) -h $(_icoSize) -o static/img/favicon-$(_icoSize).png $<;)
+	convert $(addsuffix .png,$(addprefix static/img/favicon-,$(icoSizes))) $@
+	identify $@ || echo 'Failed to identify.'
+	$(RM) $(addsuffix .png,$(addprefix static/img/favicon-,$(icoSizes)))
+.SECONDARY: static/img/favicon.ico
+
+static/img/apple-touch-icon.png: static/img/favicon-master.svg
+	inkscape -w 256 -h 256 -o $@ $<
+.SECONDARY: static/img/apple-touch-icon.png
+
 ### Generate site
 generate: $(HUGO) $(HUGOFILE) ## Generate website
 	$(HUGO) --verbose
 .PHONY: generate
 
+# https://gohugo.io/hosting-and-deployment/hosting-on-github/
+### Below here not needed when pushing directly to Github
 GitRepoName:=jgoldfar.github.io
 
 # Note: CI environment variable is (or should be) only set on CI services.

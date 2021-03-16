@@ -1,13 +1,18 @@
 baseURL = "https://jgoldfar.github.io"
 languageCode = "en-us"
+# Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
 title = "Jonathan Goldfarb"
 metaDataFormat = "yaml"
 enableGitInfo = true
 paginate = 20
+# Enable comments by entering your Disqus shortname
 disqusShortname = "jgoldfar-blog"
 
-theme = "hugo-coder"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+
+theme = "universal"
 
 pygmentsCodeFences = true
 pygmentsOptions = "nobackground=True"
@@ -17,26 +22,46 @@ pygmentsCodefencesGuessSyntax = true
 
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
+    # viewMorePostLink = "/blog/"
     author = "Jonathan Goldfarb, Ph.D."
-    info = "Technology, Software, Algorithms"
-    description = "Jonathan Goldfarb, Online. Technical Problem Solving, Domain Modeling, Data Analysis."
-    keywords = "blog,mathematics,software,personal,technology"
-    avatarurl = "https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/media/img/max.jpg"
-	# gravatarurl = "jgoldfar@gmail.com"
+    info = "Intention, Collaboration, Innovation"
+    defaultDescription = "Jonathan Goldfarb, Online."
+    keywords = "blog,personal,technology"
+    avatarurl = "https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/img/max.jpg"
+    # gravatarurl = "jgoldfar@gmail.com"
+    # mainSections = ["blog"]
 
-    # favicon_32 = "/img/favicon-32x32.png"
-    # favicon_16 = "/img/favicon-16x16.png"
+    twitter_site = "jgoldfar" # the Twitter handle of your site (without the '@')
+    default_sharing_image = "img/logo.png"
 
-    footercontent = "No Problem Too Small, No Perspective Unconsidered."
+    footercontent = "Amor Fati"
 
-	dateformat = "January 2, 2006"
+    date_format = "January 2, 2006"
 
     hideCredits = true
     hideCopyright = false
     since = 2018
 
+    about_us = "<p>Jonathan Goldfarb is a ...</p>"
+    copyright = "Copyright (c) 2018 - 2021, Jonathan Goldfarb; all rights reserved."
+    enableGoogleMaps = false
+    googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+
+    latitude = "-12.043333"
+    longitude = "-77.028333"
+    direction = "Desaperacidos"
+
+    logo = "img/logo.png"
+    logo_small = "img/logo-small.png"
+    address = """<p class='text-uppercase'><strong>Jonathan Goldfarb</strong>
+        <br />Bend, OR</p>"""
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "default"
+
     # Git Commit in Footer, uncomment the line below to enable it.
-    commit = "https://bitbucket.org/jgoldfar/personal-site-git/commits"
+    commit = "https://github.com/jgoldfar/jgoldfar.github.io/commit/"
+    # commit = "https://bitbucket.org/jgoldfar/personal-site-git/commits"
 
     rtl = false
 
@@ -55,32 +80,102 @@ pygmentsCodefencesGuessSyntax = true
 	# Custom JS
     custom_js = []
 
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
 # Setup taxonomies
 [taxonomies]
 	category = "categories"
     tags = "tags"
 
-# Social links
-[[params.social]]
-    name = "Github"
-    icon = "fab fa-github fa-2x"
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = true
+    text = """
+         <p class='hidden-sm hidden-xs'>Share Your Requirements.
+            <a href='mailto:jgoldfar@gmail.com' data-animate-hover='pulse'><i class='fas fa-envelope'></i> jgoldfar (at) gmail (dot) com</a>
+         </p>
+         <p class='hidden-md hidden-lg'>
+            <a href='tel:1-321-895-4184' data-animate-hover='pulse'><i class='fas fa-phone'></i> +1 (321) 895-4184</a>
+            <a href='mailto:jgoldfar@gmail.com' data-animate-hover='pulse'><i class='fas fa-envelope'></i> jgoldfar (at) gmail (dot) com</a>
+         </p>"""
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+
+[params.testimonials]
+    enable = false
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "Testimonials"
+    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = false
+    tags = false
+    search = false
+
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Our Clients"
+    subtitle = ""
+
+[params.recent_posts]
+    enable = false
+    title = "From the blog"
+    subtitle = ""
+
+# Social links for top bar
+[[menu.topbar]]
+    name = "LinkedIn"
+    pre = "<i class='fab fa-linkedin fa-2x'></i>"
+    weight = 1
+    url = "https://www.linkedin.com/in/jonathan-goldfarb-8684851b/"
+
+[[menu.topbar]]
     weight = 2
-    url = "https://github.com/jgoldfar/"
-[[params.social]]
-    name = "Gitlab"
-    icon = "fab fa-gitlab fa-2x"
-    weight = 2
-    url = "https://gitlab.com/jgoldfar/"
-[[params.social]]
-    name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
+    name = "GitHub"
+    url = "https://github.com/jgoldfar"
+    pre = "<i class='fab fa-2x fa-github'></i>"
+
+[[menu.topbar]]
     weight = 3
+    name = "Gitlab"
+    url = "https://gitlab.com/jgoldfar/"
+    pre = "<i class='fab fa-2x fa-gitlab'></i>"
+
+[[menu.topbar]]
+    weight = 6
+    name = "Twitter"
     url = "https://twitter.com/jgoldfar/"
-# [[params.social]]
-    # name = "Bitbucket"
-    # icon = "fab fa-bitbucket fa-2x"
-    # weight = 3
-    # url = "https://bitbucket.org/jgoldfar/"
+    pre = "<i class='fab fa-2x fa-twitter'></i>"
+
+[[menu.topbar]]
+    weight = 5
+    name = "Email"
+    url = "mailto:jgoldfar@gmail.com"
+    pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[[menu.topbar]]
+    name = "Phone"
+    pre = "<i class='fas fa-phone fa-2x'></i>"
+    weight = 4
+    url = "tel:+1-321-895-4184"
+
 # [[params.social]]
     # name = "ResearchGate"
     # icon = "fab fa-researchgate fa-2x"
@@ -91,26 +186,12 @@ pygmentsCodefencesGuessSyntax = true
     # icon = "fab fa-... fa-2x"
     # weight = 5
     # url = "https://..."
-[[params.social]]
-    name = "Email"
-    icon = "fas fa-envelope fa-2x"
-    weight = 1
-    url = "mailto:jgoldfar@my.fit.edu"
-[[params.social]]
-    name = "Phone"
-    icon = "fas fa-phone fa-2x"
-    weight = 5
-    url = "tel:+1-321-895-4184"
 # [[params.social]]
 #     name = "Physical (By Appointment, Send Email!)"
 #     icon = "fas fa-map-marker-alt fa-2x"
 #     weight = 5
 #     url = "https://goo.gl/maps/RQbuqrKWfhPenAX27"
-[[params.social]]
-    name = "LinkedIn"
-    icon = "fab fa-linkedin"
-    weight = 5
-    url = "https://www.linkedin.com/in/jonathan-goldfarb-8684851b/"
+
 [[params.social]]
     name = "RSS"
     icon = "fas fa-rss"
@@ -125,94 +206,20 @@ pygmentsCodefencesGuessSyntax = true
 	# url = "https://hub.docker.com/u/jgoldfar/"
 
 # Menu links
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/posts/"
 # [[menu.main]]
+#     name = "Blog"
+#     weight = 1
+#     url  = "/posts/"
+# # [[menu.main]]
 #     name = "Projects"
 #     weight = 2
 #     url  = "/projects/"
-[[menu.main]]
-    name = "About"
-    weight = 3
-    url = "/about/"
 # [[menu.main]]
+#     name = "About"
+#     weight = 3
+#     url = "/about/"
+# # [[menu.main]]
     # name = "CV"
     # weight = 4
     # identifier = "cv"
     # url = "/cv/cv.pdf"
-
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
-# [params.fathomAnalytics]
-    # siteID = "ABCDE"
-    # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-    # serverURL = "analytics.example.com"
-
-# [[menu.sidebar]]
-#     name = "Teaching"
-#     weight = 3
-#     identifier = "teaching"
-#     url = "/teaching"
-
-# [[menu.sidebar]]
-#     name = "Research"
-#     weight = 3
-#     identifier = "research"
-#     url = "/research"
-
-# [[menu.sidebar]]
-#     name = "Presentations"
-#     weight = 4
-#     identifier = "presentations"
-#     url = "/presentations"
-
-# [[menu.sidebar]]
-#     name = "Schedule"
-#     weight = 2
-#     identifier = "schedule"
-#     url = "/schedule"
-
-# [[menu.sidebar]]
-#     name = "Blog"
-#     weight = 2
-#     identifier = "blog"
-#     url = "/blog"
-
-# ## sidebar for Blog
-# [[menu.sidebarBlog]]
-#     name = "Home"
-#     weight = 4
-#     identifier = "home"
-#     url = "/"
-
-# [[menu.sidebarBlog]]
-#     name = "Blog Home"
-#     weight = 1
-#     identifier = "blogIndex"
-#     url = "/blog"
-
-# [[menu.sidebarBlog]]
-#     name = "About"
-#     weight = 2
-#     identifier = "about"
-#     url = "/blog/about/"
-
-# [[menu.sidebarBlog]]
-#     name = "CV"
-#     weight = 2
-#     identifier = "cv"
-#     url = "/cv/cv.pdf"
-
-# [[menu.sidebarBlog]]
-#     name = "Software"
-#     weight = 2
-#     identifier = "software"
-#     url = "/oss-contributions/"
-
-# ## Course list for homepage
-# [[menu.courses]]
-#     name = "MTH 4101: Mathematical Modeling"
-#     weight = 1
-#     identifier = "mth4101"
-#     url = "/projects/mathmodeling"
