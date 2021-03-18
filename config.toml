@@ -42,7 +42,8 @@ pygmentsCodefencesGuessSyntax = true
     hideCopyright = false
     since = 2018
 
-    about_us = "<p>Jonathan Goldfarb is a ...</p>"
+    # https://en.wikiquote.org/wiki/Voltaire
+    about_us = "<p>Quoi que vous fassiez, écrasez l'infâme, et aimez qui vous aime. - Voltaire</p><p>Always open to challenging new problems.</p>"
     copyright = "Copyright (c) 2018 - 2021, Jonathan Goldfarb; all rights reserved."
     enableGoogleMaps = false
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
@@ -63,19 +64,29 @@ pygmentsCodefencesGuessSyntax = true
     commit = "https://github.com/jgoldfar/jgoldfar.github.io/commit/"
     # commit = "https://bitbucket.org/jgoldfar/personal-site-git/commits"
 
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 50 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - register your account to https://formspree.io/register
+    # - login and create new form
+    # - set your form's endpoint url under 'formspree_action' below
+    # - upload the generated site to your server
+    # - test a dummy email yourself
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io endpoint url
+    formspree_action = "https://formspree.io/f/mjvpnqkl"
+    contact_form_ajax = false
+
     rtl = false
 
     math = true
 
 	# Custom CSS
     custom_css = []
-
-	# Specify light/dark colorscheme
-    # Supported values:
-    # "auto" (use preference set by browser)
-    # "dark" (dark background, light foreground)
-    # "light" (light background, dark foreground) (default)
-    # colorscheme = "auto"
 
 	# Custom JS
     custom_js = []
@@ -89,10 +100,11 @@ pygmentsCodefencesGuessSyntax = true
     tags = "tags"
 
 # Enable or disable top bar with social icons
+# Share Your Requirements.
 [params.topbar]
     enable = true
     text = """
-         <p class='hidden-sm hidden-xs'>Share Your Requirements.
+         <p class='hidden-sm hidden-xs'>Always Open.
             <a href='mailto:jgoldfar@gmail.com' data-animate-hover='pulse'><i class='fas fa-envelope'></i> jgoldfar (at) gmail (dot) com</a>
          </p>
          <p class='hidden-md hidden-lg'>
@@ -130,8 +142,8 @@ pygmentsCodefencesGuessSyntax = true
     enable = true
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Our Clients"
+    # For more information take a look at the README.
+    title = "Clients"
     subtitle = ""
 
 [params.recent_posts]
@@ -144,7 +156,7 @@ pygmentsCodefencesGuessSyntax = true
     name = "LinkedIn"
     pre = "<i class='fab fa-linkedin fa-2x'></i>"
     weight = 1
-    url = "https://www.linkedin.com/in/jonathan-goldfarb-8684851b/"
+    url = "https://www.linkedin.com/in/jonathan-goldfarb/"
 
 [[menu.topbar]]
     weight = 2
@@ -214,10 +226,10 @@ pygmentsCodefencesGuessSyntax = true
 #     name = "Projects"
 #     weight = 2
 #     url  = "/projects/"
-# [[menu.main]]
-#     name = "About"
-#     weight = 3
-#     url = "/about/"
+[[menu.main]]
+    name = "About"
+    weight = 1
+    url = "/contact"
 # # [[menu.main]]
     # name = "CV"
     # weight = 4

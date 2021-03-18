@@ -1,10 +1,12 @@
 weight: 2
-title: "Communication and Integration"
+title: "Communication Partner"
 description: >
   <ul class="list-style-none">
-     <li>Product Development</li>
-     <li>UI/UX Engineering</li>
-     <li>Technical Writing and Documentation</li>
-     <li></li>
+     <li>Scoping, Design, Testing, Production</li>
+     <li>Third-party Vendor Analysis</li>
+     <li>Algorithm and Process Optimization</li>
+     <li>Report Generation and Automation</li>
    </ul>
 image: "img/carousel/undraw-collaboration.svg"
+still: >
+  <li>Stakeholder Interfacing</li>

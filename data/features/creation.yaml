@@ -1,5 +1,5 @@
-weight: 10
+weight: 5
 name: "Consultation"
 icon: "fas fa-lightbulb"
 url: "/contact"
-description: "Let's get the ball rolling"
+description: "Identifying problems, discovering requirements, building specifications, assessing solution strategies, evaluating results"
