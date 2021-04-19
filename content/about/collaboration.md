@@ -9,14 +9,14 @@ The opportunities afforded by membership in a diverse and inclusive team are imm
 
 > The beginning of wisdom is a definition of terms - Socrates
 
-- I am a student of life and a believer in sharing knowledge; though I have lectured and taught in formal settings, I recognize that there is little value in asserting authority, power, or experience over the unknown - instead, I approach the development of understanding through Socratic discovery, and treat questions with curiosity and interest.
+- I am a student of life and a believer in sharing knowledge; though I have lectured and taught in formal settings, I recognize that there is little value in asserting authority, power, or experience over the unknown - instead, I approach the development of understanding through Socratic discovery, and treat questions with curiosity and interest. The outcome of understanding is oftentimes an input to decision-making, which can require a different mindset.
 
 > The limits of my language means the limits of my world. - Wittgenstein
 
-- As a lover of language and observer of communication, I recognize the power of words - and their limits. It is through dialogue that we learn about our team, the goals we should align ourselves with, and the objective reality of the world around us. I find that I communicate most effectively when I am honest, intentional, and transparent; I appreciate the negotiation of different individuals' perspectives into a cohesive position and direction. The limits of words are perhaps most interesting, since that is often where value lies. I feel that every conversation, properly approached, is an opportunity for learning.
+- I recognize the power of effective and empathetic communication. It is through dialogue that we learn about our team, the goals we should align ourselves with, and the objective reality of the world around us. I find that I communicate most effectively when I am honest, intentional, and transparent.
 
 > I know nothing except the fact of my ignorance - Socrates
 
-- When placed in a position of leadership in an organization, I have found that my most valuable contributions arise through collaborative empowerment. Embracing my own ignorance, empowering those around me - my experience has prepared me to lead by example, and listen intently to my colleagues. I am not sure I believe in managing people; projects and products may need management, position, and direction, but people are full of opportunity and motivation, provided the right environment.
+- When placed in a position of leadership in an organization, I have found that my most valuable contributions arise through collaborative empowerment. Embracing my own ignorance, empowering those around me, and executing on the best ideas - my experience has prepared me to lead by example, and listen intently to my colleagues. I am not sure I believe in managing people; projects and products may need management, position, and direction, but people are full of opportunity and motivation, provided the right environment.
 
 I an passionate about collaborating and delivering value: if you appreciate this perspective, or would like to learn more, [reach out!](/contact).

@@ -3,12 +3,22 @@ title = "Curriculum Vitae & Contact Form"
 id = "contact"
 +++
 
-I am an experienced technical consultant with demonstrated ability to gather requirements, develop specifications, and implement applications in the Defense, Finance, Education, and Medical Information industries.
-I am passionate about managing risk, engaging with complex systems, and building quality products.
-I am interested in growing as a technologist, consultant, and communicator; I have never met a problem or domain I don't want to understand more.
+> I am an experienced technical consultant with demonstrated ability to gather requirements, communicate specifications, and deliver value on greenfield and legacy applications.
+> I am passionate about managing risk, engaging with complex systems, and building quality products.
+> I am interested in growing as a technologist, communicator, and creator; I have never met a problem or domain I don't want to understand more.
+> Don't hesitate to reach out if you are interested in bringing my perspective into your team, or have anything to share!
 
-This is my contact page and an abbreviated listing of my experience - my most recent resume information is available on [LinkedIn](https://www.linkedin.com/in/jonathan-goldfarb/) or [here (PDF)](/res.pdf). Don't hesitate to reach out if you are interested in bringing my perspective into your team!
 
-- *2016--Present*: Most recently I have been engaged in highly collaborative product and algorithm development, while continuing to develop as a speaker and mentor. I have worked with students and faculty members to develop their research ideas into meaningful progress in the scientific domain, and directed activity in a university center towards the goals of knowledge generation and sharing. My professional interests have brought me into a few small teams working on innovative products across the Defense, Finance, and Medical industries - I have discovered there is much more continuity between the experience of a university professor and a technical contributor, and found a passion for interfacing with stakeholders and building products that delight users on top of transparent and malleable infrastructure. While academic work can be just as creative as the individual wishes, I believe that the constraints of industry can be motivating and lead to impactful outcomes: in my experience, the opportunities for learning can be greater outside of academia, as well. *Outcomes*: Prototypes and products released to end-users, internal documentation for colleagues. *Key technologies*: Python, JavaScript, Linux, SQL, AWS (Lambda, RDS, EC2), Google Cloud, Apache Spark, ...
+- *2016--Present*: Working professionally in the Defense, Finance, Education, and Medical industries in a variety of technical and executive roles, I have discovered continuity between the experience of a research faculty and a technical contributor, and found a passion for interfacing with stakeholders and building products that delight users on top of transparent and malleable infrastructure.
 
-- *2009--2016*: During this time, I completed my doctoral research on optimization and parameter identification for complex models, implemented projects for departmental and administration stakeholders, and collaborated with students & faculty on their research projects. I developed experience in scientific analysis and research methodologies, as well as the production of efficient software for the solution of data-intensive problems through iterative refinement across the traditional software development life-cycle. *Outcomes*: Multiple peer-reviewed publications in highly ranked journals, presentations and supporting collateral for joint works with colleagues. *Key technologies*: Python, C++, Linux, Docker, MATLAB, Julia, ...
+    - *Outcomes*: Prototypes and products released to end-users, internal documentation for colleagues.
+
+    - *Key technologies*: Python, JavaScript, Linux, SQL, AWS (Lambda, RDS, EC2), Google Cloud, Apache Spark, ...
+
+- *2009--2016*: During this time, I completed my doctoral research on optimization and parameter identification for complex models, implemented projects for departmental and administration stakeholders, and collaborated with students & faculty on their research projects. I developed experience in scientific analysis and research methodologies, as well as the production of efficient software for the solution of data-intensive problems through iterative refinement across the traditional software development life-cycle. I have worked with students and faculty members to develop their research ideas into meaningful progress in the scientific domain, and directed activity in a university center towards the goals of knowledge generation and sharing.
+
+    - *Outcomes*: Multiple peer-reviewed publications in highly ranked journals, presentations and supporting collateral for joint works with colleagues.
+
+    - *Key technologies*: Python, C++, Linux, Docker, MATLAB, Julia, ...
+
+Recent resume information is available on [LinkedIn](https://www.linkedin.com/in/jonathan-goldfarb/) or [here (PDF)](/res.pdf).
