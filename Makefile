@@ -51,8 +51,11 @@ endif
 ${HUGO}.tar.gz:
 	curl -L ${HUGO_DOWNLOAD_PATH} -o $@
 .PRECIOUS: ${HUGO}.tar.gz
-$(HUGO): ${HUGO}.tar.gz
-	cd $(dir $<) && tar xvzf $(notdir $<)
+$(HUGO):
+	if ! command -v hugo ; then					\
+		${MAKE} ${HUGO}.tar.gz ;				\
+		cd $(dir $<) && tar xvzf $(notdir $<) ;	\
+	fi
 .PRECIOUS: ${HUGO}
 
 ### CV/Resume
@@ -136,7 +139,12 @@ static/img/apple-touch-icon.png: static/img/favicon-master.svg
 
 ### Generate site
 generate: $(HUGO) $(HUGOFILE) ## Generate website
-	$(HUGO) --verbose
+	if command -v hugo ; then					\
+		hugo --verbose --minify ;				\
+	fi
+	if ! command -v hugo ; then					\
+		$(HUGO) --verbose --minify ;			\
+	fi
 .PHONY: generate
 
 # https://gohugo.io/hosting-and-deployment/hosting-on-github/
@@ -175,6 +183,6 @@ deploy-git: init-git generate-git push-git clean-git ## Run full deployment to G
 
 
 clean: ${CLEAN_TARGETS} ## Cleanup generated files
-	$(RM) -r ${GitRepoName}
+	$(RM) -r ${GitRepoName} public
 	$(RM) ${HUGO} bin/LICENSE bin/README.md
 .PHONY: clean

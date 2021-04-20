@@ -1,9 +1,11 @@
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: jgoldfar/latex-julia-docker:release-latest
+# Use a somewhat-official Docker image (https://github.com/jojomi/docker-hugo)
+# to test backup integration
+image: jojomi/hugo:latest
 
 pipelines:
   default:
     - step:
         script:
-          - apt-get update && apt-get install -y make curl git ssh
+          - apk add make curl git ssh
           - make generate

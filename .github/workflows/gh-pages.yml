@@ -1,5 +1,5 @@
 name: Build Hugo site using Github pages
-
+# Demo script from https://gohugo.io/hosting-and-deployment/hosting-on-github/
 on:
   push:
     branches:
