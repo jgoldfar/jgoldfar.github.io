@@ -7,5 +7,4 @@ pipelines:
   default:
     - step:
         script:
-          - apk add make curl git ssh
-          - make generate
+          - hugo --verbose --minify
