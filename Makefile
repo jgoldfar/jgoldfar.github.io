@@ -54,7 +54,7 @@ ${HUGO}.tar.gz:
 $(HUGO):
 	if ! command -v hugo ; then					\
 		${MAKE} ${HUGO}.tar.gz ;				\
-		cd $(dir $<) && tar xvzf $(notdir $<) ;	\
+		cd bin && tar xvzf hugo.tar.gz ;	\
 	fi
 .PRECIOUS: ${HUGO}
 
@@ -136,6 +136,14 @@ static/img/favicon.ico: static/img/favicon-master.svg
 static/img/apple-touch-icon.png: static/img/favicon-master.svg
 	inkscape -w 256 -h 256 -o $@ $<
 .SECONDARY: static/img/apple-touch-icon.png
+
+static/img/banners/%.png: static/img/banners/%.svg
+	inkscape -w 890 -h 890 -o $@ $<
+# https://www.google.com/search?q=opengraph+image+size&client=safari&rls=en&ei=SguCYIawEc7V-gS7gZvQDg&oq=opengraph+image+size&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBggAEAoQHjIGCAAQBRAeOgcIABBHELADOgUIIRCrAjoHCCEQChCrAjoFCAAQzQJQ2DFY77sBYN-9AWgKcAJ4AIABvAGIAacSkgEEMjcuMpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwiG_ZiGhZPwAhXOqp4KHbvABuoQ4dUDCA4&uact=5
+# https://neilpatel.com/blog/open-graph-meta-tags/
+
+## Generate banner images, which have to be PNG...
+img-deps: $(addprefix static/img/banners/,undraw_Project_completed_re_pqqq.png undraw_Source_code_re_wd9m.png)
 
 ### Generate site
 generate: $(HUGO) $(HUGOFILE) ## Generate website

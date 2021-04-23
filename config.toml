@@ -22,14 +22,14 @@ pygmentsCodefencesGuessSyntax = true
 
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
-    # viewMorePostLink = "/blog/"
+    viewMorePostLink = "/vault/"
     author = "Jonathan Goldfarb, Ph.D."
     info = "Intention, Collaboration, Innovation"
     defaultDescription = "Jonathan Goldfarb, Online."
     keywords = "blog,personal,technology"
     avatarurl = "https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/img/max.jpg"
-    # gravatarurl = "jgoldfar@gmail.com"
-    # mainSections = ["blog"]
+    gravatarurl = "jgoldfar@gmail.com"
+    mainSections = ["vault"]
 
     twitter_site = "jgoldfar" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/logo.png"
@@ -92,7 +92,7 @@ pygmentsCodefencesGuessSyntax = true
     custom_js = []
 
 [Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+    blog = "/vault/:year/:month/:day/:filename/"
 
 # Setup taxonomies
 [taxonomies]
@@ -144,10 +144,10 @@ pygmentsCodefencesGuessSyntax = true
     # at 'exampleSite/data/clients'.
     # For more information take a look at the README.
     title = "Clients"
-    subtitle = ""
+    # subtitle = "I love keeping my clients "
 
 [params.recent_posts]
-    enable = false
+    enable = true
     title = "From the blog"
     subtitle = ""
 
@@ -221,7 +221,8 @@ pygmentsCodefencesGuessSyntax = true
 # [[menu.main]]
 #     name = "Blog"
 #     weight = 1
-#     url  = "/posts/"
+#     url  = "/vault/about"
+
 # # [[menu.main]]
 #     name = "Projects"
 #     weight = 2
