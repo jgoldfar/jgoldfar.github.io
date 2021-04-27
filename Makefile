@@ -143,7 +143,7 @@ static/img/banners/%.png: static/img/banners/%.svg
 # https://neilpatel.com/blog/open-graph-meta-tags/
 
 ## Generate banner images, which have to be PNG...
-img-deps: $(addprefix static/img/banners/,undraw_Project_completed_re_pqqq.png undraw_Source_code_re_wd9m.png)
+img-deps: $(addprefix static/img/banners/,undraw_Project_completed_re_pqqq.png undraw_Source_code_re_wd9m.png undraw_design_components_9vy6.png)
 
 ### Generate site
 generate: $(HUGO) $(HUGOFILE) ## Generate website

@@ -22,14 +22,14 @@ pygmentsCodefencesGuessSyntax = true
 
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
-    viewMorePostLink = "/vault/"
+    viewMorePostLink = "/blog/"
     author = "Jonathan Goldfarb, Ph.D."
     info = "Intention, Collaboration, Innovation"
     defaultDescription = "Jonathan Goldfarb, Online."
     keywords = "blog,personal,technology"
     avatarurl = "https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/img/max.jpg"
     gravatarurl = "jgoldfar@gmail.com"
-    mainSections = ["vault"]
+    mainSections = ["blog"]
 
     twitter_site = "jgoldfar" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/logo.png"
@@ -92,7 +92,7 @@ pygmentsCodefencesGuessSyntax = true
     custom_js = []
 
 [Permalinks]
-    blog = "/vault/:year/:month/:day/:filename/"
+    blog = "/blog/:year/:month/:day/:filename/"
 
 # Setup taxonomies
 [taxonomies]
@@ -135,7 +135,7 @@ pygmentsCodefencesGuessSyntax = true
 # Enable and disable widgets for the right sidebar
 [params.widgets]
     categories = false
-    tags = false
+    tags = true
     search = false
 
 [params.clients]
@@ -218,10 +218,10 @@ pygmentsCodefencesGuessSyntax = true
 	# url = "https://hub.docker.com/u/jgoldfar/"
 
 # Menu links
-# [[menu.main]]
-#     name = "Blog"
-#     weight = 1
-#     url  = "/vault/about"
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/blog"
 
 # # [[menu.main]]
 #     name = "Projects"
