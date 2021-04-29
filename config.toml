@@ -43,6 +43,7 @@ pygmentsCodefencesGuessSyntax = true
     since = 2018
 
     # https://en.wikiquote.org/wiki/Voltaire
+    # Whatever you do, crush the despicable [superstition], and love those who love you.
     about_us = "<p>Quoi que vous fassiez, écrasez l'infâme, et aimez qui vous aime. - Voltaire</p><p>Always open to challenging new problems.</p>"
     copyright = "Copyright (c) 2018 - 2021, Jonathan Goldfarb; all rights reserved."
     enableGoogleMaps = false
