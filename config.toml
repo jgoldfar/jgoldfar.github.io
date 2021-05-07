@@ -189,6 +189,15 @@ pygmentsCodefencesGuessSyntax = true
     weight = 4
     url = "tel:+1-321-895-4184"
 
+[[menu.topbar]]
+    name = "RSS"
+    icon = "fas fa-rss"
+    weight = 6
+    pre = "<i class='fas fa-rss fa-2x'></i>"
+    url = "https://jgoldfar.github.io/index.xml"
+    rel = "alternate"
+    type = "application/rss+xml"
+
 # [[params.social]]
     # name = "ResearchGate"
     # icon = "fab fa-researchgate fa-2x"
@@ -205,13 +214,6 @@ pygmentsCodefencesGuessSyntax = true
 #     weight = 5
 #     url = "https://goo.gl/maps/RQbuqrKWfhPenAX27"
 
-[[params.social]]
-    name = "RSS"
-    icon = "fas fa-rss"
-    weight = 6
-    url = "https://jgoldfar.github.io/index.xml"
-    rel = "alternate"
-    type = "application/rss+xml"
 # [[params.social]]
     # name = "Docker Hub"
     # icon = "fab fa-docker"
