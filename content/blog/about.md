@@ -1,6 +1,6 @@
 ---
-title: "What? Context and Contents"
-date: "2021-04-27T09:00:47-04:00"
+title: "What Is This? Some Context"
+date: "2021-03-27T09:00:47-04:00"
 tags: ["curiosity", "failure", "skepticism"]
 draft: false
 description: "thanks to undraw.co for the banner image"
@@ -18,7 +18,7 @@ In this section, I hope to practice simple, clear, and effective communication o
 In my two decades years of formal education and in even greater measure in the variety of efforts I joined after earning my doctorate, one prominent lesson I have learned is that wisdom is not to be gained through specialization, nor is it to be found by looking to any singular model of success.
 Paraphrasing an embattled icon of reason, I know that I know nothing, and that this truth is likely fundamental to the human condition.
 
-As a former academic, I still see opportunities for learning, connection, and collaboration everywhere.
-I am particularly interested in design patterns, creative and experimental innovation, and the teams and people within them that build practices and processes.
+As an academic, I still see opportunities for learning, connection, and collaboration everywhere.
+I am particularly interested in design patterns, creative and experimental innovation, and the people that build practices and processes.
 I learned from an early age that failure is the only way to learn, and in this age of technological acceleration we must all fail faster and more often.
-So with this brief introduction, please: enjoy this blog, leave a comment, and [reach out with topic suggestions or inquiries](/contact).
+So with this brief introduction, please: enjoy this blog, leave a comment, and [reach out with topic suggestions or inquiries](mailto:jgoldfar@gmail.com).

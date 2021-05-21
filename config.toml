@@ -222,6 +222,12 @@ pygmentsCodefencesGuessSyntax = true
 
 # Menu links
 [[menu.main]]
+    name = "Services"
+    weight = 1
+    url  = "/about/services"
+
+
+[[menu.main]]
     name = "Blog"
     weight = 1
     url  = "/blog"
