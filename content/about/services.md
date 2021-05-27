@@ -1,12 +1,14 @@
 ---
-title: "Services: Freelance, Contract, etc."
+title: "Freelance and Contract Services"
 draft: false
 ---
 
-> “Difficulties strengthen the mind, as labor does the body.”
-> ― Lucius Annaeus Seneca
+I offer professional services in all areas of digital transformation; whether you want to differentiate your business or need technical guidance to respond to an organizational disruption, I am prepared to identify solutions and leverage technology to enable your success.
 
-In the projects I have collaborated on, I tackled poorly defined challenges and created a body of work for understanding their solutions together with skilled colleagues. We delivered products that delighted stakeholders for projects at small and large scales, whether measured in terms of person-year investment or LoC. I found joy in being able to talk with creative people and domain experts about their problems, and contributing to their growth where I can provide value. If anything, the limited amount of time in the day can be a great frustration, when there so many ways to have a positive impact on the world.
+1) [Collaborative Discovery and Strategy](/about/collaboration). By assessing your environment, developing an understanding of your mission and values, and evaluating solutions and strategy, I generate actionable insights for you and your stakeholders.
 
-If you are a reader of my weblog, you may know that I have been developing systems and products collaboratively and semi-professionally for a decade or more. I am starting to bring the professional services I can offer across the product development life-cycle to the "modern" web, with a [gig on Fiverr](https://www.fiverr.com/share/EEYo7Y). I'll be adding more gigs and details as I better understand the marketplace. Creating a service description that fits Fiverr's formatting requirements can be challenging, so clarification is likely needed. I welcome feedback and criticism of any kind.
-[Start a conversation today about engaging me with your challenges!](mailto:jgoldfar@gmail.com)
+2) [Innovative Design and Implementation](/about/innovation). From identifying gaps in compliance requirements to coordinating and accelerating project delivery to optimizing your critical processes, I bring my expertise to your challenges and deliver on defined objectives.
+
+3) [Training, Support, and More](/contact). I also offer customized services for qualified clients, including specialized training, 24x7 managed services, and tier 3 support, and managed services.
+
+I am excited to hear from you if you have ambitious goals, small scale initiatives, or complex projects - no matter what domain or magnitude, I want to partner with you to accomplish your objectives. Contact me directly at [jgoldfar@gmail.com](mailto:jgoldfar@gmail.com) or [321 895 4184](tel:+1-321-895-4184) today!

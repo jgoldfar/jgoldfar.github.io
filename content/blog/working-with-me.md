@@ -31,7 +31,7 @@ As time progresses only in one direction, we have no choice but to adapt and lea
 > What’s your communication style like? How have other people described it? What have you gotten feedback about in the past? How should others interpret what you do or say? Are there any aspects of communication that you are working on? How do you like to give feedback? How do you like to receive feedback? What is the best way to communicate with you? What are some things that people might misunderstand about you that you should clarify?
 
 
-In my career, I have been lucky enough to have the opportunity to engage with business-minded people, civic-minded people, professionals, students, parents, and wonderful individuals of every age and inclination.
+In my career, I have been lucky enough to have the opportunity to engage with business-minded people, volunteers, professionals, students, parents, and wonderful individuals of every age and inclination.
 I love to listen and develop an understanding of people through their meaning and intentions, and I endeavor to maintain a neutral, curious, and open mindset in my responses.
 I recognize the value of effective communication, which depends in interesting ways on factors including personalities, context, and content.
 
