@@ -9,6 +9,8 @@ I offer professional services in all areas of digital transformation; whether yo
 
 2) [Innovative Design and Implementation](/about/innovation). From identifying gaps in compliance requirements to coordinating and accelerating project delivery to optimizing your critical processes, I bring my expertise to your challenges and deliver on defined objectives.
 
-3) [Training, Support, and More](/contact). I also offer customized services for qualified clients, including specialized training, 24x7 managed services, and tier 3 support, and managed services.
+3) [Training, Support, and More](/contact). I also offer customized services for qualified clients, including specialized training, 24x7 managed services, and tier 3 support.
 
-I am excited to hear from you if you have ambitious goals, small scale initiatives, or complex projects - no matter what domain or magnitude, I want to partner with you to accomplish your objectives. Contact me directly at [jgoldfar@gmail.com](mailto:jgoldfar@gmail.com) or [321 895 4184](tel:+1-321-895-4184) today!
+I am excited to hear from you if you have ambitious goals, from a small scale initiatives to a complex project.
+I want to develop a partnership with you to accomplish your objectives.
+Contact me directly at [jgoldfar@gmail.com](mailto:jgoldfar@gmail.com) or [321 895 4184](tel:+1-321-895-4184) today!

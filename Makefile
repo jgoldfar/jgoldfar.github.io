@@ -194,3 +194,12 @@ clean: ${CLEAN_TARGETS} ## Cleanup generated files
 	$(RM) -r ${GitRepoName} public
 	$(RM) ${HUGO} bin/LICENSE bin/README.md
 .PHONY: clean
+
+
+## Management commands for individual content pages
+send-python-flask-crud-application: content/blog/python-flask-crud-application.py
+	gist -d "Python Flask CRUD Application Boilerplate" -f app.py -R $<
+
+PYTHON_FLASK_CRUD_APPLICATION_GIST:=https://gist.github.com/jgoldfar/72e5f0cea17d4306a91edb48401a1039
+update-python-flask-crud-application: content/blog/python-flask-crud-application.py
+	gist -U ${PYTHON_FLASK_CRUD_APPLICATION_GIST} $<
