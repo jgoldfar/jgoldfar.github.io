@@ -9,7 +9,17 @@ I offer professional services in all areas of digital transformation; whether yo
 
 2) [Innovative Design and Implementation](/about/innovation). From identifying gaps in compliance requirements to coordinating and accelerating project delivery to optimizing your critical processes, I bring my expertise to your challenges and deliver on defined objectives.
 
-3) [Training, Support, and More](/contact). I also offer customized services for qualified clients, including specialized training, 24x7 managed services, and tier 3 support.
+3) [Training, Support, and More](/contact). I also offer customized services for qualified clients, including specialized training, 24x7 managed services, and tier 3 support. My past engagements have included:
+
+    - Proposal and Project Initiation
+    - Project Scoping
+    - Requirement and Business Analysis
+    - Design and Delivery Planning
+    - Development
+    - Integration and Testing
+    - Implementation and Production Deployment
+    - Maintenance, Operations, and Support
+    - Disposition and Cut-over
 
 I am excited to hear from you if you have ambitious goals, from a small scale initiatives to a complex project.
 I want to develop a partnership with you to accomplish your objectives.

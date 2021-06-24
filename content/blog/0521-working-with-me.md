@@ -10,11 +10,11 @@ draft: false
 
 # Working With Jonathan Goldfarb
 
-Since I have felt a dedication to authenticity and transparency my entire professional career, I am a bit embarrassed that I didn't come up with the concept of a "user manual" for myself. Who hasn't avoided going to an office-mate or boss because they weren't sure how productive the conversation would be? Those kinds of missed opportunities can so easily be avoided with open communication in an organization. A user manual can create needed transparency about work practices across a team --- it can also drive accountability.
+Feeling a dedication to authenticity and transparency throughout my entire professional career, I find the concept of a "user manual" for myself fascinating. Who hasn't avoided going to an office-mate or boss because they weren't sure how productive the conversation would be? Those kinds of missed opportunities can so easily be avoided with open communication in an organization. A user manual can create needed transparency about work practices across a team --- it can also drive accountability.
 
 > If someone is able to show me that what I think or do is not right, I will happily change, for I seek the truth, by which no one was ever truly harmed. It is the person who continues in his self-deception and ignorance who is harmed. - Marcus Aurelius
 
-These days, there are even [templates](https://docs.google.com/document/d/1IZwTwEpHzo4KHa5Lxgc0fOCkJqpYH59YWBkZI1K3JVo/edit) [available](https://www.manualof.me) to create nice-looking documents to share. I created one for a previous engagement and found it lacking, though the concept is useful. What remains here are the prompts I gathered for this exercise, and some of my thoughts on what might be in my "user manual" as an example. I have noticed that even when people are open about communication in this way, good contributors evolve and change with the needs of the market and their role - for me, feedback is central to my process of improvement, so feel free to [reach out with comments or clarification](mailto:jgoldfar@gmail.com).
+These days, there are even [templates](https://docs.google.com/document/d/1IZwTwEpHzo4KHa5Lxgc0fOCkJqpYH59YWBkZI1K3JVo/edit) [available](https://www.manualof.me) to create nice-looking documents to share. I created one for a previous engagement and found it lacking, however useful the concept may be. What remains here are prompts I gathered for this exercise, and some of my thoughts on what might be in my "user manual" as an example. I have noticed that even when people are open about communication in this way, good contributors evolve and change with the needs of the market and their role - for me, feedback is central to my process of improvement, so feel free to [reach out with comments or clarification](mailto:jgoldfar@gmail.com).
 
 
 ## Success and Expectations
@@ -50,17 +50,8 @@ For me, this includes having humility about my ideas, and empowering others to c
 > What do you love to do, and what are you good at? What can you help others with?
 > What are your blind spots? What are you working on? What can others help you with?
 
-I enjoy contributing across the entire systems development life cycle [(SDLC)](https://en.wikipedia.org/wiki/Systems_development_life_cycle) - as a creative contributor, I am interested in managing the investment of effort to deliver a valuable work product at the right time. My past engagements have included:
-    - Proposal and Project Initiation
-    - Project Scoping
-    - Requirement and Business Analysis
-    - Design and Delivery Planning
-    - Development
-    - Integration and Testing
-    - Implementation and Production Deployment
-    - Maintenance, Operations, and Support
-    - Disposition and Cut-over
-
+It can be difficult for me to characterize my strengths.
+I enjoy contributing across the entire systems development life cycle [(SDLC)](https://en.wikipedia.org/wiki/Systems_development_life_cycle) - as a creative contributor, I am interested in engaging directly and managing effort investment to deliver a valuable work product at the right time.
 As I gain experience in different contexts, I am constantly fascinated by the
 unknowns presented by others' expertise and understanding, motivating me to dedicate myself to continuous growth and improvement. If you think I need a better balance or focus, [I'd love to hear about it!](mailto:jgoldfar@gmail.com)
 

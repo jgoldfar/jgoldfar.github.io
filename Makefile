@@ -137,10 +137,16 @@ static/img/apple-touch-icon.png: static/img/favicon-master.svg
 	inkscape -w 256 -h 256 -o $@ $<
 .SECONDARY: static/img/apple-touch-icon.png
 
+static/img/sharing-default.png: static/img/sharing-default.svg
+	inkscape -w 1200 -h 630 -o $@ $<
+
 static/img/banners/%.png: static/img/banners/%.svg
 	inkscape -w 890 -h 890 -o $@ $<
 # https://www.google.com/search?q=opengraph+image+size&client=safari&rls=en&ei=SguCYIawEc7V-gS7gZvQDg&oq=opengraph+image+size&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBggAEAoQHjIGCAAQBRAeOgcIABBHELADOgUIIRCrAjoHCCEQChCrAjoFCAAQzQJQ2DFY77sBYN-9AWgKcAJ4AIABvAGIAacSkgEEMjcuMpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwiG_ZiGhZPwAhXOqp4KHbvABuoQ4dUDCA4&uact=5
 # https://neilpatel.com/blog/open-graph-meta-tags/
+
+static/img/clients/nike.png: static/img/clients/nike.svg
+	inkscape -w 420 -h 150 -o $@ $<
 
 ## Generate banner images, which have to be PNG...
 img-deps: $(addprefix static/img/banners/,undraw_Project_completed_re_pqqq.png undraw_Source_code_re_wd9m.png undraw_design_components_9vy6.png undraw_visual_data_re_mxxo.png)
@@ -203,3 +209,11 @@ send-python-flask-crud-application: content/blog/python-flask-crud-application.p
 PYTHON_FLASK_CRUD_APPLICATION_GIST:=https://gist.github.com/jgoldfar/72e5f0cea17d4306a91edb48401a1039
 update-python-flask-crud-application: content/blog/python-flask-crud-application.py
 	gist -U ${PYTHON_FLASK_CRUD_APPLICATION_GIST} $<
+
+PYTHON_HASHTABLE_GIST:=https://gist.github.com/jgoldfar/56e758e460cd7e9c5ae60395e37cce15
+send-python-hashtable: content/blog/python-hashtable.py
+	gist -d "Python Hash Table" -f hashtable.py -R $<
+
+# TODO replace reference with {{<gist jgoldfar 56e758e460cd7e9c5ae60395e37cce15 >}}
+update-python-hashtable: content/blog/python-hashtable.py
+	gist -U ${PYTHON_HASHTABLE_GIST} $<
