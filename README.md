@@ -57,3 +57,7 @@ To generate a new page (in particular, to automatically set the date) run
 In particular, to make a new blog post with the title (for instance) `ImplicitFunctionTheoremApplications`, run
 
     make new FileName=posts/ImplicitFunctionTheoremApplications
+
+## References
+
+- [Raw HTML From](https://anaulin.org/blog/hugo-raw-html-shortcode/)

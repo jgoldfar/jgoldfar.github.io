@@ -8,7 +8,7 @@ draft: false
 ---
 
 
-# Working With Jonathan Goldfarb
+# Working With Me, Jonathan Goldfarb
 
 Feeling a dedication to authenticity and transparency throughout my entire professional career, I find the concept of a "user manual" for myself fascinating. Who hasn't avoided going to an office-mate or boss because they weren't sure how productive the conversation would be? Those kinds of missed opportunities can so easily be avoided with open communication in an organization. A user manual can create needed transparency about work practices across a team --- it can also drive accountability.
 

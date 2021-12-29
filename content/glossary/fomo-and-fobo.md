@@ -1,7 +1,7 @@
 ---
 title: "FOMO & FOBO"
 date: 2021-05-20T11:33:47-04:00
-draft: false
+draft: true
 ---
 
 The terms "FOMO" and "FOBO" are common parlance in some groups - not everyone is familiar with both terms, and how some individuals in roles such as sales use FOMO or FOBO to try to influence prospective buyers. Both are fear-based factors, fundamentally - research in economics seems to suggest that some significant percentage of buyer choice is actually emotional rather than rational, so companies wanting to maximize conversion are bound to use powerful emotions like fear to try to land a sale.

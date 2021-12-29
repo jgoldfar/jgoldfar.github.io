@@ -40,6 +40,7 @@ UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
 HUGO_VERSION:=0.67.1
 
+# Set path to Extended version of Hugo
 ifeq (${UNAME},Darwin)
 HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz
 endif
@@ -149,7 +150,7 @@ static/img/clients/nike.png: static/img/clients/nike.svg
 	inkscape -w 420 -h 150 -o $@ $<
 
 ## Generate banner images, which have to be PNG...
-img-deps: $(addprefix static/img/banners/,undraw_Project_completed_re_pqqq.png undraw_Source_code_re_wd9m.png undraw_design_components_9vy6.png undraw_visual_data_re_mxxo.png)
+img-deps: $(addprefix static/img/banners/,undraw_Project_completed_re_pqqq.png undraw_Source_code_re_wd9m.png undraw_design_components_9vy6.png undraw_visual_data_re_mxxo.png undraw_stars_re_6je7.png undraw_Walk_in_the_city_re_039v.png) static/img/sharing-default.png static/img/apple-touch-icon.png
 
 ### Generate site
 generate: $(HUGO) $(HUGOFILE) ## Generate website
