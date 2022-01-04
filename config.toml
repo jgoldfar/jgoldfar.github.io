@@ -34,7 +34,7 @@ pygmentsCodefencesGuessSyntax = true
     mainSections = ["blog"]
 
     twitter_site = "jgoldfar" # the Twitter handle of your site (without the '@')
-    default_sharing_image = "img/logo.png"
+    default_sharing_image = "img/sharing-default.png"
 
     footercontent = "Amor Fati"
 

@@ -2,7 +2,7 @@
 title: "How I Live-Code for Interviews"
 date: "2021-07-12T09:00:47-04:00"
 tags: []
-draft: false
+draft: true
 description: "thanks to undraw.io for the banner image"
 banner: "img/banners/undraw_Project_completed_re_pqqq.png"
 ---

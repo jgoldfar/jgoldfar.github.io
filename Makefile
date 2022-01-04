@@ -124,9 +124,8 @@ endif # Switch on existence of extension
 endif # Switch on definition of FileName
 .PHONY: new
 
-icoSizes=16 32 48 128 256
-img-deps: static/img/favicon.ico static/img/apple-touch-icon.png ## Generate images for site
-
+# Sizes for icon file
+icoSizes:=16 32 48 128 256
 static/img/favicon.ico: static/img/favicon-master.svg
 	$(foreach _icoSize,$(icoSizes),inkscape -w $(_icoSize) -h $(_icoSize) -o static/img/favicon-$(_icoSize).png $<;)
 	convert $(addsuffix .png,$(addprefix static/img/favicon-,$(icoSizes))) $@
@@ -138,19 +137,45 @@ static/img/apple-touch-icon.png: static/img/favicon-master.svg
 	inkscape -w 256 -h 256 -o $@ $<
 .SECONDARY: static/img/apple-touch-icon.png
 
-static/img/sharing-default.png: static/img/sharing-default.svg
+static/img/sharing-default.png: static/img/linkedin-featured.svg
 	inkscape -w 1200 -h 630 -o $@ $<
+
+static/img/logo-small.png: static/img/logo-pacifico.svg
+	inkscape -w 241 -h 42 -o $@ $<
+
+static/img/logo.png: static/img/logo-pacifico.svg
+	inkscape -w 321 -h 56 -o $@ $<
+
+# List of images to create under static/img
+IMG_CONVERT:=									\
+logo-small.png									\
+logo.png										\
+sharing-default.png								\
+apple-touch-icon.png							\
+favicon.ico
 
 static/img/banners/%.png: static/img/banners/%.svg
 	inkscape -w 890 -h 890 -o $@ $<
 # https://www.google.com/search?q=opengraph+image+size&client=safari&rls=en&ei=SguCYIawEc7V-gS7gZvQDg&oq=opengraph+image+size&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBAgAEAoyBggAEAoQHjIGCAAQBRAeOgcIABBHELADOgUIIRCrAjoHCCEQChCrAjoFCAAQzQJQ2DFY77sBYN-9AWgKcAJ4AIABvAGIAacSkgEEMjcuMpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwiG_ZiGhZPwAhXOqp4KHbvABuoQ4dUDCA4&uact=5
 # https://neilpatel.com/blog/open-graph-meta-tags/
 
+# List of images to create under static/img/banners
+IMG_BANNERS:=									\
+undraw_Project_completed_re_pqqq.png			\
+undraw_Source_code_re_wd9m.png					\
+undraw_design_components_9vy6.png				\
+undraw_visual_data_re_mxxo.png					\
+undraw_stars_re_6je7.png						\
+undraw_Walk_in_the_city_re_039v.png				\
+undraw_Map_dark_re_36sy.png
+
+# List of images to create under static/img/clients
+IMG_CLIENTS:=nike.png
 static/img/clients/nike.png: static/img/clients/nike.svg
 	inkscape -w 420 -h 150 -o $@ $<
 
 ## Generate banner images, which have to be PNG...
-img-deps: $(addprefix static/img/banners/,undraw_Project_completed_re_pqqq.png undraw_Source_code_re_wd9m.png undraw_design_components_9vy6.png undraw_visual_data_re_mxxo.png undraw_stars_re_6je7.png undraw_Walk_in_the_city_re_039v.png) static/img/sharing-default.png static/img/apple-touch-icon.png
+img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img/,${IMG_CONVERT}) $(addprefix static/img/clients/,${IMG_CLIENTS}) ## Generate images for site
 
 ### Generate site
 generate: $(HUGO) $(HUGOFILE) ## Generate website
