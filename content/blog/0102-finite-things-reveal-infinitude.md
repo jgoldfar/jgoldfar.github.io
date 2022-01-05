@@ -3,7 +3,7 @@ title: "All Finite Things Reveal Infinitude"
 date: "2021-05-31T10:26:50-04:00"
 tags: ["infinity", "values"]
 draft: false
-banner: "img/banners/undraw_Map_dark_re_36sy.png"
+banner: "img/banners/undraw_stars_re_6je7.png"
 description: "thanks to undraw.io for the banner image"
 ---
 

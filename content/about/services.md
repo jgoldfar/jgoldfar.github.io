@@ -21,6 +21,6 @@ I offer professional services in all areas of digital transformation; whether yo
     - Maintenance, Operations, and Support
     - Disposition and Cut-over
 
-I am excited to hear from you if you have ambitious goals, from a small scale initiatives to a complex project.
-I want to develop a partnership with you to accomplish your objectives.
+If you have an ambitious goal, from a small-scale initiative to a complex product iteration, I am excited to hear from you.
+I want to partner with you to accomplish your objectives.
 Contact me directly at [jgoldfar@gmail.com](mailto:jgoldfar@gmail.com) or [321 895 4184](tel:+1-321-895-4184) today!

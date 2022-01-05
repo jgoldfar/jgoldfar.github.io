@@ -14,7 +14,6 @@ This blog is a place to work out those experiments, discuss learnings, and ask q
 One of my goals as a communicator is to facilitate simple, clear, and effective dialogue involving complex ideas.
 Oftentimes, I can't achieve that goal in a blog post - clarity can require interaction between the reader, the subject, and the environment.
 
-The posts that I write here are often just starting points for dialogue online or offline.
-To provide better context, I rely on feedback.
-I'm always looking for ways to improve and help.
+The posts that I write here are often just starting points for dialogue online or offline; the context and content are clear to the specific audience I am writing for, but I am always looking to improve the presentation and utility of my work.
+To provide better context and content, I rely on feedback.
 If you need help understanding your challenge, or simply have something to say, send me a message at [jgoldfar@gmail.com](mailto:jgoldfar@gmail.com) or call at [321-895-4184](tel:+1-321-895-4184).

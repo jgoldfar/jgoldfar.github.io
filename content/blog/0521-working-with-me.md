@@ -10,20 +10,27 @@ draft: false
 
 # Working With Me, Jonathan Goldfarb
 
-Feeling a dedication to authenticity and transparency throughout my entire professional career, I find the concept of a "user manual" for myself fascinating. Who hasn't avoided going to an office-mate or boss because they weren't sure how productive the conversation would be? Those kinds of missed opportunities can so easily be avoided with open communication in an organization. A user manual can create needed transparency about work practices across a team --- it can also drive accountability.
+Dedication to authenticity and transparency is central to my work.
+In my continuous search for better ways to facilitate open and effective communication, I came across the concept of a personal "user manual", a living document that encapsulates how I work with others. I can't count the number of times a colleague has told me they avoided a conversation with an office-mate or colleague because they weren't sure how productive the conversation would be. Those kinds of missed opportunities can so easily be avoided with open communication in an organization.
+
+These days, there are even [templates](https://docs.google.com/document/d/1IZwTwEpHzo4KHa5Lxgc0fOCkJqpYH59YWBkZI1K3JVo/edit) [available](https://www.manualof.me) to create nice-looking documents to share.
+
+The fact is, each engagement is unique - as an outcomes-oriented professional, I know that building productive relationships with business owners, stakeholders, users, and colleagues is a key. There is no one-size-fits-all solution; I enjoy the process of evolving my way of working to deliver the maximum value to the people I support.
+
+What remains here are prompts I gathered for this exercise, and some of my thoughts on what might be in my "user manual" as an example.
+The best communicators I have worked with change according the needs of their colleagues, the project, and their role - for me, feedback is central to my process of improvement, so feel free to [reach out with comments or points of clarification](mailto:jgoldfar@gmail.com).
 
 > If someone is able to show me that what I think or do is not right, I will happily change, for I seek the truth, by which no one was ever truly harmed. It is the person who continues in his self-deception and ignorance who is harmed. - Marcus Aurelius
-
-These days, there are even [templates](https://docs.google.com/document/d/1IZwTwEpHzo4KHa5Lxgc0fOCkJqpYH59YWBkZI1K3JVo/edit) [available](https://www.manualof.me) to create nice-looking documents to share. I created one for a previous engagement and found it lacking, however useful the concept may be. What remains here are prompts I gathered for this exercise, and some of my thoughts on what might be in my "user manual" as an example. I have noticed that even when people are open about communication in this way, good contributors evolve and change with the needs of the market and their role - for me, feedback is central to my process of improvement, so feel free to [reach out with comments or clarification](mailto:jgoldfar@gmail.com).
-
 
 ## Success and Expectations
 
 > What does being good at your job mean to you? What are some of the values that underpin your understanding of success? What is the best way to convince you do to something? How can people earn an extra gold star with you? What qualities do you particularly value in people who work with you?
 
-I have observed success being measured in many different ways, often without recognizing the possibility of [Goodhart's law](https://en.wikipedia.org/wiki/Goodhart%27s_law) creating second-order effects in an organization or group.
-One can define success on multiple scales, from individual actualization to the well-being of communities and societies.
-As time progresses only in one direction, we have no choice but to adapt and learn. Perhaps Churchill put this process most concisely: "Success is stumbling from failure to failure with no loss of enthusiasm."
+One can define success by multiple scales and metrics, from individual actualization to the well-being of communities and societies.
+I have an intrinsic motivation to create, innovate, and achieve, and an ability to laser-focus on the critical needs of the organizations I work with.
+
+My understanding of success is rooted in my appreciation for failure - I conceptualize true failure only as ceasing to continue. I believe we have no choice but to experiment, fail, and learn.
+Perhaps Churchill put this process most concisely: "Success is stumbling from failure to failure with no loss of enthusiasm."
 
 
 ## Communication and Feedback
@@ -32,17 +39,17 @@ As time progresses only in one direction, we have no choice but to adapt and lea
 
 
 In my career, I have been lucky enough to have the opportunity to engage with business-minded people, volunteers, professionals, students, parents, and wonderful individuals of every age and inclination.
-I love to listen and develop an understanding of people through their meaning and intentions, and I endeavor to maintain a neutral, curious, and open mindset in my responses.
-I recognize the value of effective communication, which depends in interesting ways on factors including personalities, context, and content.
+I love to listen and develop an understanding of people through their meaning and intentions, and I endeavor to maintain a neutral, curious, and open mindset in every dialogue.
+I continue to seek more effective strategies for communicating different contents with different personalities in different contexts; if I can do better, I appreciate immediate feedback in any available form.
 
 
 ## Trust and Quirks
 
-> What makes you trust someone else? Conversely, what triggers you? What are the qualities you value that inspire your trust? > What are the causes of misunderstandings that you’ve had in the past? What are some things about your leadership or working style that other people criticize or misunderstand? What quirks or mannerisms might unintentionally annoy a different personality type? What book speaks to you most? What is the worst experience you've had in a team? What are some honest, unfiltered things about you? What drives you nuts? What are your quirks? When is your brain most active?
+> What makes you trust someone else? Conversely, what triggers you? What are the qualities you value that inspire your trust? What are the causes of misunderstandings that you’ve had in the past? What are some things about your leadership or working style that other people criticize or misunderstand? What quirks or mannerisms might unintentionally annoy a different personality type? What book speaks to you most? What is the worst experience you've had in a team? What are some honest, unfiltered things about you? What drives you nuts? What are your quirks? When is your brain most active?
 
 When I think about trust, I think about patterns of communication and action. I trust that people will act according to their principles, which can take time to understand.
 I have experienced misunderstandings when the team has a lack of clarity on the goals we are working towards, and the means we will use to achieve them.
-In my experience, more communication is often the solution, and more importantly, the right kind of communication.
+Often, more of the right kind of communication is the solution; as a naturally inquisitive person, I don't mind asking difficult questions or exploring challenges.
 For me, this includes having humility about my ideas, and empowering others to contribute openly to our group's conception of the issue at hand.
 
 
@@ -51,12 +58,13 @@ For me, this includes having humility about my ideas, and empowering others to c
 > What are your blind spots? What are you working on? What can others help you with?
 
 It can be difficult for me to characterize my strengths.
-I enjoy contributing across the entire systems development life cycle [(SDLC)](https://en.wikipedia.org/wiki/Systems_development_life_cycle) - as a creative contributor, I am interested in engaging directly and managing effort investment to deliver a valuable work product at the right time.
+I enjoy contributing creatively, strategically, and technically across the entire systems development life cycle [(SDLC)](https://en.wikipedia.org/wiki/Systems_development_life_cycle) --- I am interested in engaging directly and managing the investment of resources to deliver a quality work product at the right time.
+
 As I gain experience in different contexts, I am constantly fascinated by the
-unknowns presented by others' expertise and understanding, motivating me to dedicate myself to continuous growth and improvement. If you think I need a better balance or focus, [I'd love to hear about it!](mailto:jgoldfar@gmail.com)
+unknowns presented by others' expertise and understanding, motivating my dedication to continuous growth and improvement. If you think I'm missing something, [I'd love to hear about it!](mailto:jgoldfar@gmail.com)
 
 # References
 - [LinkedIn](https://www.linkedin.com/pulse/do-you-have-user-manual-your-team-polly-chandler/) picked up on this in 2016
 - [Marko's popular blog post](https://medium.com/swlh/user-manual-to-me-92c8ce68f960) on the topic, from 2018
 - [The Muse](https://www.themuse.com/advice/how-to-be-a-better-leader-manager-user-manual) has an article on the topic.
-- [Marcus Aurelius' Meditations](https://www.goodreads.com/work/quotes/31010) evidently comprises a component of my thinking on work - though certainly not the entirety.
+- [Marcus Aurelius' Meditations](https://www.goodreads.com/work/quotes/31010) evidently comprises a component of my thinking on work.
