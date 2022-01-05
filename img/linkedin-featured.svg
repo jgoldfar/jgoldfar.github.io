@@ -1,0 +1,4836 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1200"
+   height="627"
+   viewBox="0 0 1200 627"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="linkedin-featured.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.33795535"
+     inkscape:cx="593.27363"
+     inkscape:cy="369.87134"
+     inkscape:window-width="1254"
+     inkscape:window-height="656"
+     inkscape:window-x="34"
+     inkscape:window-y="26"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer14" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect49907"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path49399" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path49393" />
+    </marker>
+    <rect
+       x="38.320907"
+       y="22.644173"
+       width="1132.2086"
+       height="146.31619"
+       id="rect4524" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter40992"
+       x="-0.006198719"
+       y="-0.0049935975"
+       width="1.0123974"
+       height="1.0099872">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur40990" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter40996"
+       x="-0.051498501"
+       y="-0.42233964"
+       width="1.102997"
+       height="1.8446793">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur40994" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41000"
+       x="-0.028073923"
+       y="-0.005182858"
+       width="1.0561478"
+       height="1.0103657">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur40998" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41004"
+       x="-0.085688189"
+       y="-0.34566942"
+       width="1.1713764"
+       height="1.6913388">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41002" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41008"
+       x="-0.0060370984"
+       y="-0.0049074652"
+       width="1.0120742"
+       height="1.0098149">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41006" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41012"
+       x="-0.013485606"
+       y="-0.28227317"
+       width="1.0269712"
+       height="1.5645463">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41010" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41016"
+       x="-0.72380462"
+       y="-0.014476086"
+       width="2.4476092"
+       height="1.0289522">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41014" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41020"
+       x="-0.72380359"
+       y="-0.15079254"
+       width="2.4476072"
+       height="1.3015851">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41018" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41024"
+       x="-0.72380359"
+       y="-0.068283428"
+       width="2.4476072"
+       height="1.1365669">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41022" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41028"
+       x="-0.72380462"
+       y="-0.45237749"
+       width="2.4476092"
+       height="1.904755">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41026" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41032"
+       x="-0.72380359"
+       y="-0.17233438"
+       width="2.4476072"
+       height="1.3446688">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41030" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41036"
+       x="-0.72380359"
+       y="-0.042576721"
+       width="2.4476072"
+       height="1.0851534">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41034" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41040"
+       x="-0.72380462"
+       y="-0.45237749"
+       width="2.4476092"
+       height="1.904755">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41038" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41044"
+       x="-0.078714388"
+       y="-0.33868267"
+       width="1.1574288"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41042" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41048"
+       x="-0.046886712"
+       y="-0.32742602"
+       width="1.0937734"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41046" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41052"
+       x="-0.038337414"
+       y="-0.34057571"
+       width="1.0766748"
+       height="1.6811514">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41050" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41056"
+       x="-0.019596417"
+       y="-0.32742602"
+       width="1.0391928"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41054" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41060"
+       x="-0.028881502"
+       y="-0.34057571"
+       width="1.057763"
+       height="1.6811514">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41058" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41064"
+       x="-0.021108247"
+       y="-0.32742602"
+       width="1.0422165"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41062" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41068"
+       x="-0.055424877"
+       y="-0.33868267"
+       width="1.1108498"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41066" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41072"
+       x="-0.021108247"
+       y="-0.32742602"
+       width="1.0422165"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41070" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41076"
+       x="-0.15700469"
+       y="-0.33868267"
+       width="1.3140094"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41074" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41080"
+       x="-0.019596417"
+       y="-0.32742625"
+       width="1.0391928"
+       height="1.6548525">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41078" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41084"
+       x="-0.027554081"
+       y="-0.33868267"
+       width="1.0551082"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41082" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41088"
+       x="-0.019596417"
+       y="-0.32742602"
+       width="1.0391928"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41086" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41092"
+       x="-0.047411263"
+       y="-0.33868267"
+       width="1.0948225"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41090" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41096"
+       x="-0.021108247"
+       y="-0.32742625"
+       width="1.0422165"
+       height="1.6548525">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41094" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41100"
+       x="-0.034618718"
+       y="-0.33868267"
+       width="1.0692374"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41098" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41104"
+       x="-0.021108247"
+       y="-0.32742625"
+       width="1.0422165"
+       height="1.6548525">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41102" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41108"
+       x="-0.035687824"
+       y="-0.33868267"
+       width="1.0713756"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41106" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41112"
+       x="-0.011311091"
+       y="-0.32742602"
+       width="1.0226222"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41110" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41116"
+       x="-0.23112172"
+       y="-0.42101319"
+       width="1.4622434"
+       height="1.8420264">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41114" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41120"
+       x="-0.011311091"
+       y="-0.32742602"
+       width="1.0226222"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41118" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41124"
+       x="-0.047072887"
+       y="-0.31469766"
+       width="1.0941458"
+       height="1.6293953">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41122" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41128"
+       x="-0.058333593"
+       y="-0.33868267"
+       width="1.1166672"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41126" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41132"
+       x="-0.019596417"
+       y="-0.32742602"
+       width="1.0391928"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41130" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41136"
+       x="-0.021929492"
+       y="-0.33868267"
+       width="1.043859"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41134" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41140"
+       x="-0.019596417"
+       y="-0.32742602"
+       width="1.0391928"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41138" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41144"
+       x="-0.057245471"
+       y="-0.31469747"
+       width="1.1144909"
+       height="1.6293949">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41142" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41148"
+       x="-0.059556868"
+       y="-0.33868267"
+       width="1.1191137"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41146" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41152"
+       x="-0.019596417"
+       y="-0.32742602"
+       width="1.0391928"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41150" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41156"
+       x="-0.021552237"
+       y="-0.33868267"
+       width="1.0431045"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41154" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41160"
+       x="-0.019596417"
+       y="-0.32742625"
+       width="1.0391928"
+       height="1.6548525">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41158" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41164"
+       x="-0.036539988"
+       y="-0.33868267"
+       width="1.07308"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41162" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41168"
+       x="-0.0091393461"
+       y="-0.32742602"
+       width="1.0182787"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41166" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41172"
+       x="-0.10732634"
+       y="-0.33868267"
+       width="1.2146527"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41170" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41176"
+       x="-0.0091393461"
+       y="-0.32742602"
+       width="1.0182787"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41174" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41180"
+       x="-0.055102376"
+       y="-0.21933464"
+       width="1.1102048"
+       height="1.4386693">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41178" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41184"
+       x="-0.056628336"
+       y="-0.33868267"
+       width="1.1132567"
+       height="1.6773653">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41182" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41188"
+       x="-0.021108247"
+       y="-0.32742602"
+       width="1.0422165"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41186" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41192"
+       x="-0.050349105"
+       y="-0.21933464"
+       width="1.1006982"
+       height="1.4386693">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41190" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41196"
+       x="-0.044176971"
+       y="-0.34057571"
+       width="1.0883539"
+       height="1.6811514">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41194" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41200"
+       x="-0.014726524"
+       y="-0.32742602"
+       width="1.029453"
+       height="1.654852">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41198" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41204"
+       x="-0.08748897"
+       y="-0.5684928"
+       width="1.1749779"
+       height="2.1369856">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41202" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41208"
+       x="-0.019596417"
+       y="-0.32742535"
+       width="1.0391928"
+       height="1.6548507">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41206" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41212"
+       x="-0.01414385"
+       y="-0.017942047"
+       width="1.0282877"
+       height="1.0358841">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41210" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41216"
+       x="-0.20715884"
+       y="-0.62797192"
+       width="1.4143177"
+       height="2.2559438">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41214" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41220"
+       x="-0.57956601"
+       y="-1.3366634"
+       width="2.159132"
+       height="3.6733267">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41218" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41224"
+       x="-0.15140607"
+       y="-1.0583888"
+       width="1.3028121"
+       height="3.1167777">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41222" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41228"
+       x="-0.024891898"
+       y="-0.11247253"
+       width="1.0497838"
+       height="1.2249451">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41226" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41232"
+       x="-0.18805498"
+       y="-0.62797117"
+       width="1.37611"
+       height="2.2559423">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41230" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41236"
+       x="-0.44678998"
+       y="-1.0643046"
+       width="1.89358"
+       height="3.1286092">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41234" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter41240"
+       x="-0.072250825"
+       y="-1.0530676"
+       width="1.1445016"
+       height="3.1061352">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur41238" />
+    </filter>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path49399-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path49399-9-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5-7-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path49399-9-1-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5-7-1-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path49399-9-1-1-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path49399-4" />
+    </marker>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Background"
+     style="display:inline">
+    <rect
+       style="opacity:0.321543;fill:#7aa6a5;fill-opacity:0.653226;stroke-width:1.0111"
+       id="rect55"
+       width="1239.6952"
+       height="656.99506"
+       x="-20.590927"
+       y="-9.629858" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer11"
+     inkscape:label="SequenceDiagram"
+     style="display:inline">
+    <g
+       id="g28504"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28506"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28508"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28510"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28512"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28514"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28516"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28518"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28520"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28522"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28524"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28526"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28528"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28530"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28532"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28534"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28536"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28538"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28540"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28542"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28544"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28546"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28548"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28550"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28552"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28554"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28556"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28564"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter40992)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 8.7958787,10.291178 H 901.39805 V 1118.308 H 8.7958787 V 10.291178"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28562" />
+    </g>
+    <g
+       id="g28568"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter40996)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="412.70972"
+         y="34.91964"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28566">CloudVendor</text>
+    </g>
+    <g
+       id="g28572"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41000)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 615.42454,50.75222 H 812.511 V 1118.308 H 615.42454 V 50.75222"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28570" />
+    </g>
+    <g
+       id="g28576"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41004)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="688.29492"
+         y="75.380684"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28574">Storage</text>
+    </g>
+    <g
+       id="g28594"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41008)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 48.890698,140.20631 V 1118.308"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="13.5321, 5.86392"
+         id="path28580" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 160.061,140.20631 V 1118.308"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="13.5321, 5.86392"
+         id="path28582" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 422.59549,140.20631 V 1118.308"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="13.5321, 5.86392"
+         id="path28584" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 658.79064,140.20631 V 1118.308"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="13.5321, 5.86392"
+         id="path28586" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 757.33387,140.20631 V 1118.308"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="13.5321, 5.86392"
+         id="path28588" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 864.54947,140.20631 V 1118.308"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="13.5321, 5.86392"
+         id="path28590" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 965.38894,140.20631 V 1118.308"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="13.5321, 5.86392"
+         id="path28592" />
+    </g>
+    <path
+       fill="none"
+       stroke="none"
+       id="path28596"
+       d=""
+       style="stroke-width:0.4" />
+    <path
+       fill="none"
+       stroke="none"
+       id="path28608"
+       d=""
+       style="stroke-width:0.4" />
+    <path
+       fill="none"
+       stroke="none"
+       id="path28620"
+       d=""
+       style="stroke-width:0.4" />
+    <path
+       fill="none"
+       stroke="none"
+       id="path28632"
+       d=""
+       style="stroke-width:0.4" />
+    <path
+       fill="none"
+       stroke="none"
+       id="path28644"
+       d=""
+       style="stroke-width:0.4" />
+    <path
+       fill="none"
+       stroke="none"
+       id="path28656"
+       d=""
+       style="stroke-width:0.4" />
+    <path
+       fill="none"
+       stroke="none"
+       id="path28668"
+       d=""
+       style="stroke-width:0.4" />
+    <g
+       id="g32247"
+       style="filter:url(#filter41012)">
+      <g
+         id="g28600"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+         style="fill:none">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 17.591757,92.708561 H 80.189638 V 140.20631 H 17.591757 Z"
+           stroke-miterlimit="10"
+           stroke-width="2.81468"
+           stroke-dasharray="none"
+           id="path28598"
+           style="fill:none" />
+      </g>
+      <g
+         id="g28606"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <g
+           id="g28602" />
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="36.678814"
+           y="122.61455"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28604">CW</text>
+      </g>
+      <g
+         id="g28612"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+         style="fill:none">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 97.781395,92.708561 H 222.3406 V 140.20631 H 97.781395 Z"
+           stroke-miterlimit="10"
+           stroke-width="2.81468"
+           stroke-dasharray="none"
+           id="path28610"
+           style="fill:none" />
+      </g>
+      <g
+         id="g28618"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <g
+           id="g28614" />
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="116.86845"
+           y="122.61455"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28616">StepFunction</text>
+      </g>
+      <g
+         id="g28624"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+         style="fill:none">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 377.01954,92.708561 h 91.15191 v 47.497749 h -91.15191 z"
+           stroke-miterlimit="10"
+           stroke-width="2.81468"
+           stroke-dasharray="none"
+           id="path28622"
+           style="fill:none" />
+      </g>
+      <g
+         id="g28630"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <g
+           id="g28626" />
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="396.1066"
+           y="122.61455"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28628">Lambda</text>
+      </g>
+      <g
+         id="g28636"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+         style="fill:none">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 624.22042,92.708561 h 69.14045 v 47.497749 h -69.14045 z"
+           stroke-miterlimit="10"
+           stroke-width="2.81468"
+           stroke-dasharray="none"
+           id="path28634"
+           style="fill:none" />
+      </g>
+      <g
+         id="g28642"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <g
+           id="g28638" />
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="643.3075"
+           y="122.61455"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28640">Jobs</text>
+      </g>
+      <g
+         id="g28648"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+         style="fill:none">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 710.95263,92.708561 h 92.76249 v 47.497749 h -92.76249 z"
+           stroke-miterlimit="10"
+           stroke-width="2.81468"
+           stroke-dasharray="none"
+           id="path28646"
+           style="fill:none" />
+      </g>
+      <g
+         id="g28654"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <g
+           id="g28650" />
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="730.03967"
+           y="122.61455"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28652">Records</text>
+      </g>
+      <g
+         id="g28660"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+         style="fill:none">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 836.49678,92.708561 h 56.10539 v 47.497749 h -56.10539 z"
+           stroke-miterlimit="10"
+           stroke-width="2.81468"
+           stroke-dasharray="none"
+           id="path28658"
+           style="fill:none" />
+      </g>
+      <g
+         id="g28666"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <g
+           id="g28662" />
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="855.58386"
+           y="122.61455"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28664">S3</text>
+      </g>
+      <g
+         id="g28672"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+         style="fill:none">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 918.9898,92.708561 h 92.7983 v 47.497749 h -92.7983 z"
+           stroke-miterlimit="10"
+           stroke-width="2.81468"
+           stroke-dasharray="none"
+           id="path28670"
+           style="fill:none" />
+      </g>
+      <g
+         id="g28678"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <g
+           id="g28674" />
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="938.07684"
+           y="122.61455"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28676">Vendor1</text>
+      </g>
+    </g>
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 819.86745,240.26253 h 7.0367 v 351.83516 h -7.0367 V 240.26253"
+       stroke-miterlimit="10"
+       stroke-width="0.586392"
+       stroke-dasharray="none"
+       id="path28682"
+       style="filter:url(#filter41016)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 924.88124,251.52125 h 7.03671 v 33.77618 h -7.03671 v -33.77618"
+       stroke-miterlimit="10"
+       stroke-width="0.586392"
+       stroke-dasharray="none"
+       id="path28684"
+       style="filter:url(#filter41020)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 924.88124,307.11121 h 7.03671 v 74.58905 h -7.03671 v -74.58905"
+       stroke-miterlimit="10"
+       stroke-width="0.586392"
+       stroke-dasharray="none"
+       id="path28686"
+       style="filter:url(#filter41024)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 1101.6628,340.88738 h 7.0367 v 11.25873 h -7.0367 v -11.25873"
+       stroke-miterlimit="10"
+       stroke-width="0.586392"
+       stroke-dasharray="none"
+       id="path28688"
+       style="filter:url(#filter41028)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 924.88124,402.1067 h 7.03671 v 29.55415 h -7.03671 V 402.1067"
+       stroke-miterlimit="10"
+       stroke-width="0.586392"
+       stroke-dasharray="none"
+       id="path28690"
+       style="filter:url(#filter41032)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 924.88124,452.06729 h 7.03671 v 119.62396 h -7.03671 V 452.06729"
+       stroke-miterlimit="10"
+       stroke-width="0.586392"
+       stroke-dasharray="none"
+       id="path28692"
+       style="filter:url(#filter41036)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 1141.9986,463.32601 h 7.0367 v 11.25873 h -7.0367 v -11.25873"
+       stroke-miterlimit="10"
+       stroke-width="0.586392"
+       stroke-dasharray="none"
+       id="path28694"
+       style="filter:url(#filter41040)" />
+    <g
+       id="g28698"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41044)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="74.419373"
+         y="170.11229"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28696">trigger()</text>
+    </g>
+    <g
+       id="g28706"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41048)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 48.890698,177.149 H 136.78124"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28700" />
+      <g
+         id="g28704">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 136.60532,169.8191 14.6598,7.3299 -14.6598,7.3299 z"
+           id="path28702" />
+      </g>
+    </g>
+    <g
+       id="g28710"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41052)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="235.97395"
+         y="198.25911"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28708">execute('search')</text>
+    </g>
+    <g
+       id="g28718"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41056)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 168.85687,205.29581 H 399.31573"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28712" />
+      <g
+         id="g28716">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 399.13982,197.96591 14.65979,7.3299 -14.65979,7.3299 z"
+           id="path28714" />
+      </g>
+    </g>
+    <g
+       id="g28722"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41060)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="473.23709"
+         y="226.40591"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28720">search(status='ready')</text>
+    </g>
+    <g
+       id="g28730"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41064)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 431.39137,233.44262 H 644.30676"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28724" />
+      <g
+         id="g28728">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 644.13084,226.11272 14.6598,7.3299 -14.6598,7.3299 z"
+           id="path28726" />
+      </g>
+    </g>
+    <g
+       id="g28734"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41068)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="512.68945"
+         y="254.55273"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28732">jobs=[{id}]</text>
+    </g>
+    <g
+       id="g28742"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41072)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 658.79064,261.58943 H 445.87525"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28736" />
+      <g
+         id="g28740">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 446.05117,254.25953 -14.6598,7.3299 14.6598,7.3299 z"
+           id="path28738" />
+      </g>
+    </g>
+    <g
+       id="g28746"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41076)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="277.88159"
+         y="282.69955"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28744">jobs</text>
+    </g>
+    <g
+       id="g28754"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41080)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 413.79961,289.73624 H 183.34075"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28748" />
+      <g
+         id="g28752">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 183.51667,282.40635 -14.6598,7.32989 14.6598,7.3299 z"
+           id="path28750" />
+      </g>
+    </g>
+    <g
+       id="g28758"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41084)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="215.54088"
+         y="337.23398"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28756">getData.execute(job.id)</text>
+    </g>
+    <g
+       id="g28766"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41088)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 168.85687,344.27069 H 399.31573"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28760" />
+      <g
+         id="g28764">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 399.13982,336.94079 14.65979,7.3299 -14.65979,7.3299 z"
+           id="path28762" />
+      </g>
+    </g>
+    <g
+       id="g28770"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41092)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="500.67801"
+         y="365.3808"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28768">getJob(job.id)</text>
+    </g>
+    <g
+       id="g28778"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41096)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 431.39137,372.4175 H 644.30676"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28772" />
+      <g
+         id="g28776">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 644.13084,365.08761 14.6598,7.32989 -14.6598,7.3299 z"
+           id="path28774" />
+      </g>
+    </g>
+    <g
+       id="g28782"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41100)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="490.28073"
+         y="393.52762"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28780">job={id,s3_url,...}</text>
+    </g>
+    <g
+       id="g28790"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41104)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 658.79064,400.56432 H 445.87525"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28784" />
+      <g
+         id="g28788">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 446.05117,393.23442 -14.6598,7.3299 14.6598,7.32989 z"
+           id="path28786" />
+      </g>
+    </g>
+    <g
+       id="g28794"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41108)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="584.90753"
+         y="421.67444"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28792">getFile(job.s3_url)</text>
+    </g>
+    <g
+       id="g28802"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41112)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 431.39137,428.71113 H 841.26972"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28796" />
+      <g
+         id="g28800">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 841.0938,421.38123 14.6598,7.3299 -14.6598,7.3299 z"
+           id="path28798" />
+      </g>
+    </g>
+    <g
+       id="g28806"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41116)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="634.20239"
+         y="449.82123"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28804">file</text>
+    </g>
+    <g
+       id="g28814"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41120)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 855.7536,456.85794 H 445.87525"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28808" />
+      <g
+         id="g28812">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 446.05117,449.52804 -14.6598,7.3299 14.6598,7.3299 z"
+           id="path28810" />
+      </g>
+    </g>
+    <g
+       id="g32269"
+       style="filter:url(#filter41124)">
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 874.30056,354.25712 h 108.19808 v 16.18441 H 874.30056 v -16.18441"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path28816"
+         style="fill:none" />
+      <g
+         id="g28820"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="311.97635"
+           y="486.76392"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28818">extract data=[{key:value}] from file</text>
+      </g>
+    </g>
+    <g
+       id="g28824"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41128)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="258.31107"
+         y="523.7066"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28822">{job, data}</text>
+    </g>
+    <g
+       id="g28832"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41132)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 413.79961,530.74332 H 183.34075"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28826" />
+      <g
+         id="g28830">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 183.51667,523.41342 -14.6598,7.3299 14.6598,7.3299 z"
+           id="path28828" />
+      </g>
+    </g>
+    <g
+       id="g28836"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41136)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="194.76065"
+         y="574.72272"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28834">createJson.execute(job, data)</text>
+    </g>
+    <g
+       id="g28844"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41140)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 168.85687,581.75942 H 399.31573"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28838" />
+      <g
+         id="g28842">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 399.13982,574.42952 14.65979,7.3299 -14.65979,7.3299 z"
+           id="path28840" />
+      </g>
+    </g>
+    <g
+       id="g32264"
+       style="filter:url(#filter41144)">
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 883.91402,404.21771 h 88.97116 v 16.18442 h -88.97116 v -16.18442"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path28846"
+         style="fill:none" />
+      <g
+         id="g28850"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="336.01001"
+           y="611.66541"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28848">json=createJson(job, data)</text>
+      </g>
+    </g>
+    <g
+       id="g28854"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41148)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="259.13068"
+         y="648.60809"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28852">{job, json}</text>
+    </g>
+    <g
+       id="g28862"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41152)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 413.79961,655.6448 H 183.34075"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28856" />
+      <g
+         id="g28860">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 183.51667,648.3149 -14.6598,7.3299 14.6598,7.3299 z"
+           id="path28858" />
+      </g>
+    </g>
+    <g
+       id="g28866"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41156)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="192.31255"
+         y="699.62421"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28864">scheduleJob.execute(job,json)</text>
+    </g>
+    <g
+       id="g28874"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41160)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 168.85687,706.66089 H 399.31573"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28868" />
+      <g
+         id="g28872">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 399.13982,699.331 14.65979,7.32989 -14.65979,7.3299 z"
+           id="path28870" />
+      </g>
+    </g>
+    <g
+       id="g28878"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41164)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="634.50409"
+         y="727.771"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28876">scheduleJob(json)</text>
+    </g>
+    <g
+       id="g28886"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41168)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 431.39137,734.80771 H 942.10918"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28880" />
+      <g
+         id="g28884">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 941.93327,727.47781 14.65979,7.3299 -14.65979,7.3299 z"
+           id="path28882" />
+      </g>
+    </g>
+    <g
+       id="g28890"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41172)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="674.42889"
+         y="755.91779"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28888">job_id</text>
+    </g>
+    <g
+       id="g28898"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41176)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 956.59306,762.95452 H 445.87525"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28892" />
+      <g
+         id="g28896">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 446.05117,755.62462 -14.6598,7.3299 14.6598,7.3299 z"
+           id="path28894" />
+      </g>
+    </g>
+    <g
+       id="g32253"
+       style="filter:url(#filter41180)">
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 888.14684,476.69575 h 80.50552 l 6.33303,11.61056 -6.33303,11.61056 h -80.50552 l -6.33304,-11.61056 6.33304,-11.61056"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path28900"
+         style="fill:none" />
+      <g
+         id="g28906"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="330.75946"
+           y="792.86053"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28902">job.job_id = job_id</text>
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="330.75946"
+           y="810.45227"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28904">job.status='awaiting_vendor'</text>
+      </g>
+    </g>
+    <g
+       id="g28910"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41184)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="508.008"
+         y="847.39496"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28908">update(job)</text>
+    </g>
+    <g
+       id="g28918"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41188)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 431.39137,854.43166 H 644.30676"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28912" />
+      <g
+         id="g28916">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 644.13084,847.10176 14.6598,7.3299 -14.6598,7.3299 z"
+           id="path28914" />
+      </g>
+    </g>
+    <g
+       id="g32259"
+       style="filter:url(#filter41192)">
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 883.74884,523.84166 h 89.30151 l 6.33303,11.61056 -6.33303,11.61056 h -89.30151 l -6.33303,-11.61056 6.33303,-11.61056"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path28920"
+         style="fill:none" />
+      <g
+         id="g28926"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="319.7645"
+           y="910.72528"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28922">record.id = job.id + '-' + target</text>
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="319.7645"
+           y="928.31702"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text28924">record.status='awaiting_vendor'</text>
+      </g>
+    </g>
+    <g
+       id="g28930"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41196)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="546.28461"
+         y="965.2597"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28928">update(record)</text>
+    </g>
+    <g
+       id="g28938"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41200)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 431.39137,972.29643 H 742.84999"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28932" />
+      <g
+         id="g28936">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 742.67407,964.96653 14.6598,7.3299 -14.6598,7.3299 z"
+           id="path28934" />
+      </g>
+    </g>
+    <g
+       id="g28942"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41204)">
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="14.6667px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="264.8501"
+         y="998.68408"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text28940">success</text>
+    </g>
+    <g
+       id="g28950"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+       style="filter:url(#filter41208)">
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 413.79961,1005.7208 H 183.34075"
+         stroke-miterlimit="10"
+         stroke-width="1.46598"
+         stroke-dasharray="none"
+         id="path28944" />
+      <g
+         id="g28948">
+        <path
+           fill="#000000"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d="m 183.51667,998.39087 -14.6598,7.32993 14.6598,7.3299 z"
+           id="path28946" />
+      </g>
+    </g>
+    <g
+       id="g28952"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <path
+       fill="none"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="M 795.23899,287.40844 H 1170.1454 V 582.94997 H 795.23899 Z"
+       stroke-miterlimit="10"
+       stroke-width="1.00524"
+       stroke-dasharray="none"
+       id="path28954"
+       style="filter:url(#filter41212)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 795.23899,287.40844 v 8.44404 h 21.37486 l 4.22202,-4.22202 v -4.22202 h -25.59688"
+       stroke-miterlimit="10"
+       stroke-width="1.00524"
+       stroke-dasharray="none"
+       id="path28956"
+       style="filter:url(#filter41216)" />
+    <text
+       fill="#000000"
+       stroke="none"
+       font-family="sans-serif"
+       font-size="4.69332px"
+       font-style="normal"
+       font-weight="bold"
+       text-decoration="normal"
+       x="802.2757"
+       y="293.03781"
+       text-anchor="start"
+       dominant-baseline="alphabetic"
+       xml:space="preserve"
+       id="text28958"
+       style="stroke-width:0.4;filter:url(#filter41220)">par</text>
+    <text
+       fill="#000000"
+       stroke="none"
+       font-family="sans-serif"
+       font-size="4.69332px"
+       font-style="normal"
+       font-weight="bold"
+       text-decoration="normal"
+       x="827.87256"
+       y="293.03781"
+       text-anchor="start"
+       dominant-baseline="alphabetic"
+       xml:space="preserve"
+       id="text28960"
+       style="stroke-width:0.4;filter:url(#filter41224)">[job in jobs]</text>
+    <g
+       id="g28964"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <path
+       fill="none"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 873.89746,513.2866 h 213.02594 v 47.14591 H 873.89746 Z"
+       stroke-miterlimit="10"
+       stroke-width="1.00524"
+       stroke-dasharray="none"
+       id="path28966"
+       style="filter:url(#filter41228)" />
+    <path
+       fill="#ffffff"
+       stroke="#000000"
+       paint-order="fill stroke markers"
+       d="m 873.89746,513.2866 v 8.44405 h 23.97516 l 4.22202,-4.22202 v -4.22203 h -28.19718"
+       stroke-miterlimit="10"
+       stroke-width="1.00524"
+       stroke-dasharray="none"
+       id="path28968"
+       style="filter:url(#filter41232)" />
+    <text
+       fill="#000000"
+       stroke="none"
+       font-family="sans-serif"
+       font-size="4.69332px"
+       font-style="normal"
+       font-weight="bold"
+       text-decoration="normal"
+       x="880.93414"
+       y="518.91595"
+       text-anchor="start"
+       dominant-baseline="alphabetic"
+       xml:space="preserve"
+       id="text28970"
+       style="stroke-width:0.4;filter:url(#filter41236)">loop</text>
+    <text
+       fill="#000000"
+       stroke="none"
+       font-family="sans-serif"
+       font-size="4.69332px"
+       font-style="normal"
+       font-weight="bold"
+       text-decoration="normal"
+       x="909.13135"
+       y="518.91595"
+       text-anchor="start"
+       dominant-baseline="alphabetic"
+       xml:space="preserve"
+       id="text28972"
+       style="stroke-width:0.4;filter:url(#filter41240)">[for target in job.targets]</text>
+    <g
+       id="g28978"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28980"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28982"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28984"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28986"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28988"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       id="g28990"
+       transform="matrix(0.4,0,0,0.4,759.3614,169.40293)" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer13"
+       inkscape:label="Unblurred"
+       style="display:none">
+      <g
+         id="g40395"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 8.7958787,10.291178 H 901.39805 V 1118.308 H 8.7958787 V 10.291178"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40393" />
+      </g>
+      <g
+         id="g40399"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="412.70972"
+           y="34.91964"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40397">CloudVendor</text>
+      </g>
+      <g
+         id="g40403"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 615.42454,50.75222 H 812.511 V 1118.308 H 615.42454 V 50.75222"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40401" />
+      </g>
+      <g
+         id="g40407"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="688.29492"
+           y="75.380684"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40405">Storage</text>
+      </g>
+      <g
+         id="g40423"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 48.890698,140.20631 V 1118.308"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="13.5321, 5.86392"
+           id="path40409" />
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 160.061,140.20631 V 1118.308"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="13.5321, 5.86392"
+           id="path40411" />
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 422.59549,140.20631 V 1118.308"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="13.5321, 5.86392"
+           id="path40413" />
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 658.79064,140.20631 V 1118.308"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="13.5321, 5.86392"
+           id="path40415" />
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 757.33387,140.20631 V 1118.308"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="13.5321, 5.86392"
+           id="path40417" />
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 864.54947,140.20631 V 1118.308"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="13.5321, 5.86392"
+           id="path40419" />
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 965.38894,140.20631 V 1118.308"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="13.5321, 5.86392"
+           id="path40421" />
+      </g>
+      <g
+         id="g40495">
+        <g
+           id="g40427"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+           style="fill:none">
+          <path
+             fill="#ffffff"
+             stroke="#000000"
+             paint-order="fill stroke markers"
+             d="M 17.591757,92.708561 H 80.189638 V 140.20631 H 17.591757 Z"
+             stroke-miterlimit="10"
+             stroke-width="2.81468"
+             stroke-dasharray="none"
+             id="path40425"
+             style="fill:none" />
+        </g>
+        <g
+           id="g40433"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <g
+             id="g40429" />
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="36.678814"
+             y="122.61455"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40431">CW</text>
+        </g>
+        <g
+           id="g40437"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+           style="fill:none">
+          <path
+             fill="#ffffff"
+             stroke="#000000"
+             paint-order="fill stroke markers"
+             d="M 97.781395,92.708561 H 222.3406 V 140.20631 H 97.781395 Z"
+             stroke-miterlimit="10"
+             stroke-width="2.81468"
+             stroke-dasharray="none"
+             id="path40435"
+             style="fill:none" />
+        </g>
+        <g
+           id="g40443"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <g
+             id="g40439" />
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="116.86845"
+             y="122.61455"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40441">StepFunction</text>
+        </g>
+        <g
+           id="g40447"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+           style="fill:none">
+          <path
+             fill="#ffffff"
+             stroke="#000000"
+             paint-order="fill stroke markers"
+             d="m 377.01954,92.708561 h 91.15191 v 47.497749 h -91.15191 z"
+             stroke-miterlimit="10"
+             stroke-width="2.81468"
+             stroke-dasharray="none"
+             id="path40445"
+             style="fill:none" />
+        </g>
+        <g
+           id="g40453"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <g
+             id="g40449" />
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="396.1066"
+             y="122.61455"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40451">Lambda</text>
+        </g>
+        <g
+           id="g40457"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+           style="fill:none">
+          <path
+             fill="#ffffff"
+             stroke="#000000"
+             paint-order="fill stroke markers"
+             d="m 624.22042,92.708561 h 69.14045 v 47.497749 h -69.14045 z"
+             stroke-miterlimit="10"
+             stroke-width="2.81468"
+             stroke-dasharray="none"
+             id="path40455"
+             style="fill:none" />
+        </g>
+        <g
+           id="g40463"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <g
+             id="g40459" />
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="643.3075"
+             y="122.61455"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40461">Jobs</text>
+        </g>
+        <g
+           id="g40467"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+           style="fill:none">
+          <path
+             fill="#ffffff"
+             stroke="#000000"
+             paint-order="fill stroke markers"
+             d="m 710.95263,92.708561 h 92.76249 v 47.497749 h -92.76249 z"
+             stroke-miterlimit="10"
+             stroke-width="2.81468"
+             stroke-dasharray="none"
+             id="path40465"
+             style="fill:none" />
+        </g>
+        <g
+           id="g40473"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <g
+             id="g40469" />
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="730.03967"
+             y="122.61455"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40471">Records</text>
+        </g>
+        <g
+           id="g40477"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+           style="fill:none">
+          <path
+             fill="#ffffff"
+             stroke="#000000"
+             paint-order="fill stroke markers"
+             d="m 836.49678,92.708561 h 56.10539 v 47.497749 h -56.10539 z"
+             stroke-miterlimit="10"
+             stroke-width="2.81468"
+             stroke-dasharray="none"
+             id="path40475"
+             style="fill:none" />
+        </g>
+        <g
+           id="g40483"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <g
+             id="g40479" />
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="855.58386"
+             y="122.61455"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40481">S3</text>
+        </g>
+        <g
+           id="g40487"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)"
+           style="fill:none">
+          <path
+             fill="#ffffff"
+             stroke="#000000"
+             paint-order="fill stroke markers"
+             d="m 918.9898,92.708561 h 92.7983 v 47.497749 h -92.7983 z"
+             stroke-miterlimit="10"
+             stroke-width="2.81468"
+             stroke-dasharray="none"
+             id="path40485"
+             style="fill:none" />
+        </g>
+        <g
+           id="g40493"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <g
+             id="g40489" />
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="938.07684"
+             y="122.61455"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40491">Vendor1</text>
+        </g>
+      </g>
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 819.86745,240.26253 h 7.0367 v 351.83516 h -7.0367 V 240.26253"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path40497" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 924.88124,251.52125 h 7.03671 v 33.77618 h -7.03671 v -33.77618"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path40499" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 924.88124,307.11121 h 7.03671 v 74.58905 h -7.03671 v -74.58905"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path40501" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 1101.6628,340.88738 h 7.0367 v 11.25873 h -7.0367 v -11.25873"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path40503" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 924.88124,402.1067 h 7.03671 v 29.55415 h -7.03671 V 402.1067"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path40505" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 924.88124,452.06729 h 7.03671 v 119.62396 h -7.03671 V 452.06729"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path40507" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 1141.9986,463.32601 h 7.0367 v 11.25873 h -7.0367 v -11.25873"
+         stroke-miterlimit="10"
+         stroke-width="0.586392"
+         stroke-dasharray="none"
+         id="path40509" />
+      <g
+         id="g40513"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="74.419373"
+           y="170.11229"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40511">trigger()</text>
+      </g>
+      <g
+         id="g40521"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 48.890698,177.149 H 136.78124"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40515" />
+        <g
+           id="g40519">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 136.60532,169.8191 14.6598,7.3299 -14.6598,7.3299 z"
+             id="path40517" />
+        </g>
+      </g>
+      <g
+         id="g40525"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="235.97395"
+           y="198.25911"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40523">execute('search')</text>
+      </g>
+      <g
+         id="g40533"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 168.85687,205.29581 H 399.31573"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40527" />
+        <g
+           id="g40531">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 399.13982,197.96591 14.65979,7.3299 -14.65979,7.3299 z"
+             id="path40529" />
+        </g>
+      </g>
+      <g
+         id="g40537"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="473.23709"
+           y="226.40591"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40535">search(status='ready')</text>
+      </g>
+      <g
+         id="g40545"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 431.39137,233.44262 H 644.30676"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40539" />
+        <g
+           id="g40543">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 644.13084,226.11272 14.6598,7.3299 -14.6598,7.3299 z"
+             id="path40541" />
+        </g>
+      </g>
+      <g
+         id="g40549"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="512.68945"
+           y="254.55273"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40547">jobs=[{id}]</text>
+      </g>
+      <g
+         id="g40557"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 658.79064,261.58943 H 445.87525"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40551" />
+        <g
+           id="g40555">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 446.05117,254.25953 -14.6598,7.3299 14.6598,7.3299 z"
+             id="path40553" />
+        </g>
+      </g>
+      <g
+         id="g40561"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="277.88159"
+           y="282.69955"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40559">jobs</text>
+      </g>
+      <g
+         id="g40569"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 413.79961,289.73624 H 183.34075"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40563" />
+        <g
+           id="g40567">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 183.51667,282.40635 -14.6598,7.32989 14.6598,7.3299 z"
+             id="path40565" />
+        </g>
+      </g>
+      <g
+         id="g40573"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="215.54088"
+           y="337.23398"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40571">getData.execute(job.id)</text>
+      </g>
+      <g
+         id="g40581"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 168.85687,344.27069 H 399.31573"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40575" />
+        <g
+           id="g40579">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 399.13982,336.94079 14.65979,7.3299 -14.65979,7.3299 z"
+             id="path40577" />
+        </g>
+      </g>
+      <g
+         id="g40585"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="500.67801"
+           y="365.3808"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40583">getJob(job.id)</text>
+      </g>
+      <g
+         id="g40593"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 431.39137,372.4175 H 644.30676"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40587" />
+        <g
+           id="g40591">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 644.13084,365.08761 14.6598,7.32989 -14.6598,7.3299 z"
+             id="path40589" />
+        </g>
+      </g>
+      <g
+         id="g40597"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="490.28073"
+           y="393.52762"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40595">job={id,s3_url,...}</text>
+      </g>
+      <g
+         id="g40605"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 658.79064,400.56432 H 445.87525"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40599" />
+        <g
+           id="g40603">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 446.05117,393.23442 -14.6598,7.3299 14.6598,7.32989 z"
+             id="path40601" />
+        </g>
+      </g>
+      <g
+         id="g40609"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="584.90753"
+           y="421.67444"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40607">getFile(job.s3_url)</text>
+      </g>
+      <g
+         id="g40617"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 431.39137,428.71113 H 841.26972"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40611" />
+        <g
+           id="g40615">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 841.0938,421.38123 14.6598,7.3299 -14.6598,7.3299 z"
+             id="path40613" />
+        </g>
+      </g>
+      <g
+         id="g40621"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="634.20239"
+           y="449.82123"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40619">file</text>
+      </g>
+      <g
+         id="g40629"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 855.7536,456.85794 H 445.87525"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40623" />
+        <g
+           id="g40627">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 446.05117,449.52804 -14.6598,7.3299 14.6598,7.3299 z"
+             id="path40625" />
+        </g>
+      </g>
+      <g
+         id="g40637">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 874.30056,354.25712 h 108.19808 v 16.18441 H 874.30056 v -16.18441"
+           stroke-miterlimit="10"
+           stroke-width="0.586392"
+           stroke-dasharray="none"
+           id="path40631"
+           style="fill:none" />
+        <g
+           id="g40635"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="311.97635"
+             y="486.76392"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40633">extract data=[{key:value}] from file</text>
+        </g>
+      </g>
+      <g
+         id="g40641"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="258.31107"
+           y="523.7066"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40639">{job, data}</text>
+      </g>
+      <g
+         id="g40649"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 413.79961,530.74332 H 183.34075"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40643" />
+        <g
+           id="g40647">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 183.51667,523.41342 -14.6598,7.3299 14.6598,7.3299 z"
+             id="path40645" />
+        </g>
+      </g>
+      <g
+         id="g40653"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="194.76065"
+           y="574.72272"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40651">createJson.execute(job, data)</text>
+      </g>
+      <g
+         id="g40661"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 168.85687,581.75942 H 399.31573"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40655" />
+        <g
+           id="g40659">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 399.13982,574.42952 14.65979,7.3299 -14.65979,7.3299 z"
+             id="path40657" />
+        </g>
+      </g>
+      <g
+         id="g40669">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 883.91402,404.21771 h 88.97116 v 16.18442 h -88.97116 v -16.18442"
+           stroke-miterlimit="10"
+           stroke-width="0.586392"
+           stroke-dasharray="none"
+           id="path40663"
+           style="fill:none" />
+        <g
+           id="g40667"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="336.01001"
+             y="611.66541"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40665">json=createJson(job, data)</text>
+        </g>
+      </g>
+      <g
+         id="g40673"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="259.13068"
+           y="648.60809"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40671">{job, json}</text>
+      </g>
+      <g
+         id="g40681"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 413.79961,655.6448 H 183.34075"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40675" />
+        <g
+           id="g40679">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 183.51667,648.3149 -14.6598,7.3299 14.6598,7.3299 z"
+             id="path40677" />
+        </g>
+      </g>
+      <g
+         id="g40685"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="192.31255"
+           y="699.62421"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40683">scheduleJob.execute(job,json)</text>
+      </g>
+      <g
+         id="g40693"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 168.85687,706.66089 H 399.31573"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40687" />
+        <g
+           id="g40691">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 399.13982,699.331 14.65979,7.32989 -14.65979,7.3299 z"
+             id="path40689" />
+        </g>
+      </g>
+      <g
+         id="g40697"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="634.50409"
+           y="727.771"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40695">scheduleJob(json)</text>
+      </g>
+      <g
+         id="g40705"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 431.39137,734.80771 H 942.10918"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40699" />
+        <g
+           id="g40703">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 941.93327,727.47781 14.65979,7.3299 -14.65979,7.3299 z"
+             id="path40701" />
+        </g>
+      </g>
+      <g
+         id="g40709"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="674.42889"
+           y="755.91779"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40707">job_id</text>
+      </g>
+      <g
+         id="g40717"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 956.59306,762.95452 H 445.87525"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40711" />
+        <g
+           id="g40715">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 446.05117,755.62462 -14.6598,7.3299 14.6598,7.3299 z"
+             id="path40713" />
+        </g>
+      </g>
+      <g
+         id="g40727">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 888.14684,476.69575 h 80.50552 l 6.33303,11.61056 -6.33303,11.61056 h -80.50552 l -6.33304,-11.61056 6.33304,-11.61056"
+           stroke-miterlimit="10"
+           stroke-width="0.586392"
+           stroke-dasharray="none"
+           id="path40719"
+           style="fill:none" />
+        <g
+           id="g40725"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="330.75946"
+             y="792.86053"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40721">job.job_id = job_id</text>
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="330.75946"
+             y="810.45227"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40723">job.status='awaiting_vendor'</text>
+        </g>
+      </g>
+      <g
+         id="g40731"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="508.008"
+           y="847.39496"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40729">update(job)</text>
+      </g>
+      <g
+         id="g40739"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 431.39137,854.43166 H 644.30676"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40733" />
+        <g
+           id="g40737">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 644.13084,847.10176 14.6598,7.3299 -14.6598,7.3299 z"
+             id="path40735" />
+        </g>
+      </g>
+      <g
+         id="g40749">
+        <path
+           fill="#ffffff"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="m 883.74884,523.84166 h 89.30151 l 6.33303,11.61056 -6.33303,11.61056 h -89.30151 l -6.33303,-11.61056 6.33303,-11.61056"
+           stroke-miterlimit="10"
+           stroke-width="0.586392"
+           stroke-dasharray="none"
+           id="path40741"
+           style="fill:none" />
+        <g
+           id="g40747"
+           transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="319.7645"
+             y="910.72528"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40743">record.id = job.id + '-' + target</text>
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="14.6667px"
+             font-style="normal"
+             font-weight="normal"
+             text-decoration="normal"
+             x="319.7645"
+             y="928.31702"
+             text-anchor="start"
+             dominant-baseline="alphabetic"
+             xml:space="preserve"
+             id="text40745">record.status='awaiting_vendor'</text>
+        </g>
+      </g>
+      <g
+         id="g40753"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="546.28461"
+           y="965.2597"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40751">update(record)</text>
+      </g>
+      <g
+         id="g40761"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 431.39137,972.29643 H 742.84999"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40755" />
+        <g
+           id="g40759">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 742.67407,964.96653 14.6598,7.3299 -14.6598,7.3299 z"
+             id="path40757" />
+        </g>
+      </g>
+      <g
+         id="g40765"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="14.6667px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="264.8501"
+           y="998.68408"
+           text-anchor="start"
+           dominant-baseline="alphabetic"
+           xml:space="preserve"
+           id="text40763">success</text>
+      </g>
+      <g
+         id="g40773"
+         transform="matrix(0.4,0,0,0.4,759.3614,169.40293)">
+        <path
+           fill="none"
+           stroke="#000000"
+           paint-order="fill stroke markers"
+           d="M 413.79961,1005.7208 H 183.34075"
+           stroke-miterlimit="10"
+           stroke-width="1.46598"
+           stroke-dasharray="none"
+           id="path40767" />
+        <g
+           id="g40771">
+          <path
+             fill="#000000"
+             stroke="none"
+             paint-order="stroke fill markers"
+             d="m 183.51667,998.39087 -14.6598,7.32993 14.6598,7.3299 z"
+             id="path40769" />
+        </g>
+      </g>
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 795.23899,287.40844 H 1170.1454 V 582.94997 H 795.23899 Z"
+         stroke-miterlimit="10"
+         stroke-width="1.00524"
+         stroke-dasharray="none"
+         id="path40775" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 795.23899,287.40844 v 8.44404 h 21.37486 l 4.22202,-4.22202 v -4.22202 h -25.59688"
+         stroke-miterlimit="10"
+         stroke-width="1.00524"
+         stroke-dasharray="none"
+         id="path40777" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="4.69332px"
+         font-style="normal"
+         font-weight="bold"
+         text-decoration="normal"
+         x="802.2757"
+         y="293.03781"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text40779"
+         style="stroke-width:0.4">par</text>
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="4.69332px"
+         font-style="normal"
+         font-weight="bold"
+         text-decoration="normal"
+         x="827.87256"
+         y="293.03781"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text40781"
+         style="stroke-width:0.4">[job in jobs]</text>
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 873.89746,513.2866 h 213.02594 v 47.14591 H 873.89746 Z"
+         stroke-miterlimit="10"
+         stroke-width="1.00524"
+         stroke-dasharray="none"
+         id="path40783" />
+      <path
+         fill="#ffffff"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 873.89746,513.2866 v 8.44405 h 23.97516 l 4.22202,-4.22202 v -4.22203 h -28.19718"
+         stroke-miterlimit="10"
+         stroke-width="1.00524"
+         stroke-dasharray="none"
+         id="path40785" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="4.69332px"
+         font-style="normal"
+         font-weight="bold"
+         text-decoration="normal"
+         x="880.93414"
+         y="518.91595"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text40787"
+         style="stroke-width:0.4">loop</text>
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="4.69332px"
+         font-style="normal"
+         font-weight="bold"
+         text-decoration="normal"
+         x="909.13135"
+         y="518.91595"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         xml:space="preserve"
+         id="text40789"
+         style="stroke-width:0.4">[for target in job.targets]</text>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer14"
+     inkscape:label="Gantt"
+     style="display:inline">
+    <rect
+       style="opacity:1;fill:#bd3a3a;fill-opacity:1;stroke:none;stroke-width:1.152;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283"
+       width="183.95831"
+       height="13.221573"
+       x="440.01935"
+       y="201.12592"
+       ry="6.6107864" />
+    <rect
+       style="fill:#bd3a3a;fill-opacity:1;stroke:none;stroke-width:0.789756;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-1"
+       width="86.457001"
+       height="13.221573"
+       x="399.68552"
+       y="178.6946"
+       ry="6.6107864" />
+    <rect
+       style="fill:#bd3a3a;fill-opacity:1;stroke:none;stroke-width:0.986413;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0"
+       width="134.17316"
+       height="13.29075"
+       x="499.10297"
+       y="223.98592"
+       ry="6.6453748" />
+    <rect
+       style="fill:#6265a0;fill-opacity:1;stroke:none;stroke-width:0.986413;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-4"
+       width="134.17316"
+       height="13.29075"
+       x="602.75275"
+       y="315.70251"
+       ry="6.6453748" />
+    <rect
+       style="fill:#6265a0;fill-opacity:1;stroke:none;stroke-width:0.986413;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-4-0"
+       width="134.17316"
+       height="13.29075"
+       x="623.04004"
+       y="338.63168"
+       ry="6.6453748" />
+    <rect
+       style="fill:#70ac4b;fill-opacity:1;stroke:none;stroke-width:0.986413;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-8"
+       width="134.17316"
+       height="13.29075"
+       x="528.17285"
+       y="246.91502"
+       ry="6.6453748" />
+    <rect
+       style="fill:#70ac4b;fill-opacity:1;stroke:none;stroke-width:0.972718;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-8-9"
+       width="130.4731"
+       height="13.29075"
+       x="541.56897"
+       y="269.84424"
+       ry="6.6453748" />
+    <rect
+       style="fill:#70ac4b;fill-opacity:1;stroke:none;stroke-width:0.835625;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-8-95"
+       width="96.287918"
+       height="13.29075"
+       x="584.32068"
+       y="292.77335"
+       ry="6.6453748" />
+    <rect
+       style="fill:#6265a0;fill-opacity:1;stroke:none;stroke-width:0.586446;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-4-0-6"
+       width="47.424591"
+       height="13.29075"
+       x="690.02673"
+       y="361.56082"
+       ry="6.6453748" />
+    <rect
+       style="fill:#6265a0;fill-opacity:1;stroke:none;stroke-width:0.586446;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-4-0-6-4"
+       width="47.424591"
+       height="13.29075"
+       x="658.82202"
+       y="384.48996"
+       ry="6.6453748" />
+    <rect
+       style="fill:#6265a0;fill-opacity:1;stroke:none;stroke-width:0.586446;stroke-linejoin:round;stroke-opacity:1"
+       id="rect41283-0-4-0-6-0"
+       width="47.424591"
+       height="13.29075"
+       x="721.02991"
+       y="407.4191"
+       ry="6.6453748" />
+    <path
+       style="fill:none;stroke:#bd3a3a;stroke-width:3.456;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.456, 3.456;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 635.2323,165.51649 c 0,278.6469 0,278.6469 0,278.6469"
+       id="path42208" />
+    <path
+       style="fill:none;stroke:#70ac4b;stroke-width:3.456;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.456, 3.456;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 683.19918,165.51649 c 0,278.6469 0,278.6469 0,278.6469"
+       id="path42208-5" />
+    <path
+       style="fill:none;stroke:#6265a0;stroke-width:3.456;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.456, 3.456;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 769.4676,165.51649 c 0,278.6469 0,278.6469 0,278.6469"
+       id="path42208-5-5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.02743px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 475.42083,214.36787 c 0,14.17369 3.30354,16.58905 21.59082,16.58905"
+       id="path50465"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.02743px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-0)"
+       d="m 416.70058,191.91621 c 0,14.17368 3.30354,16.58904 21.59083,16.58904"
+       id="path50465-16"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.963223px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-5)"
+       d="m 507.26022,237.23064 c 0,14.17369 2.90352,16.58907 18.97647,16.58907"
+       id="path50465-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.963223px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-7)"
+       d="m 563.88477,283.13496 c 0,14.17369 2.90352,16.58904 18.97646,16.58904"
+       id="path50465-1-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.751556px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-7-1)"
+       d="m 610.17645,328.99326 c 0,14.1737 1.76762,16.58904 11.55271,16.58904"
+       id="path50465-1-1-9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.751556px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-7-1-9)"
+       d="m 677.49362,351.92241 c 0,14.17369 1.76762,16.58906 11.55271,16.58906"
+       id="path50465-1-1-9-2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.06083px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-7)"
+       d="m 706.50944,390.85021 c 13.47001,0 -0.78088,23.30324 12.68913,23.08545"
+       id="path50745"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:label="FullStack"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       inkscape:groupmode="layer"
+       id="layer10"
+       inkscape:label="Ring">
+      <path
+         d="m 847.50378,580.85688 a 315.57637,183.42205 0 1 1 223.14712,-53.72307 313.51526,182.22407 0 0 1 -223.14712,53.72307 z m 0,-365.43453 c -172.67126,0 -313.15035,81.65048 -313.15035,182.01232 0,100.36183 140.47909,182.01163 313.15035,182.01163 172.67132,0 313.15032,-81.6498 313.15032,-182.01163 0,-100.36185 -140.4791,-182.01232 -313.15032,-182.01232 z"
+         fill="#cccccc"
+         id="path850"
+         style="display:inline;fill:#3f3d56;fill-opacity:1;stroke-width:0.925119" />
+    </g>
+    <text
+       xml:space="preserve"
+       id="text4522"
+       style="font-style:normal;font-weight:normal;font-size:192px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4524);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="38.320312"
+         y="344.12836"
+         id="tspan52538"><tspan
+           dx="0 66.9375 43.3125 47.625 45.1875 37.6875 48.1875 45.1875 46.5 25.5 77.8125 43.3125 30.375 49.5 34.125 45.1875 43.6875"
+           style="font-size:96px;font-family:Pacifico;-inkscape-font-specification:Pacifico"
+           id="tspan52536">Jonathan Goldfarb</tspan></tspan></text>
+    <g
+       inkscape:groupmode="layer"
+       id="layer6"
+       inkscape:label="Watch">
+      <g
+         id="g28455"
+         transform="translate(0,-0.16134386)">
+        <rect
+           x="1117.8253"
+           y="326.59653"
+           width="60"
+           height="31.000002"
+           fill="#e6e6e6"
+           id="rect946"
+           style="display:inline;fill:#3f3d56;fill-opacity:1;stroke-width:0.999999" />
+        <rect
+           x="1117.8253"
+           y="437.5965"
+           width="60"
+           height="31.000002"
+           fill="#e6e6e6"
+           id="rect948"
+           style="display:inline;fill:#3f3d56;fill-opacity:1;stroke-width:0.999999" />
+        <circle
+           cx="1147.8253"
+           cy="397.5965"
+           fill="#e6e6e6"
+           id="circle950"
+           style="display:inline;fill:#3f3d56;fill-opacity:1;stroke-width:0.999999"
+           r="50" />
+        <circle
+           cx="1147.8253"
+           cy="397.5965"
+           fill="#ffffff"
+           id="circle952"
+           style="display:inline;stroke-width:0.999999"
+           r="39" />
+        <rect
+           x="1135.0542"
+           y="386.91083"
+           width="30.246828"
+           height="1.72839"
+           fill="#e2e2e2"
+           id="rect954"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1135.0238"
+           y="393.25702"
+           width="46.80151"
+           height="1.72839"
+           fill="#6c63ff"
+           id="rect956"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1135.0238"
+           y="399.23608"
+           width="36.728291"
+           height="1.72839"
+           fill="#e2e2e2"
+           id="rect958"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1135.0238"
+           y="405.21512"
+           width="21.604879"
+           height="1.72839"
+           fill="#e2e2e2"
+           id="rect960"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1135.0238"
+           y="411.19415"
+           width="32.407318"
+           height="1.72839"
+           fill="#e2e2e2"
+           id="rect962"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1121.3374"
+           y="386.41379"
+           width="3.45678"
+           height="3.45678"
+           fill="#e2e2e2"
+           id="rect964"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1121.3374"
+           y="392.39285"
+           width="3.45678"
+           height="3.45678"
+           fill="#6c63ff"
+           id="rect966"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1121.3374"
+           y="398.37186"
+           width="3.45678"
+           height="3.45678"
+           fill="#e2e2e2"
+           id="rect968"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1121.3374"
+           y="404.35095"
+           width="3.45678"
+           height="3.45678"
+           fill="#e2e2e2"
+           id="rect970"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="1121.3374"
+           y="410.32999"
+           width="3.45678"
+           height="3.45678"
+           fill="#e2e2e2"
+           id="rect972"
+           style="display:inline;stroke-width:0.999999" />
+      </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer7"
+       inkscape:label="Web">
+      <g
+         id="g28406"
+         transform="translate(43.356181)">
+        <rect
+           x="676.16852"
+           y="147.75441"
+           width="245.88383"
+           height="157.47495"
+           fill="#e6e6e6"
+           id="rect912"
+           style="display:inline;fill:#3f3d56;fill-opacity:1;stroke-width:0.999999" />
+        <rect
+           x="694.70465"
+           y="191.81036"
+           width="203.86136"
+           height="77.035172"
+           fill="#ffffff"
+           id="rect914"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="731.84735"
+           y="205.15681"
+           width="48.926842"
+           height="2.79582"
+           fill="#e6e6e6"
+           id="rect916"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="731.79822"
+           y="215.42235"
+           width="75.705467"
+           height="2.79582"
+           fill="#6c63ff"
+           id="rect918"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="731.79822"
+           y="225.09398"
+           width="59.411171"
+           height="2.79582"
+           fill="#e6e6e6"
+           id="rect920"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="731.79822"
+           y="234.76561"
+           width="34.94775"
+           height="2.79582"
+           fill="#e6e6e6"
+           id="rect922"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="731.79822"
+           y="244.43721"
+           width="52.421619"
+           height="2.79582"
+           fill="#e6e6e6"
+           id="rect924"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="709.65918"
+           y="204.35283"
+           width="5.59164"
+           height="5.59164"
+           fill="#e6e6e6"
+           id="rect926"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="709.65918"
+           y="214.02444"
+           width="5.59164"
+           height="5.59164"
+           fill="#6c63ff"
+           id="rect928"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="709.65918"
+           y="223.69606"
+           width="5.59164"
+           height="5.59164"
+           fill="#e6e6e6"
+           id="rect930"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="709.65918"
+           y="233.36769"
+           width="5.59164"
+           height="5.59164"
+           fill="#e6e6e6"
+           id="rect932"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="709.65918"
+           y="243.03931"
+           width="5.59164"
+           height="5.59164"
+           fill="#e6e6e6"
+           id="rect934"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="838.50305"
+           y="201.46252"
+           width="50.058731"
+           height="50.058731"
+           fill="#e6e6e6"
+           id="rect936"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="676.06354"
+           width="245.88383"
+           height="10.44604"
+           fill="#6c63ff"
+           id="rect938"
+           y="147.61502"
+           style="display:inline;stroke-width:0.999999" />
+        <circle
+           cx="683.82617"
+           cy="152.9556"
+           fill="#ffffff"
+           id="circle940"
+           style="display:inline;stroke-width:0.999999"
+           r="2.0968599" />
+        <circle
+           cx="691.17517"
+           cy="152.9556"
+           fill="#ffffff"
+           id="circle942"
+           style="display:inline;stroke-width:0.999999"
+           r="2.0968599" />
+        <circle
+           cx="698.52405"
+           cy="152.9556"
+           fill="#ffffff"
+           id="circle944"
+           style="display:inline;stroke-width:0.999999"
+           r="2.0968599" />
+      </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer8"
+       inkscape:label="Mobile">
+      <g
+         id="g28439"
+         transform="translate(103.16806,7.3250539)">
+        <path
+           d="m 513.87039,297.11425 v 185.99169 a 14.67525,14.67525 0 0 1 -14.67227,14.67232 H 426.9197 A 14.67656,14.67656 0 0 1 412.2413,483.10594 V 297.11425 a 14.67655,14.67655 0 0 1 14.6784,-14.67228 h 8.76785 a 6.9778001,6.9778001 0 0 0 6.45511,9.60614 h 41.20843 a 6.97774,6.97774 0 0 0 6.45506,-9.60614 h 9.39199 a 14.67524,14.67524 0 0 1 14.67225,14.67228 z"
+           fill="#e6e6e6"
+           id="path886"
+           style="display:inline;fill:#3f3d56;fill-opacity:1;stroke-width:0.999999" />
+        <rect
+           x="417.05582"
+           y="317.95959"
+           width="92"
+           height="127.99999"
+           fill="#ffffff"
+           id="rect888"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="443.17725"
+           y="405.97675"
+           width="36.71978"
+           height="2.0982699"
+           fill="#e6e6e6"
+           id="rect890"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="443.14038"
+           y="413.68109"
+           width="56.817242"
+           height="2.0982699"
+           fill="#6c63ff"
+           id="rect892"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="443.14038"
+           y="420.93967"
+           width="44.588299"
+           height="2.0982699"
+           fill="#e6e6e6"
+           id="rect894"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="443.14038"
+           y="428.19824"
+           width="26.228411"
+           height="2.0982699"
+           fill="#e6e6e6"
+           id="rect896"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="443.14038"
+           y="435.45685"
+           width="39.342621"
+           height="2.0982699"
+           fill="#e6e6e6"
+           id="rect898"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="426.5249"
+           y="405.37335"
+           width="4.1965499"
+           height="4.1965499"
+           fill="#e6e6e6"
+           id="rect900"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="426.5249"
+           y="412.63193"
+           width="4.1965499"
+           height="4.1965499"
+           fill="#6c63ff"
+           id="rect902"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="426.5249"
+           y="419.89053"
+           width="4.1965499"
+           height="4.1965499"
+           fill="#e6e6e6"
+           id="rect904"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="426.5249"
+           y="427.14911"
+           width="4.1965499"
+           height="4.1965499"
+           fill="#e6e6e6"
+           id="rect906"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="426.5249"
+           y="434.40771"
+           width="4.1965499"
+           height="4.1965499"
+           fill="#e6e6e6"
+           id="rect908"
+           style="display:inline;stroke-width:0.999999" />
+        <rect
+           x="444.74249"
+           y="333.95959"
+           width="36.997532"
+           height="36.997532"
+           fill="#e6e6e6"
+           id="rect910"
+           style="display:inline;stroke-width:0.999999" />
+      </g>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer9"
+       inkscape:label="Server">
+      <rect
+         x="462.74118"
+         y="-950.4953"
+         width="127.332"
+         height="216.16232"
+         transform="rotate(90)"
+         fill="#2f2e41"
+         id="rect852"
+         style="display:inline;stroke-width:0.733989" />
+      <g
+         id="g28483"
+         transform="matrix(1.1747437,0,0,1,-151.3097,0)">
+        <rect
+           x="727.83875"
+           y="458.85315"
+           width="236.13634"
+           height="50.543999"
+           fill="#3f3d56"
+           id="rect854"
+           style="display:inline;stroke-width:0.661831" />
+        <rect
+           x="727.83875"
+           y="480.28394"
+           width="236.13635"
+           height="7.7759995"
+           fill="#6c63ff"
+           id="rect860"
+           style="display:inline;stroke-width:0.661831" />
+      </g>
+      <g
+         id="g28479"
+         transform="matrix(1.1747437,0,0,1,-151.30969,0)">
+        <rect
+           x="727.83875"
+           y="515.22913"
+           width="236.13634"
+           height="50.543999"
+           fill="#3f3d56"
+           id="rect856"
+           style="display:inline;stroke-width:0.661831" />
+        <rect
+           x="727.83875"
+           y="536.65997"
+           width="236.11061"
+           height="7.7759995"
+           fill="#6c63ff"
+           id="rect862"
+           style="display:inline;stroke-width:0.661796" />
+      </g>
+      <g
+         id="g28475"
+         transform="matrix(1.1747437,0,0,1,-151.30969,0)">
+        <rect
+           x="727.83875"
+           y="571.60516"
+           width="236.13634"
+           height="50.543999"
+           fill="#3f3d56"
+           id="rect858"
+           style="display:inline;stroke-width:0.661831" />
+        <rect
+           x="727.83875"
+           y="593.03595"
+           width="235.98827"
+           height="7.7759995"
+           fill="#6c63ff"
+           id="rect864"
+           style="display:inline;stroke-width:0.661624" />
+      </g>
+      <g
+         id="g28488"
+         transform="translate(67.611663)">
+        <circle
+           cx="886.3847"
+           cy="466.14316"
+           fill="#6c63ff"
+           id="circle866"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+        <circle
+           cx="896.5907"
+           cy="466.14316"
+           fill="#6c63ff"
+           id="circle868"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+        <circle
+           cx="906.79675"
+           cy="466.14316"
+           fill="#6c63ff"
+           id="circle870"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+      </g>
+      <g
+         id="g28493"
+         transform="translate(67.611663)">
+        <circle
+           cx="886.3847"
+           cy="521.54724"
+           fill="#6c63ff"
+           id="circle872"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+        <circle
+           cx="896.5907"
+           cy="521.54724"
+           fill="#6c63ff"
+           id="circle874"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+        <circle
+           cx="906.79675"
+           cy="521.54724"
+           fill="#6c63ff"
+           id="circle876"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+      </g>
+      <g
+         id="g28498"
+         transform="translate(67.611663)">
+        <circle
+           cx="886.3847"
+           cy="576.95117"
+           fill="#6c63ff"
+           id="circle878"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+        <circle
+           cx="896.5907"
+           cy="576.95117"
+           fill="#6c63ff"
+           id="circle880"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+        <circle
+           cx="906.79675"
+           cy="576.95117"
+           fill="#6c63ff"
+           id="circle882"
+           style="display:inline;stroke-width:0.485998"
+           r="2.9160001" />
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Text"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:146.667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="3.6175869"
+       y="137.86699"
+       id="text13365"><tspan
+         sodipodi:role="line"
+         id="tspan13363"
+         x="3.6175869"
+         y="137.86699"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:146.667px;font-family:Pacifico;-inkscape-font-specification:Pacifico">Jonathan Goldfarb</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:64px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="26.127892"
+       y="253.40916"
+       id="text21291"><tspan
+         sodipodi:role="line"
+         x="26.127892"
+         y="253.40916"
+         id="tspan21293"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Bold Italic'">Strategy</tspan><tspan
+         sodipodi:role="line"
+         x="26.127892"
+         y="335.36902"
+         id="tspan21299"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Bold Italic'">Design</tspan><tspan
+         sodipodi:role="line"
+         x="26.127892"
+         y="417.32886"
+         id="tspan21301"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Bold Italic'"><tspan
+           dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+           id="tspan24827"
+           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Bold Italic'">Implementation</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="26.127892"
+         y="499.28873"
+         dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.7418594"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Bold Italic'"
+         id="tspan24829">Operations</tspan></text>
+  </g>
+</svg>
