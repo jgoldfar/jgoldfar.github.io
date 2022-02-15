@@ -12,6 +12,8 @@ disqusShortname = "jgoldfar-blog"
 # https://gohugo.io/templates/internal/
 # Enable Google Analytics by entering your tracking code
 # GAv3 - UA-33721305-2
+# https://analytics.google.com/analytics/web/?utm_source=marketingplatform.google.com&utm_medium=et&utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2F#/a33721305p274388243/admin/streams/table/
+# Property named jgoldfar - Marketing Pages - GA4 (274388243)
 googleAnalytics = "G-WPL5NCVTN1"
 
 theme = "universal"
