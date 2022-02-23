@@ -245,8 +245,3 @@ pygmentsCodefencesGuessSyntax = true
     name = "About"
     weight = 1
     url = "/contact"
-# # [[menu.main]]
-    # name = "CV"
-    # weight = 4
-    # identifier = "cv"
-    # url = "/cv/cv.pdf"
