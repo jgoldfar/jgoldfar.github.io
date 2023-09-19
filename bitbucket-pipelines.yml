@@ -5,5 +5,7 @@ pipelines:
     - step:
         script:
           # https://packages.debian.org/search?suite=bookworm&keywords=...
-          - apt-get -qq update && apt-get -qq -y install shellcheck build-essential curl inkscape
+          - apt-get -qq update && apt-get -qq -y install shellcheck build-essential curl inkscape git
+          - make hugo-env
+          - git submodule update --recursive --init
           - make generate
