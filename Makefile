@@ -50,6 +50,7 @@ endif
 
 # https://gohugo.io/getting-started/installing
 ${HUGO}.tar.gz:
+	mkdir -p $(dir $@)
 	curl -L ${HUGO_DOWNLOAD_PATH} -o $@
 .PRECIOUS: ${HUGO}.tar.gz
 $(HUGO):
