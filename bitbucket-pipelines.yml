@@ -1,10 +1,11 @@
 # You can specify a custom docker image from Docker Hub as your build environment.
 # Use a somewhat-official Docker image (https://github.com/jojomi/docker-hugo)
 # to test backup integration
-image: jojomi/hugo:latest
-
+image: debian:bullseye-slim
 pipelines:
   default:
     - step:
         script:
-          - hugo --verbose --minify
+          # https://packages.debian.org/search?suite=bullseye&keywords=...
+          - apt-get -qq update && apt-get -qq -y install shellcheck build-essential curl
+          - make generate

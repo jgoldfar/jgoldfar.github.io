@@ -38,7 +38,7 @@ help: ## Display this help section
 SHELL:=/bin/bash
 UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
-HUGO_VERSION:=0.67.1
+HUGO_VERSION:=0.118.2
 
 # Set path to Extended version of Hugo
 ifeq (${UNAME},Darwin)
@@ -178,7 +178,7 @@ static/img/clients/nike.png: static/img/clients/nike.svg
 img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img/,${IMG_CONVERT}) $(addprefix static/img/clients/,${IMG_CLIENTS}) ## Generate images for site
 
 ### Generate site
-generate: $(HUGO) $(HUGOFILE) ## Generate website
+generate: $(HUGO) $(HUGOFILE) img-deps ## Generate website
 	if command -v hugo ; then					\
 		hugo --verbose --minify ;				\
 	fi
@@ -219,8 +219,6 @@ clean-git:
 
 deploy-git: init-git generate-git push-git clean-git ## Run full deployment to Github Pages
 .PHONY: deploy-git
-
-
 
 clean: ${CLEAN_TARGETS} ## Cleanup generated files
 	$(RM) -r ${GitRepoName} public
