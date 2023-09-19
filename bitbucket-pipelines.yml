@@ -1,11 +1,9 @@
 # You can specify a custom docker image from Docker Hub as your build environment.
-# Use a somewhat-official Docker image (https://github.com/jojomi/docker-hugo)
-# to test backup integration
-image: debian:bullseye-slim
+image: debian:12.1-slim
 pipelines:
   default:
     - step:
         script:
-          # https://packages.debian.org/search?suite=bullseye&keywords=...
-          - apt-get -qq update && apt-get -qq -y install shellcheck build-essential curl
+          # https://packages.debian.org/search?suite=bookworm&keywords=...
+          - apt-get -qq update && apt-get -qq -y install shellcheck build-essential curl inkscape
           - make generate
