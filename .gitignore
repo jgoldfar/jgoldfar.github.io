@@ -1,2 +1,3 @@
+bin
 deps/bib2json.py
 data/*/*.json
