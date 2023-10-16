@@ -30,7 +30,7 @@ jobs:
       - name: Build with Hugo, output version
         run: |
           hugo version
-          hugo --minify --templateMetrics --templateMetricsHints --printPathWarnings --printUnusedTemplates ---panicOnWarning --enableGitInfo
+          hugo --minify --templateMetrics --templateMetricsHints --printPathWarnings --printUnusedTemplates --panicOnWarning
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
