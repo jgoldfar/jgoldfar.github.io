@@ -61,6 +61,7 @@ $(HUGO):
 .PHONY: hugo-env
 hugo-env: $(HUGO)
 	$(HUGO) --help
+	$(HUGO) version
 	$(HUGO) env
 
 ### CV/Resume
