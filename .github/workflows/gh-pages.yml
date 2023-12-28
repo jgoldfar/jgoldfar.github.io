@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: ['ubuntu-18.04', 'ubuntu-20.04', 'ubuntu-22.04', 'macos-latest']
+        platform: ['ubuntu-20.04', 'ubuntu-22.04', 'macos-latest']
     runs-on: ${{ matrix.platform }}
     steps:
       - name: Checkout the repository to generate the site
@@ -34,7 +34,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: (github.ref == 'refs/heads/main' && matrix.platform == 'ubuntu-18.04')
+        if: (github.ref == 'refs/heads/main' && matrix.platform == 'ubuntu-20.04')
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
