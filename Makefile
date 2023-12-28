@@ -38,11 +38,11 @@ help: ## Display this help section
 SHELL:=/bin/bash
 UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
-HUGO_VERSION:=0.67.1
+HUGO_VERSION:=0.118.2
 
 # Set path to Extended version of Hugo
 ifeq (${UNAME},Darwin)
-HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz
+HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_darwin-universal.tar.gz
 endif
 ifeq (${UNAME},Linux)
 HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
@@ -50,14 +50,19 @@ endif
 
 # https://gohugo.io/getting-started/installing
 ${HUGO}.tar.gz:
+	mkdir -p $(dir $@)
 	curl -L ${HUGO_DOWNLOAD_PATH} -o $@
 .PRECIOUS: ${HUGO}.tar.gz
 $(HUGO):
-	if ! command -v hugo ; then					\
-		${MAKE} ${HUGO}.tar.gz ;				\
-		cd bin && tar xvzf hugo.tar.gz ;	\
-	fi
+	${MAKE} ${HUGO}.tar.gz ;				\
+	cd bin && tar xvzf hugo.tar.gz ;
 .PRECIOUS: ${HUGO}
+
+.PHONY: hugo-env
+hugo-env: $(HUGO)
+	$(HUGO) --help
+	$(HUGO) version
+	$(HUGO) env
 
 ### CV/Resume
 CVDownloadPath:=https://dl.bintray.com/jgoldfar/ResumePublic/
@@ -108,7 +113,7 @@ CLEAN_TARGETS+=cv-deps
 HUGOFILE:=config.toml
 
 serve: $(HUGOFILE) $(HUGO) ## Serve page for local development
-	$(HUGO) --disableFastRender --verbose server
+	$(HUGO) --disableFastRender server
 .PHONY: serve
 
 new: $(HUGOFILE) $(HUGO) ## Make a new post (not super useful, just trying out Hugo)
@@ -173,18 +178,15 @@ undraw_Map_dark_re_36sy.png
 IMG_CLIENTS:=nike.png
 static/img/clients/nike.png: static/img/clients/nike.svg
 	inkscape -w 420 -h 150 -o $@ $<
+.PHONY: static/img/clients/nike.png
 
 ## Generate banner images, which have to be PNG...
 img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img/,${IMG_CONVERT}) $(addprefix static/img/clients/,${IMG_CLIENTS}) ## Generate images for site
+.PHONY: img-deps
 
 ### Generate site
-generate: $(HUGO) $(HUGOFILE) ## Generate website
-	if command -v hugo ; then					\
-		hugo --verbose --minify ;				\
-	fi
-	if ! command -v hugo ; then					\
-		$(HUGO) --verbose --minify ;			\
-	fi
+generate: $(HUGO) $(HUGOFILE) img-deps ## Generate website
+	$(HUGO) --minify --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints
 .PHONY: generate
 
 # https://gohugo.io/hosting-and-deployment/hosting-on-github/
@@ -219,8 +221,6 @@ clean-git:
 
 deploy-git: init-git generate-git push-git clean-git ## Run full deployment to Github Pages
 .PHONY: deploy-git
-
-
 
 clean: ${CLEAN_TARGETS} ## Cleanup generated files
 	$(RM) -r ${GitRepoName} public

@@ -2,29 +2,39 @@ name: Build Hugo site using Github pages
 # Demo script from https://gohugo.io/hosting-and-deployment/hosting-on-github/
 on:
   push:
-    branches:
-      - main  # Set a branch to deploy
+  schedule:
+    - cron: '30 5 * * 2,4'
+
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    name: Deploy https://jgoldfar.github.io
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: ['ubuntu-20.04', 'ubuntu-22.04', 'macos-latest']
+    runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout the repository to generate the site
+        uses: actions/checkout@v4
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
+      - name: Setup Latest Hugo version
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           # extended: true
 
-      - name: Build
-        run: hugo --minify
+      - name: Build with Hugo, output version
+        run: |
+          hugo version
+          hugo --minify --templateMetrics --templateMetricsHints --printPathWarnings --printUnusedTemplates
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: (github.ref == 'refs/heads/main' && matrix.platform == 'ubuntu-20.04')
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public

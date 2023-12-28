@@ -1,48 +1,24 @@
-## Personal Website Generator for Jonathan Goldfarb ##
+## Personal Website Generator for Jonathan Goldfarb
 
-* v2020.0
+* v2023.0
 
-Generated using [Hugo](http://gohugo.io/).
-
-Currently the build requires a Unix-like platform, and `make`, `curl`, and `git`.
+Generated using [Hugo](http://gohugo.io/), orchestrated using Github Actions on a Unix-like platform with `make`, `curl`, and `git`.
 
 My website is currently being hosted [by github Pages](http://jgoldfar.github.io/).
 
 ### Usage ##
 
 First, clone this repository somewhere; to install all of the remotely generated sources, run
+```sh
+make img-deps
+```
 
-    make pull-deps
+For the most part, the build is "vanilla" Hugo, so a standard Hugo integration works without modification for this content.
 
-`pull-deps` currently brings in the following source material:
+As documented in the CI file [`bitbucket-pipelines.yml`](./bitbucket-pipelines.yml) or the [`.github`](./.github) workflow, it is enough to run `hugo --verbose --minify`, which is `make generate`, to generate the static pages.
 
-* [Algebra Reading Group Notes](https://bitbucket.org/jgoldfar/algebrareadinggroupnotes).
-
-* [Resume and CV files](https://bintray.com/jgoldfar/ResumePublic).
-
-* Listings of Open Source contributions from [Github](https://github.com/jgoldfar) and [Bitbucket](https://bitbucket.org/jgoldfar/), parsed into a data file appropriate for Hugo to convert into a [data page](http://jgoldfar.github.io/oss-contributions/).
-
-* (currently unused, and with a private link) Calendar files from Google Calendar.
-
-In the future, it is planned that the schedule file will also be generated automatically,
-along with other files related to e.g. OSS repositories.
-
-To initialize the git repository we use to track and upload the website, run
-
-    make init-git
-
-Generate the files and push them to the remote by running
-
-    make push-git
-
-`push-git` runs `init-git` (documented above) as well as `gen-git`, which generates the
-HTML files into the correct location. The commands under the `push-git` target take care of
-just the commit & push steps.
-
-As documented in the CI file `bitbucket-pipelines.yml`, the recommended sequence of steps
-to generate and push an update are
-
-    make pull-deps push-git
+In the future, it is planned that a scheduling view will also be generated automatically,
+along with other files related to e.g. OSS projects.
 
 ### Other Useful Commands ###
 
@@ -54,9 +30,9 @@ To generate a new page (in particular, to automatically set the date) run
 
     make new FileName=...
 
-In particular, to make a new blog post with the title (for instance) `ImplicitFunctionTheoremApplications`, run
+For example, to make a new blog post with the title `230203ImplicitFunctionTheoremApplications`, run
 
-    make new FileName=posts/ImplicitFunctionTheoremApplications
+    make new FileName=posts/230203ImplicitFunctionTheoremApplications
 
 ## References
 
