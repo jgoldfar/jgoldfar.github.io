@@ -49,7 +49,7 @@ pygmentsCodefencesGuessSyntax = true
     # https://en.wikiquote.org/wiki/Voltaire
     # Whatever you do, crush the despicable [superstition], and love those who love you.
     about_us = "<p>Quoi que vous fassiez, écrasez l'infâme, et aimez qui vous aime. - Voltaire</p><p>Always open to challenging new problems.</p>"
-    copyright = "Copyright (c) 2018 - 2021, Jonathan Goldfarb; all rights reserved."
+    copyright = "Copyright (c) 2018 - 2023, Jonathan Goldfarb; all rights reserved."
     enableGoogleMaps = false
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
 
@@ -163,6 +163,12 @@ pygmentsCodefencesGuessSyntax = true
     pre = "<i class='fab fa-linkedin fa-2x'></i>"
     weight = 1
     url = "https://www.linkedin.com/in/jonathan-goldfarb/"
+
+[[menu.topbar]]
+    weight = 1
+    name = "Instagram"
+    url = "https://www.instagram.com/jgoldfar/"
+    pre = "<i class='fab fa-2x fa-instagram'></i>"
 
 [[menu.topbar]]
     weight = 2
