@@ -110,7 +110,7 @@ clean-cv-deps:
 CLEAN_TARGETS+=cv-deps
 
 ## Hugo Generation
-HUGOFILE:=config.toml
+HUGOFILE:=hugo.toml
 
 serve: $(HUGOFILE) $(HUGO) ## Serve page for local development
 	$(HUGO) --disableFastRender server
