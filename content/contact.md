@@ -1,5 +1,5 @@
 ---
-title: "Contact Me"
+title: "Contact & About Me"
 id: "contact"
 layout: "single"
 ---
