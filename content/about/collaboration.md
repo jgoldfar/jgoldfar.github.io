@@ -1,6 +1,7 @@
 ---
 title: "Collaborative Discovery"
 draft: false
+layout: "single"
 ---
 
 I define collaboration as inclusive, results-driven partnerships built around common goals; in my work, I prioritize connection and communication to unlock the insights necessary to increase efficiency and deliver operational benefits.

@@ -1,9 +1,10 @@
 ---
 title: "Contract Services: Working with Me"
 draft: false
+layout: "single"
 ---
 
-I offer professional services in all areas of digital transformation for teams tasked with delivering effectively on business challenges; if you know your outcomes aren't meeting expectations, we can drive their improvement.
+I offer professional services in all areas of digital transformation, focusing on teams tasked with delivering effectively on business challenges.
 
 1) [Collaborative Discovery](/about/collaboration). By assessing the goals and the space, developing an understanding of your mission and values, and aligning with your existing strategy, we identify actionable options for pushing your goals forward.
 
@@ -22,6 +23,6 @@ I offer professional services in all areas of digital transformation for teams t
     - Maintenance, Operations, and Support
     - Disposition and Cut-over
 
-If you have an ambitious goal, from a small-scale initiative to a complex product iteration, I am excited to hear from you.
-I want to partner with you to accomplish your objectives.
+If you have an ambitious goal, from a small-scale initiative to a complex product iteration, I want to hear from you.
+I will partner with you to bring your vision to reality.
 Contact me directly at [jgoldfar@gmail.com](mailto:jgoldfar@gmail.com) or [321 895 4184](tel:+1-321-895-4184) today!

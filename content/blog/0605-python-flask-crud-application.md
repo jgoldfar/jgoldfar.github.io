@@ -8,6 +8,7 @@ banner: "img/banners/undraw_Source_code_re_wd9m.png"
 ---
 
 I have found it useful to prepare boilerplate code for spinning up things like a new application; in this article, I'll share some code for prototyping an application that can create, retrieve, update, and delete records from a database using [Flask](https://flask.palletsprojects.com/en/2.0.x/).
+This walkthrough will assume familiarity with the command line, and that a [Python 3](https://www.python.org/) interpreter is available.
 
 For developers with experience with [Django](https://www.djangoproject.com), Flask is familiar but with a smaller footprint, and leaves more up to the application architect when it comes to implementation details like form validation and data persistence.
 As fascinating as design patterns for specialized applications can be, the four "simple" operations listed above - Create, Retrieve, Update, and Delete, commonly abbreviated as CRUD - form the functional core of more than a handful of widely-used applications.
@@ -19,7 +20,7 @@ If you need technology strategy, solution design, or project services, [contact 
 ## Prepare Your Environment
 
 To start your prototype, you start by preparing an environment in which the application will run.
-Using a [virtualenv](https://virtualenv.pypa.io/en/latest/) is recommended to allow independent projects isolated dependencies; you can do this using a nice tool like [Poetry](https://python-poetry.org/docs/basic-usage/) or manually.
+Using a [virtualenv](https://virtualenv.pypa.io/en/latest/) is recommended to allow independent projects isolated dependencies; you can do this using a nice tool like [Poetry](https://python-poetry.org/docs/basic-usage/) or as we do here, manually manage the environment.
 I always encourage reviewing the manual and documentation; with open-source tools, we have the implementation available to answer concrete questions as well!
 
 First, let's check that pip is available:
@@ -28,13 +29,14 @@ First, let's check that pip is available:
 python3 -m pip install --upgrade pip
 ```
 
-Next, install virtualenv from [PyPi](http://pypi.org) - using this version carries some benefits over using the `venv` module from the Python [Standard Library](https://docs.python.org/3/library/):
+Next, install virtualenv from [PyPi](http://pypi.org) - this is optional, but using this version carries [some benefits](https://virtualenv.pypa.io/en/latest/) over using the `venv` module from the Python [Standard Library](https://docs.python.org/3/library/):
 
 ```shell
 pip3 install virtualenv
 ```
 
-The virtual environment lives in a directory you create - it can be more than convenient to keep your code close to important configuration like the necessary environment. To open a shell in your virtual environment, we first create it and then `source` the activation script:
+The virtual environment lives in a directory you create - it can be more than convenient to keep your code close to important configuration like the necessary environment.
+To open a shell in your virtual environment, we first create it and then `source` the activation script:
 
 ```shell
 virtualenv crudapp
@@ -42,18 +44,20 @@ cd crudapp
 source bin/activate
 ```
 
-After this, your shell should show the name of the environment you are working in alongside your regular prompt. Package management and execution commands will work pretty much like normal, except using your isolated environment.
+After this, your shell should show the name of the environment you are working in alongside your regular prompt.
+Package management and execution commands will work pretty much like normal, except using your isolated environment.
 We will need [Flask](https://flask.palletsprojects.com/en/2.0.x/) for this application, so let's add that:
 
 ```shell
 pip3 install flask
 ```
 
-To leave the virtualenv, simply enter
+Lastly, whenever you want to do something else, you'll leave the virtualenv by executing
 
 ```shell
 deactivate
 ```
+
 
 ## Build Out Your Application
 The code included below defines the endpoints, and omits logic to interact with a data store, since it is often specific to the application and resources.

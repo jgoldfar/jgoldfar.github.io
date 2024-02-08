@@ -1,0 +1,16 @@
+name = "JGv0"
+license = "MIT"
+licenselink = "https://github.com/devcows/hugo-universal-theme/blob/master/LICENSE"
+description = "A port of the Universal theme, vendored and customized by JG"
+homepage = "https://github.com/devcows/hugo-universal-theme"
+tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
+features = ["blog", "themes", "disqus", "minimal", "responsive"]
+min_version = 0.15
+
+[author]
+
+
+# If Porting existing theme
+[original]
+    author = "devcows"
+    homepage = "https://github.com/devcows"

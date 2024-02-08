@@ -113,7 +113,7 @@ CLEAN_TARGETS+=cv-deps
 HUGOFILE:=hugo.toml
 
 serve: $(HUGOFILE) $(HUGO) ## Serve page for local development
-	$(HUGO) --disableFastRender server
+	$(HUGO) server --disableFastRender
 .PHONY: serve
 
 new: $(HUGOFILE) $(HUGO) ## Make a new post (not super useful, just trying out Hugo)
@@ -172,7 +172,13 @@ undraw_design_components_9vy6.png				\
 undraw_visual_data_re_mxxo.png					\
 undraw_stars_re_6je7.png						\
 undraw_Walk_in_the_city_re_039v.png				\
-undraw_Map_dark_re_36sy.png
+undraw_Map_dark_re_36sy.png						\
+undraw_things_to_say_re_jpcg.png				\
+undraw_Code_typing_re_p8b9.png					\
+undraw_Developer_activity_re_39tg.png			\
+undraw_solution_mindset_re_57bf.png				\
+undraw_startup_life_2du2.png					\
+undraw_things_to_say_re_jpcg.png
 
 # List of images to create under static/img/clients
 IMG_CLIENTS:=nike.png

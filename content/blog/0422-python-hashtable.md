@@ -23,7 +23,7 @@ Here's a dead simple hash table in Python:
 hashmap = {}
 ```
 
-Of course, the Python `dict` is a hash table, but this is not a very interesting example.
+Yes of course, the Python `dict` is a hash table, but this is not a very interesting example.
 Below, I will share a toy implementation of the hash table as a Python class so we can understand how the abstract definition can be implemented.
 Rather than give a verbose description of its properties like the one we could read on Wikipedia (see the link above), I will document the code to describe the core behavior, and validate it through some trivial tests.
 Later, I will remark on some properties we may want to improve or change the implementation to make it more reliable or useful.
@@ -104,7 +104,8 @@ grandeur
 >>> print(h.get('florida'))
 None
 ```
-That's it - the hash table here supports insertion of data, retrieval, and deletion. Whatever issues you may see with this code (please - leave feedback!) there are a couple of critical ones that we have to address before using this for general purpose computation.
+That's it - the hash table here supports insertion of data, retrieval, and deletion.
+Whatever issues you may see with this code (please - leave feedback!) there are a couple of critical ones that we have to address before using this for general purpose computation.
 
 - The hash function may have _collisions_, which are instances where the different inputs (like two different strings) may produce the same result. The implementation above will happily overwrite data if the index of a newly added key/value pair overlaps with one that exists, among many other "footguns" that production-tested implementations of this pattern don't have. There are all kinds of fun approaches for tuning this pattern for different applications.
 

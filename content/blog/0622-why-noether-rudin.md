@@ -1,5 +1,5 @@
 ---
-title: "Why Noether Rudin?"
+title: "Why Student Loan Repayment?"
 date: "2020-06-22T10:26:50-04:00"
 tags: ["mission", "values"]
 draft: false
@@ -7,13 +7,13 @@ banner: "img/banners/undraw_Project_completed_re_pqqq.png"
 description: "thanks to undraw.io for the banner image"
 ---
 
-Originally published on blog.noetherrudin.com, then on blog.getdolr.com, this piece summarized my support for an effort to get more money for people's student loans.
-I still love developing, sharing, and applying knowledge in service of good causes.
-If you would like to find out more, [contact me!](/contact)
+Originally published at blog.noetherrudin.com, then at blog.getdolr.com, this piece summarized my reason for co-founding a student loan repayment company.
+
+I still love developing, sharing, and applying knowledge in service of good causes; if you have an vision for a new way to achieve a positive goal, [contact me!](/contact)
 
 <!--more-->
 
-# Why I believe in Noether Rudin's mission
+# Why I believe in reducing student loan burdens
 
 ## Learning is the most valuable thing in life
 
