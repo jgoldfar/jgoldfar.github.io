@@ -13,9 +13,7 @@ usage:
 	@echo "Targets:"
 	@$(MAKE) help 2>/dev/null
 	@echo ""
-	@echo "We benefit from the UX and parallelism of make, so we can run e.g."
-	@echo "- make -j4 ..."
-	@echo " to install your dotfiles at blazing speed (ha), or run "
+	@echo "We benefit from make's UX, so we can run e.g."
 	@echo "- make -k ..."
 	@echo " to allow installation failures. Run as"
 	@echo "- make --silent ..."
