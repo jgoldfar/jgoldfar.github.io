@@ -179,10 +179,15 @@ undraw_startup_life_2du2.png					\
 undraw_things_to_say_re_jpcg.png
 
 # List of images to create under static/img/clients
-IMG_CLIENTS:=nike.png
+IMG_CLIENTS:=nike.png curi.png
 static/img/clients/nike.png: static/img/clients/nike.svg
 	inkscape -w 420 -h 150 -o $@ $<
 .PHONY: static/img/clients/nike.png
+
+static/img/clients/curi.png: static/img/clients/curi.svg
+	inkscape -w 300 -h 108 -o $@ $<
+.PHONY: static/img/clients/curi.png
+
 
 ## Generate banner images, which have to be PNG...
 img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img/,${IMG_CONVERT}) $(addprefix static/img/clients/,${IMG_CLIENTS}) ## Generate images for site

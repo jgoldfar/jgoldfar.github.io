@@ -24,6 +24,9 @@ pygmentsStyle = "emacs"
 pygmentsCodefencesGuessSyntax = true
 
 
+[CarouselCustomers]
+    items = 4
+
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
     viewMorePostLink = "/blog/"
