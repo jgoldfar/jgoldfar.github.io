@@ -179,17 +179,17 @@ pygmentsCodefencesGuessSyntax = true
     url = "https://github.com/jgoldfar"
     pre = "<i class='fab fa-2x fa-github'></i>"
 
-[[menu.topbar]]
-    weight = 3
-    name = "Gitlab"
-    url = "https://gitlab.com/jgoldfar/"
-    pre = "<i class='fab fa-2x fa-gitlab'></i>"
+# [[menu.topbar]]
+#     weight = 3
+#     name = "Gitlab"
+#     url = "https://gitlab.com/jgoldfar/"
+#     pre = "<i class='fab fa-2x fa-gitlab'></i>"
 
-[[menu.topbar]]
-    weight = 6
-    name = "Twitter"
-    url = "https://twitter.com/jgoldfar/"
-    pre = "<i class='fab fa-2x fa-twitter'></i>"
+# [[menu.topbar]]
+#     weight = 6
+#     name = "Twitter"
+#     url = "https://twitter.com/jgoldfar/"
+#     pre = "<i class='fab fa-2x fa-twitter'></i>"
 
 [[menu.topbar]]
     weight = 5
@@ -197,31 +197,33 @@ pygmentsCodefencesGuessSyntax = true
     url = "mailto:jgoldfar@gmail.com"
     pre = "<i class='fas fa-2x fa-envelope'></i>"
 
-[[menu.topbar]]
-    name = "Phone"
-    pre = "<i class='fas fa-phone fa-2x'></i>"
-    weight = 4
-    url = "tel:+1-321-895-4184"
+# [[menu.topbar]]
+#     name = "Phone"
+#     pre = "<i class='fas fa-phone fa-2x'></i>"
+#     weight = 4
+#     url = "tel:+1-321-895-4184"
 
-[[menu.topbar]]
-    name = "RSS"
-    icon = "fas fa-rss"
-    weight = 6
-    pre = "<i class='fas fa-rss fa-2x'></i>"
-    url = "https://jgoldfar.github.io/index.xml"
-    rel = "alternate"
-    type = "application/rss+xml"
+# [[menu.topbar]]
+#     name = "RSS"
+#     icon = "fas fa-rss"
+#     weight = 6
+#     pre = "<i class='fas fa-rss fa-2x'></i>"
+#     url = "https://jgoldfar.github.io/index.xml"
+#     rel = "alternate"
+#     type = "application/rss+xml"
 
 # [[params.social]]
     # name = "ResearchGate"
     # icon = "fab fa-researchgate fa-2x"
     # weight = 5
     # url = "https://www.researchgate.net/profile/Jonathan_Goldfarb"
+
 # [[params.social]]
     # name = "Google Scholar"
     # icon = "fab fa-... fa-2x"
     # weight = 5
     # url = "https://..."
+
 # [[params.social]]
 #     name = "Physical (By Appointment, Send Email!)"
 #     icon = "fas fa-map-marker-alt fa-2x"
@@ -240,7 +242,6 @@ pygmentsCodefencesGuessSyntax = true
     weight = 1
     url  = "/about/services"
 
-
 [[menu.main]]
     name = "Blog"
     weight = 1
@@ -250,6 +251,7 @@ pygmentsCodefencesGuessSyntax = true
 #     name = "Projects"
 #     weight = 2
 #     url  = "/projects/"
+
 [[menu.main]]
     name = "About"
     weight = 1
