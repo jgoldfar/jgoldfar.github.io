@@ -1,6 +1,6 @@
 ## Personal Website Generator for Jonathan Goldfarb
 
-* v2024.0
+* v2025.0
 
 Generated using [Hugo](http://gohugo.io/), orchestrated using Github Actions on a Unix-like platform with `make`, `curl`, and `git`.
 
