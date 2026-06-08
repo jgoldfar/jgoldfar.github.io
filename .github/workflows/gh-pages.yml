@@ -20,7 +20,7 @@ jobs:
       - name: Checkout the repository to generate the site
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 1    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Latest Hugo version
         uses: peaceiris/actions-hugo@d17f2aa363b769f5f33799d2bfd3238bd348a2ea # v3
@@ -31,7 +31,7 @@ jobs:
       - name: Build with Hugo, output version
         run: |
           hugo version
-          hugo --minify --templateMetrics --templateMetricsHints --printPathWarnings --printUnusedTemplates
+          hugo --minify --panicOnWarning
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@f4984ce547e7de88896c1d092ae7e008fed5ba31 # v4

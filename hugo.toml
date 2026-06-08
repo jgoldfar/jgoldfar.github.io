@@ -4,7 +4,7 @@ locale = "en-US"
 defaultContentLanguage = "en"
 title = "Jonathan Goldfarb"
 metaDataFormat = "yaml"
-enableGitInfo = true
+enableGitInfo = false
 
 # Enable comments by entering your Disqus shortname
 # disqusShortname = "jgoldfar-blog"
@@ -31,6 +31,9 @@ theme = "vzero"
 
 [CarouselCustomers]
     items = 4
+
+[markup.goldmark.renderer]
+    unsafe = true
 
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
