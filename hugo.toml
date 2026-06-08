@@ -29,14 +29,14 @@ pygmentsCodefencesGuessSyntax = true
 
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
-    viewMorePostLink = "/blog/"
+    # viewMorePostLink = "/blog/"
     author = "Jonathan Goldfarb, Ph.D."
     info = "Intention, Collaboration, Innovation"
     defaultDescription = "Jonathan Goldfarb, Online."
     keywords = "blog,personal,technology"
     avatarurl = "https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/img/max.jpg"
     gravatarurl = "jgoldfar@gmail.com"
-    mainSections = ["blog"]
+    # mainSections = ["blog"]
 
     twitter_site = "jgoldfar" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/sharing-default.png"
@@ -52,7 +52,7 @@ pygmentsCodefencesGuessSyntax = true
     # https://en.wikiquote.org/wiki/Voltaire
     # Whatever you do, crush the despicable [superstition], and love those who love you.
     about_us = "<p>Quoi que vous fassiez, écrasez l'infâme, et aimez qui vous aime. - Voltaire</p><p>Always open to challenging new problems.</p>"
-    copyright = "Copyright (c) 2018 - 2025, Jonathan Goldfarb; all rights reserved."
+    copyright = "Copyright © 2018 - 2026, Jonathan Goldfarb; all rights reserved."
     enableGoogleMaps = false
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
 
@@ -154,11 +154,11 @@ pygmentsCodefencesGuessSyntax = true
     title = "Clients"
     # subtitle = "I am client focused "
 
-[params.recent_posts]
-    enable = false
-    title = "From the blog"
-    # title = "Open Discussions"
-    # subtitle = "Prompts, articles, opportunities for dialogue, ..."
+# [params.recent_posts]
+#     enable = false
+#     title = "From the blog"
+#     # title = "Open Discussions"
+#     # subtitle = "Prompts, articles, opportunities for dialogue, ..."
 
 # Social links for top bar
 [[menu.topbar]]
