@@ -1,5 +1,5 @@
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: debian:12.2-slim
+image: debian:trixie-20260518-slim@sha256:b6e2a152f22a40ff69d92cb397223c906017e1391a73c952b588e51af8883bf8
 pipelines:
   default:
     - step:

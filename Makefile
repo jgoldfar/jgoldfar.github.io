@@ -36,7 +36,7 @@ help: ## Display this help section
 SHELL:=/bin/bash
 UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
-HUGO_VERSION:=0.118.2
+HUGO_VERSION:=0.162.1
 
 # Set path to Extended version of Hugo
 ifeq (${UNAME},Darwin)
