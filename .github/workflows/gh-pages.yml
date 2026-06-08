@@ -5,24 +5,42 @@ on:
   schedule:
     - cron: '30 5 * * 2,4'
 
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  deploy:
-    name: Deploy https://jgoldfar.github.io
+  verify:
+    name: Verify hugo page build
     strategy:
       fail-fast: false
       matrix:
-        platform: ['ubuntu-slim', 'ubuntu-24.04']
+        platform:
+          - ubuntu-slim
+          - ubuntu-24.04
     runs-on: ${{ matrix.platform }}
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      contents: read
+    steps:
+      - name: Checkout the repository to generate the site
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          fetch-depth: 1
 
+      - name: Setup Hugo version
+        run: |
+          make hugo-env
+
+      - name: Build with Hugo
+        run: |
+          make generate-min
+  build:
+    name: Build pages for deployment
+    needs: verify
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout the repository to generate the site
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
@@ -39,11 +57,20 @@ jobs:
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@98ef48e41587a300b82de4cf298aa98b57b2faae # v5.0.0
-        if: (github.ref == 'refs/heads/main' && matrix.platform == 'ubuntu-24.04')
         with:
-          path: public
-
+          path: ./public
+  deploy:
+    name: Deploy https://jgoldfar.github.io
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    if: github.ref == 'refs/heads/main'
+    steps:
       - name: Deploy
         id: deployment
-        if: (github.ref == 'refs/heads/main' && matrix.platform == 'ubuntu-24.04')
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v4
