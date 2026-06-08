@@ -155,7 +155,7 @@ pygmentsCodefencesGuessSyntax = true
     # subtitle = "I am client focused "
 
 [params.recent_posts]
-    enable = true
+    enable = false
     title = "From the blog"
     # title = "Open Discussions"
     # subtitle = "Prompts, articles, opportunities for dialogue, ..."
@@ -242,10 +242,10 @@ pygmentsCodefencesGuessSyntax = true
     weight = 1
     url  = "/about/services"
 
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/blog"
+# [[menu.main]]
+#     name = "Blog"
+#     weight = 1
+#     url  = "/blog"
 
 # # [[menu.main]]
 #     name = "Projects"
