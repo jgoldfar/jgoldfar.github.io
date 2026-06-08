@@ -1,6 +1,6 @@
 ## Personal Website Generator for Jonathan Goldfarb
 
-* v2025.0
+* v2026.06.07
 
 Generated using [Hugo](http://gohugo.io/), orchestrated using Github Actions on a Unix-like platform with `make`, `curl`, and `git`.
 
@@ -17,7 +17,7 @@ For the most part, the build is "vanilla" Hugo, so a standard Hugo integration w
 The theme is a vendored and customized version of the [universal theme](//github.com/devcows/hugo-universal-theme), with all due credit to the creator.
 Support their work!
 
-As documented in the CI file [`bitbucket-pipelines.yml`](./bitbucket-pipelines.yml) or the [`.github`](./.github) workflow, it is enough to run `hugo --verbose --minify`, equivalent to `make generate`, to generate the static pages.
+As documented in the CI file [`bitbucket-pipelines.yml`](./bitbucket-pipelines.yml) or the [`.github`](./.github) workflow, it is enough to run `hugo --minify`, equivalent to `make generate-min`, to generate the static pages.
 
 ### Other Useful Commands
 
