@@ -22,11 +22,9 @@ jobs:
         with:
           fetch-depth: 1    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Latest Hugo version
-        uses: peaceiris/actions-hugo@d17f2aa363b769f5f33799d2bfd3238bd348a2ea # v3
-        with:
-          hugo-version: 'latest'
-          # extended: true
+      - name: Setup Hugo version
+        run: |
+          make hugo-env
 
       - name: Build with Hugo, output version
         run: |
