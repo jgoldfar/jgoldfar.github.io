@@ -195,7 +195,13 @@ img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img
 
 ### Generate site
 generate: $(HUGO) $(HUGOFILE) img-deps ## Generate website
-	$(HUGO) --minify --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints
+	$(HUGO) \
+		--minify
+		--templateMetrics \
+		--templateMetricsHints \
+		--printUnusedTemplates \
+		--printMemoryUsage \
+		--printPathWarnings
 .PHONY: generate
 
 # https://gohugo.io/hosting-and-deployment/hosting-on-github/
