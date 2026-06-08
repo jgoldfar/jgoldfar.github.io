@@ -12,28 +12,27 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: ['ubuntu-20.04', 'ubuntu-22.04']
+        platform: ['ubuntu-slim', 'ubuntu-24.04']
     runs-on: ${{ matrix.platform }}
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout the repository to generate the site
-        uses: actions/checkout@v4
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 1    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Latest Hugo version
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          # extended: true
-
-      - name: Build with Hugo, output version
+      - name: Setup Hugo version
         run: |
-          hugo version
-          hugo --minify --templateMetrics --templateMetricsHints --printPathWarnings --printUnusedTemplates
+          make hugo-env
+
+      - name: Build with Hugo
+        run: |
+          make generate-min
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: (github.ref == 'refs/heads/main' && matrix.platform == 'ubuntu-20.04')
+        uses: peaceiris/actions-gh-pages@f4984ce547e7de88896c1d092ae7e008fed5ba31 # v4
+        if: (github.ref == 'refs/heads/main' && matrix.platform == 'ubuntu-24.04')
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public

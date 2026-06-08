@@ -1,44 +1,52 @@
 baseURL = "https://jgoldfar.github.io"
-languageCode = "en-us"
+locale = "en-US"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
 title = "Jonathan Goldfarb"
 metaDataFormat = "yaml"
-enableGitInfo = true
-paginate = 4
+enableGitInfo = false
+
 # Enable comments by entering your Disqus shortname
 # disqusShortname = "jgoldfar-blog"
+
+
+theme = "vzero"
 
 # https://gohugo.io/templates/internal/
 # Enable Google Analytics by entering your tracking code
 # GAv3 - UA-33721305-2
 # https://analytics.google.com/analytics/web/?utm_source=marketingplatform.google.com&utm_medium=et&utm_campaign=marketingplatform.google.com%2Fabout%2Fanalytics%2F#/a33721305p274388243/admin/streams/table/
 # Property named jgoldfar - Marketing Pages - GA4 (274388243)
-googleAnalytics = "G-WPL5NCVTN1"
+[services]
+  [services.googleAnalytics]
+    ID = "G-WPL5NCVTN1"
 
-theme = "vzero"
+[markup.highlight]
+    style = "emacs"
+    guessSyntax = true
+    noClasses = false
 
-pygmentsCodeFences = true
-pygmentsOptions = "nobackground=True"
-pygmentsStyle = "emacs"
-pygmentsCodefencesGuessSyntax = true
-
+[pagination]
+    pagerSize = 4
 
 [CarouselCustomers]
     items = 4
 
+[markup.goldmark.renderer]
+    unsafe = true
+
 # https://github.com/luizdepra/hugo-coder/wiki/Configurations
 [params]
-    viewMorePostLink = "/blog/"
+    # viewMorePostLink = "/blog/"
     author = "Jonathan Goldfarb, Ph.D."
     info = "Intention, Collaboration, Innovation"
     defaultDescription = "Jonathan Goldfarb, Online."
     keywords = "blog,personal,technology"
     avatarurl = "https://raw.githubusercontent.com/jgoldfar/jgoldfar.github.io/master/img/max.jpg"
     gravatarurl = "jgoldfar@gmail.com"
-    mainSections = ["blog"]
+    # mainSections = ["blog"]
 
-    twitter_site = "jgoldfar" # the Twitter handle of your site (without the '@')
+    # twitter_site = "jgoldfar" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/sharing-default.png"
 
     footercontent = "Amor Fati"
@@ -52,7 +60,7 @@ pygmentsCodefencesGuessSyntax = true
     # https://en.wikiquote.org/wiki/Voltaire
     # Whatever you do, crush the despicable [superstition], and love those who love you.
     about_us = "<p>Quoi que vous fassiez, écrasez l'infâme, et aimez qui vous aime. - Voltaire</p><p>Always open to challenging new problems.</p>"
-    copyright = "Copyright (c) 2018 - 2025, Jonathan Goldfarb; all rights reserved."
+    copyright = "Copyright © 2018 - 2026, Jonathan Goldfarb; all rights reserved."
     enableGoogleMaps = false
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
 
@@ -91,7 +99,7 @@ pygmentsCodefencesGuessSyntax = true
 
     rtl = false
 
-    math = true
+    math = false
 
 	# Custom CSS
     custom_css = []
@@ -99,8 +107,8 @@ pygmentsCodefencesGuessSyntax = true
 	# Custom JS
     custom_js = []
 
-[Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+[permalinks]
+    blog = "/blog/:year/:month/:day/:contentbasename/"
 
 # Setup taxonomies
 [taxonomies]
@@ -154,11 +162,11 @@ pygmentsCodefencesGuessSyntax = true
     title = "Clients"
     # subtitle = "I am client focused "
 
-[params.recent_posts]
-    enable = false
-    title = "From the blog"
-    # title = "Open Discussions"
-    # subtitle = "Prompts, articles, opportunities for dialogue, ..."
+# [params.recent_posts]
+#     enable = false
+#     title = "From the blog"
+#     # title = "Open Discussions"
+#     # subtitle = "Prompts, articles, opportunities for dialogue, ..."
 
 # Social links for top bar
 [[menu.topbar]]

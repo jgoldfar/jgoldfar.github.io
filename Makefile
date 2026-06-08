@@ -36,15 +36,16 @@ help: ## Display this help section
 SHELL:=/bin/bash
 UNAME:=$(shell uname -s)
 HUGO:=bin/hugo
-HUGO_VERSION:=0.118.2
+HUGO_VERSION:=0.162.1
 
 # Set path to Extended version of Hugo
 ifeq (${UNAME},Darwin)
-HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_darwin-universal.tar.gz
+$(HUGO):
+	GOBIN=${LOCAL_BASE_PATH}/bin go install github.com/gohugoio/hugo@v$(HUGO_VERSION)
+.PRECIOUS: ${HUGO}
 endif
 ifeq (${UNAME},Linux)
 HUGO_DOWNLOAD_PATH:=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-endif
 
 # https://gohugo.io/getting-started/installing
 ${HUGO}.tar.gz:
@@ -55,6 +56,7 @@ $(HUGO):
 	${MAKE} ${HUGO}.tar.gz ;				\
 	cd bin && tar xvzf hugo.tar.gz ;
 .PRECIOUS: ${HUGO}
+endif
 
 .PHONY: hugo-env
 hugo-env: $(HUGO)
@@ -65,7 +67,6 @@ hugo-env: $(HUGO)
 ### CV/Resume
 CVDownloadPath:=https://dl.bintray.com/jgoldfar/ResumePublic/
 CVPath:=static/cv
-
 
 CVBibFiles:=cont-talks.bib inv-talks.bib posters.bib pubs.bib
 CVFiles:=cv-default.pdf res-default.pdf $(CVBibFiles)
@@ -194,9 +195,21 @@ img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img
 .PHONY: img-deps
 
 ### Generate site
-generate: $(HUGO) $(HUGOFILE) img-deps ## Generate website
-	$(HUGO) --minify --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints
-.PHONY: generate
+generate-debug: $(HUGO) $(HUGOFILE) img-deps ## Generate website in debug mode
+	$(HUGO)										\
+		--minify								\
+		--templateMetrics						\
+		--templateMetricsHints					\
+		--printUnusedTemplates					\
+		--printMemoryUsage						\
+		--printPathWarnings
+.PHONY: generate-debug
+
+generate-min: $(HUGO) $(HUGOFILE)
+	$(HUGO)										\
+		--minify								\
+		--panicOnWarning
+.PHONY: generate-min
 
 # https://gohugo.io/hosting-and-deployment/hosting-on-github/
 ### Below here not needed when pushing directly to Github
