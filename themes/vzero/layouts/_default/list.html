@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
 
   <head>
     {{ partial "headers.html" . }}
@@ -47,7 +47,7 @@
                                           {{ end }}
                                           {{ if isset .Params "categories" }}
                                           {{ if gt (len .Params.categories) 0 }}
-                                          in 
+                                          in
                                           {{ range $index, $category := .Params.categories }}{{ if $index }}, {{ end }}
                                               <a href="{{ "categories/" | relLangURL }}{{ . | urlize | lower }}">{{ $category }}</a>{{ end }}
                                           {{ end }}
