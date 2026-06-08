@@ -26,10 +26,9 @@ jobs:
         run: |
           make hugo-env
 
-      - name: Build with Hugo, output version
+      - name: Build with Hugo
         run: |
-          hugo version
-          hugo --minify --panicOnWarning
+          make generate-min
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@f4984ce547e7de88896c1d092ae7e008fed5ba31 # v4

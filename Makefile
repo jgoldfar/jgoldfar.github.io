@@ -195,7 +195,7 @@ img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img
 .PHONY: img-deps
 
 ### Generate site
-generate: $(HUGO) $(HUGOFILE) img-deps ## Generate website
+generate-debug: $(HUGO) $(HUGOFILE) img-deps ## Generate website in debug mode
 	$(HUGO) \
 		--minify \
 		--templateMetrics \
@@ -203,7 +203,13 @@ generate: $(HUGO) $(HUGOFILE) img-deps ## Generate website
 		--printUnusedTemplates \
 		--printMemoryUsage \
 		--printPathWarnings
-.PHONY: generate
+.PHONY: generate-debug
+
+generate-min: $(HUGO) $(HUGOFILE)
+	$(HUGO) \
+		--minify
+		--panicOnWarning
+.PHONY: generate-min
 
 # https://gohugo.io/hosting-and-deployment/hosting-on-github/
 ### Below here not needed when pushing directly to Github

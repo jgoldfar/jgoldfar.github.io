@@ -7,4 +7,4 @@ pipelines:
           # https://packages.debian.org/search?suite=bookworm&keywords=...
           - apt-get -qq update && apt-get -qq -y install shellcheck build-essential curl inkscape git
           - make hugo-env
-          - make generate
+          - make generate-debug
