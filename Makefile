@@ -196,18 +196,18 @@ img-deps: $(addprefix static/img/banners/,${IMG_BANNERS}) $(addprefix static/img
 
 ### Generate site
 generate-debug: $(HUGO) $(HUGOFILE) img-deps ## Generate website in debug mode
-	$(HUGO) \
-		--minify \
-		--templateMetrics \
-		--templateMetricsHints \
-		--printUnusedTemplates \
-		--printMemoryUsage \
+	$(HUGO)										\
+		--minify								\
+		--templateMetrics						\
+		--templateMetricsHints					\
+		--printUnusedTemplates					\
+		--printMemoryUsage						\
 		--printPathWarnings
 .PHONY: generate-debug
 
 generate-min: $(HUGO) $(HUGOFILE)
-	$(HUGO) \
-		--minify
+	$(HUGO)										\
+		--minify								\
 		--panicOnWarning
 .PHONY: generate-min
 
